@@ -1,0 +1,53 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-image: linear-gradient(to right, #334166, #004466 25%, #004466 75%, #334166);
+	color: white;
+}
+
+
+a {
+    text-decoration: none !important;
+}
+
+#nav {
+	height: 100px;
+	background: linear-gradient(#333333 0%,#333333 75%, #ffff33 75%,#ffffcc 100%);
+
+}
+
+
+#nav ul {
+	float: right;
+	display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 75px;
+    overflow: hidden;
+    background-color: #333333;
+}
+#nav li {
+	display: inline-block;
+	float: right;
+}
+
+#nav ul li a {
+ 	display: inline-block;
+	text-align: center;
+    padding: 24px 16px;
+    font-size: 25px;
+	color: #8c8c8c;
+}
+
+#nav ul li a:hover {
+	 color: #f3f3f3;
+	 background-color: #2a2a2a;
+
+}
+
+#logo {
+	font-size: 75px;
+	color: yellow;
+}
+
