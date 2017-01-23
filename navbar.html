@@ -17,11 +17,12 @@
 
 <script type="text/javascript">
 	function expandMenu() {
-	    var x = document.getElementById("navbarid");
-	    if (x.className === "navbar") {
-	        x.className += " collapse";
-	    } else {
-	        x.className = "navbar";
+	    var navClass = document.getElementById("navbarid");
+	    if (navClass.className === "navbar") {
+	        navClass.className += " collapse";
+	    } 
+	    else {
+	        navClass.className = "navbar";
 	    }
 	}
 </script>
