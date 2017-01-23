@@ -40,27 +40,27 @@ ul.navbar li.icon {
 }
 
 @media screen and (max-width:600px) {
-  ul.navbar li:not(:last-child) {display: none;}
-  ul.navbar li.icon {
-    float: right;
-    display: inline-block;
-  }
-}
+	ul.navbar li:not(:last-child) {display: none;}
+	ul.navbar li.icon {
+	    float: right;
+	    display: inline-block;
+    }
+}  
 
 @media screen and (max-width:600px) {
-  ul.navbar.collapse {position: relative;}
-  ul.navbar.collapse li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  ul.navbar.collapse li {
-    float: none;
-    display: inline;
-  }
-  ul.navbar.collapse li a {
-    display: block;
-    text-align: left;
-  }
+	ul.navbar.collapse {position: relative;}
+	ul.navbar.collapse li.icon {
+		position: absolute;
+	    right: 0;
+	    top: 0;
+    }
+    ul.navbar.collapse li {
+	    float: none;
+	    display: inline;
+    }
+    ul.navbar.collapse li a {
+	    display: block;
+	    text-align: left;
+    }
 }
 
