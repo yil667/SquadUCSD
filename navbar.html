@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" type="text/css" href="navbar.css" />
 <head></head>
 <body>
-	<a id="logo" href="./index.html">LOGO GOES HERE</a>
-	<ul>
-		<li><a href="./index.html">Contact</a></li> 
-		<li><a href="pendingURL">Find Group</a></li> 
-		<li><a href="pendingURL">Register</a></li> 
-		<li><a href="pendingURL">Login</a></li> 
 
-	</ul>
-</body>	
+<ul class="navbar" id="navbarid">
+	<li><a href="./index.html">News</a></li>
+	<li><a href="./index.html">Login/Register</a></li>
+	<li><a href="./index.html">Find Group</a></li>
+	<li><a href="./index.html">Contact</a></li>
+	<li class="icon">
+		<a href="javascript:void(0);" style="font-size: 25px;" onclick="myFunction()">☰</a>
+	</li>
+</ul>
+
+
+<script type="text/javascript">
+	function myFunction() {
+	    var x = document.getElementById("navbarid");
+	    if (x.className === "navbar") {
+	        x.className += " collapse";
+	    } else {
+	        x.className = "navbar";
+	    }
+	}
+</script>
+
+</body>
 </html>
