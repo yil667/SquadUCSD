@@ -1,0 +1,75 @@
+a {
+    text-decoration: none !important;
+}
+
+html {
+	background-repeat: no-repeat;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background: #43C6AC; /* fallback for old browsers */
+	background: -webkit-linear-gradient(right, #43C6AC, #191654);
+	background: -o-linear-gradient(right, #43C6AC, #191654);
+	background: linear-gradient(to left, #43C6AC, #191654); /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-attachment: fixed;
+    margin:0;
+
+
+}
+
+.navbar {
+	background: #000000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(#333333, #333333 55%, #000000 100%);
+	background: linear-gradient(#333333, #333333 55%, #000000 100%);
+	min-height: 55px;
+}
+
+.navbar-brand {
+	color: #cccccc;
+	font-size: 20px;
+    line-height: 55px;
+    height: 55px;
+    margin-top: 0;
+}
+
+.navbar li a {
+	color: #cccccc;
+	font-size: 20px;
+    line-height: 55px;
+    height: 55px;
+    margin-top: 0;
+}
+
+.navbar-black .navbar-nav > li > a:hover,
+.navbar-black .navbar-nav > li > a:focus {
+    background-color: #000000;
+    color: #e6e6e6;
+}
+
+.navbar-black .dropdown.open .dropdown-toggle{
+	background-color: #000000;
+    color: #e6e6e6;
+}
+
+.navbar-black .dropdown-menu {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-black .dropdown-menu > li > a,
+.navbar-black .dropdown-menu > li > a {
+	background-color: #333333;
+    color: #cccccc;
+}
+
+.navbar-black .dropdown-menu > li > a:hover,
+.navbar-black .dropdown-menu > li > a:focus {
+	background-color: #000000;
+    color: #e6e6e6;
+}
+
+.navbar-black .navbar-toggle .icon-bar {
+	background-color: #cccccc;
+}
