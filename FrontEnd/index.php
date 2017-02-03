@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<link rel="stylesheet" type="text/css" href="common.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
 	<head>
 	    <title>SquadUCSD</title>
 	    <meta charset="utf-8">
@@ -28,6 +29,36 @@
                 <div class="panel panel-custom">
                     <div class="panel-heading"><h3>Welcome</h3></div>
                     <div class="panel-body">
+
+                        <div class="col-xs-12" style="margin-bottom:20px;">
+                            First time using SquadUCSD?
+                            <a href="./register.html">
+                                Register here!
+                            </a>
+                        </div>
+
+                        <form class="form-horizontal" role="form" method="POST">
+                            <label class="col-md-4 control-label"></label> <!--Fix for register here -->
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <input type="text" class="form-control" name="login" value="" placeholder="UCSD Email Address">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <input type="password" class="form-control" name="password" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-4">
+                                    <button type="submit" class="btn btn-primary">Login</button>
+
+                                    <a class="btn btn-link" href="#">Forgot password?</a>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
