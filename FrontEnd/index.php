@@ -10,7 +10,7 @@
 	 	<meta name="keywords" content="HTML,CSS,JavaScript">
 		<meta name="author" content="Zifan Yang">
 		<!-- Latest compiled and minified CSS -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -25,7 +25,7 @@
     <body>
         <div id="common"></div>
         <div class="row">
-            <div class="col-sm-4 col-sm-offset-4">
+            <div class="col-sm-8 col-sm-offset-2">
                 <div class="panel panel-custom">
                     <div class="panel-heading"><h3>Welcome</h3></div>
                     <div class="panel-body">
