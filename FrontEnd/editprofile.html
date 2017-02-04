@@ -30,37 +30,46 @@
             <div class="panel-heading"><h3>Edit Profile</h3></div>
             <div class="panel-body">
                 <form class="form-horizontal" role="form" method="POST">
-                    <label class="col-sm-4 control-label"></label> <!--Fix for register here -->
-
                     <div class="form-group">
-                        <div class="col-sm-10 col-sm-offset-1">
-                            <input type="text" class="form-control" name="name" value="" placeholder="Full Name">
+                        <label for="name" class="col-sm-3 col-form-label">Full Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="name" value="John Smith">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-sm-10 col-sm-offset-1">
-                            <input type="text" class="form-control" name="email" value=""
-                                   placeholder="UCSD Email Address">
+                        <label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" name="ucsdemail" id="ucsdemail"
+                                   value="foo@ucsd.edu" disabled>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-sm-10 col-sm-offset-1">
-                            <input type="text" class="form-control" name="contact" value=""
-                                   placeholder="Contact Information">
+                        <label for="email" class="col-sm-3 col-form-label">Preferred Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" name="email" id="email" value="foo@example.com">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-sm-10 col-sm-offset-1">
-                            <input type="text" class="form-control" name="major" value="" placeholder="Major">
+                        <label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
+                        <div class="col-sm-9">
+                            <input type="tel" class="form-control" name="phone" id="phone" value="1-(123)-456-7890">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-sm-10 col-sm-offset-1">
-                            <textarea class="form-control" id="about" rows="3" placeholder="About Me"></textarea>
+                        <label for="major" class="col-sm-3 col-form-label">Major</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="major" id="major" value="Gender Studies">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="about" class="col-sm-3 col-form-label">About Me</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" name="about" id="about" rows="3"></textarea>
                         </div>
                     </div>
 
