@@ -11,7 +11,7 @@ html {
     background-repeat: no-repeat;
     min-height: 100%;
     position: relative;
-    /* footer */
+	background-repeat: no-repeat;
 }
 
 body {
@@ -98,8 +98,6 @@ body {
     }
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
 .footer {
     position: absolute;
     bottom: 0;
