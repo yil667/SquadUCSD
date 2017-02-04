@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<link rel="stylesheet" type="text/css" href="common.css" />
+    <link rel="stylesheet" type="text/css" href="footer.css"/>
     <link rel="stylesheet" type="text/css" href="index.css" />
 	<head>
 	    <title>SquadUCSD</title>
@@ -30,7 +31,8 @@
                     <div class="panel panel-custom">
                         <div class="panel-heading"><h3>Welcome</h3></div>
                         <div class="panel-body">
-                            <p class="col-sm-offset-1 col-sm-10">According to all known laws of aviation,
+                            <p class="col-sm-offset-1 col-sm-10">
+                                According to all known laws of aviation,
                                 there is no way a bee should be able to fly.
                                 Its wings are too small to get its fat little body off the ground.
                                 The bee, of course, flies anyway
@@ -313,7 +315,8 @@
                                 Oopy that visual.
                                 Wait. One of these flowers seems to be on the move.
                                 Say again? You're reporting a moving flower?
-                                Affirmative.</p>
+                                Affirmative.
+                            </p>
                         </div>
                     </div>
                 </div>
