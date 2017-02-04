@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a0c2dd1-1bac-4d32-899a-10de4e7b4895" name="Default" comment="Created Edit Profile Page, updated submit button on login">
+    <list default="true" id="2a0c2dd1-1bac-4d32-899a-10de4e7b4895" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="f1a93318-654c-41b9-926f-ecff404dfc98" name="Rejected commit: Default" comment="Created Edit Profile Page, updated submit button on login">
@@ -636,12 +636,20 @@
       <workItem from="1486150314463" duration="2165000" />
       <workItem from="1486152505986" duration="2050000" />
       <workItem from="1486164290236" duration="1429000" />
-      <workItem from="1486167367298" duration="2215000" />
+      <workItem from="1486167367298" duration="2233000" />
     </task>
+    <task id="LOCAL-00001" summary="Created Edit Profile Page, updated submit button on login">
+      <created>1486169587797</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1486169587797</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7859000" />
+    <option name="totallyTimeSpent" value="7877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
