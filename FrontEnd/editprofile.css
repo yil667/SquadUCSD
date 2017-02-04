@@ -2,7 +2,6 @@
 	margin-top: 150px;
 }
 
-
 .panel-custom > .panel-heading h3 {
 	color: #f2f2f2;
 }
@@ -14,5 +13,14 @@
 .panel-custom > .panel-body {
 	background-color: #f2f2f2;
 	padding-top: 30px;
+}
+
+.panel-custom > .panel-heading h3 {
+    color: #f2f2f2;
+}
+
+.panel-custom > .panel-heading {
+    background-color: #333333;
+    border-color: transparent;
 }
 
