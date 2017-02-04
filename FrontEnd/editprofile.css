@@ -1,11 +1,13 @@
 .row {
-	margin-top: 150px;
+    margin-top: 150px;
 }
 
 .panel-custom > .panel-heading h3 {
 	color: #f2f2f2;
 }
 .panel-custom > .panel-heading {
+    padding-left: 20px;
+    vertical-align: middle;
 	background-color: #333333;
 	border-color: transparent;
 }
