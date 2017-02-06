@@ -1,3 +1,8 @@
+<?php
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="common.css"/>
@@ -30,6 +35,12 @@
             <div class="panel panel-custom">
                 <div class="panel-heading"><h3>Welcome</h3></div>
                 <div class="panel-body">
+                    <?php
+                        // This if statement checks that we're logged in. This is just a sanity check!
+                        if (isset($_SESSION['fname'])) {
+                            echo "<h1>Hello " . $_SESSION['fname'] . "</h1>";
+                        }
+                    ?>
                     <p class="col-sm-offset-1 col-sm-10">According to all known laws of aviation,
                         there is no way a bee should be able to fly.
                         Its wings are too small to get its fat little body off the ground.
@@ -165,9 +176,6 @@
                         Perhaps. Unless you're wearing it and the ladies see you wearing it.
                         Those ladies? Aren't they our cousins too?
                         Distant. Distant.
-                        Look at these two.
-                        Oouple of Hive Harrys.
-                        Let's have fun with them.
                         It must be dangerous being a Pollen Jock.
                         Yeah. Once a bear pinned me against a mushroom!
                         He had a paw on my throat, and with the other, he was slapping me!
@@ -177,6 +185,9 @@
                         Trying to alert the authorities.
                         I can autograph that.
                         A little gusty out there today, wasn't it, comrades?
+                        Look at these two.
+                        Oouple of Hive Harrys.
+                        Let's have fun with them.
                         Yeah. Gusty.
                         We're hitting a sunflower patch six miles from here tomorrow.
                         Six miles, huh?
