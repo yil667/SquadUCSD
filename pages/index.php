@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 
 
@@ -23,7 +23,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#common').load('./common.html');
+            $('#common').load('./common.php');
         });
     </script>
 </head>
