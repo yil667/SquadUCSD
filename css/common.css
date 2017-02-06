@@ -1,0 +1,114 @@
+.panel, .panel > .panel-heading, button, input {
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+textarea {
+    border-radius: 0 !important;
+    border: none !important
+}
+
+a {
+    text-decoration: none !important;
+}
+
+html {
+    background-repeat: no-repeat;
+    min-height: 100%;
+    position: relative;
+	background-repeat: no-repeat;
+}
+
+body {
+    color: #262626;
+    padding: 0;
+    background-size: 100%;
+    background: #43C6AC; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #43C6AC, #191654);
+    background: -o-linear-gradient(right, #43C6AC, #191654);
+    background: linear-gradient(to left, #43C6AC, #191654); /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-attachment: fixed;
+}
+
+.navbar {
+    background: #262626;
+    min-height: 55px;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.navbar-brand {
+    color: #cccccc;
+    font-size: 20px;
+    line-height: 55px;
+    height: 55px;
+    margin-top: 0;
+}
+
+.navbar li a {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 55px;
+    height: 55px;
+    margin-top: 0;
+}
+
+.navbar-black .navbar-nav > li > a:hover,
+.navbar-black .navbar-nav > li > a:focus {
+    background-color: #000000;
+    color: #e6e6e6;
+}
+
+.navbar-black .dropdown.open .dropdown-toggle {
+    background-color: #000000;
+    color: #e6e6e6;
+}
+
+.navbar-black .dropdown-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-black .dropdown-menu > li > a,
+.navbar-black .dropdown-menu > li > a {
+    line-height: 55px;
+    height: 55px;
+    margin-top: 0;
+    padding-top: 0;
+    background-color: #333333;
+    color: #cccccc;
+}
+
+.navbar-black .dropdown-menu > li > a:hover,
+.navbar-black .dropdown-menu > li > a:focus {
+    background-color: #000000;
+    color: #e6e6e6;
+}
+
+.navbar-black .navbar-toggle .icon-bar {
+    background-color: #cccccc;
+}
+
+@media screen and (max-width: 1440px) {
+    .panel {
+        width: 125%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .panel {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 30px;
+    line-height: 30px;
+    background-color: #f5f5f5;
+}
