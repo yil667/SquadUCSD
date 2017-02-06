@@ -33,15 +33,21 @@ session_start();
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3>Welcome</h3></div>
-                <div class="panel-body">
-
+                <div class="panel-heading">
                     <?php
                     // This if statement checks that we're logged in. This is just a sanity check!
-                    if (isset($_SESSION['fname'])) {
-                        echo "<h1>Hello " . $_SESSION['fname'] . "</h1>";
-                    }
+
+                    if (isset($_SESSION['fname']))
+                        echo "<h3>Welcome, " . $_SESSION['fname'] . "</h3>" . "<img src='http://i.imgur.com/Divi9yo.png?1'>";
+
+                    else
+                        echo "<h3>Welcome</h3>";
+
                     ?>
+                </div>
+
+                <div class="panel-body">
+
 
                     <p class="col-sm-offset-1 col-sm-10">According to all known laws of aviation,
                         there is no way a bee should be able to fly.
@@ -148,131 +154,131 @@ session_start();
                         We'll sure try.
                         Wow! That blew my mind!
                         "What's the difference?" How can you say that?
-                        One job forever? That's an insane choice to have to make.
+                        One job forever? That's an insane choice to have to make .
                         I'm relieved. Now we only have to make one decision in life.
                         But, Adam, how could they never have told us that?
-                        Why would you question anything? We're bees.
+                        Why would you question anything? We're bees .
                         We're the most perfectly functioning society on Earth.
                         You ever think maybe things work a little too well here?
                         Like what? Give me one example.
-                        I don't know. But you know what I'm talking about.
+                        I don't know . But you know what I'm talking about.
                         Please clear the gate. Royal Nectar Force on approach.
                         Wait a second. Oheck it out.
                         Hey, those are Pollen Jocks!
                         Wow.
-                        I've never seen them this close.
+                        I've never seen them this close .
                         They know what it's like outside the hive.
-                        Yeah, but some don't come back.
+                        Yeah, but some don't come back .
                         Hey, Jocks!
                         Hi, Jocks!
                         You guys did great!
-                        You're monsters! You're sky freaks! I love it! I love it!
-                        I wonder where they were.
+                        You're monsters! You're sky freaks!I love it!I love it!
+                        I wonder where they were .
                         I don't know.
-                        Their day's not planned.
-                        Outside the hive, flying who knows where, doing who knows what.
+                        Their day's not planned .
+                        Outside the hive, flying who knows where, doing who knows what .
                         You can'tjust decide to be a Pollen Jock. You have to be bred for that.
                         Right.
-                        Look. That's more pollen than you and I will see in a lifetime.
+                        Look. That's more pollen than you and I will see in a lifetime .
                         It's just a status symbol. Bees make too much of it.
-                        Perhaps. Unless you're wearing it and the ladies see you wearing it.
-                        Those ladies? Aren't they our cousins too?
+                        Perhaps. Unless you're wearing it and the ladies see you wearing it .
+                        Those ladies ? Aren't they our cousins too?
                         Distant. Distant.
                         Look at these two.
                         Oouple of Hive Harrys.
-                        Let's have fun with them.
-                        It must be dangerous being a Pollen Jock.
-                        Yeah. Once a bear pinned me against a mushroom!
+                        Let's have fun with them .
+                        It must be dangerous being a Pollen Jock .
+                        Yeah . Once a bear pinned me against a mushroom!
                         He had a paw on my throat, and with the other, he was slapping me!
                         Oh, my!
                         I never thought I'd knock him out.
                         What were you doing during this?
                         Trying to alert the authorities.
                         I can autograph that.
-                        A little gusty out there today, wasn't it, comrades?
-                        Yeah. Gusty.
+                        A little gusty out there today, wasn't it, comrades ?
+                        Yeah . Gusty .
                         We're hitting a sunflower patch six miles from here tomorrow.
                         Six miles, huh?
                         Barry!
-                        A puddle jump for us, but maybe you're not up for it.
-                        Maybe I am.
+                        A puddle jump for us, but maybe you're not up for it .
+                        Maybe I am .
                         You are not!
                         We're going 0900 at J-Gate.
                         What do you think, buzzy-boy? Are you bee enough?
                         I might be. It all depends on what 0900 means.
                         Hey, Honex!
                         Dad, you surprised me.
-                        You decide what you're interested in?
+                        You decide what you're interested in ?
                         Well, there's a lot of choices.
                         But you only get one.
                         Do you ever get bored doing the same job every day?
                         Son, let me tell you about stirring.
                         You grab that stick, and you just move it around, and you stir it around.
-                        You get yourself into a rhythm. It's a beautiful thing.
+                        You get yourself into a rhythm. It's a beautiful thing .
                         You know, Dad, the more I think about it,
                         maybe the honey field just isn't right for me.
                         You were thinking of what, making balloon animals?
-                        That's a bad job for a guy with a stinger.
+                        That's a bad job for a guy with a stinger .
                         Janet, your son's not sure he wants to go into honey!
                         Barry, you are so funny sometimes.
-                        I'm not trying to be funny.
-                        You're not funny! You're going into honey. Our son, the stirrer!
+                        I'm not trying to be funny .
+                        You're not funny! You're going into honey . Our son, the stirrer!
                         You're gonna be a stirrer?
                         No one's listening to me!
-                        Wait till you see the sticks I have.
-                        I could say anything right now. I'm gonna get an ant tattoo!
+                        Wait till you see the sticks I have .
+                        I could say anything right now . I'm gonna get an ant tattoo!
                         Let's open some honey and celebrate!
                         Maybe I'll pierce my thorax. Shave my antennae.
                         Shack up with a grasshopper. Get a gold tooth and call everybody "dawg"!
-                        I'm so proud.
+                        I'm so proud .
                         We're starting work today!
-                        Today's the day.
-                        Oome on! All the good jobs will be gone.
-                        Yeah, right.
+                        Today's the day .
+                        Oome on!All the good jobs will be gone .
+                        Yeah, right .
                         Pollen counting, stunt bee, pouring, stirrer, front desk, hair removal...
-                        Is it still available?
-                        Hang on. Two left!
+                        Is it still available ?
+                        Hang on . Two left!
                         One of them's yours! Oongratulations! Step to the side.
-                        What'd you get?
-                        Picking crud out. Stellar!
+                        What'd you get ?
+                        Picking crud out . Stellar!
                         Wow!
-                        Oouple of newbies?
-                        Yes, sir! Our first day! We are ready!
-                        Make your choice.
-                        You want to go first?
-                        No, you go.
-                        Oh, my. What's available?
-                        Restroom attendant's open, not for the reason you think.
-                        Any chance of getting the Krelman?
+                        Oouple of newbies ?
+                        Yes, sir!Our first day!We are ready!
+                        Make your choice .
+                        You want to go first ?
+                        No, you go .
+                        Oh, my . What's available?
+                        Restroom attendant's open, not for the reason you think .
+                        Any chance of getting the Krelman ?
                         Sure, you're on.
-                        I'm sorry, the Krelman just closed out.
+                        I'm sorry, the Krelman just closed out .
                         Wax monkey's always open.
                         The Krelman opened up again.
                         What happened?
-                        A bee died. Makes an opening. See? He's dead. Another dead one.
-                        Deady. Deadified. Two more dead.
-                        Dead from the neck up. Dead from the neck down. That's life!
+                        A bee died. Makes an opening. See? He's dead . Another dead one .
+                        Deady . Deadified . Two more dead .
+                        Dead from the neck up . Dead from the neck down . That's life!
                         Oh, this is so hard!
                         Heating, cooling, stunt bee, pourer, stirrer,
                         humming, inspector number seven, lint coordinator, stripe supervisor,
                         mite wrangler. Barry, what do you think I should... Barry?
                         Barry!
                         All right, we've got the sunflower patch in quadrant nine...
-                        What happened to you? Where are you?
+                        What happened to you ? Where are you ?
                         I'm going out.
                         Out? Out where?
                         Out there.
                         Oh, no!
                         I have to, before I go to work for the rest of my life.
-                        You're gonna die! You're crazy! Hello?
+                        You're gonna die!You're crazy! Hello?
                         Another call coming in.
                         If anyone's feeling brave, there's a Korean deli on 83rd
                         that gets their roses today.
                         Hey, guys.
                         Look at that.
-                        Isn't that the kid we saw yesterday?
+                        Isn't that the kid we saw yesterday ?
                         Hold it, son, flight deck's restricted.
-                        It's OK, Lou. We're gonna take him up.
+                        It's OK, Lou . We're gonna take him up.
                         Really? Feeling lucky, are you?
                         Sign here, here. Just initial that.
                         Thank you.
@@ -300,9 +306,9 @@ session_start();
                         Scared out of my shorts, check.
                         OK, ladies,
                         let's move it out!
-                        Pound those petunias, you striped stem-suckers!
+                        Pound those petunias, you striped stem - suckers!
                         All of you, drain those flowers!
-                        Wow! I'm out!
+                        Wow!I'm out!
                         I can't believe I'm out!
                         So blue.
                         I feel so fast and free!
@@ -313,20 +319,20 @@ session_start();
                         Bring it around 30 degrees and hold.
                         Roses!
                         30 degrees, roger. Bringing it around.
-                        Stand to the side, kid. It's got a bit of a kick.
+                        Stand to the side, kid. It's got a bit of a kick .
                         That is one nectar collector!
-                        Ever see pollination up close?
-                        No, sir.
-                        I pick up some pollen here, sprinkle it over here. Maybe a dash over there,
-                        a pinch on that one. See that? It's a little bit of magic.
-                        That's amazing. Why do we do that?
+                        Ever see pollination up close ?
+                        No, sir .
+                        I pick up some pollen here, sprinkle it over here . Maybe a dash over there,
+                        a pinch on that one . See that ? It's a little bit of magic.
+                        That's amazing . Why do we do that ?
                         That's pollen power. More pollen, more flowers, more nectar, more honey for us.
                         Oool.
-                        I'm picking up a lot of bright yellow. Oould be daisies. Don't we need those?
+                        I'm picking up a lot of bright yellow . Oould be daisies . Don't we need those?
                         Oopy that visual.
                         Wait. One of these flowers seems to be on the move.
-                        Say again? You're reporting a moving flower?
-                        Affirmative.
+                        Say again? You're reporting a moving flower ?
+                        Affirmative .
                     </p>
                 </div>
             </div>
