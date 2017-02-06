@@ -18,7 +18,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#common').load('../pages/common.html');
+            $('#common').load('./common.html');
         });
     </script>
 </head>
@@ -37,18 +37,24 @@
                         </a>
                     </div>
 
-                    <form class="form-horizontal" role="form" method="POST">
+                    <form class="form-horizontal" action="register.php" role="form" method="POST">
                         <label class="col-sm-4 control-label"></label> <!--Fix for login here link-->
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-3">
-                                <input type="email" class="form-control" name="login" value=""
+                                <input type="email" class="form-control" name="email" value=""
                                        placeholder="UCSD Email Address">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-3">
-                                <input type="text" class="form-control" name="fullname" placeholder="Full Name">
+                                <input type="text" class="form-control" name="first" placeholder="First Name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <input type="text" class="form-control" name="last" placeholder="Last Name">
                             </div>
                         </div>
 
@@ -60,7 +66,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-3">
-                                <input type="password" class="form-control" name="password"
+                                <input type="password" class="form-control" name="password2"
                                        placeholder="Re-enter Password">
                             </div>
                         </div>

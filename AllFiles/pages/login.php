@@ -21,6 +21,6 @@ else {
     // global variable keeps track of whether the user is logged in or not
    $_SESSION['fname'] = $row['fname'];
    $_SESSION['id'] = $row['id'];
-    header("Location: index.php");
+    header("Location: ../index.php");
 }
 
