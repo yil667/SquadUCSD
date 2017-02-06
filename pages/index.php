@@ -38,7 +38,11 @@ session_start();
                     // This if statement checks that we're logged in. This is just a sanity check!
 
                     if (isset($_SESSION['fname']))
-                        echo "<h3>Welcome, " . $_SESSION['fname'] . "</h3>" . "<img src='http://i.imgur.com/Divi9yo.png?1'>";
+                        echo "<h3>Welcome, " . strtoupper($_SESSION['fname'])  . "!" . "</h3>" .
+                            "<img src='http://i.imgur.com/Divi9yo.png?1'>" . "<img src='https://pbs.twimg.com/media/CuIpxFBXEAAtyBW.png'>" .
+                            "<img src='https://static-cdn.jtvnw.net/emoticons/v1/55338/3.0'>" . "<img src='https://pbs.twimg.com/media/B0-MiHzCMAADysA.png'>" .
+                            "<img src='http://jagatplay.com/wp-content/uploads/2015/12/seemsgood.png'>" . "<img src='https://pbs.twimg.com/media/CT6ZdmjUYAA-er6.png'>" .
+                            "<img src='http://orig01.deviantart.net/04cd/f/2015/337/0/8/feelsvalman_by_voodooval-d9iymbi.png'>";
 
                     else
                         echo "<h3>Welcome</h3>";
