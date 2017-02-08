@@ -42,10 +42,10 @@ session_start();
                 <?php
                 // This if statement checks that we're logged in. This is just a sanity check!
                 if (isset($_SESSION['fname'])) {
-                    echo "<li><a href='logout.php'><span class='glyphicon glyphicon-log-out'></span> Logout</a></li>";
+                    echo "<li><a href='../controller/LogoutHandler.php'><span class='glyphicon glyphicon-log-out'></span> Logout</a></li>";
                 } else {
-                    echo "<li><a href='./register.html'><span class='glyphicon glyphicon-user'></span> Register</a></li>";
-                    echo "<li><a href='./login.html'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
+                    echo "<li><a href='./register.php'><span class='glyphicon glyphicon-user'></span> Register</a></li>";
+                    echo "<li><a href='./login.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
 
                 }
 
