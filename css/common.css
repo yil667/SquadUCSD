@@ -80,6 +80,10 @@ body {
     padding: 0;
 }
 
+.navbar-black .dropdown-toggle {
+    padding-top: 20px !important;
+}
+
 .navbar-black .dropdown-menu > li > a,
 .navbar-black .dropdown-menu > li > a {
     margin-top: 0;
