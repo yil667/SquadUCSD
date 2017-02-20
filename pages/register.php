@@ -37,7 +37,7 @@
                         </a>
                     </div>
 
-                    <form class="form-horizontal" action="../controller/RegisterHandler.php" role="form" method="POST">
+                    <form class="form-horizontal" action="../controller/registerFormAction.php" role="form" method="POST">
                         <label class="col-sm-4 control-label"></label> <!--Fix for login here link-->
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-3">

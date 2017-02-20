@@ -30,7 +30,7 @@ else{
 			var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
 			var userFirstName = <?php echo  json_encode($firstName); ?>;
 			var defaultContent = "<li><a href='./register.php'><span class='glyphicon glyphicon-user'></span> Register</a></li><li><a href='./login.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
-			var loggedInContent = "<li class='dropdown'><a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + userFirstName +  "<span class='caret'></span></a><ul class='dropdown-menu'><li><a href='#'>Edit Schedule</a></li><li><a href='#'>Edit Profile</a></li><li><a href='#'>View Profile</a></li><li><a href='../controller/LogoutHandler.php'><span class='glyphicon glyphicon-log-out'></span> Logout</a></li></ul></li>";
+			var loggedInContent = "<li class='dropdown'><a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + userFirstName +  "<span class='caret'></span></a><ul class='dropdown-menu'><li><a href='#'>Edit Schedule</a></li><li><a href='#'>Edit Profile</a></li><li><a href='#'>View Profile</a></li><li><a href='../controller/logoutAction.php'><span class='glyphicon glyphicon-log-out'></span> Logout</a></li></ul></li>";
 
 			if (isUserLoggedIn){
 				$("#rightNav").html(loggedInContent);
