@@ -41,7 +41,9 @@ function login($email, $password)
     // set the user's info into the associative array
     $row = mysqli_fetch_assoc($result);
     $_SESSION['fname'] = $row['fname'];
+    $_SESSION['lname'] = $row['lname'];
     $_SESSION['id'] = $row['id'];
+    $_SESSION['email'] = $row['email'];
 
     // redirect to the homepage
     header("Location: ../pages/index.php");
@@ -51,6 +53,18 @@ function login($email, $password)
 function getFirstName()
 {
     return $_SESSION['fname'];
+}
+
+// pre-condition: user is already logged in
+function getLastName()
+{
+    return $_SESSION['lname'];
+}
+
+// pre-condition: user is already logged in
+function getEmail()
+{
+    return $_SESSION['email'];
 }
 
 // pre-condition: user is already logged in

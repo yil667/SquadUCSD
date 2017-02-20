@@ -17,7 +17,7 @@ if ($retVal == -2) {
     // notify the front end that
     // the user email already exists in the database
     // with the flag in the url
-    header("Location: ../pages/register.php?register_fail");
+    header("Location: ../pages/register.php?fail");
 }
 
 // Create the new user in the database
@@ -26,5 +26,5 @@ else {
     addUser($email, $password, $first, $last);
 
     // redirect to the homepage
-    header("Location: ../pages/login.php?register_success");
+    header("Location: ../pages/login.php?verify");
 }

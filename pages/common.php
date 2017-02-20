@@ -1,22 +1,9 @@
 <?php
-session_start();
-$isLoggedIn = 0;
-if (isset($_SESSION['fname'])) {
-	$firstName = $_SESSION['fname'];
-	$isLoggedIn = 1;
-}
-else{
-	$firstName = "";
-	$isLoggedIn = 0;
-}
+include_once '../controller/startUserSession.php';
 ?>
 
 <!DOCTYPE html>
 <html>
-
-
-
-
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
