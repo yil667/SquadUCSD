@@ -2,7 +2,18 @@
 
 include_once 'dbController.php';
 
+function existingEmail($email)
+{
+    $sql = "SELECT * FROM student WHERE email='$email'";
+    $conn = connectToDB();
+    $result = mysqli_query($conn, $sql);
 
+    // user account exists in database
+    if ($row = mysqli_fetch_assoc($result))
+        return true;
+    else
+        return false;
+}
 
 // pre-condition: email does not already exist in the database,
 // and valid credentials
