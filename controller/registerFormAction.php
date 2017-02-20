@@ -8,12 +8,11 @@ $first = $_POST['first'];
 $last = $_POST['last'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-$password2 = $_POST['password2'];
 
-$retVal = validLogin($email, $password);
+$duplicateEmail = existingEmail($email);
 
 // see if account has already been created
-if ($retVal == -2) {
+if ($duplicateEmail) {
     // notify the front end that
     // the user email already exists in the database
     // with the flag in the url
