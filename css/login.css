@@ -2,9 +2,6 @@
     margin-top: 150px;
 }
 
-/* hello */
-/* hi owo*/
-
 .panel-custom > .panel-heading h3 {
     color: #f2f2f2;
 }
@@ -22,3 +19,6 @@
     margin-bottom: 60px;
 }
 
+#login-error, #register-error, .error {
+	color: red;
+}

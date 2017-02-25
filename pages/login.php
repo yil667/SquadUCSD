@@ -1,3 +1,8 @@
+<?php
+include_once '../controller/startUserSession.php';
+?>
+
+
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
@@ -10,15 +15,27 @@
     <meta name="author" content="Zifan Yang">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
+            var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
+            if (isUserLoggedIn){
+                document.location.href = './index.php';
+            }
+
+            if(window.location.href.indexOf("verify") > -1) {
+                $("#login-error").html("Please complete your email verification!");
+            }
+            if(window.location.href.indexOf("nonexistent_account") > -1) {
+                $("#login-error").html("The account you entered does not exsist!");
+            }
+            if(window.location.href.indexOf("wrong_password") > -1) {
+                $("#login-error").html("Invalid login info! Please make sure you entered the correct password.");
+            }
         });
     </script>
 </head>
@@ -26,9 +43,9 @@
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3>Login</h3></div>
+                <div class="panel-heading" id="login-header"><h3>Login<h4 id="login-error"><h4></h3></div>
                 <div class="panel-body">
 
                     <div class="col-sm-6 col-sm-offset-3" style="margin-bottom:10px;">
@@ -38,7 +55,7 @@
                         </a>
                     </div>
 
-                    <form action="../controller/LoginHandler.php" class="form-horizontal" role="form" method="POST">
+                    <form action="../controller/loginFormAction.php" class="form-horizontal" role="form" method="POST">
                         <label class="col-sm-4 control-label"></label> <!--Fix for register here -->
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-3">

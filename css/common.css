@@ -1,3 +1,5 @@
+@import "font.css";
+
 .panel, .panel > .panel-heading, button, input {
     border-radius: 0 !important;
     border: none !important;
@@ -19,6 +21,11 @@ html {
 	background-repeat: no-repeat;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     color: #262626;
     padding: 0;
@@ -30,38 +37,33 @@ body {
     background-attachment: fixed;
 }
 
+span {
+    font-size: 17px;
+}
+
 .navbar {
     background: #262626;
-    min-height: 70px;
     border-radius: 0 !important;
     border: none !important;
 }
 
-
-
-.navbar-brand img {
+.navbar-brand {
     height: auto; 
-    width: auto; 
-    max-width: 100px; 
-    max-height: 70px;
+    width: auto;
+    font-weight: 700;
+    font-size: 30px;
 }
 
 .navbar-left li a{
     color: #cccccc;
-    font-size: 30px;
-    line-height: 70px;
-    height: 70px;
+    font-size: 22px;
     margin-top: 0;
-    padding-top: 22px !important;
 }
 
 .navbar-right li a{
     color: #cccccc;
-    font-size: 30px;
-    line-height: 70px;
-    height: 70px;
+    font-size: 22px;
     margin-top: 0;
-    padding-top: 15px !important;
 }
 
 .navbar-black .navbar-nav > li > a:hover,
@@ -80,15 +82,20 @@ body {
     padding: 0;
 }
 
-.navbar-black .dropdown-toggle {
-    padding-top: 20px !important;
-}
-
 .navbar-black .dropdown-menu > li > a,
 .navbar-black .dropdown-menu > li > a {
     margin-top: 0;
-    padding-top: 20px;
-    background-color: #333333;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #262626;
+    color: #cccccc;
+}
+
+.navbar.in > li > a{
+    margin-top: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #262626;
     color: #cccccc;
 }
 
@@ -102,19 +109,7 @@ body {
     background-color: #cccccc;
 }
 
-@media screen and (max-width: 1440px) {
-    .panel {
-        width: 125%;
-        margin: 0 auto;
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .panel {
-        width: 75%;
-        margin: 0 auto;
-    }
-}
 
 .footer {
     position: absolute;

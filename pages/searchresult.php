@@ -16,33 +16,34 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#common').load('./common.php');
+        });
+    </script>
 </head>
 <body>
 
+    <div id="common"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4">
                 <div class="panel panel-custom">
-                    <div class="panel-heading"><h4>FirstName LastName</h4></div>
+                    <div class="panel-heading"><h4>John Smith</h4></div>
                     <div class="panel-body">
                         <div class="basicinfo">
                 
                       
-                       <label class="col-sm-4">Matched Classes: </label>
+                       <label class="col-sm-4">Matched Classes: CSE101, CSE 105, CSE110</label>
                        </div>
                         <br><br>
-                        <div class="buttons">
-                            <a href="#" class="btn btn-primary" role="button">&#9993 Message</a>
-                            <a href="./viewprofile.html" target="_blank" class="btn btn-info" role="button">View Profile</a>
-                            <a href="#" class="btn btn-success" role="button">Invite to Existing Group</a>
-                             <a href="#" class="btn btn-success" role="button">Invite to Form New Group</a>
-                             
-                                    <br>
+                        <div class="button-group" role="group">
+                            <button href="#" type="button" class="btn btn-primary" role="button">Message</button>
+                            <button href="./viewprofile.html" type="button" target="_blank" class="btn btn-info" role="button">View Profile</button>
+                            <button href="#" type="button" class="btn btn-success" role="button">Invite to Existing Group</button>
+                            <button href="#" type="button" class="btn btn-success" role="button">Invite to Form New Group</button>
+                            <br>
                         </div>
-                               
-                           
-                        </form>
                     </div>
                 </div>
             </div>
