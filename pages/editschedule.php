@@ -21,14 +21,12 @@ include_once '../controller/startUserSession.php';
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#common').load('./common.html');
+            $('#common').load('./common.php');
         });
     </script>
 </head>
 <body>
 <div id="common"></div>
 
-
-<div id="footer"></div>
 </body>
 </html>

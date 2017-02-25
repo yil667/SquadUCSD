@@ -28,35 +28,28 @@
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3>FullName's Profile</h3></div>
+                <div class="panel-heading"><h3>John's Profile</h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
 
                         <div class="form-group">
                             <label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label>
                             <div class="col-sm-9">
-                                <label name="ucsdemail" id="ucsdemail"></label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email" class="col-sm-3 col-form-label">Preferred Email</label>
-                            <div class="col-sm-9">
-                                <label name="email" id="email"></label>
+                                <label name="ucsdemail" id="ucsdemail">johnsmith@ucsd.edu</label>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
                             <div class="col-sm-9">
-                                <label name="phone" id="phone"></label>
+                                <label name="phone" id="phone">1-(012)-345-6789</label>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="major" class="col-sm-3 col-form-label">Major</label>
                             <div class="col-sm-9">
-                                 <label name="major" id="major"></label>
+                                 <label name="major" id="major">Computer Science</label>
                             </div>
                         </div>
 
@@ -73,6 +66,5 @@
         </div>
     </div>
 </div>
-<div id="footer"></div>
 </body>
 </html>

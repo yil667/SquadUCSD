@@ -45,15 +45,7 @@ include_once '../controller/startUserSession.php';
                         <div class="form-group">
                             <label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label>
                             <div class="col-sm-9">
-                                 <label name="ucsdemail" id="ucsdemail"></label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email" class="col-sm-3 col-form-label">Preferred Email</label>
-                            <div class="col-sm-9">
-                                <input type="email" class="form-control" name="email" id="email"
-                                       value="foo@example.com">
+                                 <label name="ucsdemail" id="ucsdemail">johnsmith@ucsd.edu</label>
                             </div>
                         </div>
 
