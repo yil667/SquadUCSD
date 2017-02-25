@@ -44,8 +44,6 @@ include_once '../controller/startUserSession.php';
                 </div>
 
                 <div class="panel-body">
-
-
                     <p class="col-sm-offset-1 col-sm-10">
 
                     </p>
