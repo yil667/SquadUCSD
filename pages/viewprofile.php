@@ -1,3 +1,34 @@
+<?php
+// if the user clicks on the view profile themselves
+// we need to adjust the url accordingly (append user id)
+include_once '../controller/startUserSession.php';
+
+$url = $_SERVER['REQUEST_URI'];
+
+// redirects the url to have suffix "user=id"
+if (strpos($url, "?") == "") {
+    $_SESSION['profileid'] = $_SESSION['id'];
+    $redirectUrl = "Location: ./viewprofile.php?userid=" . $_SESSION['profileid'];
+    header($redirectUrl);
+}
+
+// otherwise we load the id into the session variable and
+// call the action controller
+else {
+    // getting url info for the action controller
+    // this is the part after the "?"
+    $url = json_encode($_SERVER['QUERY_STRING']);
+
+    // this one somehow has a quotation mark at the end
+    $userid = substr($url, strpos($url, "=") + 1);
+    $userid = substr($userid, 0, strlen($userid) - 1);
+
+    $_SESSION['profileid'] = $userid;
+}
+
+include_once '../controller/viewProfileAction.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
@@ -19,6 +50,18 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
+
+            var major = <?php echo json_encode($user->getMajor()); ?>;
+            $('#major').html(major);
+
+            var about = <?php echo json_encode($user->getAbout()); ?>;
+            $('#about').html(about);
+
+            var phone = <?php echo json_encode($user->getPhone()); ?>;
+            $('#phone').html(phone);
+
+            var email = <?php echo json_encode($user->getEmail()); ?>;
+            $('#email').html(email);
         });
     </script>
 </head>
@@ -35,7 +78,7 @@
                         <div class="form-group">
                             <label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label>
                             <div class="col-sm-9">
-                                <label name="ucsdemail" id="ucsdemail">johnsmith@ucsd.edu</label>
+                                <label name="email" id="email"></label>
                             </div>
                         </div>
 
@@ -49,7 +92,7 @@
                         <div class="form-group">
                             <label for="major" class="col-sm-3 col-form-label">Major</label>
                             <div class="col-sm-9">
-                                 <label name="major" id="major">Computer Science</label>
+                                <label name="major" id="major"></label>
                             </div>
                         </div>
 
