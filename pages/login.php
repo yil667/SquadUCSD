@@ -27,7 +27,7 @@ include_once '../controller/startUserSession.php';
                 document.location.href = './index.php';
             }
 
-            if(window.location.href.indexOf("verify") > -1) {
+            if(window.location.href.indexOf("verify") > -1 || window.location.href.indexOf("not_verified") > -1) {
                 $("#login-error").html("Please complete your email verification!");
             }
             if(window.location.href.indexOf("nonexistent_account") > -1) {

@@ -19,9 +19,9 @@ function existingEmail($email)
 // and valid credentials
 // no redirection is done in this function
 // tentative parameter list (do we want to pass in the user info, or do we want to use $_POST[] ?)
-function addUser($email, $password, $first, $last)
+function addUser($email, $password, $first, $last, $hash)
 {
-    $sql = "INSERT INTO student (fname, lname, email, pwd) VALUES ('$first', '$last', '$email', '$password')";
+    $sql = "INSERT INTO student (fname, lname, email, pwd, hash) VALUES ('$first', '$last', '$email', '$password', '$hash')";
     $conn = connectToDB();
     mysqli_query($conn, $sql);
 }
