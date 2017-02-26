@@ -2,7 +2,7 @@
 <!-- start PHP code -->
 <?php
 	
-	include_once 'dbConroller.php';
+	include_once 'dbController.php';
 	$hash = $_GET['hash'];
 	$email = $_GET['email'];
 	$sql = "SELECT * FROM student WHERE email='$email' AND hash='$hash'";
