@@ -3,18 +3,27 @@
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
 
-$url = $_SERVER['REQUEST_URI'];
+$url =json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to have suffix "user=id"
-if (strpos($url, "?") == "") {
-    $_SESSION['profileid'] = $_SESSION['id'];
-    $redirectUrl = "Location: ./viewprofile.php?userid=" . $_SESSION['profileid'];
-    header($redirectUrl);
+if (strrpos($url, "?") == "") {
+    // redirects to home page if the user is not logged in
+    if(!isLoggedIn())
+        handleNotLoggedIn();
+    else
+    {
+        // otherwise modify the link and redirect to the correct userid page
+        $_SESSION['profileid'] = $_SESSION['id'];
+        $redirectUrl = "Location: ./viewprofile.php?userid=" . $_SESSION['profileid'];
+        header($redirectUrl);
+    }
 }
 
 // otherwise we load the id into the session variable and
 // call the action controller
 else {
+
+
     // getting url info for the action controller
     // this is the part after the "?"
     $url = json_encode($_SERVER['QUERY_STRING']);
@@ -51,6 +60,9 @@ include_once '../controller/viewProfileAction.php';
         $(document).ready(function () {
             $('#common').load('./common.php');
 
+            var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
+            $('#name').html(name);
+
             var major = <?php echo json_encode($user->getMajor()); ?>;
             $('#major').html(major);
 
@@ -71,7 +83,7 @@ include_once '../controller/viewProfileAction.php';
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3>John's Profile</h3></div>
+                <div class="panel-heading"><h3 id='name'></h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
 

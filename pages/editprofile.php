@@ -1,6 +1,8 @@
 <?php
 include_once '../controller/startUserSession.php';
 
+handleNotLoggedIn();
+
 $_SESSION['profileid'] = $_SESSION['id'];
 
 // load the user's data from action controller
@@ -31,13 +33,11 @@ include_once '../controller/viewProfileAction.php';
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-            var name = <?php echo json_encode($user->getFname()); ?>;
+            var name = <?php echo json_encode($user->getFname() . " " .$user->getLname()); ?>;
             $('#name').html(name);
-
 
             var email = <?php echo json_encode($user->getEmail()); ?>;
             $('#email').html(email);
-
 
             // input fields
             var major = <?php echo json_encode($user->getMajor()); ?>;
@@ -64,7 +64,7 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <label for="name" class="col-sm-3 col-form-label">Full Name</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="fullname" id="name">
+                                <label name="Full Name" id="name"></label>
                             </div>
                         </div>
 

@@ -5,10 +5,6 @@ include_once '../controller/startUserSession.php';
 <!DOCTYPE html>
 <html>
 
-
-
-
-
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/common.css"/>
@@ -23,7 +19,7 @@ include_once '../controller/startUserSession.php';
                 "<li class='dropdown'>" +
                 "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + userFirstName +  " <span class='caret'></span></a><ul class='dropdown-menu'>" +
                 "<li><a href='editschedule.php'>Edit Schedule</a></li>" +
-                "<li><a href='editprofile'>Edit Profile</a></li>" +
+                "<li><a href='editprofile.php'>Edit Profile</a></li>" +
                 "<li><a href='./viewprofile.php'>View Profile</a></li>" +
                 "<li><a href='../controller/logoutAction.php'>" +
                 "<span class='glyphicon glyphicon-log-out'>" + "</span> Logout</a></li></ul></li>";
