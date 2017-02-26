@@ -27,34 +27,36 @@ function generateMessage($senderRow, $receiverRow, $userMessage, $hash)
     $senderlname = $senderRow['lname'];
     $receiverfname = $receiverRow['fname'];
     $senderid = $senderRow['id'];
+    $senderEmail = $senderRow['email'];
     $receiverid = $receiverRow['id'];
 
     $senderProfile = getProfileUrl($senderRow['id']);
     $inviteUrl = generateInviteUrl($senderid, $receiverid, $hash);
 
     $message = "
-	Hi $receiverfname, 
+Hi $receiverfname, 
 	
-	$senderfname $senderlname invited you to form a study group. Here is the included message 
-	from $senderfname: 
+$senderfname $senderlname invited you to form a study group. Here is the included message from $senderfname: 
 	
-	------------------------
-	$userMessage
-	------------------------
+------------------------
+$userMessage
+------------------------
     
-    Here is the profile page for $senderfname: 
-    $senderProfile
- 
- 
-	If you would like to join $senderfname, please click on the link below: 
-	$inviteUrl ";
+Here is the profile page for $senderfname: 
+$senderProfile
+    
+Here is $senderfname's email:
+$senderEmail
+
+If you would like to join $senderfname, please click on the link below: 
+$inviteUrl ";
 
     return $message;
 }
 
 function generateSubject($senderRow, $receiverRow)
 {
-    return "'$senderRow[fname]' . ' ' . '$senderRow[lname]' invited you to a group! He's le prince from Nigeria watch out lol.";
+    return "$senderRow[fname] $senderRow[lname] invited you to a group!";
 }
 
 function addRequestToDB($conn, $userid, $receiverid, $hash)
