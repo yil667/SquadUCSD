@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2017 at 09:37 AM
+-- Generation Time: Feb 26, 2017 at 02:32 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -31,16 +31,21 @@ CREATE TABLE `student` (
   `fname` varchar(20) NOT NULL,
   `lname` varchar(20) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `pwd` varchar(20) NOT NULL
+  `pwd` varchar(20) NOT NULL,
+  `active` int(1) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `major` varchar(50) NOT NULL,
+  `about` varchar(500) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`id`, `fname`, `lname`, `email`, `pwd`) VALUES
-(1, 'relax', 'relax2', 'relax@relax.com', '123'),
-(2, 'relax', 'relax2', 'relax@relax.com', '123');
+INSERT INTO `student` (`id`, `fname`, `lname`, `email`, `pwd`, `active`, `phone`, `major`, `about`) VALUES
+(1, 'relax', 'relax2', 'relax@relax.com', '123', 0, '', '', ''),
+(2, 'relax', 'relax2', 'relax@relax.com', '123', 0, '', '', ''),
+(3, 'Zifan', 'Yang', 'ziy086@ucsd.edu', 'qweqwe', 1, '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -60,7 +65,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
