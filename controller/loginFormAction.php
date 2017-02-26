@@ -17,7 +17,9 @@ if ($retVal == -2) {
 else if ($retVal == -1) {
     header("Location: ../pages/login.php?nonexistent_account");
 }
-
-else {
+else if($retVal == -3) {
+	header("Location: ../pages/login.php?not_verified");
+}
+else if($retVal == 0) {
     login($email, $password);
 }

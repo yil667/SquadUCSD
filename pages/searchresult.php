@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4">
                 <div class="panel panel-custom">
-                    <div class="panel-heading"><h4>John Smith</h4></div>
+                    <div class="panel-heading"><h4>Search Results</h4></div>
                     <div class="panel-body">
                         <div class="basicinfo">
                 

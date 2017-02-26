@@ -10,13 +10,21 @@ include_once 'dbController.php';
 function validLogin($email, $password)
 {
     $sql = "SELECT * FROM student WHERE email='$email' AND pwd='$password'";
+	
     $conn = connectToDB();
     $result = mysqli_query($conn, $sql);
-
+	
     // if the login info was valid
-    if ($row = mysqli_fetch_assoc($result))
-        return 0;
-
+    if ($row = mysqli_fetch_assoc($result)){
+		
+		$sql = "SELECT * FROM student WHERE email='$email' AND pwd='$password' AND active=1";
+		$result = mysqli_query($conn, $sql);
+		if ($row = mysqli_fetch_assoc($result))
+            return 0;
+        else 
+            return -3;
+    }
+        
     // otherwise
     else
     {
