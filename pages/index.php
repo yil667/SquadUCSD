@@ -44,8 +44,8 @@ include_once '../controller/startUserSession.php';
                 </div>
 
                 <div class="panel-body">
-                    <p class="col-sm-12">
-                        This web app allows students to form study groups for the classes they are enrolled in. Groups are formed based on schedule compatibility and individual personalities and preferences. Groups can set a maximum size to allow however many people in. This can be changed any time.
+                    <p class="col-sm-offset-1 col-sm-10">
+
                     </p>
                 </div>
             </div>

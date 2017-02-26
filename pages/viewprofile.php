@@ -40,6 +40,7 @@ include_once '../controller/viewProfileAction.php';
 
 <!DOCTYPE html>
 <html>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
 <link rel="stylesheet" type="text/css" href="../css/profile.css"/>
 <head>
@@ -56,11 +57,9 @@ include_once '../controller/viewProfileAction.php';
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-
 
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
@@ -76,7 +75,6 @@ include_once '../controller/viewProfileAction.php';
 
             var email = <?php echo json_encode($user->getEmail()); ?>;
             $('#email').html(email);
-
         });
     </script>
 </head>
@@ -84,7 +82,7 @@ include_once '../controller/viewProfileAction.php';
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
                 <div class="panel-heading"><h3 id='name'></h3></div>
                 <div class="panel-body">
@@ -100,7 +98,7 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
                             <div class="col-sm-9">
-                                <label name="phone" id="phone"></label>
+                                <label name="phone" id="phone">1-(012)-345-6789</label>
                             </div>
                         </div>
 
@@ -111,6 +109,7 @@ include_once '../controller/viewProfileAction.php';
                             </div>
                         </div>
 
+
                         <div class="form-group">
                             <label for="about" class="col-sm-3 col-form-label">About Me</label>
                             <div class="col-sm-9">
@@ -118,82 +117,11 @@ include_once '../controller/viewProfileAction.php';
                             </div>
                         </div>
 
-                        <div class="button">
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#messageModal">Message</button>
-                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#inviteModal">Invite to Existing Group</button>
-                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
-                            </div>
-                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="messageLabel">Message $User$</h3>
-            </div>
-            <div class="modal-body">
-                <label name="message" id="message">Message</label>
-                <textarea class="form-control" name=messagebox id="messagebox" rows="3"></textarea>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button class="btn btn-primary">Send</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="messageLabel">Invite $User$ to Existing Group</h3>
-            </div>
-            <div class="modal-body">
-                <label name="message" id="message" for="groupselect">Select Group</label>
-                <br>
-                <select id="groupselect" name="groupselect">
-                    <option>1</option>
-                </select>
-                <br>
-                <label name="message" id="message" for="messageboxinvite">Message</label>
-                <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button class="btn btn-primary">Send Invite</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="messageLabel">Invite $User$ to Form Group</h3>
-            </div>
-            <div class="modal-body">
-                <label name="message" id="message" for="messageboxform">Message</label>
-                <textarea class="form-control" name="messageboxform" id="messageboxform" rows="3"></textarea>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button class="btn btn-primary">Send Invite</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 </body>
 </html>
