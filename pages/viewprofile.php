@@ -71,7 +71,7 @@ include_once '../controller/viewProfileAction.php';
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3>FullName's Profile</h3></div>
+                <div class="panel-heading"><h3>John's Profile</h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
 
@@ -85,7 +85,7 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
                             <div class="col-sm-9">
-                                <label name="phone" id="phone"></label>
+                                <label name="phone" id="phone">1-(012)-345-6789</label>
                             </div>
                         </div>
 
@@ -109,6 +109,5 @@ include_once '../controller/viewProfileAction.php';
         </div>
     </div>
 </div>
-<div id="footer"></div>
 </body>
 </html>
