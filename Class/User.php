@@ -9,6 +9,8 @@
 class User
 {
     private $userid;
+    private $fname;
+    private $lname;
     private $email;
     private $major;
     private $schedule;
@@ -18,6 +20,7 @@ class User
     private $picture; // profile picture
     private $classesTaking;
     private $tags;
+
 
     /**
      * User constructor.
@@ -30,10 +33,15 @@ class User
      * @param $groups
      * @param $picture
      * @param $classesTaking
+     * @param $tags
+     * @param $fname
+     * @param $lname
      */
-    public function __construct($userid, $email, $major, $schedule, $phone, $about, $groups, $picture, $classesTaking)
+    public function __construct($userid, $fname, $lname, $email, $major, $schedule, $phone, $about, $groups, $picture, $classesTaking, $tags)
     {
         $this->userid = $userid;
+        $this->fname = $fname;
+        $this->lname = $lname;
         $this->email = $email;
         $this->major = $major;
         $this->schedule = $schedule;
@@ -42,6 +50,55 @@ class User
         $this->groups = $groups;
         $this->picture = $picture;
         $this->classesTaking = $classesTaking;
+        $this->tags = $tags;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param mixed $tags
+     */
+    public function setTags($tags)
+    {
+        $this->tags = $tags;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFname()
+    {
+        return $this->fname;
+    }
+
+    /**
+     * @param mixed $fname
+     */
+    public function setFname($fname)
+    {
+        $this->fname = $fname;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLname()
+    {
+        return $this->lname;
+    }
+
+    /**
+     * @param mixed $lname
+     */
+    public function setLname($lname)
+    {
+        $this->lname = $lname;
     }
 
     /**

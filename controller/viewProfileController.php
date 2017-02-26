@@ -12,7 +12,8 @@ function getUserObject($id)
 
     $row = mysqli_fetch_assoc($result);
 
-    $user = new User($id, $row['email'], $row['major'], "", $row['phone'], $row['about'], "", "", "");
+    $user = new User($id, $row['fname'], $row['lname'], $row['email'], $row['major'], "", $row['phone'],
+        $row['about'], "", "", "", "");
 
     return $user;
 }
