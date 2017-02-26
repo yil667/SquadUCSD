@@ -13,12 +13,12 @@ function getRow($conn, $id)
 // generates a user's url for the profile's page
 function getProfileUrl($id)
 {
-    return "http://squaducsd.com/pages/viewprofile.php?userid='$id'";
+    return "http://squaducsd.com/pages/viewprofile.php?userid=$id";
 }
 
 function generateInviteUrl($senderid, $receiverid, $hash)
 {
-    return "http://www.squaducsd.com/controller/createGroupController.php?id1='$senderid'&id2='$receiverid'&hash='$hash'";
+    return "http://www.squaducsd.com/controller/createGroupController.php?id1=$senderid&id2=$receiverid&hash=$hash";
 }
 
 function generateMessage($senderRow, $receiverRow, $userMessage, $hash)
@@ -33,21 +33,21 @@ function generateMessage($senderRow, $receiverRow, $userMessage, $hash)
     $inviteUrl = generateInviteUrl($senderid, $receiverid, $hash);
 
     $message = "
-	Hi '$receiverfname', \n
+	Hi $receiverfname, 
 	
-	'$senderfname' . ' ' . '$senderlname' invited you to form a study group. Here is the included message 
-	from '$senderfname': \n\n
+	$senderfname $senderlname invited you to form a study group. Here is the included message 
+	from $senderfname: 
 	
-	------------------------\n
-	'$userMessage' \n
-	------------------------\n\n
+	------------------------
+	$userMessage
+	------------------------
     
-    Here is the profile page for '$senderfname': \n
-    '$senderProfile' \n\n
+    Here is the profile page for $senderfname: 
+    $senderProfile
  
  
-	If you would like to join '$senderfname', please click on the link below: \n
-	'$inviteUrl' \n";
+	If you would like to join $senderfname, please click on the link below: 
+	$inviteUrl ";
 
     return $message;
 }
