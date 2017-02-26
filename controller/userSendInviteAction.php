@@ -19,3 +19,5 @@ addRequestToDB($conn, $userid, $receiverid, $hash);
 
 // send the email request to the receiver
 sendInvite($conn, $userid, $receiverid, $message, $hash);
+
+echo "<h1> REFUCKINGLAX </h1>";
