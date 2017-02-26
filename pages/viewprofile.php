@@ -97,7 +97,7 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
                             <div class="col-sm-9">
-                                <label name="phone" id="phone">1-(012)-345-6789</label>
+                                <label name="phone" id="phone"></label>
                             </div>
                         </div>
 

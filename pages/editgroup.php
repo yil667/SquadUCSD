@@ -1,4 +1,3 @@
-
 <!-- remove '/' in </?php @BACKEND -->
 </?php
 include_once '../controller/startUserSession.php';
