@@ -1,4 +1,4 @@
-</?php
+<?php
 // if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
@@ -57,30 +57,28 @@ include_once '../controller/viewProfileAction.php';
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!--
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
 
 
-            var name = </?php echo json_encode($user->getFname() . "'s Profile"); ?>;
+            var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
 
-            var major = </?php echo json_encode($user->getMajor()); ?>;
+            var major = <?php echo json_encode($user->getMajor()); ?>;
             $('#major').html(major);
 
-            var about = </?php echo json_encode($user->getAbout()); ?>;
+            var about = <?php echo json_encode($user->getAbout()); ?>;
             $('#about').html(about);
 
-            var phone = </?php echo json_encode($user->getPhone()); ?>;
+            var phone = <?php echo json_encode($user->getPhone()); ?>;
             $('#phone').html(phone);
 
-            var email = </?php echo json_encode($user->getEmail()); ?>;
+            var email = <?php echo json_encode($user->getEmail()); ?>;
             $('#email').html(email);
 
         });
     </script>
-    -->
 </head>
 <body>
 <div id="common"></div>
