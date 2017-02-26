@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2017 at 09:37 AM
+-- Generation Time: Feb 26, 2017 at 04:27 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -31,16 +31,22 @@ CREATE TABLE `student` (
   `fname` varchar(20) NOT NULL,
   `lname` varchar(20) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `pwd` varchar(20) NOT NULL
+  `pwd` varchar(20) NOT NULL,
+  `hash` varchar(32) NOT NULL,
+  `active` int(1) NOT NULL DEFAULT '0',
+  `phone` varchar(10) DEFAULT '',
+  `major` varchar(40) DEFAULT '',
+  `about` varchar(400) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`id`, `fname`, `lname`, `email`, `pwd`) VALUES
-(1, 'relax', 'relax2', 'relax@relax.com', '123'),
-(2, 'relax', 'relax2', 'relax@relax.com', '123');
+INSERT INTO `student` (`id`, `fname`, `lname`, `email`, `pwd`, `hash`, `active`, `phone`, `major`, `about`) VALUES
+(1, 'relax', 'relax2', 'relax@relax.com', '123', '', 0, '', '', ''),
+(2, 'relax', 'relax2', 'relax@relax.com', '123', '', 0, '', '', ''),
+(6, 'Zifan', 'Yang', 'ziy086@ucsd.edu', 'qweqwe', '7f6ffaa6bb0b408017b62254211691b5', 1, 'qwe', 'qweqwe', 'qweqweqwe');
 
 --
 -- Indexes for dumped tables
@@ -60,7 +66,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

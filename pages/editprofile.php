@@ -34,17 +34,21 @@ include_once '../controller/viewProfileAction.php';
             var name = <?php echo json_encode($user->getFname()); ?>;
             $('#name').html(name);
 
-            var major = <?php echo json_encode($user->getMajor()); ?>;
-            $('#major').html(major);
-
-            var about = <?php echo json_encode($user->getAbout()); ?>;
-            $('#about').html(about);
-
-            var phone = <?php echo json_encode($user->getPhone()); ?>;
-            $('#phone').html(phone);
 
             var email = <?php echo json_encode($user->getEmail()); ?>;
             $('#email').html(email);
+
+
+            // input fields
+            var major = <?php echo json_encode($user->getMajor()); ?>;
+            document.getElementById('major').value = major;
+
+            var about = <?php echo json_encode($user->getAbout()); ?>;
+            document.getElementById('about').value = about;
+
+            var phone = <?php echo json_encode($user->getPhone()); ?>;
+            document.getElementById('phone').value = phone;
+
         });
     </script>
 </head>
@@ -67,11 +71,7 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label>
                             <div class="col-sm-9">
-<<<<<<< HEAD
-                                 <label name="ucsdemail" id="ucsdemail">johnsmith@ucsd.edu</label>
-=======
                                  <label name="email" id="email"></label>
->>>>>>> b78e6542f0891545d914860296b405e6fce44bbd
                             </div>
                         </div>
 
