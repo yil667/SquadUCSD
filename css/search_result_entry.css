@@ -2,7 +2,9 @@
     margin-top: 150px;
 }
 
-
+.button{
+    text-align: center;
+}
 
 .panel-custom > .panel-heading h4 {
     color: #f2f2f2;

@@ -34,15 +34,17 @@
                         <div class="basicinfo">
                 
                       
-                       <label class="col-sm-4">Matched Classes: CSE101, CSE 105, CSE110</label>
+                       <label class="col-sm-12">Matched Classes: CSE101, CSE 105, CSE110</label>
+                            <br>
+                            <br>
                        </div>
-                        <br><br>
-                        <div class="button-group" role="group">
+                        <div class="button">
+                        <div class="btn-group" role="group">
                             <button href="#" type="button" class="btn btn-primary" role="button">Message</button>
                             <button href="./viewprofile.html" type="button" target="_blank" class="btn btn-info" role="button">View Profile</button>
                             <button href="#" type="button" class="btn btn-success" role="button">Invite to Existing Group</button>
                             <button href="#" type="button" class="btn btn-success" role="button">Invite to Form New Group</button>
-                            <br>
+                        </div>
                         </div>
                     </div>
                 </div>
