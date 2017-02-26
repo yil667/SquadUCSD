@@ -162,7 +162,7 @@ include_once '../controller/viewProfileAction.php';
                 <label name="message" id="message" for="groupselect">Select Group</label>
                 <br>
                 <select id="groupselect" name="groupselect">
-                    <option>1</option>
+                    <option></option>
                 </select>
                 <br>
                 <label name="message" id="message" for="messageboxinvite">Message</label>
