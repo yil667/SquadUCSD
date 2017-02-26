@@ -1,4 +1,4 @@
-<?php
+</?php
 // if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
@@ -56,26 +56,31 @@ include_once '../controller/viewProfileAction.php';
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-            var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
+
+            var name = </?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
 
-            var major = <?php echo json_encode($user->getMajor()); ?>;
+            var major = </?php echo json_encode($user->getMajor()); ?>;
             $('#major').html(major);
 
-            var about = <?php echo json_encode($user->getAbout()); ?>;
+            var about = </?php echo json_encode($user->getAbout()); ?>;
             $('#about').html(about);
 
-            var phone = <?php echo json_encode($user->getPhone()); ?>;
+            var phone = </?php echo json_encode($user->getPhone()); ?>;
             $('#phone').html(phone);
 
-            var email = <?php echo json_encode($user->getEmail()); ?>;
+            var email = </?php echo json_encode($user->getEmail()); ?>;
             $('#email').html(email);
+
         });
     </script>
+    -->
 </head>
 <body>
 <div id="common"></div>
@@ -115,11 +120,82 @@ include_once '../controller/viewProfileAction.php';
                             </div>
                         </div>
 
+                        <div class="button">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#messageModal">Message</button>
+                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#inviteModal">Invite to Existing Group</button>
+                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="messageLabel">Message $User$</h3>
+            </div>
+            <div class="modal-body">
+                <label name="message" id="message">Message</label>
+                <textarea class="form-control" name=messagebox id="messagebox" rows="3"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-primary">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="messageLabel">Invite $User$ to Existing Group</h3>
+            </div>
+            <div class="modal-body">
+                <label name="message" id="message" for="groupselect">Select Group</label>
+                <br>
+                <select id="groupselect" name="groupselect">
+                    <option>1</option>
+                </select>
+                <br>
+                <label name="message" id="message" for="messageboxinvite">Message</label>
+                <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-primary">Send Invite</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="messageLabel">Invite $User$ to Form Group</h3>
+            </div>
+            <div class="modal-body">
+                <label name="message" id="message" for="messageboxform">Message</label>
+                <textarea class="form-control" name="messageboxform" id="messageboxform" rows="3"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-primary">Send Invite</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
