@@ -1,3 +1,5 @@
+
+
 <?php
 include_once '../controller/startUserSession.php';
 
@@ -107,6 +109,5 @@ include_once '../controller/viewProfileAction.php';
         </div>
     </div>
 </div>
-<div id="footer"></div>
 </body>
 </html>
