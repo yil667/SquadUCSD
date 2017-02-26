@@ -75,7 +75,7 @@ include_once '../controller/startUserSession.php';
                             <div class="text-center" style="margin-top:10px;">
                                 <button type="submit" class="btn btn-primary">Login</button>
                                 <br>
-                                <a class="btn btn-link" href="#">Forgot password?</a>
+                                <a class="btn btn-link" href="forgotpassword.php">Forgot password?</a>
                             </div>
                         </div>
                     </form>

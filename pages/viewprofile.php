@@ -40,6 +40,7 @@ include_once '../controller/viewProfileAction.php';
 
 <!DOCTYPE html>
 <html>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
 <link rel="stylesheet" type="text/css" href="../css/profile.css"/>
 <head>
@@ -56,11 +57,9 @@ include_once '../controller/viewProfileAction.php';
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-
 
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
@@ -76,7 +75,6 @@ include_once '../controller/viewProfileAction.php';
 
             var email = <?php echo json_encode($user->getEmail()); ?>;
             $('#email').html(email);
-
         });
     </script>
 </head>
@@ -84,7 +82,7 @@ include_once '../controller/viewProfileAction.php';
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
                 <div class="panel-heading"><h3 id='name'></h3></div>
                 <div class="panel-body">
@@ -111,6 +109,7 @@ include_once '../controller/viewProfileAction.php';
                             </div>
                         </div>
 
+
                         <div class="form-group">
                             <label for="about" class="col-sm-3 col-form-label">About Me</label>
                             <div class="col-sm-9">
@@ -125,6 +124,7 @@ include_once '../controller/viewProfileAction.php';
                                 <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -194,6 +194,5 @@ include_once '../controller/viewProfileAction.php';
         </div>
     </div>
 </div>
-
 </body>
 </html>
