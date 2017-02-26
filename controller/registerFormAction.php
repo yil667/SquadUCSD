@@ -41,7 +41,7 @@ else {
  
 	'; // Our message above including the link
                      
-	$headers = 'From:squaducsd.com' . "\r\n"; // Set from headers
+	$headers = 'From: Admin' . "\r\n"; // Set from headers
 	mail($_POST['email'], $subject, $message, $headers);
 	
 	
