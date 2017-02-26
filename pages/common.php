@@ -19,7 +19,14 @@ include_once '../controller/startUserSession.php';
 			var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
 			var userFirstName = <?php echo json_encode($firstName); ?>;
 			var defaultContent = "<li><a href='./register.php'><span class='glyphicon glyphicon-user'></span> Register</a></li><li><a href='./login.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
-			var loggedInContent = "<li class='dropdown'><a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + userFirstName +  " <span class='caret'></span></a><ul class='dropdown-menu'><li><a href='editschedule.php'>Edit Schedule</a></li><li><a href='editprofile'>Edit Profile</a></li><li><a href='./viewprofile.php'>View Profile</a></li><li><a href='../controller/logoutAction.php'><span class='glyphicon glyphicon-log-out'></span> Logout</a></li></ul></li>";
+			var loggedInContent =
+                "<li class='dropdown'>" +
+                "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + userFirstName +  " <span class='caret'></span></a><ul class='dropdown-menu'>" +
+                "<li><a href='editschedule.php'>Edit Schedule</a></li>" +
+                "<li><a href='editprofile'>Edit Profile</a></li>" +
+                "<li><a href='./viewprofile.php'>View Profile</a></li>" +
+                "<li><a href='../controller/logoutAction.php'>" +
+                "<span class='glyphicon glyphicon-log-out'>" + "</span> Logout</a></li></ul></li>";
 
 			if (isUserLoggedIn){
 				$("#rightNav").html(loggedInContent);

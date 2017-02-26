@@ -50,14 +50,6 @@ include_once '../controller/startUserSession.php';
                         </div>
 
                         <div class="form-group">
-                            <label for="email" class="col-sm-3 col-form-label">Preferred Email</label>
-                            <div class="col-sm-9">
-                                <input type="email" class="form-control" name="email" id="email"
-                                       value="foo@example.com">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
                             <label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
                             <div class="col-sm-9">
                                 <input type="tel" class="form-control" name="phone" id="phone" value="1-(123)-456-7890">
