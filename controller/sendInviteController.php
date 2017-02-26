@@ -18,7 +18,7 @@ function getProfileUrl($id)
 
 function generateInviteUrl($senderid, $receiverid, $hash)
 {
-    return "http://www.squaducsd.com/controller/createGroupController.php?id1=$senderid&id2=$receiverid&hash=$hash";
+    return "http://www.squaducsd.com/controller/createGroupAction.php?id1=$senderid&id2=$receiverid&hash=$hash";
 }
 
 function generateMessage($senderRow, $receiverRow, $userMessage, $hash)
@@ -72,7 +72,9 @@ function sendInvite($conn, $userid, $receiverid, $userMessage, $hash)
     $receiverRow = getRow($conn, $receiverid);
 
     $message = generateMessage($senderRow, $receiverRow, $userMessage, $hash);
-    $headers = 'From: Admin' . "\r\n"; // Set from headers
+    $headers = 'From: Admin' . "\r\n"; // Set from headers (perhaps change this in the future?)
     $subject = generateSubject($senderRow, $receiverRow); // Give the email a subject
+
+    // send the email
     mail($receiverRow['email'], $subject, $message, $headers);
 }
