@@ -1,5 +1,8 @@
 <?php
 
+include_once "dbController.php";
+include_once "sendInviteController.php";
+
 session_start();
 
 // In this action controller, we assume the scenario to be one user intends to invite another user to form a group.
