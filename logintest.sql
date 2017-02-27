@@ -36,7 +36,8 @@ CREATE TABLE `student` (
   `active` int(1) NOT NULL DEFAULT '0',
   `phone` varchar(10) DEFAULT '',
   `major` varchar(40) DEFAULT '',
-  `about` varchar(400) NOT NULL DEFAULT ''
+  `about` varchar(400) NOT NULL DEFAULT '',
+  `groups` varchar(40) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
