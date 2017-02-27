@@ -1,4 +1,4 @@
-<?php
+</?php
 // if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
@@ -63,20 +63,6 @@ include_once '../controller/viewProfileAction.php';
 
         });
 
-        var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
-        $('#name').html(name);
-
-        var major = <?php echo json_encode($user->getMajor()); ?>;
-        $('#major').html(major);
-
-        var about = <?php echo json_encode($user->getAbout()); ?>;
-        $('#about').html(about);
-
-        var phone = <?php echo json_encode($user->getPhone()); ?>;
-        $('#phone').html(phone);
-
-        var email = <?php echo json_encode($user->getEmail()); ?>;
-        $('#email').html(email);
     </script>
 </head>
 <body>
@@ -91,9 +77,9 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <div class="col-sm-12">
                                 <div class="list-group">
-                                    <a href="#" class="list-group-item">First item</a>
-                                    <a href="#" class="list-group-item">Second item</a>
-                                    <a href="#" class="list-group-item">Third item</a>
+                                    <a href="#" class="list-group-item">CSE100</a>
+                                    <a href="#" class="list-group-item">CSE110</a>
+                                    <a href="#" class="list-group-item">ECON100A</a>
                                 </div>
                             </div>
                         </div>
