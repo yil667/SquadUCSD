@@ -1,11 +1,10 @@
-
-<!-- start PHP code -->
 <?php
+  include_once 'dbController.php';
 
 	$hash = $_GET['hash'];
 	$email = $_GET['email'];
 	$sql = "SELECT * FROM student WHERE email='$email' AND hash='$hash'";
-	$conn = mysqli_connect("localhost", "root", "", "logintest");
+	$conn = connectToDB();
 	$result = mysqli_query($conn, $sql);
 
 	// if the login info was valid
@@ -20,4 +19,3 @@
 ?>
 <!-- stop PHP Code -->
 
- 
