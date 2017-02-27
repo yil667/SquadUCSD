@@ -1,6 +1,6 @@
 
 <!-- remove '/' in </?php @BACKEND -->
-</?php
+<?php
 // if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
@@ -10,7 +10,7 @@ $url = $_SERVER['REQUEST_URI'];
 // redirects the url to have suffix "user=id"
 if (strpos($url, "?") == "") {
     $_SESSION['profileid'] = $_SESSION['id'];
-    $redirectUrl = "Location: ./viewprofile.php?userid=" . $_SESSION['profileid'];
+    $redirectUrl = "Location: ./viewgroup.php?userid=" . $_SESSION['profileid'];
     header($redirectUrl);
 }
 
@@ -28,7 +28,7 @@ else {
     $_SESSION['profileid'] = $userid;
 }
 
-include_once '../controller/viewProfileAction.php';
+include_once '../controller/viewGroupAction.php';
 ?>
 
 <!DOCTYPE html>
@@ -50,26 +50,24 @@ include_once '../controller/viewProfileAction.php';
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- @BACKEND remove pls
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
 
             //REMOVE '/' when editing @BACKEND
-            var major = </?php echo json_encode($user->getMajor()); ?>;
+            var major = <?php echo json_encode($user->getMajor()); ?>;
             $('#major').html(major);
 
-            var about = </?php echo json_encode($user->getAbout()); ?>;
+            var about = <?php echo json_encode($user->getAbout()); ?>;
             $('#about').html(about);
 
-            var phone = </?php echo json_encode($user->getPhone()); ?>;
+            var phone = <?php echo json_encode($user->getPhone()); ?>;
             $('#phone').html(phone);
 
-            var email = </?php echo json_encode($user->getEmail()); ?>;
+            var email = <?php echo json_encode($user->getEmail()); ?>;
             $('#email').html(email);
         });
     </script>
-    -->
 </head>
 <body>
 <div id="common"></div>
@@ -105,11 +103,56 @@ include_once '../controller/viewProfileAction.php';
                                 <label type="number" name="size" id="size"></label>
                             </div>
                         </div>
+
+                        <div class="button">
+                            <div class="btn-group" role="group">
+                                <!-- use js to choose Leave Group / Request Invite -->
+                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#leaveModal">Leave Group</button>
+                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#leaveModal">Request to Join Group</button>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" id="leaveModal" tabindex="-1" role="dialog" aria-labelledby="leaveLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="leaveLabel">Leave Group?</h3>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="requestLabel">Request Invite to Group</h3>
+            </div>
+            <div class="modal-body">
+                <label name="message" id="message" for="messageboxreq">Message</label>
+                <textarea class="form-control" name="messageboxreq" id="messageboxreq" rows="3"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-primary">Send Request</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
