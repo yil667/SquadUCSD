@@ -32,8 +32,8 @@
                     <div class="panel-heading"><h4>Search Results</h4></div>
                     <div class="panel-body">
                         <div class="basicinfo">
-                
-                      
+
+
                        <label class="col-sm-12">Matched Classes: CSE101, CSE 105, CSE110</label>
                             <br>
                             <br>
@@ -51,6 +51,7 @@
         </div>
     </div>
 
+
     <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -59,8 +60,12 @@
                     <h3 id="messageLabel">Message $User$</h3>
                 </div>
                 <div class="modal-body">
-                    <label name="message" id="message">Message</label>
-                    <textarea class="form-control" name=messagebox id="messagebox" rows="3"></textarea>
+                    <form>
+                        <div class="form-group">
+                            <label name="message" id="message">Message</label>
+                            <textarea class="form-control" name=messagebox id="messagebox" rows="3"></textarea>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
@@ -78,14 +83,19 @@
                     <h3 id="messageLabel">Invite $User$ to Existing Group</h3>
                 </div>
                 <div class="modal-body">
-                    <label name="message" id="message" for="groupselect">Select Group</label>
-                    <br>
-                    <select id="groupselect" name="groupselect">
-                        <option></option>
-                    </select>
-                    <br>
-                    <label name="message" id="message" for="messageboxinvite">Message</label>
-                    <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
+
+                    <form>
+                        <div class="form-group">
+                            <label name="message" id="message" for="groupselect">Select Group</label>
+                            <select id="groupselect" name="groupselect">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label name="message" id="message" for="messageboxinvite">Message</label>
+                            <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
