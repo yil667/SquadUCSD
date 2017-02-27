@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `groupProfile` (
   `id` int(11) NOT NULL,
   `current_size` int(11) NOT NULL,
-  `class_id` int(11)) NOT NULL DEFAULT '-1',
+  `class_id` int(11) NOT NULL DEFAULT '-1',
   `users` varchar(100) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
