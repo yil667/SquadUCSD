@@ -32,12 +32,8 @@ class User
      * @param $phone
      * @param $major
      * @param $about
-     * @param $groups
-     * @param $classes
-     * @param $tags
-     * @param $picture
      */
-    public function __construct($userid, $fname, $lname, $email, $phone, $major, $about, $groups, $classes, $tags, $picture)
+    public function __construct($userid, $fname, $lname, $email, $phone, $major, $about)
     {
         $this->userid = $userid;
         $this->fname = $fname;
@@ -46,11 +42,8 @@ class User
         $this->phone = $phone;
         $this->major = $major;
         $this->about = $about;
-        $this->groups = $groups;
-        $this->classes = $classes;
-        $this->tags = $tags;
-        $this->picture = $picture;
     }
+
 
     /**
      * @return mixed
@@ -227,7 +220,5 @@ class User
     {
         $this->picture = $picture;
     } // profile picture
-
-
 
 }
