@@ -108,7 +108,7 @@ include_once '../controller/viewGroupAction.php';
                             <div class="btn-group" role="group">
                                 <!-- use js to choose Leave Group / Request Invite -->
                                 <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#leaveModal">Leave Group</button>
-                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#leaveModal">Request to Join Group</button>
+                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#requestModal">Request to Join Group</button>
                             </div>
                         </div>
 
@@ -143,8 +143,12 @@ include_once '../controller/viewGroupAction.php';
                 <h3 id="requestLabel">Request Invite to Group</h3>
             </div>
             <div class="modal-body">
-                <label name="message" id="message" for="messageboxreq">Message</label>
-                <textarea class="form-control" name="messageboxreq" id="messageboxreq" rows="3"></textarea>
+                <form>
+                    <div class="form-group">
+                        <label name="message" id="message" for="messageboxreq">Message</label>
+                        <textarea class="form-control" name="messageboxreq" id="messageboxreq" rows="3"></textarea>
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
