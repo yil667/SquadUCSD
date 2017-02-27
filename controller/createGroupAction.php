@@ -19,6 +19,7 @@ if ($row = mysqli_fetch_assoc($result)) {
     deleteRowInInviteTable($id1, $id2, $hash, $conn);
 
     // create a new group and put these 2 people in that group
+    createGroup($id1, $id2, $conn);
 
     // update the "group" field for both individuals in the students table
 }
