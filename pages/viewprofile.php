@@ -1,4 +1,4 @@
-<?php
+</?php
 // if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
@@ -140,8 +140,12 @@ include_once '../controller/viewProfileAction.php';
                 <h3 id="messageLabel">Message $User$</h3>
             </div>
             <div class="modal-body">
-                <label name="message" id="message">Message</label>
-                <textarea class="form-control" name=messagebox id="messagebox" rows="3"></textarea>
+                <form>
+                    <div class="form-group">
+                        <label name="message" id="message">Message</label>
+                        <textarea class="form-control" name=messagebox id="messagebox" rows="3"></textarea>
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
@@ -159,14 +163,19 @@ include_once '../controller/viewProfileAction.php';
                 <h3 id="messageLabel">Invite $User$ to Existing Group</h3>
             </div>
             <div class="modal-body">
-                <label name="message" id="message" for="groupselect">Select Group</label>
-                <br>
-                <select id="groupselect" name="groupselect">
-                    <option></option>
-                </select>
-                <br>
-                <label name="message" id="message" for="messageboxinvite">Message</label>
-                <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
+
+                <form>
+                    <div class="form-group">
+                        <label name="message" id="message" for="groupselect">Select Group</label>
+                        <select id="groupselect" name="groupselect">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label name="message" id="message" for="messageboxinvite">Message</label>
+                        <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
