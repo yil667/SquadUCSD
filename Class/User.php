@@ -8,65 +8,64 @@
  */
 class User
 {
+    // current
     private $userid;
     private $fname;
     private $lname;
     private $email;
-    private $major;
-    private $schedule;
     private $phone;
+    private $major;
     private $about; // about me
     private $groups; // user's affiliated groups
-    private $picture; // profile picture
-    private $classesTaking;
-    private $tags;
+    private $classes;
 
+    // unimplemented
+    private $tags;
+    private $picture;
 
     /**
      * User constructor.
      * @param $userid
-     * @param $email
-     * @param $major
-     * @param $schedule
-     * @param $phone
-     * @param $about
-     * @param $groups
-     * @param $picture
-     * @param $classesTaking
-     * @param $tags
      * @param $fname
      * @param $lname
+     * @param $email
+     * @param $phone
+     * @param $major
+     * @param $about
+     * @param $groups
+     * @param $classes
+     * @param $tags
+     * @param $picture
      */
-    public function __construct($userid, $fname, $lname, $email, $major, $schedule, $phone, $about, $groups, $picture, $classesTaking, $tags)
+    public function __construct($userid, $fname, $lname, $email, $phone, $major, $about, $groups, $classes, $tags, $picture)
     {
         $this->userid = $userid;
         $this->fname = $fname;
         $this->lname = $lname;
         $this->email = $email;
-        $this->major = $major;
-        $this->schedule = $schedule;
         $this->phone = $phone;
+        $this->major = $major;
         $this->about = $about;
         $this->groups = $groups;
-        $this->picture = $picture;
-        $this->classesTaking = $classesTaking;
+        $this->classes = $classes;
         $this->tags = $tags;
+        $this->picture = $picture;
     }
 
     /**
      * @return mixed
      */
-    public function getTags()
+    public function getUserid()
     {
-        return $this->tags;
+        return $this->userid;
     }
 
     /**
-     * @param mixed $tags
+     * @param mixed $userid
      */
-    public function setTags($tags)
+    public function setUserid($userid)
     {
-        $this->tags = $tags;
+        $this->userid = $userid;
     }
 
     /**
@@ -104,22 +103,6 @@ class User
     /**
      * @return mixed
      */
-    public function getUserid()
-    {
-        return $this->userid;
-    }
-
-    /**
-     * @param mixed $userid
-     */
-    public function setUserid($userid)
-    {
-        $this->userid = $userid;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getEmail()
     {
         return $this->email;
@@ -136,38 +119,6 @@ class User
     /**
      * @return mixed
      */
-    public function getMajor()
-    {
-        return $this->major;
-    }
-
-    /**
-     * @param mixed $major
-     */
-    public function setMajor($major)
-    {
-        $this->major = $major;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSchedule()
-    {
-        return $this->schedule;
-    }
-
-    /**
-     * @param mixed $schedule
-     */
-    public function setSchedule($schedule)
-    {
-        $this->schedule = $schedule;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getPhone()
     {
         return $this->phone;
@@ -179,6 +130,22 @@ class User
     public function setPhone($phone)
     {
         $this->phone = $phone;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMajor()
+    {
+        return $this->major;
+    }
+
+    /**
+     * @param mixed $major
+     */
+    public function setMajor($major)
+    {
+        $this->major = $major;
     }
 
     /**
@@ -216,6 +183,38 @@ class User
     /**
      * @return mixed
      */
+    public function getClasses()
+    {
+        return $this->classes;
+    }
+
+    /**
+     * @param mixed $classes
+     */
+    public function setClasses($classes)
+    {
+        $this->classes = $classes;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param mixed $tags
+     */
+    public function setTags($tags)
+    {
+        $this->tags = $tags;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getPicture()
     {
         return $this->picture;
@@ -227,23 +226,8 @@ class User
     public function setPicture($picture)
     {
         $this->picture = $picture;
-    }
+    } // profile picture
 
-    /**
-     * @return mixed
-     */
-    public function getClassesTaking()
-    {
-        return $this->classesTaking;
-    }
-
-    /**
-     * @param mixed $classesTaking
-     */
-    public function setClassesTaking($classesTaking)
-    {
-        $this->classesTaking = $classesTaking;
-    } // a list of ID's of classes the user is taking
 
 
 }
