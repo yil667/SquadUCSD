@@ -35,6 +35,7 @@ else {
     $_SESSION['profileid'] = $userid;
 }
 
+// this action controller will fetch the user data into the $user variable
 include_once '../controller/viewProfileAction.php';
 ?>
 
