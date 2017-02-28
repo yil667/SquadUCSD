@@ -5538,7 +5538,7 @@ $( "#class2" ).autocomplete({
         });
 
         response(startsWith.concat(contains));
-        response(results.slice(0, 10));
+        //response(results.slice(0, 10));
     }
 });
 $( "#class3" ).autocomplete({
