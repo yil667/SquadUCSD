@@ -16,7 +16,7 @@ $fromurl = $_SESSION['fromurl'];
 $conn = connectToDB();
 
 // this is the custom message the user wants to send along with the invite request
-$message = mysqli_real_escape_string($conn, $_POST['messageboxform']);
+$message = ($_POST['messageboxform']);
 $hash = md5(rand(0, 10000));
 
 // add a request to the Invite HashCode Table

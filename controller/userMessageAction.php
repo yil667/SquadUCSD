@@ -19,7 +19,7 @@ echo $receiverid;
 $conn = connectToDB();
 
 // this is the custom message the user wants to send along with the invite request
-$message = mysqli_real_escape_string($conn, $_POST['sendmessageform']);
+$message = ($_POST['sendmessageform']);
 
 // send the email request to the receiver
 sendEmail($conn, $userid, $receiverid, $message);
