@@ -30,15 +30,19 @@ include_once '../controller/startUserSession.php';
             if(window.location.href.indexOf("verify") > -1 || window.location.href.indexOf("not_verified") > -1) {
                 $("#login-error").html("Please complete your email verification!");
             }
-            if(window.location.href.indexOf("nonexistent_account") > -1) {
+            else if(window.location.href.indexOf("nonexistent_account") > -1) {
                 $("#login-error").html("The account you entered does not exsist!");
             }
-            if(window.location.href.indexOf("wrong_password") > -1) {
+            else if(window.location.href.indexOf("wrong_password") > -1) {
                 $("#login-error").html("Invalid login info! Please make sure you entered the correct password.");
             }
 
-            if(window.location.href.indexOf("verified") > -1) {
+            else if(window.location.href.indexOf("verified") > -1) {
                 $("#login-error").html("Email verification successful!");
+            }
+
+            else if(window.location.href.indexOf("activate_invalid") > -1) {
+                $("#login-error").html("Invalid activation link or account already activated.");
             }
         });
     </script>

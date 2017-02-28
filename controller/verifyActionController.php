@@ -14,7 +14,7 @@ if ($row = mysqli_fetch_assoc($result)) {
 }
 else {
     // No match -> invalid url or account has already been activated.
-    header("Location: ../pages/login.php?error");
+    header("Location: ../pages/login.php?activate_invalid");
 }
 
 ?>
