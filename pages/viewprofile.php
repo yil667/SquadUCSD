@@ -142,10 +142,10 @@ else {
                 <h3 id="nameMessage"></h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/userMessageAction.php" role="form" method="POST" id="sendmessageform">
+                <form action="../controller/userMessageAction.php" role="form" method="POST" id="messageform">
                     <div class="form-group">
-                        <label name="message" id="message">Message</label>
-                        <textarea class="form-control" name=messagebox id="messagebox" rows="3"></textarea>
+                        <label name="message" id="message" for="sendmessageform">Message</label>
+                        <textarea class="form-control" name="sendmessageform" id="sendmessageform" rows="3"></textarea>
                     </div>
                 </form>
             </div>
