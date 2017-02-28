@@ -42,7 +42,6 @@ include_once '../controller/viewGroupAction.php';
             var email = </?php echo json_encode($user->getEmail()); ?>;
             $('#email').html(email);
 
-
             // input fields
             var major = </?php echo json_encode($user->getMajor()); ?>;
             document.getElementById('major').value = major;

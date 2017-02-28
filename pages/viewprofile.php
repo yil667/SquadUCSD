@@ -98,21 +98,21 @@ include_once '../controller/viewProfileAction.php';
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
 
-                        <div class="form-group">
+                        <div class="form-group row">
                             <p><label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label></p>
                             <div class="col-sm-9">
                                 <p><label class="form-control-static" name="email" id="email"></label></p>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="phone" class="col-sm-3 col-form-label">Phone Number</label></p>
+                        <div class="form-group row">
+                            <p><label for="phone" class="col-sm-3 col-form-label">Phone Number</label></p>
                             <div class="col-sm-9">
-                                <label class="form-control-static" name="phone" id="phone"></label></p>
+                                <p><label class="form-control-static" name="phone" id="phone"></label></p>
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group row">
                             <p><label for="major" class="col-sm-3 col-form-label">Major</label></p>
                             <div class="col-sm-9">
                                 <p><label class="form-control-static" name="major" id="major"></label></p>
@@ -120,7 +120,7 @@ include_once '../controller/viewProfileAction.php';
                         </div>
 
 
-                        <div class="form-group">
+                        <div class="form-group row">
                             <p><label for="about" class="col-sm-3 col-form-label">About Me</label></p>
                             <div class="col-sm-9">
                                 <p><label class="form-control-static" name="about" id="about"></label></p>
