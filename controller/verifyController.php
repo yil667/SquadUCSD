@@ -1,8 +1,7 @@
 <?php
 
 include_once 'dbController.php';
-$hash = $_GET['hash'];
-$email = $_GET['email'];
+
 $sql = "SELECT * FROM student WHERE email='$email' AND hash='$hash'";
 $conn = connectToDB();
 $result = mysqli_query($conn, $sql);

@@ -72,7 +72,7 @@ function sendInvite($conn, $userid, $receiverid, $userMessage, $hash)
     $receiverRow = getRow($conn, $receiverid);
 
     $message = generateMessage($senderRow, $receiverRow, $userMessage, $hash);
-    $headers = 'From: Relax' . "\r\n"; // Set from headers (perhaps change this in the future?)
+    $headers = 'From: message' . "\r\n"; // Set from headers (perhaps change this in the future?)
     $subject = generateSubject($senderRow, $receiverRow); // Give the email a subject
 
     // send the email

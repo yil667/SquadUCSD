@@ -37,11 +37,11 @@ else {
 	------------------------
  
 	Please click this link to activate your account:
-	http://www.squaducsd.com/controller/verifyController.php?email='.$email.'&hash='.$hash.'
+	http://www.squaducsd.com/pages/activate?email='.$email.'&hash='.$hash.'
  
 	'; // Our message above including the link
-                     
-	$headers = 'From: Admin' . "\r\n"; // Set from headers
+
+	$headers = "From: account" . "\r\n"; // Set from headers
 	mail($_POST['email'], $subject, $message, $headers);
 	
 	
