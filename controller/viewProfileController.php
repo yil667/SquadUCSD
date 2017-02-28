@@ -22,12 +22,19 @@ function getUserObject($id)
     // declare an empty array
     $groups = Array();
 
-    // iterate through the groups that the user is affiliated with
-    foreach ($row['groups'] as $groupId) {
-        $sql = "SELECT * FROM groupProfile WHERE id='$groupId'";
-        $result = mysqli_query($conn, $sql);
-        $groupRow = mysqli_fetch_assoc($result);
-        array_push($groups, new Group($groupRow['id'], $groupRow['name'], "", "", ""));
+    if ($row['groups']) {
+        $groupIDs = explode($row['groups'], ",");
+
+        // iterate through the groups that the user is affiliated with
+        foreach ($groupIDs as $groupId) {
+            if ($groupId == "")
+                continue;
+
+            $sql = "SELECT * FROM groupProfile WHERE id='$groupId'";
+            $result = mysqli_query($conn, $sql);
+            $groupRow = mysqli_fetch_assoc($result);
+            array_push($groups, new Group($groupRow['id'], $groupRow['name'], "", "", ""));
+        }
     }
 
     $user->setGroups($groups);
@@ -62,14 +69,22 @@ function getGroupObject($id)
     // we now need to get the users' info
     $users = Array();
 
-    // iterate through the groups that the user is affiliated with
-    foreach ($row['users'] as $userId) {
-        $sql = "SELECT * FROM student WHERE id='$userId'";
-        $result = mysqli_query($conn, $sql);
-        $userRow = mysqli_fetch_assoc($result);
-        array_push($users, new User($userRow['id'], $userRow['fname'] . " " . $userRow['lname'],
-            "", "", "","",""));
+    if ($row['users']) {
+        $userIDs = explode($row['users'], ",");
+
+        // iterate through the groups that the user is affiliated with
+        foreach ($userIDs as $userId) {
+            if ($userId == "")
+                continue;
+
+            $sql = "SELECT * FROM student WHERE id='$userId'";
+            $result = mysqli_query($conn, $sql);
+            $userRow = mysqli_fetch_assoc($result);
+            array_push($users, new User($userRow['id'], $userRow['fname'] . " " . $userRow['lname'],
+                "", "", "", "", ""));
+        }
     }
+
 
     $group->setUsers($users);
 

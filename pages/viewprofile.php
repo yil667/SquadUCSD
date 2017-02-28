@@ -34,10 +34,10 @@ else {
 //
 //    $_SESSION['profileid'] = $profileid;
 
-    $profileid = $_GET['userid'];
+    $_SESSION['profileid'] = $_GET['userid'];
 
     // this action controller will fetch the user data into the $user variable
-    include_once "../controller/viewProfileAction.php?userid=$profileid";
+    include_once "../controller/viewProfileAction.php";
 }
 
 
@@ -184,7 +184,7 @@ else {
                         </select>
                     </div>
                     <div class="form-group">
-                        <label name="formMessage" id="formMessage" for="messageboxinvite">Message</label>
+                        <label name="message" id="message" for="messageboxinvite">Message</label>
                         <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
                     </div>
 
@@ -209,7 +209,7 @@ else {
             <div class="modal-body">
                 <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
                     <div class="form-group">
-                        <label name="formMessage" id="formMessage" for="messageboxform">Message</label>
+                        <label name="message" id="message" for="messageboxform">Message</label>
                         <textarea class="form-control" name="messageboxform" id="messageboxform" rows="3"></textarea>
                     </div>
 

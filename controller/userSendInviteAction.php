@@ -1,7 +1,11 @@
 <?php
 
+include_once "loginController.php";
 include_once "dbController.php";
 include_once "sendInviteController.php";
+
+error_reporting(-1);
+ini_set('display_errors', 'On');
 
 session_start();
 
@@ -12,7 +16,7 @@ echo "<h1> refuckinglollax</h1>";
 $userid = getUserId();
 echo "<h1> $userid</h1>";
 
-$receiverid = $_GET['userid'];// decide on how we get this field later, maybe through _POST[]
+$receiverid = $_SESSION['profileid'];// decide on how we get this field later, maybe through _POST[]
 echo "<h1> $receiverid</h1>";
 
 
@@ -22,7 +26,7 @@ echo "<h1> $receiverid</h1>";
 $conn = connectToDB();
 
 // this is the custom message the user wants to send along with the invite request
-$message = mysqli_real_escape_string($conn, $_POST['formMessage']);
+$message = mysqli_real_escape_string($conn, $_POST['messageboxform']);
 $hash = md5(rand(0, 10000));
 
 // add a request to the Invite HashCode Table
@@ -31,4 +35,4 @@ addRequestToDB($conn, $userid, $receiverid, $hash);
 // send the email request to the receiver
 sendInvite($conn, $userid, $receiverid, $message, $hash);
 
-header("Location: ../pages/index.php");
+//header("Location: ../pages/index.php");
