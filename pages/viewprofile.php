@@ -12,9 +12,6 @@ if (strrpos($url, "?") == "") {
         handleNotLoggedIn();
     else
     {
-        // otherwise modify the link and redirect to the correct userid page
-//        $_SESSION['profileid'] = $_SESSION['id'];
-
         $profileid = getUserId();
         $redirectUrl = "Location: ./viewprofile.php?userid=$profileid";
         header($redirectUrl);
@@ -24,20 +21,13 @@ if (strrpos($url, "?") == "") {
 // otherwise we load the id into the session variable and
 // call the action controller
 else {
-    // getting url info for the action controller
-    // this is the part after the "?"
-//    $url = json_encode($_SERVER['QUERY_STRING']);
-//
-//    // this one somehow has a quotation mark at the end
-//    $profileid = substr($url, strpos($url, "=") + 1);
-//    $profileid = substr($profileid, 0, strlen($profileid) - 1);
-//
-//    $_SESSION['profileid'] = $profileid;
 
     $_SESSION['profileid'] = $_GET['userid'];
 
     // this action controller will fetch the user data into the $user variable
     include_once "../controller/viewProfileAction.php";
+
+    $_SESSION['fromurl'] = $url;
 }
 
 

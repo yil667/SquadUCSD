@@ -9,18 +9,16 @@ ini_set('display_errors', 'On');
 
 session_start();
 
-echo "<h1> refuckinglollax</h1>";
+
+
+echo $_SESSION['fromurl'];
+
 // In this action controller, we assume the scenario to be one user intends to invite another user to form a group.
 
 // assume we get the user's and receiver's ID's
 $userid = getUserId();
-echo "<h1> $userid</h1>";
-
-$receiverid = $_SESSION['profileid'];// decide on how we get this field later, maybe through _POST[]
-echo "<h1> $receiverid</h1>";
-
-
-//$from = $_GET['from'];
+$receiverid = $_SESSION['profileid'];
+$fromurl = $_SESSION['fromurl'];
 
 
 $conn = connectToDB();
@@ -36,3 +34,4 @@ addRequestToDB($conn, $userid, $receiverid, $hash);
 sendInvite($conn, $userid, $receiverid, $message, $hash);
 
 //header("Location: ../pages/index.php");
+header("Location: $fromurl");

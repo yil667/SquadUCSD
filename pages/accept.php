@@ -7,3 +7,5 @@ $hash = $_GET['hash'];
 include_once "../controller/createGroupAction.php";
 
 echo $valid ? "nigga" : "please";
+
+?>
