@@ -217,10 +217,6 @@ include_once '../controller/viewProfileAction.php';
                 </form>
 
             </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
-            </div>
         </div>
     </div>
 </div>

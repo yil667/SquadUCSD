@@ -10,7 +10,13 @@ session_start();
 // assume we get the user's and receiver's ID's
 $userid = getUserId();
 $receiverid = getProfileId();// decide on how we get this field later, maybe through _POST[]
-$from = $_GET['from'];
+
+echo "<h1> refuckinglollax</h1>";
+echo "<h1> $userid</h1>";
+echo "<h1> $receiverid</h1>";
+
+
+//$from = $_GET['from'];
 
 
 $conn = connectToDB();
@@ -25,4 +31,4 @@ addRequestToDB($conn, $userid, $receiverid, $hash);
 // send the email request to the receiver
 sendInvite($conn, $userid, $receiverid, $message, $hash);
 
-header("Location: " . $from);
+header("Location: ../pages/index.php");
