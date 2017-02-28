@@ -709,8 +709,7 @@ $(function() {
 "SIOG 260",
 "Clinical Psychology 205",
 "Clinical Psychology 209",
-"Clinical
-Psychology 294",
+"Clinical Psychology 294",
 "School of Medicine 202E",
 "Clinical Psychology 296",
 "CLRE 230",
