@@ -3,7 +3,7 @@
 include_once "loginController.php";
 include_once "viewProfileController.php";
 
-$id = getProfileId(); // fetches the user's id
+$id = $_GET['userid']; // fetches the user's id
 
 $user = getUserObject($id);
 
