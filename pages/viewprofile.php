@@ -172,7 +172,7 @@ include_once '../controller/viewProfileAction.php';
             </div>
             <div class="modal-body">
 
-                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
+                <form class="form-horizontal" action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
                     <div class="form-group">
                         <label name="message" id="message" for="groupselect">Select Group</label>
                         <select id="groupselect" name="groupselect">
@@ -183,9 +183,11 @@ include_once '../controller/viewProfileAction.php';
                         <label name="message" id="message" for="messageboxinvite">Message</label>
                         <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
                     </div>
-                    <div class="form-group modal-footer">
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Send Invite</button>
+                    <div class="form-group">
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Send Invite</button>
+                        </div>
                     </div>
                 </form>
             </div>
