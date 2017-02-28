@@ -6,8 +6,8 @@ class Group
     private $groupid;
     private $name;
     private $class;
-    private $users;
     private $size;
+    private $users;
 
     /**
      * Group constructor.
@@ -17,12 +17,11 @@ class Group
      * @param $users
      * @param $size
      */
-    public function __construct($groupid, $name, $class, $users, $size)
+    public function __construct($groupid, $name, $class, $size)
     {
         $this->groupid = $groupid;
         $this->name = $name;
         $this->class = $class;
-        $this->users = $users;
         $this->size = $size;
     }
 

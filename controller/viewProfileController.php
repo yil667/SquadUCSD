@@ -46,3 +46,32 @@ function getUserObject($id)
 
     return $user;
 }
+
+function getGroupObject($id)
+{
+    // first retrieve the row from the database
+    $sql = "SELECT * FROM groupProfile WHERE id='$id'";
+    $conn = connectToDB();
+    $result = mysqli_query($conn, $sql);
+
+    $row = mysqli_fetch_assoc($result);
+
+    // declare return object
+    $group = new Group($id, $row['name'], $row['class'], $row['size']);
+
+    // we now need to get the users' info
+    $users = Array();
+
+    // iterate through the groups that the user is affiliated with
+    foreach ($row['users'] as $userId) {
+        $sql = "SELECT * FROM student WHERE id='$userId'";
+        $result = mysqli_query($conn, $sql);
+        $userRow = mysqli_fetch_assoc($result);
+        array_push($users, new User($userRow['id'], $userRow['fname'] . " " . $userRow['lname'],
+            "", "", "","",""));
+    }
+
+    $group->setUsers($users);
+
+    return $group;
+}
