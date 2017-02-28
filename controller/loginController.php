@@ -61,9 +61,13 @@ function getFirstName()
 }
 
 // pre-condition: user is already logged in
-function getUserId()
+function getProfileId()
 {
     return $_SESSION['profileid'];
+}
+
+function getUserId(){
+    return $_SESSION['id'];
 }
 
 // returns true is user is logged in

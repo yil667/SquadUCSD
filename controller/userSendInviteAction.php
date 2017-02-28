@@ -9,7 +9,7 @@ session_start();
 
 // assume we get the user's and receiver's ID's
 $userid = getUserId();
-$receiverid = $_GET['receiverid'];// decide on how we get this field later, maybe through _POST[]
+$receiverid = getProfileId();// decide on how we get this field later, maybe through _POST[]
 $from = $_GET['from'];
 
 
