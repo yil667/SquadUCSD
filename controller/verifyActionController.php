@@ -2,7 +2,7 @@
 
 include_once 'dbController.php';
 
-$sql = "SELECT * FROM student WHERE email='$email' AND hash='$hash'";
+$sql = "SELECT * FROM student WHERE email='$email' AND hash='$hash' AND active='0'";
 $conn = connectToDB();
 $result = mysqli_query($conn, $sql);
 
