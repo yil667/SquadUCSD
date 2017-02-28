@@ -14,10 +14,10 @@ if (strrpos($url, "?") == "") {
     {
         // otherwise modify the link and redirect to the correct userid page
 //        $_SESSION['profileid'] = $_SESSION['id'];
-//        $redirectUrl = "Location: ./viewprofile.php?userid=" . $_SESSION['profileid'];
-//        header($redirectUrl);
 
         $profileid = getUserId();
+        $redirectUrl = "Location: ./viewprofile.php?userid=$profileid";
+        header($redirectUrl);
     }
 }
 
