@@ -16,14 +16,10 @@ $fromurl = $_SESSION['fromurl'];
 $conn = connectToDB();
 
 // this is the custom message the user wants to send along with the invite request
-$message = mysqli_real_escape_string($conn, $_POST['messageboxform']);
-$hash = md5(rand(0, 10000));
-
-// add a request to the Invite HashCode Table
-addInviteRequestToDB($conn, $userid, $receiverid, $hash);
+$message = mysqli_real_escape_string($conn, $_POST['sendmessageform']);
 
 // send the email request to the receiver
-sendInviteEmail($conn, $userid, $receiverid, $message, $hash);
+sendEmail($conn, $userid, $receiverid, $message);
 
 //header("Location: ../pages/index.php");
 header("Location: $fromurl");
