@@ -180,7 +180,7 @@ include_once '../controller/viewProfileAction.php';
                         </select>
                     </div>
                     <div class="form-group">
-                        <label name="message" id="message" for="messageboxinvite">Message</label>
+                        <label name="formMessage" id="formMessage" for="messageboxinvite">Message</label>
                         <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
                     </div>
 
@@ -205,7 +205,7 @@ include_once '../controller/viewProfileAction.php';
             <div class="modal-body">
                 <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
                     <div class="form-group">
-                        <label name="message" id="message" for="messageboxform">Message</label>
+                        <label name="formMessage" id="formMessage" for="messageboxform">Message</label>
                         <textarea class="form-control" name="messageboxform" id="messageboxform" rows="3"></textarea>
                     </div>
 
