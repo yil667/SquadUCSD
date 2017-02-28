@@ -5534,7 +5534,9 @@ function results(request,response){
 }
 
 $( "#class2" ).autocomplete({
-    source: results(request,response);
+    source: function(request, response) {
+       return results(request,response);
+    }
 });
 
 
