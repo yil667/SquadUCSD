@@ -8,27 +8,21 @@ include_once '../controller/startUserSession.php';
 $url = $_SERVER['REQUEST_URI'];
 
 // redirects the url to have suffix "user=id"
-if (strpos($url, "?") == "") {
-    $_SESSION['profileid'] = $_SESSION['id'];
-    $redirectUrl = "Location: ./viewgroup.php?userid=" . $_SESSION['profileid'];
-    header($redirectUrl);
-}
 
 // otherwise we load the id into the session variable and
 // call the action controller
-else {
+
     // getting url info for the action controller
     // this is the part after the "?"
     $url = json_encode($_SERVER['QUERY_STRING']);
 
     // this one somehow has a quotation mark at the end
-    $userid = substr($url, strpos($url, "=") + 1);
-    $userid = substr($userid, 0, strlen($userid) - 1);
+    $groupid = substr($url, strpos($url, "=") + 1);
+    $groupid = substr($groupid, 0, strlen($groupid) - 1);
 
-    $_SESSION['profileid'] = $userid;
-}
+    $_SESSION['groupid'] = $groupid;
 
-include_once '../controller/viewGroupAction.php';
+include_once '../controller/viewGroupProfileAction.php';
 ?>
 
 <!DOCTYPE html>
