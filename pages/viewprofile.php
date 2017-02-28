@@ -13,9 +13,11 @@ if (strrpos($url, "?") == "") {
     else
     {
         // otherwise modify the link and redirect to the correct userid page
-        $_SESSION['profileid'] = $_SESSION['id'];
-        $redirectUrl = "Location: ./viewprofile.php?userid=" . $_SESSION['profileid'];
-        header($redirectUrl);
+//        $_SESSION['profileid'] = $_SESSION['id'];
+//        $redirectUrl = "Location: ./viewprofile.php?userid=" . $_SESSION['profileid'];
+//        header($redirectUrl);
+
+        $profileid = getUserId();
     }
 }
 
@@ -35,9 +37,8 @@ else {
     $profileid = $_GET['userid'];
 
     // this action controller will fetch the user data into the $user variable
-    include_once "../controller/viewProfileAction.php?userid=$profileid";
-
 }
+include_once "../controller/viewProfileAction.php?userid=$profileid";
 
 
 ?>
