@@ -3,8 +3,11 @@
 include_once "loginController.php";
 include_once "viewProfileController.php";
 
-error_reporting(-1);
-ini_set('display_errors', 'On');
+echo '<pre>';
+print_r($_POST); // for viewing it as an array
+var_dump($_POST); // for viewing all info of the array
+echo '</pre>';
+die();
 
 $id = $_GET['userid']; // fetches the user's id
 
