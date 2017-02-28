@@ -27,29 +27,25 @@ function getUserObject($id)
 
         // iterate through the groups that the user is affiliated with
         foreach ($groupIDs as $groupId) {
-            if ($groupId == "")
-                continue;
-
-            $sql = "SELECT * FROM groupProfile WHERE id='$groupId'";
-            $result = mysqli_query($conn, $sql);
-            $groupRow = mysqli_fetch_assoc($result);
-            array_push($groups, new Group($groupRow['id'], $groupRow['name'], "", "", ""));
+            if ($groupId != "")
+            {
+                $sql = "SELECT * FROM groupProfile WHERE id='$groupId'";
+                $result = mysqli_query($conn, $sql);
+                $groupRow = mysqli_fetch_assoc($result);
+                array_push($groups, new Group($groupRow['id'], $groupRow['name'], "", "", ""));
+            }
         }
     }
 
     $user->setGroups($groups);
 
     // get the classses
-    $classes = array(
-        new Course($row['class1'], $row['searchGroup1']),
-        new Course($row['class2'], $row['searchGroup2']),
-        new Course($row['class3'], $row['searchGroup3']),
-        new Course($row['class4'], $row['searchGroup4']),
-        new Course($row['class5'], $row['searchGroup5']),
-        new Course($row['class6'], $row['searchGroup6']),
-    );
-
-    $user->setClasses($classes);
+    $user->setClass1(new Course($row['class1'], $row['searchGroup1']));
+    $user->setClass2(new Course($row['class2'], $row['searchGroup2']));
+    $user->setClass3(new Course($row['class3'], $row['searchGroup3']));
+    $user->setClass4(new Course($row['class4'], $row['searchGroup4']));
+    $user->setClass5(new Course($row['class5'], $row['searchGroup5']));
+    $user->setClass6(new Course($row['class6'], $row['searchGroup6']));
 
     return $user;
 }

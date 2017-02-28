@@ -17,7 +17,13 @@ class User
     private $major;
     private $about; // about me
     private $groups; // user's affiliated groups
-    private $classes;
+
+    private $class1;
+    private $class2;
+    private $class3;
+    private $class4;
+    private $class5;
+    private $class6;
 
     // unimplemented
     private $tags;
@@ -174,14 +180,6 @@ class User
     }
 
     /**
-     * @return mixed
-     */
-    public function getClasses()
-    {
-        return $this->classes;
-    }
-
-    /**
      * @param mixed $classes
      */
     public function setClasses($classes)
@@ -219,6 +217,104 @@ class User
     public function setPicture($picture)
     {
         $this->picture = $picture;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getClass1()
+    {
+        return $this->class1;
+    }
+
+    /**
+     * @param mixed $class1
+     */
+    public function setClass1($class1)
+    {
+        $this->class1 = $class1;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getClass2()
+    {
+        return $this->class2;
+    }
+
+    /**
+     * @param mixed $class2
+     */
+    public function setClass2($class2)
+    {
+        $this->class2 = $class2;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getClass3()
+    {
+        return $this->class3;
+    }
+
+    /**
+     * @param mixed $class3
+     */
+    public function setClass3($class3)
+    {
+        $this->class3 = $class3;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getClass4()
+    {
+        return $this->class4;
+    }
+
+    /**
+     * @param mixed $class4
+     */
+    public function setClass4($class4)
+    {
+        $this->class4 = $class4;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getClass5()
+    {
+        return $this->class5;
+    }
+
+    /**
+     * @param mixed $class5
+     */
+    public function setClass5($class5)
+    {
+        $this->class5 = $class5;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getClass6()
+    {
+        return $this->class6;
+    }
+
+    /**
+     * @param mixed $class6
+     */
+    public function setClass6($class6)
+    {
+        $this->class6 = $class6;
     } // profile picture
+
+
 
 }

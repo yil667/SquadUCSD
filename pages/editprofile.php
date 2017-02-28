@@ -58,6 +58,21 @@ include_once '../controller/viewProfileAction.php';
             var phone = <?php echo json_encode($user->getPhone()); ?>;
             document.getElementById('phone').value = phone;
 
+            var class1 = <?php echo json_encode($user->getClass1()->getClassName()); ?>;
+            document.getElementById('class1').value = class1;
+            var class2 = <?php echo json_encode($user->getClass2()->getClassName()); ?>;
+            document.getElementById('class2').value = class2;
+            var class3 = <?php echo json_encode($user->getClass3()->getClassName()); ?>;
+            document.getElementById('class3').value = class3;
+            var class4 = <?php echo json_encode($user->getClass4()->getClassName()); ?>;
+            document.getElementById('class4').value = class4;
+            var class5 = <?php echo json_encode($user->getClass5()->getClassName()); ?>;
+            document.getElementById('class5').value = class5;
+            var class6 = <?php echo json_encode($user->getClass6()->getClassName()); ?>;
+            document.getElementById('class6').value = class6;
+
+
+
         });
     </script>
 </head>

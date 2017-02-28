@@ -8,7 +8,7 @@
  */
 class Course
 {
-    private $class;
+    private $className;
     private $searchGroup;
 
     /**
@@ -18,24 +18,24 @@ class Course
      */
     public function __construct($class, $searchGroup)
     {
-        $this->class = $class;
+        $this->className = $class;
         $this->searchGroup = $searchGroup;
     }
 
     /**
      * This method returns all the classes the user is taking
      */
-    public function getAllClass()
+    public function getClassName()
     {
-        return $this->class;
+        return $this->className;
     }
 
     /**
-     * @param mixed $class
+     * @param mixed $className
      */
-    public function setClass($class)
+    public function setClassName($className)
     {
-        $this->class = $class;
+        $this->className = $className;
     }
 
     /**
