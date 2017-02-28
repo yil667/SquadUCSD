@@ -74,7 +74,6 @@ include_once '../controller/viewProfileAction.php';
                             <label for="name" class="col-sm-3 col-form-label">Full Name</label>
                             <div class="col-sm-9">
                                 <label class="form-control-static" name="Full Name" id="name"></label>
-
                             </div>
                         </div>
 
