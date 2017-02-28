@@ -9,17 +9,12 @@ ini_set('display_errors', 'On');
 
 session_start();
 
-
-
-
-
 // In this action controller, we assume the scenario to be one user intends to invite another user to form a group.
 
 // assume we get the user's and receiver's ID's
 $userid = getUserId();
 $receiverid = $_SESSION['profileid'];
 $fromurl = $_SESSION['fromurl'];
-echo $_SESSION['fromurl'];
 
 $conn = connectToDB();
 
@@ -34,4 +29,4 @@ addRequestToDB($conn, $userid, $receiverid, $hash);
 sendInvite($conn, $userid, $receiverid, $message, $hash);
 
 //header("Location: ../pages/index.php");
-//header("Location: $fromurl");
+header("Location: $fromurl");
