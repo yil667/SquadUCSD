@@ -5533,8 +5533,8 @@ $( "#class2" ).autocomplete({
                 containsMatcher.test(value.label || value.value || value);
         });
 
-        response(startsWith.concat(contains));
-        response(contains.slice(0, 10));
+        response(startsWith.concat(contains).slice(0,10));
+
     }
 });
 
