@@ -18,7 +18,7 @@ function getProfileUrl($id)
 
 function generateInviteUrl($senderid, $receiverid, $hash)
 {
-    return "http://www.squaducsd.com/controller/createGroupAction.php?id1=$senderid&id2=$receiverid&hash=$hash";
+    return "http://www.squaducsd.com/pages/accept.php?id1=$senderid&id2=$receiverid&hash=$hash";
 }
 
 function generateMessage($senderRow, $receiverRow, $userMessage, $hash)

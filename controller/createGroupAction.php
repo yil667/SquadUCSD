@@ -3,9 +3,6 @@ include_once 'dbController.php';
 include_once 'createGroupController.php';
 
 // extract values from the url
-$id1 = $_GET['id1'];
-$id2 = $_GET['id2'];
-$hash = $_GET['hash'];
 echo "<h1>$id1 $id2 $hash</h1>";
 
 $sql = "SELECT * FROM inviteTable WHERE id1='$id1' AND id2='$id2' AND hash='$hash'";
