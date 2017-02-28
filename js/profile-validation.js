@@ -16,21 +16,6 @@ $().ready(function () {
             },
             class1: {
                 maxlength: 10
-            },
-            class2: {
-                maxlength: 10
-            },
-            class3: {
-                maxlength: 10
-            },
-            class4: {
-                maxlength: 10
-            },
-            class5: {
-                maxlength: 10
-            },
-            class6: {
-                maxlength: 10
             }
         },
         // Specify validation error messages
@@ -45,21 +30,6 @@ $().ready(function () {
             class1: {
                 maxlength: "Your class should be less than 10 characters"
             },
-            class2: {
-                maxlength: "Your class should be less than 10 characters"
-            },
-            class3: {
-                maxlength: "Your class should be less than 10 characters"
-            },
-            class4: {
-                maxlength: "Your class should be less than 10 characters"
-            },
-            class5: {
-                maxlength: "Your class should be less than 10 characters"
-            },
-            class6: {
-                maxlength: "Your class should be less than 10 characters"
-            }
         },
         // Make sure the form is submitted to the destination defined
         // in the "action" attribute of the form when valid

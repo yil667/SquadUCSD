@@ -102,11 +102,6 @@ include_once '../controller/viewProfileAction.php';
                             <label for="major" class="col-sm-3 col-form-label">Classes</label>
                             <div class="col-sm-9 ui-widget">
                                 <input type="text" class="form-control" id="class1">
-                                <input type="text" class="form-control" id="class2">
-                                <input type="text" class="form-control" id="class3">
-                                <input type="text" class="form-control" id="class4">
-                                <input type="text" class="form-control" id="class5">
-                                <input type="text" class="form-control" id="class6">
                             </div>
                         </div>
 
