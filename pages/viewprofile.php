@@ -172,7 +172,7 @@ include_once '../controller/viewProfileAction.php';
             </div>
             <div class="modal-body">
 
-                <form class="form-horizontal" action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
+                <form id="invite-new-form" action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
                     <div class="form-group">
                         <label name="message" id="message" for="groupselect">Select Group</label>
                         <select id="groupselect" name="groupselect">
@@ -186,7 +186,7 @@ include_once '../controller/viewProfileAction.php';
                     <div class="form-group">
                         <div class="modal-footer">
                             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Send Invite</button>
+                            <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
                         </div>
                     </div>
                 </form>
@@ -213,5 +213,23 @@ include_once '../controller/viewProfileAction.php';
         </div>
     </div>
 </div>
+
+<script>
+    $(function(){
+        $('invite-new-form').on('submit', function(e){
+            e.preventDefault();
+            $.ajax({
+                url: "../controller/userSendInviteAction.php",
+                type: "POST",
+                data: $("invite-new-form").serialize(),
+                success: function(data){
+                    alert("Successfully submitted.")
+                }
+            });
+        });
+    });
+</script>
 </body>
+
+
 </html>
