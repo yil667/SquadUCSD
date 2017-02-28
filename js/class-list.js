@@ -5517,57 +5517,28 @@ $(function() {
 "WARR 189",
 "WCWP 500",
   ];
-$( "#class1" ).autocomplete({
-    source: function(request, response) {
-        var results = $.ui.autocomplete.filter(listOfClasses, request.term);
 
-        response(results.slice(0, 10));
-    }
-});
+function search(request, response) {
+    var term = $.ui.autocomplete.escapeRegex(request.term)
+        , startsWithMatcher = new RegExp("^" + term, "i")
+        , startsWith = $.grep(listOfClasses, function(value) {
+        return startsWithMatcher.test(value.label || value.value || value);
+    })
+        , containsMatcher = new RegExp(term, "i")
+        , contains = $.grep(listOfClasses, function (value) {
+        return $.inArray(value, startsWith) < 0 &&
+            containsMatcher.test(value.label || value.value || value);
+    });
+
+    response(startsWith.concat(contains));
+    response(results.slice(0, 10));
+}
+
 $( "#class2" ).autocomplete({
-    source: function(request, response) {
-        var term = $.ui.autocomplete.escapeRegex(request.term)
-            , startsWithMatcher = new RegExp("^" + term, "i")
-            , startsWith = $.grep(listOfClasses, function(value) {
-            return startsWithMatcher.test(value.label || value.value || value);
-        })
-            , containsMatcher = new RegExp(term, "i")
-            , contains = $.grep(listOfClasses, function (value) {
-            return $.inArray(value, startsWith) < 0 &&
-                containsMatcher.test(value.label || value.value || value);
-        });
-
-        response(startsWith.concat(contains));
-        //response(results.slice(0, 10));
-    }
+    source: search(request,response)
 });
-$( "#class3" ).autocomplete({
-    source: function(request, response) {
-        var results = $.ui.autocomplete.filter(listOfClasses, request.term);
 
-        response(results.slice(0, 10));
-    }
-});
-$( "#class4" ).autocomplete({
-    source: function(request, response) {
-        var results = $.ui.autocomplete.filter(listOfClasses, request.term);
 
-        response(results.slice(0, 10));
-    }
-});
-$( "#class5" ).autocomplete({
-    source: function(request, response) {
-        var results = $.ui.autocomplete.filter(listOfClasses, request.term);
 
-        response(results.slice(0, 10));
-    }
-});
-$( "#class6" ).autocomplete({
-    source: function(request, response) {
-        var results = $.ui.autocomplete.filter(listOfClasses, request.term);
-
-        response(results.slice(0, 10));
-    }
-});
 
 } );
