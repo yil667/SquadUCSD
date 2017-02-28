@@ -9,8 +9,8 @@ function deleteRowInInviteTable($id1, $id2, $hash, $conn)
 function createGroup($id1, $id2, $conn)
 {
     $userString = $id1 . "," . $id2;
-    $sql = "INSERT INTO groupProfile (current_size, users)" .
-        " VALUES (2, '$userString')";
+    $sql = "INSERT INTO groupProfile (users)" .
+        " VALUES('$userString')";
     mysqli_query($conn, $sql);
 
     return $conn->insert_id;
