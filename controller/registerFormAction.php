@@ -26,23 +26,18 @@ else {
 
 	
 	$to      = $email; // Send email to our user
-	$subject = 'Signup | Verification'; // Give the email a subject 
-	$message = '
- 
-	Thanks for signing up!
-	Your account has been created, you can login with the following credentials after you have activated your account by pressing the url below.
- 
-	------------------------
-	Email: '.$email.' 
-	------------------------
- 
-	Please click this link to activate your account:
-	http://www.squaducsd.com/pages/activate.php?email='.$email.'&hash='.$hash.'
- 
-	'; // Our message above including the link
+	$subject = "Register | Verification"; // Give the email a subject
+	$message = "
+Hi $first,
 
-	$headers = "From: account" . "\r\n"; // Set from headers
-	mail($_POST['email'], $subject, $message, $headers);
+Thank you for registering!
+Your account has been created, you can log in after you have activated your account. 
+
+Please click the following link to activate your account:
+http://www.squaducsd.com/pages/activate.php?email=$email&hash=$hash";
+
+$headers = "From: account" . "\r\n"; // Set from headers
+mail($_POST['email'], $subject, $message, $headers);
 	
 	
     // redirect to the homepage
