@@ -10,6 +10,7 @@ $conn = connectToDB();
 $phone = mysqli_real_escape_string($conn, $_POST['phone']);
 $major = mysqli_real_escape_string($conn, $_POST['major']);
 $about = mysqli_real_escape_string($conn, $_POST['about']);
+
 $class1 = mysqli_real_escape_string($conn, $_POST['class1']);
 $class2 = mysqli_real_escape_string($conn, $_POST['class2']);
 $class3 = mysqli_real_escape_string($conn, $_POST['class3']);
@@ -28,10 +29,4 @@ $sql = "UPDATE student SET phone='$phone', major='$major', about='$about', " .
 
 $result = mysqli_query($conn, $sql);
 
-
-if ($result) {
-    header("Location: ../pages/editprofile.php?success");
-}
-else {
-    header("Location: ../pages/editprofile.php?fail");
-}
+header("Location: ../pages/editprofile.php?saved");
