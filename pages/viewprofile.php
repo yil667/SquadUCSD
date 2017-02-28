@@ -216,12 +216,12 @@ include_once '../controller/viewProfileAction.php';
 
 <script>
     $(function(){
-        $('invite-new-form').on('submit', function(e){
+        $('#invite-new-form').on('submit', function(e){
             e.preventDefault();
             $.ajax({
                 url: "../controller/userSendInviteAction.php",
                 type: "POST",
-                data: $("invite-new-form").serialize(),
+                data: $("#invite-new-form").serialize(),
                 success: function(data){
                     alert("Successfully submitted.")
                 }
