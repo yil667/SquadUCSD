@@ -1,13 +1,8 @@
 @import "font.css";
 
-.panel, .panel > .panel-heading, button, input {
+.panel, .panel > .panel-heading, button, input, .jumbotron, textarea {
     border-radius: 0 !important;
     border: none !important;
-}
-
-textarea {
-    border-radius: 0 !important;
-    border: none !important
 }
 
 a {
