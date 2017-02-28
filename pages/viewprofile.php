@@ -99,31 +99,31 @@ include_once '../controller/viewProfileAction.php';
                     <form class="form-horizontal" role="form" method="POST">
 
                         <div class="form-group">
-                            <label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label>
+                            <p><label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label></p>
                             <div class="col-sm-9">
-                                <label class="form-control-static" name="email" id="email"></label>
+                                <p><label class="form-control-static" name="email" id="email"></label></p>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
+                            <label for="phone" class="col-sm-3 col-form-label">Phone Number</label></p>
                             <div class="col-sm-9">
-                                <label class="form-control-static" name="phone" id="phone"></label>
+                                <label class="form-control-static" name="phone" id="phone"></label></p>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="major" class="col-sm-3 col-form-label">Major</label>
+                            <p><label for="major" class="col-sm-3 col-form-label">Major</label></p>
                             <div class="col-sm-9">
-                                <label class="form-control-static" name="major" id="major"></label>
+                                <p><label class="form-control-static" name="major" id="major"></label></p>
                             </div>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="about" class="col-sm-3 col-form-label">About Me</label>
+                            <p><label for="about" class="col-sm-3 col-form-label">About Me</label></p>
                             <div class="col-sm-9">
-                                <label class="form-control-static" name="about" id="about"></label>
+                                <p><label class="form-control-static" name="about" id="about"></label></p>
                             </div>
                         </div>
 
