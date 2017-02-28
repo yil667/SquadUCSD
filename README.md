@@ -7,3 +7,4 @@ Zi's todo list:
 2. add password checking for special characters
 3. check flags for editprofile(fail, success and saved)
 4. class length to be 40?
+5. maybe don't display the button's in profile page if user not logged in

@@ -27,8 +27,7 @@ function getUserObject($id)
 
         // iterate through the groups that the user is affiliated with
         foreach ($groupIDs as $groupId) {
-            if ($groupId != "")
-            {
+            if ($groupId != "") {
                 $sql = "SELECT * FROM groupProfile WHERE id='$groupId'";
                 $result = mysqli_query($conn, $sql);
                 $groupRow = mysqli_fetch_assoc($result);
@@ -70,8 +69,7 @@ function getGroupObject($id)
 
         // iterate through the groups that the user is affiliated with
         foreach ($userIDs as $userId) {
-            if ($userId != "")
-            {
+            if ($userId != "") {
                 $sql = "SELECT * FROM student WHERE id='$userId'";
                 $result = mysqli_query($conn, $sql);
                 $userRow = mysqli_fetch_assoc($result);
