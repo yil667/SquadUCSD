@@ -32,21 +32,93 @@
                     <div class="panel-heading"><h4>Search Results</h4></div>
                     <div class="panel-body">
                         <div class="basicinfo">
-                
-                      
+
+
                        <label class="col-sm-12">Matched Classes: CSE101, CSE 105, CSE110</label>
                             <br>
                             <br>
                        </div>
                         <div class="button">
-                        <div class="btn-group" role="group">
-                            <button href="#" type="button" class="btn btn-primary" role="button">Message</button>
-                            <button href="./viewprofile.html" type="button" target="_blank" class="btn btn-info" role="button">View Profile</button>
-                            <button href="#" type="button" class="btn btn-success" role="button">Invite to Existing Group</button>
-                            <button href="#" type="button" class="btn btn-success" role="button">Invite to Form New Group</button>
-                        </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#messageModal">Message</button>
+                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#inviteModal">Invite to Existing Group</button>
+                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="messageLabel">Message $User$</h3>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label name="message" id="message">Message</label>
+                            <textarea class="form-control" name=messagebox id="messagebox" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <button class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="messageLabel">Invite $User$ to Existing Group</h3>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-group">
+                            <label name="message" id="message" for="groupselect">Select Group</label>
+                            <select id="groupselect" name="groupselect">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label name="message" id="message" for="messageboxinvite">Message</label>
+                            <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <button class="btn btn-primary">Send Invite</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="messageLabel">Invite $User$ to Form Group</h3>
+                </div>
+                <div class="modal-body">
+                    <label name="message" id="message" for="messageboxform">Message</label>
+                    <textarea class="form-control" name="messageboxform" id="messageboxform" rows="3"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <button class="btn btn-primary">Send Invite</button>
                 </div>
             </div>
         </div>

@@ -1,5 +1,9 @@
 .row {
-    margin-top: 150px;
+    margin-top: 30px;
+}
+
+.button{
+    text-align: center;
 }
 
 .panel-custom > .panel-heading h3 {
@@ -27,6 +31,6 @@ textarea {
     resize: vertical;
 }
 
-.col-form-label {
-
+.error {
+    color: red;
 }

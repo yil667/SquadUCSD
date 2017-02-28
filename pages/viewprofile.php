@@ -1,5 +1,5 @@
 <?php
-// if the user clicks on the view profile themselves
+//if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
 
@@ -41,6 +41,7 @@ include_once '../controller/viewProfileAction.php';
 
 <!DOCTYPE html>
 <html>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
 <link rel="stylesheet" type="text/css" href="../css/profile.css"/>
 <head>
@@ -82,7 +83,7 @@ include_once '../controller/viewProfileAction.php';
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
                 <div class="panel-heading"><h3 id='name'></h3></div>
                 <div class="panel-body">
@@ -91,33 +92,122 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label>
                             <div class="col-sm-9">
-                                <label name="email" id="email"></label>
+                                <label class="form-control-static" name="email" id="email"></label>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
                             <div class="col-sm-9">
-                                <label name="phone" id="phone">1-(012)-345-6789</label>
+                                <label class="form-control-static" name="phone" id="phone"></label>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="major" class="col-sm-3 col-form-label">Major</label>
                             <div class="col-sm-9">
-                                <label name="major" id="major"></label>
+                                <label class="form-control-static" name="major" id="major"></label>
                             </div>
                         </div>
+
 
                         <div class="form-group">
                             <label for="about" class="col-sm-3 col-form-label">About Me</label>
                             <div class="col-sm-9">
-                                <label name="about" id="about"></label>
+                                <label class="form-control-static" name="about" id="about"></label>
+                            </div>
+                        </div>
+
+                        <div class="button">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#messageModal">Message</button>
+                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#inviteModal">Invite to Existing Group</button>
+                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
+                            </div>
+                        </div>
+
+                        <div class="button">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#messageModal">Message</button>
+                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#inviteModal">Invite to Existing Group</button>
+                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
                             </div>
                         </div>
 
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="messageLabel">Message $User$</h3>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label name="message" id="message">Message</label>
+                        <textarea class="form-control" name=messagebox id="messagebox" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-primary">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="messageLabel">Invite $User$ to Existing Group</h3>
+            </div>
+            <div class="modal-body">
+
+                <form>
+                    <div class="form-group">
+                        <label name="message" id="message" for="groupselect">Select Group</label>
+                        <select id="groupselect" name="groupselect">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label name="message" id="message" for="messageboxinvite">Message</label>
+                        <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-primary">Send Invite</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="messageLabel">Invite $User$ to Form Group</h3>
+            </div>
+            <div class="modal-body">
+                <label name="message" id="message" for="messageboxform">Message</label>
+                <textarea class="form-control" name="messageboxform" id="messageboxform" rows="3"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-primary">Send Invite</button>
             </div>
         </div>
     </div>
