@@ -107,7 +107,6 @@ include_once '../controller/viewProfileAction.php';
                                 <input type="text" class="form-control" id="class4">
                                 <input type="text" class="form-control" id="class5">
                                 <input type="text" class="form-control" id="class6">
-
                             </div>
                         </div>
 
