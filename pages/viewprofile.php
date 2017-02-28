@@ -183,12 +183,12 @@ include_once '../controller/viewProfileAction.php';
                         <label name="message" id="message" for="messageboxinvite">Message</label>
                         <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
                     </div>
-                    <div class="form-group">
-                        <div class="modal-footer">
-                            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                            <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
-                        </div>
+
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button id="send-btn" type="submit" class="btn btn-primary msg-submit">Send Invite</button>
                     </div>
+
                 </form>
             </div>
         </div>
@@ -215,17 +215,10 @@ include_once '../controller/viewProfileAction.php';
 </div>
 
 <script>
-    $(function(){
-        $('#invite-new-form').on('submit', function(e){
-            e.preventDefault();
-            $.ajax({
-                url: "../controller/userSendInviteAction.php",
-                type: "POST",
-                data: $("#invite-new-form").serialize(),
-                success: function(data){
-                    alert("Successfully submitted.")
-                }
-            });
+    $(function () {
+        $('body').on('click', '.msg-submit', function (e) {
+            $(this.form).submit();
+            $('#myModal').modal('hide');
         });
     });
 </script>
