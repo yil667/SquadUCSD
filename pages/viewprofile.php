@@ -37,8 +37,8 @@ else {
     $profileid = $_GET['userid'];
 
     // this action controller will fetch the user data into the $user variable
+    include_once "../controller/viewProfileAction.php?userid=$profileid";
 }
-include_once "../controller/viewProfileAction.php?userid=$profileid";
 
 
 ?>
