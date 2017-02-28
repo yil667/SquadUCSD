@@ -26,15 +26,21 @@ function addUser($email, $password, $first, $last, $hash)
     mysqli_query($conn, $sql);
 }
 
+function sendverificationEmail($first, $email, $hash)
+{
+    $subject = "Register | Verification"; // Give the email a subject
+    $message = "
+Hi $first,
+
+Thank you for registering!
+Your account has been created, you can log in after you have activated your account. 
+
+Please click the following link to activate your account:
+http://www.squaducsd.com/pages/activate.php?email=$email&hash=$hash
 
 
-//$first = $_POST['first'];
-//$last = $_POST['last'];
-//$email = $_POST['email'];
-//$password = $_POST['password'];
-//$password2 = $_POST['password2'];
+SquadUCSD";
 
-//$sql = "INSERT INTO student (fname, lname, email, pwd) VALUES ('$first', '$last', '$email', '$password')";
-//$result = mysqli_query($conn, $sql);
-
-//header("Location: ../pages/login.php");
+    $headers = "From: account" . "\r\n"; // Set from headers
+    mail($email, $subject, $message, $headers);
+}

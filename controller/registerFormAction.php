@@ -17,28 +17,14 @@ if ($duplicateEmail) {
     // the user email already exists in the database
     // with the flag in the url
     header("Location: ../pages/register.php?fail");
-}
+} // Create the new user in the database
 
-// Create the new user in the database
 else {
     // add the user into the database
     addUser($email, $password, $first, $last, $hash);
 
-
-    $to = $email; // Send email to our user
-    $subject = "Register | Verification"; // Give the email a subject
-    $message = "
-Hi $first,
-
-Thank you for registering!
-Your account has been created, you can log in after you have activated your account. 
-
-Please click the following link to activate your account:
-http://www.squaducsd.com/pages/activate.php?email=$email&hash=$hash";
-
-    $headers = "From: account" . "\r\n"; // Set from headers
-    mail($_POST['email'], $subject, $message, $headers);
-
+    // send the verification email
+    sendverificationEmail($first, $email, $hash);
 
     // redirect to the homepage
     header("Location: ../pages/login.php?verify");
