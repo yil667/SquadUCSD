@@ -5518,22 +5518,46 @@ $(function() {
 "WCWP 500",
   ];
 $( "#class1" ).autocomplete({
-  source: listOfClasses
+    source: function(request, response) {
+        var results = $.ui.autocomplete.filter(listOfClasses, request.term);
+
+        response(results.slice(0, 10));
+    }
 });
 $( "#class2" ).autocomplete({
-  source: listOfClasses
+    source: function(request, response) {
+        var results = $.ui.autocomplete.filter(listOfClasses, request.term);
+
+        response(results.slice(0, 10));
+    }
 });
 $( "#class3" ).autocomplete({
-  source: listOfClasses
+    source: function(request, response) {
+        var results = $.ui.autocomplete.filter(listOfClasses, request.term);
+
+        response(results.slice(0, 10));
+    }
 });
 $( "#class4" ).autocomplete({
-  source: listOfClasses
+    source: function(request, response) {
+        var results = $.ui.autocomplete.filter(listOfClasses, request.term);
+
+        response(results.slice(0, 10));
+    }
 });
 $( "#class5" ).autocomplete({
-  source: listOfClasses
+    source: function(request, response) {
+        var results = $.ui.autocomplete.filter(listOfClasses, request.term);
+
+        response(results.slice(0, 10));
+    }
 });
 $( "#class6" ).autocomplete({
-  source: listOfClasses
+    source: function(request, response) {
+        var results = $.ui.autocomplete.filter(listOfClasses, request.term);
+
+        response(results.slice(0, 10));
+    }
 });
 
 } );
