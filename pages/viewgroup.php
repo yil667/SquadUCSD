@@ -93,14 +93,14 @@ include_once '../controller/viewGroupAction.php';
                         <div class="form-group">
                             <label for="class" class="col-sm-3 col-form-label">Class</label>
                             <div class="col-sm-9">
-                                <label type="text" name="class" id="class"></label>
+                                <label class="form-control-static" type="text" name="class" id="class"></label>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="size" class="col-sm-3 col-form-label">Group Size</label>
                             <div class="col-sm-9">
-                                <label type="number" name="size" id="size"></label>
+                                <label class="form-control-static" type="number" name="size" id="size"></label>
                             </div>
                         </div>
 

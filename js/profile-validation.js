@@ -1,4 +1,5 @@
 $().ready(function() {
+
   $("#editProfileForm").validate({
     // Specify validation rules
     rules: {

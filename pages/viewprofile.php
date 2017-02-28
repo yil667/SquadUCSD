@@ -91,21 +91,21 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label>
                             <div class="col-sm-9">
-                                <label name="email" id="email"></label>
+                                <label class="form-control-static" name="email" id="email"></label>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
                             <div class="col-sm-9">
-                                <label name="phone" id="phone"></label>
+                                <label class="form-control-static" name="phone" id="phone"></label>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="major" class="col-sm-3 col-form-label">Major</label>
                             <div class="col-sm-9">
-                                <label name="major" id="major"></label>
+                                <label class="form-control-static" name="major" id="major"></label>
                             </div>
                         </div>
 
@@ -113,7 +113,15 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <label for="about" class="col-sm-3 col-form-label">About Me</label>
                             <div class="col-sm-9">
-                                <label name="about" id="about"></label>
+                                <label class="form-control-static" name="about" id="about"></label>
+                            </div>
+                        </div>
+
+                        <div class="button">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#messageModal">Message</button>
+                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#inviteModal">Invite to Existing Group</button>
+                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
                             </div>
                         </div>
 
