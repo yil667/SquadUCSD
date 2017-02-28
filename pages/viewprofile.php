@@ -183,7 +183,7 @@ include_once '../controller/viewProfileAction.php';
                         <label name="message" id="message" for="messageboxinvite">Message</label>
                         <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
                     </div>
-                    <div class="modal-footer">
+                    <div class="form-group modal-footer">
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         <button type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
