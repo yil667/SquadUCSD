@@ -37,7 +37,7 @@ else {
 	------------------------
  
 	Please click this link to activate your account:
-	http://www.squaducsd.com/pages/activate?email='.$email.'&hash='.$hash.'
+	http://www.squaducsd.com/pages/activate.php?email='.$email.'&hash='.$hash.'
  
 	'; // Our message above including the link
 
