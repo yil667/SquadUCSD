@@ -18,10 +18,9 @@ include_once '../controller/startUserSession.php';
 			var loggedInContent =
                 "<li class='dropdown'>" +
                 "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + userFirstName +  " <span class='caret'></span></a><ul class='dropdown-menu'>" +
-                "<li><a href='managegroup.php'>Manage Groups</a></li>" +
+                "<li><a href='managegroups.php'>Manage Groups</a></li>" +
                 "<li><a href='editprofile.php'>Edit Profile</a></li>" +
                 "<li><a href='./viewprofile.php'>View Profile</a></li>" +
-                "<li><a href='./changepassword.php'>Change Password</a></li>" +
                 "<li><a href='../controller/logoutAction.php'>" +
                 "<span class='glyphicon glyphicon-log-out'>" + "</span> Logout</a></li></ul></li>";
 
