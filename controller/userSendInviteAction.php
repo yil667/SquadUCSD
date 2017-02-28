@@ -9,7 +9,7 @@ session_start();
 
 // assume we get the user's and receiver's ID's
 $userid = getUserId();
-$receiverid = $_GET['userid'];// decide on how we get this field later, maybe through _POST[]
+$receiverid = $_GET['receiverid'];// decide on how we get this field later, maybe through _POST[]
 $from = $_GET['from'];
 
 
@@ -26,5 +26,3 @@ addRequestToDB($conn, $userid, $receiverid, $hash);
 sendInvite($conn, $userid, $receiverid, $message, $hash);
 
 header("Location: " . $from);
-
-echo "<h1> REFUCKINGLAX </h1>";
