@@ -27,7 +27,7 @@ else {
     // this action controller will fetch the user data into the $user variable
     include_once "../controller/viewProfileAction.php";
 
-    $_SESSION['fromurl'] = $url;
+    $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 }
 
 
