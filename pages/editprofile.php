@@ -25,12 +25,19 @@ include_once '../controller/viewProfileAction.php';
     <meta name="author" content="Zifan Yang">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/class-list.js"></script>
+     <!-- jQuery form validation -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="../js/profile-validation.js"></script>
+    <script src="../js/changepassword-validation.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
@@ -58,22 +65,23 @@ include_once '../controller/viewProfileAction.php';
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
                 <div class="panel-heading"><h3>Edit Profile</h3></div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="../controller/editProfileAction.php">
+                    <form class="form-horizontal" id="editProfileForm" role="form" method="POST" action="../controller/editProfileAction.php">
                         <div class="form-group">
                             <label for="name" class="col-sm-3 col-form-label">Full Name</label>
                             <div class="col-sm-9">
-                                <label name="Full Name" id="name"></label>
+                                <label class="form-control-static" name="Full Name" id="name"></label>
+
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label>
                             <div class="col-sm-9">
-                                 <label name="email" id="email"></label>
+                                 <label class="form-control-static" name="email" id="email"></label>
                             </div>
                         </div>
 
@@ -92,6 +100,19 @@ include_once '../controller/viewProfileAction.php';
                         </div>
 
                         <div class="form-group">
+                            <label for="major" class="col-sm-3 col-form-label">Classes</label>
+                            <div class="col-sm-9 ui-widget">
+                                <input type="text" class="form-control" id="class1">
+                                <input type="text" class="form-control" id="class2">
+                                <input type="text" class="form-control" id="class3">
+                                <input type="text" class="form-control" id="class4">
+                                <input type="text" class="form-control" id="class5">
+                                <input type="text" class="form-control" id="class6">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="about" class="col-sm-3 col-form-label">About Me</label>
                             <div class="col-sm-9">
                                 <textarea class="form-control" name="about" id="about" rows="3"></textarea>
@@ -104,6 +125,40 @@ include_once '../controller/viewProfileAction.php';
                             </div>
                         </div>
                     </form>
+
+                    <form class="form-horizontal" id="changePasswordForm" role="form" method="POST" action="../controller/changePasswordAction.php">
+
+                    <div class="form-group">
+                        <label for="currpassword" class="col-sm-3 col-form-label">Enter Current Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" name="currpassword" id="currpassword">
+                        </div>
+                    </div>
+
+               
+                    <div class="form-group">
+                        <label for="password" class="col-sm-3 col-form-label">Enter New Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" name="password" id="password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password2" class="col-sm-3 col-form-label">Confirm New Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" name="password2" id="password2">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Change Password</button>
+                             <br>
+                            <a class="btn btn-link" href="forgotpassword.php">Forgot password?</a>
+                        </div>
+                    </div>
+                </form>
                 </div>
             </div>
         </div>
