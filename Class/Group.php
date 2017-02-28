@@ -7,6 +7,7 @@ class Group
     private $name;
     private $class;
     private $size;
+    private $maxSize;
     private $users;
 
     /**
@@ -14,15 +15,16 @@ class Group
      * @param $groupid
      * @param $name
      * @param $class
-     * @param $users
      * @param $size
+     * @param $maxSize
      */
-    public function __construct($groupid, $name, $class, $size)
+    public function __construct($groupid, $name, $size, $maxSize, $class)
     {
         $this->groupid = $groupid;
         $this->name = $name;
-        $this->class = $class;
         $this->size = $size;
+        $this->maxSize = $maxSize;
+        $this->class = $class;
     }
 
     /**
@@ -105,6 +107,24 @@ class Group
         $this->size = $size;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getMaxSize()
+    {
+        return $this->maxSize;
+    }
 
+    /**
+     * @param mixed $maxSize
+     */
+    public function setMaxSize($maxSize)
+    {
+        $this->maxSize = $maxSize;
+    }
 
+    public function isFull()
+    {
+        return $this->size == $this->maxSize;
+    }
 }
