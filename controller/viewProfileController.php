@@ -70,17 +70,17 @@ function getGroupObject($id)
 
         // iterate through the groups that the user is affiliated with
         foreach ($userIDs as $userId) {
-            if ($userId == "")
-                continue;
+            if ($userId != "")
+            {
+                $sql = "SELECT * FROM student WHERE id='$userId'";
+                $result = mysqli_query($conn, $sql);
+                $userRow = mysqli_fetch_assoc($result);
+                array_push($users, new User($userRow['id'], $userRow['fname'] . " " . $userRow['lname'],
+                    "", "", "", "", ""));
 
-            $sql = "SELECT * FROM student WHERE id='$userId'";
-            $result = mysqli_query($conn, $sql);
-            $userRow = mysqli_fetch_assoc($result);
-            array_push($users, new User($userRow['id'], $userRow['fname'] . " " . $userRow['lname'],
-                "", "", "", "", ""));
+            }
         }
     }
-
 
     $group->setUsers($users);
 
