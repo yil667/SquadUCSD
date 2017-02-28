@@ -1,28 +1,28 @@
 $().ready(function() {
-  $("#changePasswordForm").validate({
+
+  $("#editProfileForm").validate({
     // Specify validation rules
     rules: {
-      currpassword: "required",
-      password: {
-        required: true,
-        minlength: 6,
-        maxlength: 12
+      phone: {
+      	minlength: 8,
+        maxlength: 15,
+        digits: true
       },
-      password2: {
-        required: true,
-        equalTo: "#password"
+      major: {
+         maxlength: 40
+      },
+      about: {
+         maxlength: 200
       }
     },
     // Specify validation error messages
     messages: {
-      currpassword: "Please enter your current password",
-      password: {
-        required: "Please provide a password",
-        minlength: "Your password must be at least 6-12 characters long"
+      phone: "Please enter a valid phone number (8-15 characters)",
+      major: {
+        maxlength: "Your major should be less than 40 characters"
       },
-      password2: {
-        required: "Please re-enter your password",
-        equalTo: "Passwords do not match"
+     about: {
+        maxlength: "Your about should be less than 200 characters"
       },
     },
     // Make sure the form is submitted to the destination defined

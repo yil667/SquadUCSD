@@ -37,6 +37,7 @@ include_once '../controller/viewProfileAction.php';
      <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script src="../js/profile-validation.js"></script>
+    <script src="../js/changepassword-validation.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
@@ -68,11 +69,12 @@ include_once '../controller/viewProfileAction.php';
             <div class="panel panel-custom">
                 <div class="panel-heading"><h3>Edit Profile</h3></div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="../controller/editProfileAction.php">
+                    <form class="form-horizontal" id="editProfileForm" role="form" method="POST" action="../controller/editProfileAction.php">
                         <div class="form-group">
                             <label for="name" class="col-sm-3 col-form-label">Full Name</label>
                             <div class="col-sm-9">
                                 <label class="form-control-static" name="Full Name" id="name"></label>
+
                             </div>
                         </div>
 
