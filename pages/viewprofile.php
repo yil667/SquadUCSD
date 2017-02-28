@@ -172,7 +172,7 @@ include_once '../controller/viewProfileAction.php';
             </div>
             <div class="modal-body">
 
-                <form id="invite-new-form" action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
+                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
                     <div class="form-group">
                         <label name="message" id="message" for="groupselect">Select Group</label>
                         <select id="groupselect" name="groupselect">
@@ -186,7 +186,7 @@ include_once '../controller/viewProfileAction.php';
 
                     <div class="modal-footer">
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="send-btn" type="submit" class="btn btn-primary msg-submit">Send Invite</button>
+                        <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
 
                 </form>
@@ -203,25 +203,29 @@ include_once '../controller/viewProfileAction.php';
                 <h3 id="nameForm"></h3>
             </div>
             <div class="modal-body">
-                <label name="message" id="message" for="messageboxform">Message</label>
-                <textarea class="form-control" name="messageboxform" id="messageboxform" rows="3"></textarea>
+                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
+                    <div class="form-group">
+                        <label name="message" id="message" for="messageboxform">Message</label>
+                        <textarea class="form-control" name="messageboxform" id="messageboxform" rows="3"></textarea>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
+                    </div>
+
+                </form>
+
             </div>
             <div class="modal-footer">
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button class="btn btn-primary">Send Invite</button>
+                <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
             </div>
         </div>
     </div>
 </div>
 
-<script>
-    $(function () {
-        $('body').on('click', '.msg-submit', function (e) {
-            $(this.form).submit();
-            $('#myModal').modal('hide');
-        });
-    });
-</script>
+
 </body>
 
 
