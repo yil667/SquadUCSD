@@ -73,7 +73,7 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <label for="name" class="col-sm-3 col-form-label">Full Name</label>
                             <div class="col-sm-9">
-                                <label class="form-control-static" name="Full Name" id="name"></label>
+                                <label class="form-control-static" name="name" id="name"></label>
                             </div>
                         </div>
 
@@ -101,7 +101,7 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <label for="major" class="col-sm-3 col-form-label">Classes</label>
                             <div class="col-sm-9 ui-widget">
-                                <input type="text" class="form-control" id="class1">
+                                <input type="text" class="form-control" name="class1" id="class1">
                             </div>
                         </div>
 
