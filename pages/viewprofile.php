@@ -65,6 +65,15 @@ include_once '../controller/viewProfileAction.php';
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
 
+            var nameMessage = <?php echo json_encode("Message " . $user->getFname()); ?>;
+            $('#nameMessage').html(nameMessage);
+
+            var nameInvite = <?php echo json_encode("Invite " . $user->getFname() . " to Existing Group"); ?>;
+            $('#nameInvite').html(nameInvite);
+
+            var nameForm = <?php echo json_encode("Invite " . $user->getFname() . " to Form Group"); ?>;
+            $('#nameForm').html(nameForm);
+
             var major = <?php echo json_encode($user->getMajor()); ?>;
             $('#major').html(major);
 
@@ -119,7 +128,7 @@ include_once '../controller/viewProfileAction.php';
                         </div>
 
                         <div class="button">
-                            <div class="btn-group" role="group">
+                            <div class="btn-toolbar" role="toolbar">
                                 <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#messageModal">Message</button>
                                 <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#inviteModal">Invite to Existing Group</button>
                                 <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
@@ -138,7 +147,7 @@ include_once '../controller/viewProfileAction.php';
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="messageLabel">Message $User$</h3>
+                <h3 id="nameMessage"></h3>
             </div>
             <div class="modal-body">
                 <form>
@@ -161,7 +170,7 @@ include_once '../controller/viewProfileAction.php';
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="messageLabel">Invite $User$ to Existing Group</h3>
+                <h3 id="nameInvite"></h3>
             </div>
             <div class="modal-body">
 
@@ -191,7 +200,7 @@ include_once '../controller/viewProfileAction.php';
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="messageLabel">Invite $User$ to Form Group</h3>
+                <h3 id="nameForm"></h3>
             </div>
             <div class="modal-body">
                 <label name="message" id="message" for="messageboxform">Message</label>

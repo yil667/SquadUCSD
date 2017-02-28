@@ -39,7 +39,7 @@
                             <br>
                        </div>
                         <div class="button">
-                            <div class="btn-group" role="group">
+                            <div class="btn-toolbar" role="toolbar">
                                 <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#messageModal">Message</button>
                                 <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#inviteModal">Invite to Existing Group</button>
                                 <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
