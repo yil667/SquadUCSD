@@ -3,15 +3,14 @@
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
 
-$url =json_encode($_SERVER['REQUEST_URI']);
+$url = json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to have suffix "user=id"
 if (strrpos($url, "?") == "") {
     // redirects to home page if the user is not logged in
-    if(!isLoggedIn())
+    if (!isLoggedIn())
         handleNotLoggedIn();
-    else
-    {
+    else {
         $profileid = getUserId();
         $redirectUrl = "Location: ./viewprofile.php?userid=$profileid";
         header($redirectUrl);
@@ -122,9 +121,15 @@ else {
                         </div>
 
                         <div class="button">
-                            <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#messageModal">Message</button>
-                            <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#inviteModal">Invite to Existing Group</button>
-                            <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
+                            <button type="button" class="btn btn-primary" role="button" data-toggle="modal"
+                                    data-target="#messageModal">Message
+                            </button>
+                            <button type="button" class="btn btn-success" role="button" data-toggle="modal"
+                                    data-target="#inviteModal">Invite to Existing Group
+                            </button>
+                            <button type="button" class="btn btn-success" role="button" data-toggle="modal"
+                                    data-target="#formModal">Invite to Form New Group
+                            </button>
                         </div>
 
                     </form>
@@ -147,73 +152,78 @@ else {
                         <label name="message" id="message" for="sendmessageform">Message</label>
                         <textarea class="form-control" name="sendmessageform" id="sendmessageform" rows="3"></textarea>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button class="btn btn-primary">Send</button>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="nameInvite"></h3>
-            </div>
-            <div class="modal-body">
-
-                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
-                    <div class="form-group">
-                        <label name="message" id="message" for="groupselect">Select Group</label>
-                        <select id="groupselect" name="groupselect">
-                            <option></option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label name="message" id="message" for="messageboxinvite">Message</label>
-                        <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
-                    </div>
 
                     <div class="modal-footer">
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
+                        <button id="send-btn" type="submit" class="btn btn-primary">Send</button>
                     </div>
-
                 </form>
             </div>
         </div>
     </div>
-</div>
 
-<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="nameForm"></h3>
-            </div>
-            <div class="modal-body">
-                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
-                    <div class="form-group">
-                        <label name="message" id="message" for="messageboxform">Message</label>
-                        <textarea class="form-control" name="messageboxform" id="messageboxform" rows="3"></textarea>
-                    </div>
+    <div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="nameInvite"></h3>
+                </div>
+                <div class="modal-body">
 
-                    <div class="modal-footer">
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
-                    </div>
+                    <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
+                        <div class="form-group">
+                            <label name="message" id="message" for="groupselect">Select Group</label>
+                            <select id="groupselect" name="groupselect">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label name="message" id="message" for="messageboxinvite">Message</label>
+                            <textarea class="form-control" name="messageboxinvite" id="messageboxinvite"
+                                      rows="3"></textarea>
+                        </div>
 
-                </form>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                            <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
+                        </div>
 
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="nameForm"></h3>
+                </div>
+                <div class="modal-body">
+                    <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
+                        <div class="form-group">
+                            <label name="message" id="message" for="messageboxform">Message</label>
+                            <textarea class="form-control" name="messageboxform" id="messageboxform"
+                                      rows="3"></textarea>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                            <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>
