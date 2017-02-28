@@ -5518,24 +5518,24 @@ $(function() {
 "WCWP 500",
   ];
 
-function search(request, response) {
-    var term = $.ui.autocomplete.escapeRegex(request.term)
-        , startsWithMatcher = new RegExp("^" + term, "i")
-        , startsWith = $.grep(listOfClasses, function(value) {
-        return startsWithMatcher.test(value.label || value.value || value);
-    })
-        , containsMatcher = new RegExp(term, "i")
-        , contains = $.grep(listOfClasses, function (value) {
-        return $.inArray(value, startsWith) < 0 &&
-            containsMatcher.test(value.label || value.value || value);
-    });
 
-    response(startsWith.concat(contains));
-    response(results.slice(0, 10));
-}
 
 $( "#class2" ).autocomplete({
-    source: search(request,response)
+    source: function(request, response) {
+        var term = $.ui.autocomplete.escapeRegex(request.term)
+            , startsWithMatcher = new RegExp("^" + term, "i")
+            , startsWith = $.grep(listOfClasses, function(value) {
+            return startsWithMatcher.test(value.label || value.value || value);
+        })
+            , containsMatcher = new RegExp(term, "i")
+            , contains = $.grep(listOfClasses, function (value) {
+            return $.inArray(value, startsWith) < 0 &&
+                containsMatcher.test(value.label || value.value || value);
+        });
+
+        response(startsWith.concat(contains));
+        response(results.slice(0, 10));
+    }
 });
 
 
