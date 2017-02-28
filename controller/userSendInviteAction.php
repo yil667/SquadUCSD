@@ -10,9 +10,9 @@ echo "<h1> refuckinglollax</h1>";
 
 // assume we get the user's and receiver's ID's
 $userid = getUserId();
-$receiverid = getProfileId();// decide on how we get this field later, maybe through _POST[]
-
 echo "<h1> $userid</h1>";
+
+$receiverid = $_GET['userid'];// decide on how we get this field later, maybe through _POST[]
 echo "<h1> $receiverid</h1>";
 
 

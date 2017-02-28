@@ -22,21 +22,24 @@ if (strrpos($url, "?") == "") {
 // otherwise we load the id into the session variable and
 // call the action controller
 else {
-
-
     // getting url info for the action controller
     // this is the part after the "?"
-    $url = json_encode($_SERVER['QUERY_STRING']);
+//    $url = json_encode($_SERVER['QUERY_STRING']);
+//
+//    // this one somehow has a quotation mark at the end
+//    $profileid = substr($url, strpos($url, "=") + 1);
+//    $profileid = substr($profileid, 0, strlen($profileid) - 1);
+//
+//    $_SESSION['profileid'] = $profileid;
 
-    // this one somehow has a quotation mark at the end
-    $userid = substr($url, strpos($url, "=") + 1);
-    $userid = substr($userid, 0, strlen($userid) - 1);
+    $profileid = $_GET['userid'];
 
-    $_SESSION['profileid'] = $userid;
+    // this action controller will fetch the user data into the $user variable
+    include_once "../controller/viewProfileAction.php?userid=$profileid";
+
 }
 
-// this action controller will fetch the user data into the $user variable
-include_once '../controller/viewProfileAction.php';
+
 ?>
 
 <!DOCTYPE html>
