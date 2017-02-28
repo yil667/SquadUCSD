@@ -5526,8 +5526,18 @@ $( "#class1" ).autocomplete({
 });
 $( "#class2" ).autocomplete({
     source: function(request, response) {
-        var results = $.ui.autocomplete.filter(listOfClasses, request.term);
+        var term = $.ui.autocomplete.escapeRegex(request.term)
+            , startsWithMatcher = new RegExp("^" + term, "i")
+            , startsWith = $.grep(listOfClasses, function(value) {
+            return startsWithMatcher.test(value.label || value.value || value);
+        })
+            , containsMatcher = new RegExp(term, "i")
+            , contains = $.grep(listOfClasses, function (value) {
+            return $.inArray(value, startsWith) < 0 &&
+                containsMatcher.test(value.label || value.value || value);
+        });
 
+        response(startsWith.concat(contains));
         response(results.slice(0, 10));
     }
 });
