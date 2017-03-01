@@ -49,7 +49,7 @@ include_once '../controller/viewProfileAction.php';
             }
 
             if (window.location.href.indexOf("?fail") > -1) {
-                $("#update-info").html("Password change failed: Incorrect correct password entered.");
+                $("#update-info").html("Password change failed: Incorrect current password entered.");
             }
 
             var name = <?php echo json_encode($user->getFname() . " " . $user->getLname()); ?>;

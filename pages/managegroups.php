@@ -5,36 +5,9 @@ include_once '../controller/startUserSession.php';
 
 $url = json_encode($_SERVER['REQUEST_URI']);
 
-// redirects the url to have suffix "user=id"
-if (strrpos($url, "?") == "") {
-    // redirects to home page if the user is not logged in
-    if (!isLoggedIn())
-        handleNotLoggedIn();
-    else {
-        // otherwise modify the link and redirect to the correct userid page
-        $_SESSION['profileid'] = $_SESSION['id'];
-        $redirectUrl = "Location: ./managegroups.php?userid=" . $_SESSION['profileid'];
-        header($redirectUrl);
-    }
-}
+// redirects the url to homepage if the user is not logged in
+handleNotLoggedIn();
 
-// otherwise we load the id into the session variable and
-// call the action controller
-else {
-
-
-    // getting url info for the action controller
-    // this is the part after the "?"
-    $url = json_encode($_SERVER['QUERY_STRING']);
-
-    // this one somehow has a quotation mark at the end
-    $userid = substr($url, strpos($url, "=") + 1);
-    $userid = substr($userid, 0, strlen($userid) - 1);
-
-    $_SESSION['profileid'] = $userid;
-}
-
-//include_once '../controller/viewProfileAction.php';
 ?>
 
 <!DOCTYPE html>
