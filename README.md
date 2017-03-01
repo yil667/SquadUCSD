@@ -41,12 +41,12 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
-   <li>add safety page redirection</li>
 </ol>
 
 <h2>Back-end recently finished: </h2>
 <ol>
    <li><strike>forgot password logic</strike></li>
+   <li><strike>add safety page redirection</strike></li>
 </ol>
 
 
