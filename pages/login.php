@@ -1,5 +1,12 @@
 <?php
 include_once '../controller/startUserSession.php';
+if(strpos($_SERVER['HTTP_HOST'], "www.") != "")
+{
+    $shortened = substr($_SERVER['HTTP_HOST'], 4);
+    $actual_link = "$shortened$_SERVER[REQUEST_URI]";
+    header("Location: $actual_link");
+}
+
 ?>
 
 
