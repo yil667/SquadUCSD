@@ -21,7 +21,7 @@ This web app allows students to form study groups for the classes they are enrol
    <li>check flags for editprofile(fail, success and saved)</li>
    <li>invite to form new group needs group name / group size></li>
    <li>display groups in user profile</li>
-   <li>in user profile when you are on your own profile make button for edit profile</li>
+
 //Zi
    <li>dynamically display groups in viewprofile page (invite to existing group)
       display warning if the group if full already when inviting 
@@ -33,9 +33,10 @@ This web app allows students to form study groups for the classes they are enrol
 <ol>
    <li><strike>maybe don't display the button's in profile page if user not logged in
       and don't display buttons on the user's own profile page</strike></li>
-      <li><strike>add password checking for special characters</strike></li>
+   <li><strike>add password checking for special characters</strike></li>
    <li><strike>handle forgot password redirection checks in resetpassword.php.
        Read the comments in the php script in the beginning of that file.</strike></li>
+   <li><strike>in user profile when you are on your own profile make button for edit profile</strike></li>
 </ol>
    
 <h2>Back-end todo list:</h2>
