@@ -316,5 +316,4 @@ class User
     } // profile picture
 
 
-
 }

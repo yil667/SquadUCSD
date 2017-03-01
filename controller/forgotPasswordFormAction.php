@@ -10,7 +10,7 @@ $conn = connectToDB();
 $result = handleForgotPasswordEmail($conn, $email);
 
 // email exists
-if($result)
+if ($result)
     header("Location: ../pages/forgotpassword.php?sent");
 else
     header("Location: ../pages/forgotpassword.php?fail");

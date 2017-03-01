@@ -9,8 +9,7 @@ $group = getGroupObject($group);
 
 $inGroup = false;
 // check if user is logged in, and if so, whether the user is in the group
-if (isLoggedIn())
-{
+if (isLoggedIn()) {
     $userid = getUserId(); // fetches the user's id
     $inGroup = $group->hasUser($userid);
 }

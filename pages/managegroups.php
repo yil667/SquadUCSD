@@ -3,15 +3,14 @@
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
 
-$url =json_encode($_SERVER['REQUEST_URI']);
+$url = json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to have suffix "user=id"
 if (strrpos($url, "?") == "") {
     // redirects to home page if the user is not logged in
-    if(!isLoggedIn())
+    if (!isLoggedIn())
         handleNotLoggedIn();
-    else
-    {
+    else {
         // otherwise modify the link and redirect to the correct userid page
         $_SESSION['profileid'] = $_SESSION['id'];
         $redirectUrl = "Location: ./managegroups.php?userid=" . $_SESSION['profileid'];

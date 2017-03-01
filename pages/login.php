@@ -23,25 +23,25 @@ include_once '../controller/startUserSession.php';
         $(document).ready(function () {
             $('#common').load('./common.php');
             var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
-            if (isUserLoggedIn){
+            if (isUserLoggedIn) {
                 document.location.href = './index.php';
             }
 
-            if(window.location.href.indexOf("verify") > -1 || window.location.href.indexOf("not_verified") > -1) {
+            if (window.location.href.indexOf("verify") > -1 || window.location.href.indexOf("not_verified") > -1) {
                 $("#login-error").html("Please complete your email verification!");
             }
-            else if(window.location.href.indexOf("nonexistent_account") > -1) {
+            else if (window.location.href.indexOf("nonexistent_account") > -1) {
                 $("#login-error").html("The account you entered does not exsist!");
             }
-            else if(window.location.href.indexOf("wrong_password") > -1) {
+            else if (window.location.href.indexOf("wrong_password") > -1) {
                 $("#login-error").html("Invalid login info! Please make sure you entered the correct password.");
             }
 
-            else if(window.location.href.indexOf("verified") > -1) {
+            else if (window.location.href.indexOf("verified") > -1) {
                 $("#login-error").html("Email verification successful!");
             }
 
-            else if(window.location.href.indexOf("activate_invalid") > -1) {
+            else if (window.location.href.indexOf("activate_invalid") > -1) {
                 $("#login-error").html("Invalid activation link or account already activated.");
             }
         });
@@ -53,7 +53,11 @@ include_once '../controller/startUserSession.php';
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
-                <div class="panel-heading" id="login-header"><h3>Login<h4 id="login-error"><h4></h3></div>
+                <div class="panel-heading" id="login-header">
+                    <h3>Login
+                        <h4 id="login-error"><h4>
+                    </h3>
+                </div>
                 <div class="panel-body">
 
                     <div class="col-sm-6 col-sm-offset-3" style="margin-bottom:10px;">

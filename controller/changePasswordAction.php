@@ -12,12 +12,9 @@ $id = getUserId();
 $currPassword = $_POST['currpassword'];
 $newPassword = $_POST['password'];
 
-if(validCurrPassword($conn, $id, $currPassword))
-{
+if (validCurrPassword($conn, $id, $currPassword)) {
     updatePassword($conn, $id, $newPassword);
     header("Location: ../pages/editprofile.php?success");
-}
-else
-{
+} else {
     header("Location: ../pages/editprofile.php?fail");
 }

@@ -38,10 +38,9 @@ include_once '../controller/startUserSession.php';
                         Enter your UCSD email address and a reset link will be sent to your email.
                     </div>
 
-                    <form action="../controller/forgotPasswordFormAction.php" class="form-horizontal" role="form" method="POST">
+                    <form action="../controller/forgotPasswordFormAction.php" class="form-horizontal" role="form"
+                          method="POST">
                         <label class="col-sm-4 control-label"></label> <!--Fix for register here -->
-
-
 
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-3">

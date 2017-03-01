@@ -11,9 +11,8 @@ $result = mysqli_query($conn, $sql);
 
 // if the email and hash are correct
 if ($row = mysqli_fetch_assoc($result)) {
-    $valid = true;
-}
-else {
+    header("Location: ../pages/resetpassword.php");
+} else {
     // No match -> invalid url or account has already been activated.
     $valid = false;
 }

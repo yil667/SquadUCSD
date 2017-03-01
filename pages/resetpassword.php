@@ -52,7 +52,8 @@ include_once "../controller/resetPasswordLinkAction.php";
                         Enter and confirm your new password.
                     </div>
 
-                    <form action="../controller/resetPasswordFormAction.php" class="form-horizontal" role="form" method="POST">
+                    <form action="../controller/resetPasswordFormAction.php" class="form-horizontal" role="form"
+                          method="POST">
                         <label class="col-sm-4 control-label"></label> <!--Fix for register here -->
 
                         <div class="form-group">
