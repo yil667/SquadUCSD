@@ -71,7 +71,7 @@ else {
                 content = "";
             }
             else {
-                content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#leaveModal'>Request to Join Group" +
+                content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#requestModal'>Request to Join Group" +
                     "</button>"
             }
             $("#buttons").html(content);
@@ -141,20 +141,6 @@ else {
 </div>
 
 
-<div class="modal fade" id="leaveModal" tabindex="-1" role="dialog" aria-labelledby="leaveLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="leaveLabel">Leave Group?</h3>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button class="btn btn-primary">Confirm</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

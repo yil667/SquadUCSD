@@ -116,8 +116,9 @@ include_once '../controller/viewGroupProfileAction.php';
 
                         <div class="form-group">
                             <div class="text-center">
-                                <button href="" class="btn btn-primary">View Group Profile</button>
+                                <button type="button" href="" class="btn btn-primary">View Group Profile</button>
                                 <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <button type="button" class="btn btn-danger" data-target="#leaveModal">Leave Group</button>
                             </div>
                         </div>
                     </form>
@@ -126,5 +127,21 @@ include_once '../controller/viewGroupProfileAction.php';
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="leaveModal" tabindex="-1" role="dialog" aria-labelledby="leaveLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="leaveLabel">Leave Group?</h3>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
