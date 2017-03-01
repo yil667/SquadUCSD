@@ -48,18 +48,17 @@ $url = $_SERVER['REQUEST_URI'];
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-            //REMOVE '/' when editing @BACKEND
-            var major = <?php echo json_encode($user->getMajor()); ?>;
-            $('#major').html(major);
-
-            var about = <?php echo json_encode($user->getAbout()); ?>;
-            $('#about').html(about);
-
-            var phone = <?php echo json_encode($user->getPhone()); ?>;
-            $('#phone').html(phone);
-
-            var email = <?php echo json_encode($user->getEmail()); ?>;
-            $('#email').html(email);
+//            var major = <?php //echo json_encode($user->getMajor()); ?>//;
+//            $('#major').html(major);
+//
+//            var about = <?php //echo json_encode($user->getAbout()); ?>//;
+//            $('#about').html(about);
+//
+//            var phone = <?php //echo json_encode($user->getPhone()); ?>//;
+//            $('#phone').html(phone);
+//
+//            var email = <?php //echo json_encode($user->getEmail()); ?>//;
+//            $('#email').html(email);
         });
     </script>
 </head>
@@ -74,7 +73,7 @@ $url = $_SERVER['REQUEST_URI'];
                     <form class="form-horizontal" role="form" method="POST">
 
                         <div class="form-group">
-                            <label for="members" class="col-sm-3 col-form-label">Members</label>
+                            <label for="members" class="col-sm-3 control-label">Members</label>
                             <div class="col-sm-9">
                                 <div class="list-group">
                                     <a href="#" class="list-group-item">First item</a>
@@ -85,25 +84,23 @@ $url = $_SERVER['REQUEST_URI'];
                         </div>
 
                         <div class="form-group">
-                            <label for="class" class="col-sm-3 col-form-label">Class</label>
+                            <label for="class" class="col-sm-3 control-label">Class</label>
                             <div class="col-sm-9">
-                                <label class="form-control-static" type="text" name="class" id="class"></label>
+                                <p class="form-control-static" type="text" name="class" id="class"></p>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="size" class="col-sm-3 col-form-label">Group Size</label>
+                            <label for="size" class="col-sm-3 control-label">Group Size</label>
                             <div class="col-sm-9">
-                                <label class="form-control-static" type="number" name="size" id="size"></label>
+                                <p class="form-control-static" type="number" name="size" id="size"></p>
                             </div>
                         </div>
 
                         <div class="button">
-                            <div class="btn-group" role="group">
                                 <!-- use js to choose Leave Group / Request Invite -->
                                 <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#leaveModal">Leave Group</button>
                                 <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#requestModal">Request to Join Group</button>
-                            </div>
                         </div>
 
                     </form>

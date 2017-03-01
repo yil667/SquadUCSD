@@ -53,6 +53,7 @@ include_once '../controller/startUserSession.php';
 				<ul class="nav navbar-nav navbar-left">
 					<li><a href="./index.php">Home</a></li>
 					<li><a href="#">Browse</a></li>
+                    <li><a href="#">Contact</a></li>
 
 				</ul>
 				<ul class="nav navbar-nav navbar-right" id="rightNav"></ul>
@@ -63,7 +64,6 @@ include_once '../controller/startUserSession.php';
 	<footer class="footer">
 		<div>
 			<a href="#" class="col-sm-1">
-				Contact
 			</a>
 		</div>
 	</footer>
