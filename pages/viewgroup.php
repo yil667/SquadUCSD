@@ -1,28 +1,25 @@
-
-<!-- remove '/' in </?php @BACKEND -->
 <?php
-// if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
 
-$url = $_SERVER['REQUEST_URI'];
+$url = json_encode($_SERVER['REQUEST_URI']);
 
-// redirects the url to have suffix "user=id"
+// redirects the url to homepage if not groupid found
+if (strrpos($url, "?") == "") {
+    // redirects to home page if the user is not logged in
+    header("Location: ../pages/index.php");
+}
 
 // otherwise we load the id into the session variable and
 // call the action controller
+else {
+    $_SESSION['groupid'] = $_GET['groupid'];
 
-    // getting url info for the action controller
-    // this is the part after the "?"
-    $url = json_encode($_SERVER['QUERY_STRING']);
+    // this action controller will fetch the user data into the $user variable
+    include_once "../controller/viewGroupProfileAction.php";
 
-    // this one somehow has a quotation mark at the end
-    $groupid = substr($url, strpos($url, "=") + 1);
-    $groupid = substr($groupid, 0, strlen($groupid) - 1);
-
-    $_SESSION['groupid'] = $groupid;
-
-//include_once '../controller/viewGroupProfileAction.php';
+    $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+}
 ?>
 
 <!DOCTYPE html>
@@ -48,17 +45,17 @@ $url = $_SERVER['REQUEST_URI'];
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-//            var major = <?php //echo json_encode($user->getMajor()); ?>//;
-//            $('#major').html(major);
-//
-//            var about = <?php //echo json_encode($user->getAbout()); ?>//;
-//            $('#about').html(about);
-//
-//            var phone = <?php //echo json_encode($user->getPhone()); ?>//;
-//            $('#phone').html(phone);
-//
-//            var email = <?php //echo json_encode($user->getEmail()); ?>//;
-//            $('#email').html(email);
+            var major = <?php echo json_encode($user->getMajor()); ?>;
+            $('#major').html(major);
+
+            var about = <?php echo json_encode($user->getAbout()); ?>;
+            $('#about').html(about);
+
+            var phone = <?php echo json_encode($user->getPhone()); ?>;
+            $('#phone').html(phone);
+
+            var email = <?php echo json_encode($user->getEmail()); ?>;
+            $('#email').html(email);
         });
     </script>
 </head>
@@ -105,9 +102,13 @@ $url = $_SERVER['REQUEST_URI'];
                         </div>
 
                         <div class="button">
-                                <!-- use js to choose Leave Group / Request Invite -->
-                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#leaveModal">Leave Group</button>
-                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#requestModal">Request to Join Group</button>
+                            <!-- use js to choose Leave Group / Request Invite -->
+                            <button type="button" class="btn btn-primary" role="button" data-toggle="modal"
+                                    data-target="#leaveModal">Leave Group
+                            </button>
+                            <button type="button" class="btn btn-primary" role="button" data-toggle="modal"
+                                    data-target="#requestModal">Request to Join Group
+                            </button>
                         </div>
 
                     </form>
