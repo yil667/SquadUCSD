@@ -73,9 +73,16 @@ $url = $_SERVER['REQUEST_URI'];
                     <form class="form-horizontal" role="form" method="POST">
 
                         <div class="form-group">
+                            <label for="groupname" class="col-sm-3 control-label">Name</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static" type="text" name="groupname" id="groupname"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="members" class="col-sm-3 control-label">Members</label>
                             <div class="col-sm-9">
-                                <div class="list-group">
+                                <div class="list-group" id="memberlist" name="memberlist">
                                     <a href="#" class="list-group-item">First item</a>
                                     <a href="#" class="list-group-item">Second item</a>
                                     <a href="#" class="list-group-item">Third item</a>
