@@ -10,7 +10,7 @@ $hash = $_GET['hash'];
 include_once "../controller/createGroupAction.php";
 
 if ($valid) {
-    header("Locatoin: ./managegroups.php?formed");
+    header("Location: ./managegroups.php?formed");
 }
 else {
     // redirects to error page
