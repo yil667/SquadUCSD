@@ -11,7 +11,7 @@ if (strpos($url, "?") === false) {
 // if the link contains the flag, but user is not logged in,
 // then the user shouldn't be able to edit profile
 else {
-    if(!isLoggedIn()){
+    if(!isLoggedIn() || !$inGroup){
         $groupid = $_GET['groupid'];
         header("Location: ./viewgroup.php?$groupid");
     }
@@ -48,13 +48,13 @@ include_once '../controller/viewGroupProfileAction.php';
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-
             var users = <?php echo json_encode($group->getUsers()); ?>;
             for (i = 0; i < users.length; i++) {
                 var link = "./viewprofile.php?userid=" + users[i]["userid"];
                 $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
                     + users[i]["fname"] + "</a>");
             }
+        
             // input fields
             var groupname = <?php echo json_encode($group->getName()); ?>;
             document.getElementById('groupname').value = groupname;
