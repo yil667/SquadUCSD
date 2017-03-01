@@ -6,7 +6,6 @@ Front-end todo list:
 1. add classes duplicate checks
 2. add password checking for special characters
 3. check flags for editprofile(fail, success and saved)
-4. class length to be 40?
 5. maybe don't display the button's in profile page if user not logged in
    and don't display buttons on the user's own profile page
 6. dynamically display groups in viewprofile page (invite to existing group)
