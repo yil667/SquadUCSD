@@ -1,11 +1,7 @@
 <?php
 include_once '../controller/startUserSession.php';
 
-if($_SERVER['HTTP_HOST'] != "localhost" && strpos($_SERVER['HTTP_HOST'], "www.") === false)
-{
-    $actual_link = "http://www.$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    header("Location: $actual_link");
-}
+
 
 ?>
 
