@@ -1,19 +1,38 @@
-# SUCS D
+<html>
+<h1>SUCS D</h1>
 
+<p>
 This web app allows students to form study groups for the classes they are enrolled in. Groups are formed based on schedule compatibility and individual personalities and preferences. Groups can set a maximum size to allow however many people in. This can be changed any time.
+</p>
 
-Front-end todo list:
-1. add classes duplicate checks
-2. add password checking for special characters
-3. check flags for editprofile(fail, success and saved)
+<h2>Non-Coding related todo list: </h2>
+<ol>
+   <li>Rewrite blurb on <a href="http://www.squaducsd.com/pages/">welcome</a> page</li>
+   <li>Go over Use Cases and Design Use cases and update to be consistent with final product</li>
+   <li>Start testing the site</li>
+</ol>
+
+<h2>Front-end todo list: </h2>
+<ol>
+   <li>add classes duplicate checks</li>
+   <li>add password checking for special characters</li>
+   <li>check flags for editprofile(fail, success and saved)</li>
+   <li>invite to form new group needs group name / group size></li>
+   <li>manage groups redirects to wrong page</li>
+   <li>display groups in user profile</li>
+   <li>in user profile when you are on your own profile make button for edit profile</li>
 //Zi
 
-5. maybe don't display the button's in profile page if user not logged in
-   and don't display buttons on the user's own profile page
-6. dynamically display groups in viewprofile page (invite to existing group)
-   display warning if the group if full already when inviting 
-   (backend will resize the group)
-7. dynamically display groups in manage group page
+   <li>maybe don't display the button's in profile page if user not logged in
+      and don't display buttons on the user's own profile page</li>
+   <li>dynamically display groups in viewprofile page (invite to existing group)
+      display warning if the group if full already when inviting 
+      (backend will resize the group)</li>
+   <li>dynamically display groups in manage group page</li>
+</ol>
    
-Back-end todo list:
-hmm
+<h2>Back-end todo list:</h2>
+<ol>
+   <li>hmm</li>
+</ol>
+</html>
