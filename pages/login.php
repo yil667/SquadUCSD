@@ -44,6 +44,14 @@ include_once '../controller/startUserSession.php';
             else if (window.location.href.indexOf("activate_invalid") > -1) {
                 $("#login-error").html("Invalid activation link or account already activated.");
             }
+
+            else if (window.location.href.indexOf("reset") > -1) {
+                $("#login-error").html("Password reset successful.");
+            }
+
+            else if (window.location.href.indexOf("sent") > -1) {
+                $("#login-error").html("A link to reset your password has been sent to your email.");
+            }
         });
     </script>
 </head>

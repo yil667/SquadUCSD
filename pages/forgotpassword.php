@@ -22,6 +22,11 @@ include_once '../controller/startUserSession.php';
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
+
+            if (window.location.href.indexOf("fail") > -1) {
+                $("#email-error").html("The email you entered does not exist.");
+            }
+
         });
     </script>
 </head>
@@ -31,7 +36,11 @@ include_once '../controller/startUserSession.php';
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
-                <div class="panel-heading" id="login-header"><h3>Forgot Password?</h3></div>
+                <div class="panel-heading" id="login-header">
+                    <h3>Forgot Password
+                        <h4 id="email-error"><h4>
+                    </h3>
+                </div>
                 <div class="panel-body">
 
                     <div class="col-sm-6 col-sm-offset-3" style="margin-bottom:10px;">

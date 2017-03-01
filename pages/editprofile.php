@@ -166,8 +166,6 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary">Change Password</button>
-                                <br>
-                                <a class="btn btn-link" href="forgotpassword.php">Forgot password?</a>
                             </div>
                         </div>
                     </form>

@@ -22,17 +22,33 @@ This web app allows students to form study groups for the classes they are enrol
    <li>display groups in user profile</li>
    <li>in user profile when you are on your own profile make button for edit profile</li>
 //Zi
-
-   <li>maybe don't display the button's in profile page if user not logged in
-      and don't display buttons on the user's own profile page</li>
    <li>dynamically display groups in viewprofile page (invite to existing group)
       display warning if the group if full already when inviting 
       (backend will resize the group)</li>
    <li>dynamically display groups in manage group page</li>
+   <li>handle forgot password redirection checks in resetpassword.php.
+       Read the comments in the php script in the beginning of that file.</li>
+    <li>handle flags in 
+</ol>
+
+<h2>Front-end recently finished: </h2>
+<ol>
+   <li><strike>maybe don't display the button's in profile page if user not logged in
+      and don't display buttons on the user's own profile page</strike>Finished</li>
+
 </ol>
    
 <h2>Back-end todo list:</h2>
 <ol>
    <li>hmm</li>
 </ol>
+
+<h2>Back-end recently finished: </h2>
+<ol>
+   <li><strike>forgot password logic</strike></li>
+</ol>
+
+
+
+
 </html>
