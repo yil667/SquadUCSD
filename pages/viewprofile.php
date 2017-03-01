@@ -140,9 +140,10 @@ else {
                                 <p class="form-control-static" name="about" id="about"></p>
                             </div>
                         </div>
-
-                        <div class="text-center" id="buttons" name="buttons">
-                            <!-- contents here is displayed conditionally -->
+                        <div class="form-group">
+                            <div class="text-center" id="buttons" name="buttons">
+                                <!-- contents here is displayed conditionally -->
+                            </div>
                         </div>
                     </form>
                 </div>
