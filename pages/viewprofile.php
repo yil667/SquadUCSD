@@ -91,10 +91,14 @@ else {
                 "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#formModal'>Invite to Form New Group" +
                 "</button>";
             var defaultContent = "";
-            var selfProfile = "";
+            var selfProfile = "<a class='btn btn-primary' href='editprofile.php' role='button' id='editprofile' name='editprofile' >Edit Profile" +
+                "</a>";
 
             if (isUserLoggedIn && !isOwnPage) {
                 $("#buttons").html(loggedInContent);
+            }
+            else if (isOwnPage) {
+                $("#buttons").html(selfProfile);
             }
             else {
                 $("#buttons").html(defaultContent);
