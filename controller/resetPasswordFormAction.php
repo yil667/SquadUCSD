@@ -5,14 +5,11 @@ include_once 'dbController.php';
 $email = $_SESSION['forgetEmail'];
 $newPassword = $_POST['newpassword'];
 
-echo "email is $email";
-echo "newPassword is $newPassword";
+$sql = "UPDATE student SET hash1='', pwd='$newPassword' WHERE email='$email'";
+$conn = connectToDB();
+mysqli_query($conn, $sql);
 
-//$sql = "UPDATE student SET hash1='' AND pwd='$newPassword' WHERE email='$email'";
-//$conn = connectToDB();
-//mysqli_query($conn, $sql);
-//
-//header("Location: ../pages/login.php?reset");
+header("Location: ../pages/login.php?reset");
 
 ?>
 <!-- stop PHP Code -->
