@@ -71,9 +71,16 @@ else {
                     <form class="form-horizontal" role="form" method="POST">
 
                         <div class="form-group">
+                            <label for="groupname" class="col-sm-3 control-label">Name</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static" type="text" name="groupname" id="groupname"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="members" class="col-sm-3 control-label">Members</label>
                             <div class="col-sm-9">
-                                <div class="list-group">
+                                <div class="list-group" id="memberlist" name="memberlist">
                                     <a href="#" class="list-group-item">First item</a>
                                     <a href="#" class="list-group-item">Second item</a>
                                     <a href="#" class="list-group-item">Third item</a>
@@ -133,7 +140,7 @@ else {
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="requestLabel">Request Invite to Group</h3>
+                <h3 id="requestLabel">Request to Join Group</h3>
             </div>
             <div class="modal-body">
                 <form>
