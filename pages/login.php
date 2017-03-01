@@ -2,12 +2,12 @@
 include_once '../controller/startUserSession.php';
 echo "the link is " . $_SERVER['HTTP_HOST'];
 
-//if(strpos($_SERVER['HTTP_HOST'], "www.") != "")
-//{
-//    $shortened = substr($_SERVER['HTTP_HOST'], 4);
-//    $actual_link = "$shortened$_SERVER[REQUEST_URI]";
-//    header("Location: $actual_link");
-//}
+if($_SERVER['HTTP_HOST'] != "localhost" && !strpos($_SERVER['HTTP_HOST'], "www."))
+{
+    $shortened = substr($_SERVER['HTTP_HOST'], 4);
+    $actual_link = "$shortened$_SERVER[REQUEST_URI]";
+    header("Location: $actual_link");
+}
 
 ?>
 
