@@ -138,7 +138,7 @@ $url = $_SERVER['REQUEST_URI'];
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="requestLabel">Request Invite to Group</h3>
+                <h3 id="requestLabel">Request to Join Group</h3>
             </div>
             <div class="modal-body">
                 <form>

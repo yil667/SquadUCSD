@@ -33,8 +33,6 @@ include_once '../controller/startUserSession.php';
 			}
 
 		});
-
-				
 	</script>
 
 </head>

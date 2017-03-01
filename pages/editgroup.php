@@ -1,4 +1,3 @@
-
 <!-- remove '/' in </?php @BACKEND -->
 <?php
 include_once '../controller/startUserSession.php';
@@ -6,7 +5,7 @@ include_once '../controller/startUserSession.php';
 $_SESSION['profileid'] = $_SESSION['id'];
 
 // load the group's data from action controller
-include_once '../controller/viewGroupAction.php';
+include_once '../controller/viewGroupProfileAction.php';
 
 // now the group object contains all the relevant user info
 ?>
@@ -35,22 +34,20 @@ include_once '../controller/viewGroupAction.php';
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-//            var name = <?php //echo json_encode($user->getFname()); ?>//;
-//            $('#name').html(name);
+
 //
-//
-//            var email = <?php //echo json_encode($user->getEmail()); ?>//;
-//            $('#email').html(email);
+//            var users = <?php //echo json_encode($group->getUsers()); ?>//;
+//            $('#users').html(users);
 //
 //            // input fields
-//            var major = <?php //echo json_encode($user->getMajor()); ?>//;
-//            document.getElementById('major').value = major;
+//            var name = <?php //echo json_encode($group->getName()); ?>//;
+//            document.getElementById('name').value = name;
 //
-//            var about = <?php //echo json_encode($user->getAbout()); ?>//;
-//            document.getElementById('about').value = about;
+//            var class = <?php //echo json_encode($group->getClass()); ?>//;
+//            document.getElementById('class').value = class;
 //
-//            var phone = <?php //echo json_encode($user->getPhone()); ?>//;
-//            document.getElementById('phone').value = phone;
+//            var size = <?php //echo json_encode($group->getSize()); ?>//;
+//            document.getElementById('size').value = size;
 
         });
     </script>
@@ -66,16 +63,16 @@ include_once '../controller/viewGroupAction.php';
                     <form class="form-horizontal" role="form" method="POST" action="../controller/editGroupAction.php">
 
                         <div class="form-group">
-                            <label for="groupname" class="col-sm-3 control-label">Name</label>
+                            <label for="name" class="col-sm-3 control-label">Name</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="groupname" id="groupname">
+                                <input type="text" class="form-control" name="name" id="name">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="members" class="col-sm-3 control-label">Members</label>
                             <div class="col-sm-9">
-                                <div class="list-group">
+                                <div class="list-group" name="members" id="members">
                                     <a href="#" class="list-group-item">First item</a>
                                     <a href="#" class="list-group-item">Second item</a>
                                     <a href="#" class="list-group-item">Third item</a>
@@ -94,7 +91,8 @@ include_once '../controller/viewGroupAction.php';
                             <label for="size" class="col-sm-3 control-label">Group Size</label>
                             <div class="col-sm-9">
                                 <!--replace min with num from backend @DOM @SCOTT -->
-                                <input type="number" class="form-control bfh-number" min="2" max="15" name="size" id="size">
+                                <input type="number" class="form-control bfh-number" min="2" max="15" name="size"
+                                       id="size">
                             </div>
                         </div>
 
