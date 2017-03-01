@@ -67,18 +67,12 @@ else {
             var inGroup = <?php echo json_encode($inGroup); ?>;
             var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
             var content;
-            if (!isUserLoggedIn) {
+            if (!isUserLoggedIn || inGroup) {
                 content = "";
             }
             else {
-                if (inGroup) {
-                    content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#leaveModal'>Leave Group" +
+                content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#leaveModal'>Request to Join Group" +
                     "</button>"
-                }
-                else {
-                    content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#leaveModal'>Request to Join Group" +
-                        "</button>"
-                }
             }
             $("#buttons").html(content);
 
