@@ -2,6 +2,14 @@
 
 This web app allows students to form study groups for the classes they are enrolled in. Groups are formed based on schedule compatibility and individual personalities and preferences. Groups can set a maximum size to allow however many people in. This can be changed any time.
 
+<html>
+Non-Coding related todo list:
+Rewrite blurb on <a href="www.squaducsd.com">welcome</a> page
+</html>
+
+Go over Use Cases and Design Use cases and update to be consistent with final product
+
+
 Front-end todo list:
 1. add classes duplicate checks
 2. add password checking for special characters
