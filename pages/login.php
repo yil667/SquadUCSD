@@ -34,7 +34,7 @@ include_once '../controller/startUserSession.php';
                 $("#login-error").html("Please complete your email verification!");
             }
             else if (window.location.href.indexOf("?nonexistent_account") > -1) {
-                $("#login-error").html("The account you entered does not exsist!");
+                $("#login-error").html("The account you entered does not exist!");
             }
             else if (window.location.href.indexOf("?wrong_password") > -1) {
                 $("#login-error").html("Invalid login info! Please make sure you entered the correct password.");
