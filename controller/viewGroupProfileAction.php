@@ -3,8 +3,9 @@
 include_once "loginController.php";
 include_once "viewProfileController.php";
 
-$groupid = $_SESSION['groupid']; //?groupid=34
 
+
+$groupid = $_SESSION['groupid']; //?groupid=34
 $group = getGroupObject($groupid);
 
 $inGroup = false;
@@ -13,5 +14,6 @@ if (isLoggedIn()) {
     $userid = getUserId(); // fetches the user's id
     $inGroup = $group->hasUser($userid);
 }
+
 
 ?>

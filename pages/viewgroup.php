@@ -63,6 +63,35 @@ else {
 
             var size = <?php echo json_encode($group->getSize()); ?>;
             $('#size').html(size);
+
+            var inGroup = <?php echo json_encode($inGroup); ?>;
+            var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
+            var content;
+            if (!isUserLoggedIn) {
+                content = "";
+            }
+            else {
+                if (inGroup) {
+                    content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#leaveModal'>Leave Group" +
+                    "</button>"
+                }
+                else {
+                    content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#leaveModal'>Request to Join Group" +
+                        "</button>"
+                }
+            }
+            $("#buttons").html(content);
+
+
+            var loggedInSelfContent =
+                "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#messageModal'>Message" +
+                "</button>" +
+                "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#inviteModal'>Invite to Existing Group" +
+                "</button>" +
+                "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#formModal'>Invite to Form New Group" +
+                "</button>";
+            var defaultContent = "";
+
         });
     </script>
 </head>
@@ -106,14 +135,8 @@ else {
                             </div>
                         </div>
 
-                        <div class="button">
-                            <!-- use js to choose Leave Group / Request Invite -->
-                            <button type="button" class="btn btn-primary" role="button" data-toggle="modal"
-                                    data-target="#leaveModal">Leave Group
-                            </button>
-                            <button type="button" class="btn btn-primary" role="button" data-toggle="modal"
-                                    data-target="#requestModal">Request to Join Group
-                            </button>
+                        <div class="button" id="buttons" name="buttons">
+                            <!-- contents here is displayed conditionally -->
                         </div>
 
                     </form>

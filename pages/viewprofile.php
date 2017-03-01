@@ -55,8 +55,6 @@ else {
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-            var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
-
             var displayButtons = <?php echo json_encode($displayButtons); ?>;
 
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
@@ -144,6 +142,7 @@ else {
                         </div>
 
                         <div class="button" id="buttons" name="buttons">
+                            <!-- contents here is displayed conditionally -->
                         </div>
                     </form>
                 </div>

@@ -2,8 +2,23 @@
 <?php
 include_once '../controller/startUserSession.php';
 
-$_SESSION['profileid'] = $_SESSION['id'];
+// no flag is found, redirect to manage group page
+$url = $_SERVER['REQUEST_URI'];
 
+if (strpos($url, "?") === false) {
+    header("Location: ./managegroups.php");
+}
+// if the link contains the flag, but user is not logged in,
+// then the user shouldn't be able to edit profile
+else {
+    if(!isLoggedIn()){
+        $groupid = $_GET['groupid'];
+        header("Location: ./viewgroup.php?$groupid");
+    }
+}
+
+$_SESSION['groupid'] = $_GET['groupid'];
+$_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 // load the group's data from action controller
 include_once '../controller/viewGroupProfileAction.php';
 
@@ -36,7 +51,7 @@ include_once '../controller/viewGroupProfileAction.php';
 
             var users = <?php echo json_encode($group->getUsers()); ?>;
             for (i = 0; i < users.length; i++) {
-                var link = "./viewprofile.php?id=" + users[i]["userid"];
+                var link = "./viewprofile.php?userid=" + users[i]["userid"];
                 $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
                     + users[i]["fname"] + "</a>");
             }
@@ -60,14 +75,18 @@ include_once '../controller/viewGroupProfileAction.php';
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3>Edit Group</h3></div>
+                <div class="panel-heading">
+                    <h3>
+                        Edit Group
+                    </h3>
+                </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="../controller/editGroupAction.php">
 
                         <div class="form-group">
-                            <label for="name" class="col-sm-3 control-label">Name</label>
+                            <label for="groupname" class="col-sm-3 control-label">Group Name</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="name" id="name">
+                                <input type="text" class="form-control" name="groupname" id="groupname">
                             </div>
                         </div>
 
@@ -75,17 +94,15 @@ include_once '../controller/viewGroupProfileAction.php';
                             <label for="members" class="col-sm-3 control-label">Members</label>
                             <div class="col-sm-9">
                                 <div class="list-group" name="memberlist" id="memberlist">
-                                    <a href="#" class="list-group-item">First item</a>
-                                    <a href="#" class="list-group-item">Second item</a>
-                                    <a href="#" class="list-group-item">Third item</a>
+                                    <!-- contents here are displayed dynamically -->
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="class" class="col-sm-3 control-label">Class</label>
+                            <label for="course" class="col-sm-3 control-label">Class</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="class" id="class">
+                                <input type="text" class="form-control" name="course" id="course">
                             </div>
                         </div>
 

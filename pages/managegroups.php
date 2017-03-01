@@ -36,7 +36,7 @@ include_once '../controller/manageGroupAction.php';
             var groups = <?php echo json_encode($user->getGroups()); ?>;
             for(i = 0; i < groups.length; i++ )
             {
-                var link = "./viewgroup.php?groupid=" + groups[i]["groupid"];
+                var link = "./editgroup.php?groupid=" + groups[i]["groupid"];
                 $('#classlist').append("<a href='" + link + "' class='list-group-item'>"
                     + groups[i]["name"] + "</a>");
             }

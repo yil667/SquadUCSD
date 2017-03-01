@@ -17,6 +17,8 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
+   
+   <li>connect the writable text fields correctly (correctly not displaying some shits - from Dom)</li>
    <li>add classes duplicate checks</li>
    <li>invite to form new group needs group name / group size></li>
    <li>display groups in user profile</li>
@@ -25,11 +27,13 @@ This web app allows students to form study groups for the classes they are enrol
    <li>dynamically display groups in viewprofile page (invite to existing group)
       display warning if the group if full already when inviting 
       (backend will resize the group)</li>
-   <li>dynamically display groups in manage group page</li>
 </ol>
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>dynamically display button in view profile page</strike></li>
+   <li><strike>dynamically display groups in edit profile page</strike></li>
+   <li><strike>dynamically display groups in manage group page</strike></li>
    <li><strike>maybe don't display the button's in profile page if user not logged in
       and don't display buttons on the user's own profile page</strike></li>
    <li><strike>add password checking for special characters</strike></li>
