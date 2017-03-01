@@ -14,7 +14,7 @@ if (strrpos($url, "?") == "") {
     {
         // otherwise modify the link and redirect to the correct userid page
         $_SESSION['profileid'] = $_SESSION['id'];
-        $redirectUrl = "Location: ./editgroup.php?userid=" . $_SESSION['profileid'];
+        $redirectUrl = "Location: ./managegroups.php?userid=" . $_SESSION['profileid'];
         header($redirectUrl);
     }
 }
