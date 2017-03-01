@@ -23,7 +23,7 @@ include_once '../controller/startUserSession.php';
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-            if (window.location.href.indexOf("fail") > -1) {
+            if (window.location.href.indexOf("?fail") > -1) {
                 $("#email-error").html("The email you entered does not exist.");
             }
 

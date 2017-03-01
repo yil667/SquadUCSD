@@ -36,6 +36,6 @@ textarea {
     resize: vertical;
 }
 
-.error {
+#update-info, .error {
     color: red;
 }

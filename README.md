@@ -18,7 +18,6 @@ This web app allows students to form study groups for the classes they are enrol
 <h2>Front-end todo list: </h2>
 <ol>
    <li>add classes duplicate checks</li>
-   <li>check flags for editprofile(fail, success and saved)</li>
    <li>invite to form new group needs group name / group size></li>
    <li>display groups in user profile</li>
 
@@ -37,6 +36,7 @@ This web app allows students to form study groups for the classes they are enrol
    <li><strike>handle forgot password redirection checks in resetpassword.php.
        Read the comments in the php script in the beginning of that file.</strike></li>
    <li><strike>in user profile when you are on your own profile make button for edit profile</strike></li>
+   <li><strike>check flags for editprofile(fail, success and saved)</strike></li>
 </ol>
    
 <h2>Back-end todo list:</h2>

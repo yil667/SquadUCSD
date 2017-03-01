@@ -40,6 +40,18 @@ include_once '../controller/viewProfileAction.php';
         $(document).ready(function () {
             $('#common').load('./common.php');
 
+            if (window.location.href.indexOf("?saved") > -1) {
+                $("#update-info").html("Profile updated.");
+            }
+
+            if (window.location.href.indexOf("?success") > -1) {
+                $("#update-info").html("Password changed successfully.");
+            }
+
+            if (window.location.href.indexOf("?fail") > -1) {
+                $("#update-info").html("Password change failed: Incorrect correct password entered.");
+            }
+
             var name = <?php echo json_encode($user->getFname() . " " . $user->getLname()); ?>;
             $('#name').html(name);
 
@@ -79,7 +91,11 @@ include_once '../controller/viewProfileAction.php';
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3>Edit Profile</h3></div>
+                <div class="panel-heading">
+                    <h3>Edit Profile
+                        <h4 id="update-info"><h4>
+                    </h3>
+                </div>
                 <div class="panel-body">
                     <form class="form-horizontal" id="editProfileForm" role="form" method="POST"
                           action="../controller/editProfileAction.php">
