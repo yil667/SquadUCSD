@@ -21,7 +21,6 @@ This web app allows students to form study groups for the classes they are enrol
    <li>add password checking for special characters</li>
    <li>check flags for editprofile(fail, success and saved)</li>
    <li>invite to form new group needs group name / group size></li>
-   <li>manage groups redirects to wrong page</li>
    <li>display groups in user profile</li>
    <li>in user profile when you are on your own profile make button for edit profile</li>
 //Zi
