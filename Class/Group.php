@@ -3,8 +3,8 @@
 
 class Group
 {
-    private $groupid;
-    private $name;
+    public $groupid;
+    public $name;
     private $class;
     private $size;
     private $maxSize;

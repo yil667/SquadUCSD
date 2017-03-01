@@ -3,38 +3,10 @@
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
 
-$url = json_encode($_SERVER['REQUEST_URI']);
+handleNotLoggedIn();
 
-// redirects the url to have suffix "user=id"
-if (strrpos($url, "?") == "") {
-    // redirects to home page if the user is not logged in
-    if (!isLoggedIn())
-        handleNotLoggedIn();
-    else {
-        // otherwise modify the link and redirect to the correct userid page
-        $_SESSION['profileid'] = $_SESSION['id'];
-        $redirectUrl = "Location: ./managegroups.php?userid=" . $_SESSION['profileid'];
-        header($redirectUrl);
-    }
-}
+include_once '../controller/manageGroupAction.php';
 
-// otherwise we load the id into the session variable and
-// call the action controller
-else {
-
-
-    // getting url info for the action controller
-    // this is the part after the "?"
-    $url = json_encode($_SERVER['QUERY_STRING']);
-
-    // this one somehow has a quotation mark at the end
-    $userid = substr($url, strpos($url, "=") + 1);
-    $userid = substr($userid, 0, strlen($userid) - 1);
-
-    $_SESSION['profileid'] = $userid;
-}
-
-//include_once '../controller/viewProfileAction.php';
 ?>
 
 <!DOCTYPE html>
@@ -57,9 +29,17 @@ else {
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
+
         $(document).ready(function () {
             $('#common').load('./common.php');
 
+            var groups = <?php echo json_encode($user->getGroups()); ?>;
+            for(i = 0; i < groups.length; i++ )
+            {
+                var link = "./viewgroup.php?groupid=" + groups[i]["groupid"];
+                $('#classlist').append("<a href='" + link + "' class='list-group-item'>"
+                    + groups[i]["name"] + "</a>");
+            }
         });
 
     </script>
@@ -75,10 +55,8 @@ else {
                     <form class="form-horizontal" role="form" method="POST">
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <div class="list-group">
-                                    <a href="#" class="list-group-item">CSE100</a>
-                                    <a href="#" class="list-group-item">CSE110</a>
-                                    <a href="#" class="list-group-item">ECON100A</a>
+                                <div class="list-group" id="classlist">
+                                    <!-- contents here are displayed dynamically -->
                                 </div>
                             </div>
                         </div>

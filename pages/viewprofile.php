@@ -6,7 +6,7 @@ include_once '../controller/startUserSession.php';
 $url = json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to have suffix "user=id"
-if (strrpos($url, "?") == "") {
+if (strrpos($url, "?") === false) {
 
     if (!isLoggedIn())
         handleNotLoggedIn();
@@ -57,7 +57,7 @@ else {
 
             var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
 
-            var isOwnPage = <?php echo json_encode($_GET['userid'] == getUserId()); ?>;
+            var displayButtons = <?php echo json_encode($displayButtons); ?>;
 
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
@@ -94,7 +94,7 @@ else {
             var selfProfile = "<a class='btn btn-primary' href='editprofile.php' role='button' id='editprofile' name='editprofile' >Edit Profile" +
                 "</a>";
 
-            if (isUserLoggedIn && !isOwnPage) {
+            if (displayButtons) {
                 $("#buttons").html(loggedInContent);
             }
             else if (isOwnPage) {

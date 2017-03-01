@@ -35,17 +35,21 @@ include_once '../controller/viewGroupProfileAction.php';
             $('#common').load('./common.php');
 
             var users = <?php echo json_encode($group->getUsers()); ?>;
-            $('#users').html(users);
+            for (i = 0; i < users.length; i++) {
+                var link = "./viewprofile.php?id=" + users[i]["userid"];
+                $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
+                    + users[i]["fname"] + "</a>");
+            }
 
             // input fields
-            var name = <?php echo json_encode($group->getName()); ?>;
-            document.getElementById('name').value = name;
+            var groupname = <?php echo json_encode($group->getName()); ?>;
+            $('#groupname').html(groupname);
 
             var course = <?php echo json_encode($group->getClass()); ?>;
-            document.getElementById('class').value = course;
+            $('#course').html(course);
 
             var size = <?php echo json_encode($group->getSize()); ?>;
-            document.getElementById('size').value = size;
+            $('#size').html(size);
 
         });
     </script>
@@ -70,7 +74,7 @@ include_once '../controller/viewGroupProfileAction.php';
                         <div class="form-group">
                             <label for="members" class="col-sm-3 control-label">Members</label>
                             <div class="col-sm-9">
-                                <div class="list-group" name="members" id="members">
+                                <div class="list-group" name="memberlist" id="memberlist">
                                     <a href="#" class="list-group-item">First item</a>
                                     <a href="#" class="list-group-item">Second item</a>
                                     <a href="#" class="list-group-item">Third item</a>
