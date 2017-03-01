@@ -141,7 +141,7 @@ else {
                             </div>
                         </div>
 
-                        <div class="button" id="buttons" name="buttons">
+                        <div class="text-center" id="buttons" name="buttons">
                             <!-- contents here is displayed conditionally -->
                         </div>
                     </form>

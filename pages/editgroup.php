@@ -116,6 +116,7 @@ include_once '../controller/viewGroupProfileAction.php';
 
                         <div class="form-group">
                             <div class="text-center">
+                                <button href="" class="btn btn-primary">View Group Profile</button>
                                 <button type="submit" class="btn btn-primary">Save Changes</button>
                             </div>
                         </div>
