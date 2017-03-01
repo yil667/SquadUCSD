@@ -27,33 +27,33 @@ include_once '../controller/startUserSession.php';
                 document.location.href = './index.php';
             }
 
-            if (window.location.href.indexOf("verify") > -1 || window.location.href.indexOf("not_verified") > -1) {
+            if (window.location.href.indexOf("?verify") > -1 || window.location.href.indexOf("?not_verified") > -1) {
                 $("#login-error").html("Please complete your email verification!");
             }
-            else if (window.location.href.indexOf("nonexistent_account") > -1) {
+            else if (window.location.href.indexOf("?nonexistent_account") > -1) {
                 $("#login-error").html("The account you entered does not exsist!");
             }
-            else if (window.location.href.indexOf("wrong_password") > -1) {
+            else if (window.location.href.indexOf("?wrong_password") > -1) {
                 $("#login-error").html("Invalid login info! Please make sure you entered the correct password.");
             }
 
-            else if (window.location.href.indexOf("verified") > -1) {
+            else if (window.location.href.indexOf("?verified") > -1) {
                 $("#login-error").html("Email verification successful!");
             }
 
-            else if (window.location.href.indexOf("activate_invalid") > -1) {
+            else if (window.location.href.indexOf("?activate_invalid") > -1) {
                 $("#login-error").html("Invalid activation link or account already activated.");
             }
 
-            else if (window.location.href.indexOf("reset") > -1) {
+            else if (window.location.href.indexOf("?reset") > -1) {
                 $("#login-error").html("Password reset successful.");
             }
 
-            else if (window.location.href.indexOf("sent") > -1) {
+            else if (window.location.href.indexOf("?sent") > -1) {
                 $("#login-error").html("A link to reset your password has been sent to your email.");
             }
 
-            else if (window.location.href.indexOf("invalidreset") > -1) {
+            else if (window.location.href.indexOf("?invalidreset") > -1) {
                 $("#login-error").html("Invalid or expired reset password link.");
             }
         });
