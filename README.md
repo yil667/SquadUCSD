@@ -18,7 +18,6 @@ This web app allows students to form study groups for the classes they are enrol
 <h2>Front-end todo list: </h2>
 <ol>
    
-   <li>connect the writable text fields correctly (correctly not displaying some shits - from Dom)</li>
    <li>add classes duplicate checks</li>
    <li>invite to form new group needs group name / group size></li>
    <li>display groups in user profile</li>
@@ -31,6 +30,7 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>connect the writable text fields correctly (correctly not displaying some shits - from Dom)</strike></li>
    <li><strike>dynamically display button in view profile page</strike></li>
    <li><strike>dynamically display groups in edit profile page</strike></li>
    <li><strike>dynamically display groups in manage group page</strike></li>
@@ -45,6 +45,8 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
+   <li>implement backend logic for edit group submit form</li>
+
 </ol>
 
 <h2>Back-end recently finished: </h2>

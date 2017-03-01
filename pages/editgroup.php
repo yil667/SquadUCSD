@@ -58,14 +58,13 @@ include_once '../controller/viewGroupProfileAction.php';
 
             // input fields
             var groupname = <?php echo json_encode($group->getName()); ?>;
-            $('#groupname').html(groupname);
+            document.getElementById('groupname').value = groupname;
 
             var course = <?php echo json_encode($group->getClass()); ?>;
-            $('#course').html(course);
+            document.getElementById('course').value = course;
 
-            var size = <?php echo json_encode($group->getSize()); ?>;
-            $('#size').html(size);
-
+            var size = <?php echo json_encode($group->getMaxSize()); ?>;
+            document.getElementById('size').value = size;
         });
     </script>
 </head>
