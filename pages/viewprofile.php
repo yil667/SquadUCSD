@@ -97,6 +97,9 @@ else {
             if (isUserLoggedIn && !isOwnPage) {
                 $("#buttons").html(loggedInContent);
             }
+            else if (isOwnPage) {
+                $("#buttons").html(selfProfile);
+            }
             else {
                 $("#buttons").html(defaultContent);
             }
