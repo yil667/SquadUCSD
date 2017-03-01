@@ -1,6 +1,6 @@
 
 <!-- remove '/' in </?php @BACKEND -->
-<?php
+</?php
 // if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
@@ -22,7 +22,7 @@ $url = $_SERVER['REQUEST_URI'];
 
     $_SESSION['groupid'] = $groupid;
 
-include_once '../controller/viewGroupProfileAction.php';
+//include_once '../controller/viewGroupProfileAction.php';
 ?>
 
 <!DOCTYPE html>
