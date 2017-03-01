@@ -52,6 +52,10 @@ include_once '../controller/startUserSession.php';
             else if (window.location.href.indexOf("sent") > -1) {
                 $("#login-error").html("A link to reset your password has been sent to your email.");
             }
+
+            else if (window.location.href.indexOf("invalidreset") > -1) {
+                $("#login-error").html("Invalid or expired reset password link.");
+            }
         });
     </script>
 </head>

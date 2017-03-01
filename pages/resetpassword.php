@@ -6,6 +6,8 @@ $_SESSION['hash'] = $_GET['hash'];
 $_SESSION['forgetEmail'] = $_GET['email'];
 
 include_once "../controller/resetPasswordLinkAction.php";
+
+
 // the script return a $valid variable for checking whether the activation
 // link the user clicked on is good or not
 //
