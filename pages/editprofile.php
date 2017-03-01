@@ -86,35 +86,35 @@ include_once '../controller/viewProfileAction.php';
                 <div class="panel-body">
                     <form class="form-horizontal" id="editProfileForm" role="form" method="POST" action="../controller/editProfileAction.php">
                         <div class="form-group">
-                            <label for="name" class="col-sm-3 col-form-label">Full Name</label>
+                            <label for="name" class="col-sm-3 control-label">Full Name</label>
                             <div class="col-sm-9">
                                 <label class="form-control-static" name="name" id="name"></label>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label>
+                            <label for="ucsdemail" class="col-sm-3 control-label">UCSD Email</label>
                             <div class="col-sm-9">
                                  <label class="form-control-static" name="email" id="email"></label>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
+                            <label for="phone" class="col-sm-3 control-label">Phone Number</label>
                             <div class="col-sm-9">
                                 <input type="tel" class="form-control" name="phone" id="phone">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="major" class="col-sm-3 col-form-label">Major</label>
+                            <label for="major" class="col-sm-3 control-label">Major</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" name="major" id="major">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="major" class="col-sm-3 col-form-label">Classes</label>
+                            <label for="major" class="col-sm-3 control-label">Classes</label>
                             <div class="col-sm-9 ui-widget">
                                 <input type="text" class="form-control" name="class1" id="class1">
                                 <input type="text" class="form-control" name="class2" id="class2">
@@ -126,7 +126,7 @@ include_once '../controller/viewProfileAction.php';
                         </div>
 
                         <div class="form-group">
-                            <label for="about" class="col-sm-3 col-form-label">About Me</label>
+                            <label for="about" class="col-sm-3 control-label">About Me</label>
                             <div class="col-sm-9">
                                 <textarea class="form-control" name="about" id="about" rows="3"></textarea>
                             </div>
@@ -142,7 +142,7 @@ include_once '../controller/viewProfileAction.php';
                     <form class="form-horizontal" id="changePasswordForm" role="form" method="POST" action="../controller/changePasswordAction.php">
 
                     <div class="form-group">
-                        <label for="currpassword" class="col-sm-3 col-form-label">Enter Current Password</label>
+                        <label for="currpassword" class="col-sm-3 control-label">Enter Current Password</label>
                         <div class="col-sm-9">
                             <input type="password" class="form-control" name="currpassword" id="currpassword">
                         </div>
@@ -150,14 +150,14 @@ include_once '../controller/viewProfileAction.php';
 
                
                     <div class="form-group">
-                        <label for="password" class="col-sm-3 col-form-label">Enter New Password</label>
+                        <label for="password" class="col-sm-3 control-label">Enter New Password</label>
                         <div class="col-sm-9">
                             <input type="password" class="form-control" name="password" id="password">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="password2" class="col-sm-3 col-form-label">Confirm New Password</label>
+                        <label for="password2" class="col-sm-3 control-label">Confirm New Password</label>
                         <div class="col-sm-9">
                             <input type="password" class="form-control" name="password2" id="password2">
                         </div>

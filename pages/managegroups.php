@@ -1,4 +1,4 @@
-</?php
+<?php
 // if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
@@ -35,7 +35,7 @@ else {
     $_SESSION['profileid'] = $userid;
 }
 
-include_once '../controller/viewProfileAction.php';
+//include_once '../controller/viewProfileAction.php';
 ?>
 
 <!DOCTYPE html>

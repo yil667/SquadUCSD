@@ -1,3 +1,15 @@
+<?php
+include_once '../controller/startUserSession.php';
+
+handleNotLoggedIn();
+
+$_SESSION['profileid'] = $_SESSION['id'];
+
+// load the user's data from action controller
+//include_once '../controller/viewProfileAction.php';
+
+// now the user object contains all the relevant user info
+?>
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" type="text/css" href="../css/search_result_entry.css"/>
@@ -29,7 +41,7 @@
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4">
                 <div class="panel panel-custom">
-                    <div class="panel-heading"><h4>Search Results</h4></div>
+                    <div class="panel-heading"><h4>Name</h4></div>
                     <div class="panel-body">
                         <div class="basicinfo">
                             <label for="classes">Matched Classes:</label>

@@ -7,7 +7,7 @@ $url = json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to have suffix "user=id"
 if (strrpos($url, "?") == "") {
-    // redirects to home page if the user is not logged in
+
     if (!isLoggedIn())
         handleNotLoggedIn();
     else {
@@ -55,6 +55,10 @@ else {
         $(document).ready(function () {
             $('#common').load('./common.php');
 
+            var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
+
+            var isOwnPage = <?php echo json_encode($_GET['userid'] == getUserId()); ?>;
+
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
 
@@ -78,6 +82,23 @@ else {
 
             var email = <?php echo json_encode($user->getEmail()); ?>;
             $('#email').html(email);
+
+            var loggedInContent =
+                "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#messageModal'>Message" +
+                "</button>" +
+                "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#inviteModal'>Invite to Existing Group" +
+                "</button>" +
+                "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#formModal'>Invite to Form New Group" +
+                "</button>";
+            var defaultContent = "";
+            var selfProfile = "";
+
+            if (isUserLoggedIn  && !isOwnPage) {
+                $("#buttons").html(loggedInContent);
+            }
+            else {
+                $("#buttons").html(defaultContent);
+            }
         });
     </script>
 </head>
@@ -118,16 +139,7 @@ else {
                             </div>
                         </div>
 
-                        <div class="button">
-                            <button type="button" class="btn btn-primary" role="button" data-toggle="modal"
-                                    data-target="#messageModal">Message
-                            </button>
-                            <button type="button" class="btn btn-success" role="button" data-toggle="modal"
-                                    data-target="#inviteModal">Invite to Existing Group
-                            </button>
-                            <button type="button" class="btn btn-success" role="button" data-toggle="modal"
-                                    data-target="#formModal">Invite to Form New Group
-                            </button>
+                        <div class="button" id="buttons" name="buttons">
                         </div>
                     </form>
                 </div>
