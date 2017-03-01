@@ -19,6 +19,7 @@ This web app allows students to form study groups for the classes they are enrol
 <ol>
    
    <li>add classes duplicate checks</li>
+   <li>member list label hover color darker</li>
    <li>invite to form new group needs group name / group size></li>
    <li>display groups in user profile</li>
    <li>in edit profile page add 2 more buttons, view profile and leave group</li>

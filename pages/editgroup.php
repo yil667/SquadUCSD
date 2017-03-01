@@ -118,7 +118,7 @@ include_once '../controller/viewGroupProfileAction.php';
                             <div class="text-center">
                                 <button type="button" href="" class="btn btn-primary">View Group Profile</button>
                                 <button type="submit" class="btn btn-primary">Save Changes</button>
-                                <button type="button" class="btn btn-danger" data-target="#leaveModal">Leave Group</button>
+                                <button type="button" class="btn btn-danger" role='button' data-toggle='modal' data-target="#leaveModal">Leave Group</button>
                             </div>
                         </div>
                     </form>
