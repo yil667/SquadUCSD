@@ -5,6 +5,9 @@
 This web app allows students to form study groups for the classes they are enrolled in. Groups are formed based on schedule compatibility and individual personalities and preferences. Groups can set a maximum size to allow however many people in. This can be changed any time.
 </p>
 
+<h1>Add new issues here as well as the issues tab in github</h1>
+<h1>As issues are resolved, close issues on issue tab in github and delete entry here</h1>
+
 <h2>Non-Coding related todo list: </h2>
 <ol>
    <li>Rewrite blurb on <a href="http://www.squaducsd.com/pages/">welcome</a> page</li>
@@ -18,7 +21,6 @@ This web app allows students to form study groups for the classes they are enrol
    <li>add password checking for special characters</li>
    <li>check flags for editprofile(fail, success and saved)</li>
    <li>invite to form new group needs group name / group size></li>
-   <li>manage groups redirects to wrong page</li>
    <li>display groups in user profile</li>
    <li>in user profile when you are on your own profile make button for edit profile</li>
 //Zi
