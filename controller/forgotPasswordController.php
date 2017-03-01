@@ -37,7 +37,7 @@ function generateForgotPasswordUrl($email, $hash)
 function generateForgotPasswordEmail($fname, $email, $hash)
 {
     $url = generateForgotPasswordUrl($email, $hash);
-    $message = "
+    $message = "<html><body>
 Hi $fname,
 
 We received a request to reset your SquadUCSD password.
@@ -48,7 +48,7 @@ We received a request to reset your SquadUCSD password.
 .
 "
 
-SquadUCSD";
+SquadUCSD</body></html>";
 
     return $message;
 }
