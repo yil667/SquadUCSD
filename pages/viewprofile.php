@@ -93,7 +93,7 @@ else {
             var defaultContent = "";
             var selfProfile = "";
 
-            if (isUserLoggedIn  && !isOwnPage) {
+            if (isUserLoggedIn && !isOwnPage) {
                 $("#buttons").html(loggedInContent);
             }
             else {

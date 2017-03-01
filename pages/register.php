@@ -18,17 +18,17 @@ include_once '../controller/startUserSession.php';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-     <!-- jQuery form validation -->
+    <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script src="../js/register-validation.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
             var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
-            if (isUserLoggedIn){
+            if (isUserLoggedIn) {
                 document.location.href = './index.php';
             }
-            if(window.location.href.indexOf("fail") > -1) {
+            if (window.location.href.indexOf("fail") > -1) {
                 $("#register-error").html("The email you entered is already registered! ");
             }
         });
@@ -40,7 +40,11 @@ include_once '../controller/startUserSession.php';
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3>Register<h4 id="register-error"><h4></h3></div>
+                <div class="panel-heading">
+                    <h3>Register
+                        <h4 id="register-error"><h4>
+                    </h3>
+                </div>
                 <div class="panel-body">
                     <div class="col-sm-6 col-sm-offset-3" style="margin-bottom:20px;">
                         Already have an account?
@@ -49,7 +53,8 @@ include_once '../controller/startUserSession.php';
                         </a>
                     </div>
 
-                    <form class="form-horizontal" action="../controller/registerFormAction.php" role="form" method="POST" id="registrationForm">
+                    <form class="form-horizontal" action="../controller/registerFormAction.php" role="form"
+                          method="POST" id="registrationForm">
                         <label class="col-sm-4 control-label"></label> <!--Fix for login here link-->
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-3">
@@ -60,7 +65,8 @@ include_once '../controller/startUserSession.php';
 
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-3">
-                                <input type="text" class="form-control" name="first" id="first" placeholder="First Name">
+                                <input type="text" class="form-control" name="first" id="first"
+                                       placeholder="First Name">
                             </div>
                         </div>
 
@@ -72,7 +78,8 @@ include_once '../controller/startUserSession.php';
 
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-3">
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                                <input type="password" class="form-control" name="password" id="password"
+                                       placeholder="Password">
                             </div>
                         </div>
 

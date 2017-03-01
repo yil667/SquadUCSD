@@ -13,7 +13,7 @@ html {
     background-repeat: no-repeat;
     min-height: 100%;
     position: relative;
-	background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
 ul {
@@ -43,19 +43,19 @@ span {
 }
 
 .navbar-brand {
-    height: auto; 
+    height: auto;
     width: auto;
     font-weight: 700;
     font-size: 30px;
 }
 
-.navbar-left li a{
+.navbar-left li a {
     color: #cccccc;
     font-size: 22px;
     margin-top: 0;
 }
 
-.navbar-right li a{
+.navbar-right li a {
     color: #cccccc;
     font-size: 22px;
     margin-top: 0;
@@ -86,7 +86,7 @@ span {
     color: #cccccc;
 }
 
-.navbar.in > li > a{
+.navbar.in > li > a {
     margin-top: 0;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -103,8 +103,6 @@ span {
 .navbar-black .navbar-toggle .icon-bar {
     background-color: #cccccc;
 }
-
-
 
 .footer {
     position: absolute;

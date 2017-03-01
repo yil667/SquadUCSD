@@ -137,7 +137,7 @@ class Group
 
         // loop through all the users and determine if a given user is in the group
         foreach ($this->users as $user) {
-            if($user == $id)
+            if ($user == $id)
                 return true;
         }
 

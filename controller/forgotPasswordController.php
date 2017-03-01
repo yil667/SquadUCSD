@@ -3,8 +3,7 @@ function handleForgotPasswordEmail($conn, $email)
 {
     $sql = "SELECT * FROM student WHERE email='$email'";
     $result = mysqli_query($conn, $sql);
-    if($row = mysqli_fetch_assoc($result))
-    {
+    if ($row = mysqli_fetch_assoc($result)) {
         $fname = $row['fname'];
         $hash = md5(rand(0, 1000)); // generate a random hash
         $email = $row['email'];
@@ -13,9 +12,7 @@ function handleForgotPasswordEmail($conn, $email)
 
         sendForgotPasswordEmail($fname, $email, $hash);
         return true;
-    }
-    else
-    {
+    } else {
         // the user does not exist in the database
         return false;
     }
@@ -46,9 +43,9 @@ We received a request to reset your SquadUCSD password.
 <br/><br/>
 " .
 
-"<a href= '$url'> Please click here to reset your password </a>"
-.
-"
+        "<a href= '$url'> Please click here to reset your password </a>"
+        .
+        "
 <br/><br/>
 SquadUCSD</p></body></html>";
 

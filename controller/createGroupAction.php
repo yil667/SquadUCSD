@@ -22,10 +22,8 @@ if ($row = mysqli_fetch_assoc($result)) {
 
     // update the "group" field for both individuals in the students table
     updateUserProfiles($id1, $id2, $groupid, $conn);
-}
-
-// the invite doesn't exist
-else{
+} // the invite doesn't exist
+else {
     // redirect somewhere else
     $valid = false;
 }

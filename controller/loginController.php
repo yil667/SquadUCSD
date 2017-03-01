@@ -22,9 +22,7 @@ function validLogin($email, $password)
             return 0;
         else
             return -3;
-    }
-
-    // otherwise
+    } // otherwise
     else {
         $sql = "SELECT * FROM student WHERE email='$email'";
         $result = mysqli_query($conn, $sql);
@@ -66,7 +64,8 @@ function getProfileId()
     return $_SESSION['profileid'];
 }
 
-function getUserId(){
+function getUserId()
+{
     return $_SESSION['id'];
 }
 

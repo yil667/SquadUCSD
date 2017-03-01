@@ -11,8 +11,7 @@ $result = mysqli_query($conn, $sql);
 if ($row = mysqli_fetch_assoc($result)) {
     mysqli_query($conn, "UPDATE student SET active='1' WHERE email='" . $email . "' AND hash='" . $hash . "' AND active='0'") or die(mysql_error());
     header("Location: ../pages/login.php?verified");
-}
-else {
+} else {
     // No match -> invalid url or account has already been activated.
     header("Location: ../pages/login.php?activate_invalid");
 }
