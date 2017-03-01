@@ -20,6 +20,7 @@ This web app allows students to form study groups for the classes they are enrol
    <li>invite to form new group needs group name / group size></li>
    <li>manage groups redirects to wrong page</li>
    <li>display groups in user profile</li>
+   <li>in user profile when you are on your own profile make button for edit profile</li>
 //Zi
 
    <li>maybe don't display the button's in profile page if user not logged in
