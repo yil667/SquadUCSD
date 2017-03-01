@@ -6,7 +6,10 @@ if($_SERVER['HTTP_HOST'] != "localhost" && !strpos($_SERVER['HTTP_HOST'], "www."
 {
     $shortened = substr($_SERVER['HTTP_HOST'], 4);
     $actual_link = "$shortened$_SERVER[REQUEST_URI]";
-    header("Location: $actual_link");
+    echo "shortened is $shortened\n";
+    echo "actual is $actual_link\n";
+
+    //header("Location: $actual_link");
 }
 
 ?>
