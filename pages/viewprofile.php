@@ -91,7 +91,8 @@ else {
                 "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#formModal'>Invite to Form New Group" +
                 "</button>";
             var defaultContent = "";
-            var selfProfile = "";
+            var selfProfile = "<button href='./viewprofile.php' type='button' class='btn btn-primary' role='button' id='editprofile' name='editprofile' >Edit Profile" +
+                "</button>";
 
             if (isUserLoggedIn && !isOwnPage) {
                 $("#buttons").html(loggedInContent);
