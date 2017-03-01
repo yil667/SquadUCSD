@@ -16,7 +16,8 @@ $().ready(function () {
             password: {
                 required: true,
                 minlength: 6,
-                maxlength: 12
+                maxlength: 12,
+                pwcheck: true
             },
             password2: {
                 required: true,
@@ -25,11 +26,12 @@ $().ready(function () {
         },
         // Specify validation error messages
         messages: {
-            first: "Please enter your firstname",
-            last: "Please enter your lastname",
+            first: "Please enter your first name",
+            last: "Please enter your last name",
             password: {
                 required: "Please provide a password",
-                minlength: "Your password must be at least 6-12 characters long"
+                minlength: "Your password must be at least 6-12 characters long",
+                pwcheck: "Your password can only consist of characters and numbers"
             },
             password2: {
                 required: "Please re-enter your password",
@@ -42,6 +44,10 @@ $().ready(function () {
         submitHandler: function (form) {
             form.submit();
         }
+    });
+
+    $.validator.addMethod("pwcheck", function(value) {
+        return /^[A-Za-z0-9\d]*$/.test(value) // consists of only these
     });
 
     $.validator.addMethod("customemail",
