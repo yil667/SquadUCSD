@@ -18,7 +18,6 @@ This web app allows students to form study groups for the classes they are enrol
 <h2>Front-end todo list: </h2>
 <ol>
    <li>add classes duplicate checks</li>
-   <li>add password checking for special characters</li>
    <li>check flags for editprofile(fail, success and saved)</li>
    <li>invite to form new group needs group name / group size></li>
    <li>display groups in user profile</li>
@@ -36,8 +35,8 @@ This web app allows students to form study groups for the classes they are enrol
 <h2>Front-end recently finished: </h2>
 <ol>
    <li><strike>maybe don't display the button's in profile page if user not logged in
-      and don't display buttons on the user's own profile page</strike>Finished</li>
-
+      and don't display buttons on the user's own profile page</strike></li>
+      <li><strike>add password checking for special characters</strike></li>
 </ol>
    
 <h2>Back-end todo list:</h2>
