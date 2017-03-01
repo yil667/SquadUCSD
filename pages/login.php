@@ -2,7 +2,7 @@
 include_once '../controller/startUserSession.php';
 echo "the link is " . $_SERVER['HTTP_HOST'];
 
-if($_SERVER['HTTP_HOST'] != "localhost" && !strpos($_SERVER['HTTP_HOST'], "www."))
+if($_SERVER['HTTP_HOST'] != "localhost" && strpos($_SERVER['HTTP_HOST'], "www.") !== false)
 {
     $shortened = substr($_SERVER['HTTP_HOST'], 4);
     $actual_link = "$shortened$_SERVER[REQUEST_URI]";
