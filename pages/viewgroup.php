@@ -1,6 +1,6 @@
 
 <!-- remove '/' in </?php @BACKEND -->
-</?php
+<?php
 // if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';

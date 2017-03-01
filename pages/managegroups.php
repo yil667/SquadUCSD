@@ -1,4 +1,4 @@
-</?php
+<?php
 // if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
@@ -14,7 +14,7 @@ if (strrpos($url, "?") == "") {
     {
         // otherwise modify the link and redirect to the correct userid page
         $_SESSION['profileid'] = $_SESSION['id'];
-        $redirectUrl = "Location: ./managegroups.php?userid=" . $_SESSION['profileid'];
+        $redirectUrl = "Location: ./editgroup.php?userid=" . $_SESSION['profileid'];
         header($redirectUrl);
     }
 }
@@ -35,7 +35,7 @@ else {
     $_SESSION['profileid'] = $userid;
 }
 
-include_once '../controller/viewProfileAction.php';
+//include_once '../controller/viewProfileAction.php';
 ?>
 
 <!DOCTYPE html>
