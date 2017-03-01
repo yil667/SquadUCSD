@@ -26,6 +26,8 @@ function sendForgotPasswordEmail($fname, $email, $hash)
     $subject = "SquadUCSD | Forgot Password";
     $message = generateForgotPasswordEmail($fname, $email, $hash);
     $headers = "From: account" . "\r\n"; // Set from headers
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
     mail($email, $subject, $message, $headers);
 }
 
@@ -37,18 +39,18 @@ function generateForgotPasswordUrl($email, $hash)
 function generateForgotPasswordEmail($fname, $email, $hash)
 {
     $url = generateForgotPasswordUrl($email, $hash);
-    $message = "<html><body>
+    $message = "<html><body><p>
 Hi $fname,
-
+<br/><br/>
 We received a request to reset your SquadUCSD password.
-
+<br/><br/>
 " .
 
 "<a href= '$url'> Please click here to reset your password </a>"
 .
 "
-
-SquadUCSD</body></html>";
+<br/><br/>
+SquadUCSD</p></body></html>";
 
     return $message;
 }
