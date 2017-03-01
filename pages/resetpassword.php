@@ -1,5 +1,4 @@
 <?php
-// if it comes with the ?fail flag, that means email does not exist.
 
 include_once '../controller/startUserSession.php';
 
