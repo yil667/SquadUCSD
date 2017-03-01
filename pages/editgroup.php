@@ -55,7 +55,6 @@ include_once '../controller/viewGroupProfileAction.php';
                 $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
                     + users[i]["fname"] + "</a>");
             }
-
             // input fields
             var groupname = <?php echo json_encode($group->getName()); ?>;
             document.getElementById('groupname').value = groupname;
@@ -116,7 +115,7 @@ include_once '../controller/viewGroupProfileAction.php';
 
                         <div class="form-group">
                             <div class="text-center">
-                                <button type="button" href="" class="btn btn-primary">View Group Profile</button>
+                                <button id="view-group" type="button" onclick="location.href=window.location.href.replace('edit','view')" class="btn btn-primary">View Group Profile</button>
                                 <button type="submit" class="btn btn-primary">Save Changes</button>
                                 <button type="button" class="btn btn-danger" role='button' data-toggle='modal' data-target="#leaveModal">Leave Group</button>
                             </div>
