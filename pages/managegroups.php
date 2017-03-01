@@ -40,6 +40,9 @@ include_once '../controller/manageGroupAction.php';
                 $('#classlist').append("<a href='" + link + "' class='list-group-item'>"
                     + groups[i]["name"] + "</a>");
             }
+
+            if (window.location.href.indexOf("?formed") > -1) {
+                $("#update").html("Group created successfully!");
         });
 
     </script>
@@ -50,7 +53,9 @@ include_once '../controller/manageGroupAction.php';
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3 id='name'>Manage Groups</h3></div>
+                <div class="panel-heading"><h3 id='name'>Manage Groups
+                        <h4 id="update"><h4>
+                    </h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
                         <div class="form-group">

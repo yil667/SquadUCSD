@@ -23,6 +23,8 @@ This web app allows students to form study groups for the classes they are enrol
    <li>display groups in user profile</li>
    <li>in edit profile page add 2 more buttons, view profile and leave group</li>
    <li>display groups in user profile</li>
+   <li>create generic error page to handle invalid links 
+   (e.g., invalid activation url, invalid request to form url, expired urls, etc.</li>
 
 //Zi
    <li>dynamically display groups in viewprofile page (invite to existing group)
@@ -51,6 +53,7 @@ This web app allows students to form study groups for the classes they are enrol
    <li>implement backend logic for edit group submit form</li>
    <li>implement backend logic for view group request to join form</li>
    <li>implement backend logic for resizing group request when inviting</li>
+   <li>update accept.php when front end error page is done </li>
 
 </ol>
 

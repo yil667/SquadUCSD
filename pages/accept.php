@@ -9,6 +9,13 @@ $hash = $_GET['hash'];
 
 include_once "../controller/createGroupAction.php";
 
-//echo $valid ? ;
+if ($valid) {
+    header("Locatoin: ./managegroups.php?formed");
+}
+else {
+    // redirects to error page
+    // for now it's going to redirect to the home page
+    header("Location: ./index.php");
+}
 
 ?>
