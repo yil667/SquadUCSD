@@ -18,11 +18,13 @@ $().ready(function () {
             currpassword: "Please enter your current password",
             password: {
                 required: "Please provide a password",
-                minlength: "Your password must be at least 6-12 characters long"
+                minlength: "Your password must be at least 6-12 characters long",
+                pwcheck: true
             },
             password2: {
                 required: "Please re-enter your password",
-                equalTo: "Passwords do not match"
+                equalTo: "Passwords do not match",
+                pwcheck: "Your password can only consist of characters and numbers"
             },
         },
         // Make sure the form is submitted to the destination defined
@@ -30,6 +32,10 @@ $().ready(function () {
         submitHandler: function (form) {
             form.submit();
         }
+    });
+
+    $.validator.addMethod("pwcheck", function(value) {
+        return /^[A-Za-z0-9\d]*$/.test(value) // consists of only these
     });
 
 });
