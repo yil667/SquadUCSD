@@ -116,12 +116,12 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <label for="major" class="col-sm-3 col-form-label">Classes</label>
                             <div class="col-sm-9 ui-widget">
-                                <input type="text" class="form-control-class" name="class1" id="class1">
-                                <input type="text" class="form-control-class" name="class2" id="class2">
-                                <input type="text" class="form-control-class" name="class3" id="class3">
-                                <input type="text" class="form-control-class" name="class4" id="class4">
-                                <input type="text" class="form-control-class" name="class5" id="class5">
-                                <input type="text" class="form-control-class" name="class6" id="class6">
+                                <input type="text" class="form-control" name="class1" id="class1">
+                                <input type="text" class="form-control" name="class2" id="class2">
+                                <input type="text" class="form-control" name="class3" id="class3">
+                                <input type="text" class="form-control" name="class4" id="class4">
+                                <input type="text" class="form-control" name="class5" id="class5">
+                                <input type="text" class="form-control" name="class6" id="class6">
                             </div>
                         </div>
 

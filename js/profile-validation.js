@@ -15,8 +15,7 @@ $().ready(function () {
                 maxlength: 200
             },
             class1: {
-                maxlength: 40,
-                notEqualToGroup: {'.form-control-class'}
+                maxlength: 40
             },
             class2: {
                 maxlength: 40
@@ -68,22 +67,5 @@ $().ready(function () {
             form.submit();
         }
     });
-    $.validator.addMethod("notEqualToGroup", function (value, element, options) {
-        // get all the elements passed here with the same class
-        var elems = $(element).parents('form').find(options[0]);
-        // the value of the current element
-        var valueToCompare = value;
-        // count
-        var matchesFound = 0;
-        // loop each element and compare its value with the current value
-        // and increase the count every time we find one
-        $.each(elems, function () {
-            thisVal = $(this).val();
-            if (thisVal == valueToCompare) {
-                matchesFound++;
-            }
-        });
-        // count should be either 0 or 1 max
-        return this.optional(element) || matchesFound <= 1;
-    });
+
 });
