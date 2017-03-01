@@ -50,6 +50,7 @@ This web app allows students to form study groups for the classes they are enrol
 <ol>
    <li>implement backend logic for edit group submit form</li>
    <li>implement backend logic for view group request to join form</li>
+   <li>implement backend logic for resizing group request when inviting</li>
 
 </ol>
 
