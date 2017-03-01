@@ -26,9 +26,8 @@ function addUser($email, $password, $first, $last, $hash)
     mysqli_query($conn, $sql);
 }
 
-function sendverificationEmail($first, $email, $hash)
+function generateVerificationEmail($first, $email, $hash)
 {
-    $subject = "Register | Verification"; // Give the email a subject
     $message = "
 Hi $first,
 
@@ -41,6 +40,13 @@ http://www.squaducsd.com/pages/activate.php?email=$email&hash=$hash
 
 SquadUCSD";
 
+    return $message;
+}
+
+function sendVerificationEmail($first, $email, $hash)
+{
+    $subject = "SquadUCSD | Register Verification"; // Give the email a subject
+    $message = generateVerificationEmail($first, $email, $hash);
     $headers = "From: account" . "\r\n"; // Set from headers
     mail($email, $subject, $message, $headers);
 }

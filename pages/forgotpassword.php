@@ -46,7 +46,7 @@ include_once '../controller/startUserSession.php';
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-3">
                                 <input type="text" class="form-control" name="email" value=""
-                                       placeholder="UCSD Email Address">
+                                       placeholder="UCSD Email Address" id="email">
                             </div>
                         </div>
 

@@ -20,6 +20,7 @@ else {
     include_once "../controller/viewGroupProfileAction.php";
 
     $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
 }
 ?>
 
@@ -46,17 +47,18 @@ else {
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-            var major = <?php echo json_encode($user->getMajor()); ?>;
-            $('#major').html(major);
+//            var users = <?php //echo json_encode($group->getUsers()); ?>//;
+//            $('#users').html(users);
 
-            var about = <?php echo json_encode($user->getAbout()); ?>;
-            $('#about').html(about);
+            // input fields
+            var name = <?php echo json_encode($group->getName()); ?>;
+            document.getElementById('name').value = name;
 
-            var phone = <?php echo json_encode($user->getPhone()); ?>;
-            $('#phone').html(phone);
+            var course = <?php echo json_encode($group->getClass()); ?>;
+            document.getElementById('class').value = course;
 
-            var email = <?php echo json_encode($user->getEmail()); ?>;
-            $('#email').html(email);
+            var size = <?php echo json_encode($group->getSize()); ?>;
+            document.getElementById('size').value = size;
         });
     </script>
 </head>

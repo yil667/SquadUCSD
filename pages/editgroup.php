@@ -34,20 +34,18 @@ include_once '../controller/viewGroupProfileAction.php';
         $(document).ready(function () {
             $('#common').load('./common.php');
 
+            var users = <?php echo json_encode($group->getUsers()); ?>;
+            $('#users').html(users);
 
-//
-//            var users = <?php //echo json_encode($group->getUsers()); ?>//;
-//            $('#users').html(users);
-//
-//            // input fields
-//            var name = <?php //echo json_encode($group->getName()); ?>//;
-//            document.getElementById('name').value = name;
-//
-//            var class = <?php //echo json_encode($group->getClass()); ?>//;
-//            document.getElementById('class').value = class;
-//
-//            var size = <?php //echo json_encode($group->getSize()); ?>//;
-//            document.getElementById('size').value = size;
+            // input fields
+            var name = <?php echo json_encode($group->getName()); ?>;
+            document.getElementById('name').value = name;
+
+            var course = <?php echo json_encode($group->getClass()); ?>;
+            document.getElementById('class').value = course;
+
+            var size = <?php echo json_encode($group->getSize()); ?>;
+            document.getElementById('size').value = size;
 
         });
     </script>

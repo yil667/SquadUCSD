@@ -1,5 +1,14 @@
 <?php
+// if it comes with the ?fail flag, that means email does not exist.
+
 include_once '../controller/startUserSession.php';
+
+$_SESSION['hash'] = $_GET['hash'];
+$_SESSION['forgetEmail'] = $_GET['email'];
+
+include_once "../controller/resetPasswordLinkAction.php";
+// the script return a $valid variable for checking whether it's good or not
+
 ?>
 
 
@@ -43,8 +52,8 @@ include_once '../controller/startUserSession.php';
 
                         <div class="form-group">
                             <div class="col-sm-6 col-sm-offset-3">
-                                <input type="password" class="form-control" name="pass" value=""
-                                       placeholder="New Password">
+                                <input type="password" class="form-control" name="newpassword" value=""
+                                       placeholder="New Password" id="newpassword">
                             </div>
                         </div>
 
