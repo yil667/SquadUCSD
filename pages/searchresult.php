@@ -32,18 +32,13 @@
                     <div class="panel-heading"><h4>Search Results</h4></div>
                     <div class="panel-body">
                         <div class="basicinfo">
-
-
-                       <label class="col-sm-12">Matched Classes: CSE101, CSE 105, CSE110</label>
-                            <br>
-                            <br>
+                            <label for="classes">Matched Classes:</label>
+                            <p name="classes" id="classes">CSE11, CSE12, CSE13</p>
                        </div>
                         <div class="button">
-                            <div class="btn-toolbar btn-toolbar-centered" role="toolbar">
-                                <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#messageModal">Message</button>
-                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#inviteModal">Invite to Existing Group</button>
-                                <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
-                            </div>
+                            <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#messageModal">Message</button>
+                            <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#inviteModal">Invite to Existing Group</button>
+                            <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
                         </div>
                     </div>
                 </div>
@@ -62,7 +57,7 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label name="message" id="message">Message</label>
+                            <label for="messagebox">Message</label>
                             <textarea class="form-control" name=messagebox id="messagebox" rows="3"></textarea>
                         </div>
                     </form>
@@ -92,7 +87,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label name="message" id="message" for="messageboxinvite">Message</label>
+                            <label for="messageboxinvite">Message</label>
                             <textarea class="form-control" name="messageboxinvite" id="messageboxinvite" rows="3"></textarea>
                         </div>
                     </form>
@@ -113,7 +108,7 @@
                     <h3 id="messageLabel">Invite $User$ to Form Group</h3>
                 </div>
                 <div class="modal-body">
-                    <label name="message" id="message" for="messageboxform">Message</label>
+                    <label for="messageboxform">Message</label>
                     <textarea class="form-control" name="messageboxform" id="messageboxform" rows="3"></textarea>
                 </div>
                 <div class="modal-footer">

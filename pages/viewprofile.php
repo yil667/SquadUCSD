@@ -1,4 +1,4 @@
-<?php
+</?php
 //if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
@@ -58,35 +58,37 @@ include_once '../controller/viewProfileAction.php';
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-            var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
+            var name = </?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
 
-            var nameMessage = <?php echo json_encode("Message " . $user->getFname()); ?>;
+            var nameMessage = </?php echo json_encode("Message " . $user->getFname()); ?>;
             $('#nameMessage').html(nameMessage);
 
-            var nameInvite = <?php echo json_encode("Invite " . $user->getFname() . " to Existing Group"); ?>;
+            var nameInvite = </?php echo json_encode("Invite " . $user->getFname() . " to Existing Group"); ?>;
             $('#nameInvite').html(nameInvite);
 
-            var nameForm = <?php echo json_encode("Invite " . $user->getFname() . " to Form Group"); ?>;
+            var nameForm = </?php echo json_encode("Invite " . $user->getFname() . " to Form Group"); ?>;
             $('#nameForm').html(nameForm);
 
-            var major = <?php echo json_encode($user->getMajor()); ?>;
+            var major = </?php echo json_encode($user->getMajor()); ?>;
             $('#major').html(major);
 
-            var about = <?php echo json_encode($user->getAbout()); ?>;
+            var about = </?php echo json_encode($user->getAbout()); ?>;
             $('#about').html(about);
 
-            var phone = <?php echo json_encode($user->getPhone()); ?>;
+            var phone = </?php echo json_encode($user->getPhone()); ?>;
             $('#phone').html(phone);
 
-            var email = <?php echo json_encode($user->getEmail()); ?>;
+            var email = </?php echo json_encode($user->getEmail()); ?>;
             $('#email').html(email);
         });
     </script>
+    -->
 </head>
 <body>
 <div id="common"></div>
@@ -97,33 +99,31 @@ include_once '../controller/viewProfileAction.php';
                 <div class="panel-heading"><h3 id='name'></h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
-
-                        <div class="form-group row">
-                            <p><label for="ucsdemail" class="col-sm-3 col-form-label">UCSD Email</label></p>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-3 control-label">UCSD Email</label>
                             <div class="col-sm-9">
-                                <p><label class="form-control-static" name="email" id="email"></label></p>
+                                <p class="form-control-static" name="email" id="email"></p>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <p><label for="phone" class="col-sm-3 col-form-label">Phone Number</label></p>
+                            <label for="phone" class="col-sm-3 control-label">Phone Number</label>
                             <div class="col-sm-9">
-                                <p><label class="form-control-static" name="phone" id="phone"></label></p>
+                                <p class="form-control-static" name="phone" id="phone"></p>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <p><label for="major" class="col-sm-3 col-form-label">Major</label></p>
+                            <label for="major" class="col-sm-3 control-label">Major</label>
                             <div class="col-sm-9">
-                                <p><label class="form-control-static" name="major" id="major"></label></p>
+                                <p class="form-control-static" name="major" id="major"></p>
                             </div>
                         </div>
 
-
                         <div class="form-group row">
-                            <p><label for="about" class="col-sm-3 col-form-label">About Me</label></p>
+                            <label for="about" class="col-sm-3 control-label">About Me</label>
                             <div class="col-sm-9">
-                                <p><label class="form-control-static" name="about" id="about"></label></p>
+                                <p class="form-control-static" name="about" id="about"></p>
                             </div>
                         </div>
 
@@ -132,7 +132,6 @@ include_once '../controller/viewProfileAction.php';
                             <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#inviteModal">Invite to Existing Group</button>
                             <button type="button" class="btn btn-success" role="button" data-toggle="modal" data-target="#formModal">Invite to Form New Group</button>
                         </div>
-
                     </form>
                 </div>
             </div>
