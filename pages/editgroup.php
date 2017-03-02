@@ -13,7 +13,7 @@ if (strpos($url, "?") === false) {
 else {
     if(!isLoggedIn() || !$inGroup){
         $groupid = $_GET['groupid'];
-        header("Location: ./viewgroup.php?$groupid");
+        header("Location: ./viewgroup.php?groupid=$groupid");
     }
 }
 
