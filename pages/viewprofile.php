@@ -85,9 +85,9 @@ else {
             $('#email').html(email);
 
             var loggedInContent =
-                "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#messageModal'>Message</button>" +
-                "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#inviteModal'>Invite to Existing Group</button>" +
-                "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#formModal'>Invite to Form New Group</button>";
+                "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#messageModal'>Message</button>" +
+                "<button type='button' class='btn btn-success' data-toggle='modal' data-target='#inviteModal'>Invite to Existing Group</button>" +
+                "<button type='button' class='btn btn-success' data-toggle='modal' data-target='#formModal'>Invite to Form New Group</button>";
             var defaultContent = "";
             var selfProfile = "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Profile</button>";
 
@@ -143,9 +143,6 @@ else {
                             <div class="text-center" id="buttons">
                     
                             </div>
-                              <button type="button" onclick="location.href=window.location.href.replace('edit','view')" class="btn btn-primary">View Group Profile</button>
-                                <button type="submit" class="btn btn-primary">Save Changes</button>
-                                <button type="button" class="btn btn-danger" role='button' data-toggle='modal' data-target="#leaveModal">Leave Group</button>
                         </div>
                     </form>
                 </div>
