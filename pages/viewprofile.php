@@ -58,7 +58,7 @@ else {
             var displayButtons = <?php echo json_encode($displayButtons); ?>;
 
             var loggedInId = <?php echo json_encode($user->getUserId()); ?>;
-            var pageId =  <?php echo json_encode($_SESSION['profileid'];) ?>;
+            var pageId =  <?php echo json_encode($id); ?>;
 
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
