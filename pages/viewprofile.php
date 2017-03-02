@@ -57,6 +57,9 @@ else {
 
             var displayButtons = <?php echo json_encode($displayButtons); ?>;
 
+            var loggedInId = <?php echo json_encode($user->getUserId()); ?>;
+            var pageId =  <?php echo json_encode($_GET['userid'];) ?>;
+
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
 
@@ -94,7 +97,7 @@ else {
             if (displayButtons) {
                 $("#buttons").html(loggedInContent);
             }
-            else if (isOwnPage) {
+            else if (loggedInId == userid) {
                 $("#buttons").html(selfProfile);
             }
             else {
