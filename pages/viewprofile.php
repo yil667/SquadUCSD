@@ -57,9 +57,6 @@ else {
 
             var displayButtons = <?php echo json_encode($displayButtons); ?>;
 
-            var loggedInId = <?php echo json_encode($user->getUserId()); ?>;
-            var pageId =  <?php echo json_encode($id); ?>;
-
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
 
@@ -90,17 +87,14 @@ else {
             var inviteFormButton = "<button type='button' class='btn btn-success' data-toggle='modal' data-target='#formModal'>Invite to Form New Group</button>";
 
             var defaultContent = "";
-            var selfProfile = "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Profile</button>";
+         
 
-            if (displayButtons) {
+         	if (displayButtons) {
                 $("#buttons").append(messageButton);
                 $("#buttons").append(" "); // add spacing
                 $("#buttons").append(inviteButton);
                 $("#buttons").append(" "); // add spacing
                 $("#buttons").append(inviteFormButton);
-            }
-            else if (loggedInId == pageId) {
-                $("#buttons").html(selfProfile);
             }
             else {
                 $("#buttons").html(defaultContent);
