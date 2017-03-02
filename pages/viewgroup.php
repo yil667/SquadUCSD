@@ -46,6 +46,7 @@ else {
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
+            $('#edit-button').hide();
 
             var users = <?php echo json_encode($group->getUsers()); ?>;
             for (i = 0; i < users.length; i++) {
@@ -71,15 +72,16 @@ else {
 
             if (!isUserLoggedIn) {
                 content = "";
+                $("#buttons").html(content);
             }
             else if(inGroup){
-                content= "";
                 $('#edit-button').show();
             }
             else {
                 content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#requestModal'>Request to Join Group</button>";
+                $("#buttons").html(content);
             }
-            $("#buttons").html(content);
+        
         
 
         });
