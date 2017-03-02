@@ -89,8 +89,7 @@ else {
                 "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#formModal'>Invite to Form New Group" +
                 "</button>";
             var defaultContent = "";
-            var selfProfile = "<a class='btn btn-primary' href='editprofile.php' role='button' id='editprofile' name='editprofile' >Edit Profile" +
-                "</a>";
+            var selfProfile = "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Profile</button>";
 
             if (displayButtons) {
                 $("#buttons").html(loggedInContent);
