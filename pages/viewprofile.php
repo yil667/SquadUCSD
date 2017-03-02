@@ -143,6 +143,9 @@ else {
                             <div class="text-center" id="buttons">
                     
                             </div>
+                            <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#messageModal'>Message</button>
+                            <button type='button' class='btn btn-success' data-toggle='modal' data-target='#inviteModal'>Invite to Existing Group</button>
+                            <button type='button' class='btn btn-success' data-toggle='modal' data-target='#formModal'>Invite to Form New Group</button>
                         </div>
                     </form>
                 </div>
