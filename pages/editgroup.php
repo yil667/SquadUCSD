@@ -11,7 +11,7 @@ if (strpos($url, "?") === false) {
 // if the link contains the flag, but user is not logged in,
 // then the user shouldn't be able to edit profile
 else {
-    if(!isLoggedIn() || !$inGroup){
+    if(!isLoggedIn()){
         $groupid = $_GET['groupid'];
         header("Location: ./viewgroup.php?groupid=$groupid");
     }
@@ -22,6 +22,10 @@ $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 // load the group's data from action controller
 include_once '../controller/viewGroupProfileAction.php';
 
+if(!$inGroup){
+        $groupid = $_GET['groupid'];
+        header("Location: ./viewgroup.php?groupid=$groupid");
+}
 // now the group object contains all the relevant user info
 ?>
 

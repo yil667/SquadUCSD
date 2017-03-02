@@ -67,11 +67,14 @@ else {
             var inGroup = <?php echo json_encode($inGroup); ?>;
             var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
             var content;
+            $('#edit-button').hide();
+            
             if (!isUserLoggedIn) {
                 content = "";
             }
             else if(inGroup){
-                content= "<button type='button' onclick='location.href=window.location.href.replace('view','edit')' class='btn btn-primary'>Edit Group</button>";
+                content= "";
+                $('#edit-button').show();
             }
             else {
                 content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#requestModal'>Request to Join Group</button>";
@@ -124,6 +127,7 @@ else {
 
                         <div class="button" id="buttons" name="buttons">
                             <!-- contents here is displayed conditionally -->
+                            <button id="edit-button" type='button' onclick="location.href=window.location.href.replace('view','edit')"" class='btn btn-primary'>Edit Group</button>
                         </div>
 
                     </form>
