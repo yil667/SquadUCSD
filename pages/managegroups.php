@@ -43,6 +43,7 @@ include_once '../controller/manageGroupAction.php';
 
             if (window.location.href.indexOf("?formed") > -1) {
                 $("#update").html("Group created successfully!");
+            }
         });
 
     </script>
