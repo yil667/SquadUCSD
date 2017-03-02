@@ -22,12 +22,9 @@ This web app allows students to form study groups for the classes they are enrol
    <li>member list label hover color darker</li>
    <li>invite to form new group needs group name / group size></li>
    <li>display groups in user profile</li>
-
-   <li>display groups in user profile</li>
    <li>create generic error page to handle invalid links 
    (e.g., invalid activation url, invalid request to form url, expired urls, etc.</li>
 
-//Zi
    <li>dynamically display groups in viewprofile page (invite to existing group)
       display warning if the group if full already when inviting 
       (backend will resize the group)</li>
