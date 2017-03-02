@@ -55,7 +55,7 @@ include_once '../controller/manageGroupAction.php';
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
                 <div class="panel-heading"><h3 id='name'>Manage Groups
-                        <h4 id="update"><h4>
+                        <h4 id="update-info"><h4>
                     </h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">

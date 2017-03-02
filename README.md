@@ -17,12 +17,12 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
-   
+   <li>fix buttons spacing on view profile(match edit group)</li>
    <li>add classes duplicate checks</li>
    <li>member list label hover color darker</li>
    <li>invite to form new group needs group name / group size></li>
    <li>display groups in user profile</li>
-   <li>in edit profile page add 2 more buttons, view profile and leave group</li>
+
    <li>display groups in user profile</li>
    <li>create generic error page to handle invalid links 
    (e.g., invalid activation url, invalid request to form url, expired urls, etc.</li>
@@ -35,6 +35,7 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>in edit profile page add 2 more buttons, view profile and leave group</strike></li>
    <li><strike>view profile page updated</strike></li>
    <li><strike>connect the writable text fields correctly (correctly not displaying some shits - from Dom)</strike></li>
    <li><strike>dynamically display button in view profile page</strike></li>
