@@ -67,8 +67,8 @@ else {
             var inGroup = <?php echo json_encode($inGroup); ?>;
             var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
             var content;
-            $('#edit-button').hide();
-            
+           
+
             if (!isUserLoggedIn) {
                 content = "";
             }
