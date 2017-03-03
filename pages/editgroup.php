@@ -63,7 +63,7 @@ else if (!$inGroup) {
     
     <script type="text/javascript">
         var minSize = <?php echo json_encode($group->getSize()); ?>;
-        var maxSize = 10;
+        var maxSize = 15;
         $(document).ready(function () {
             $('#common').load('./common.php');
             var users = <?php echo json_encode($group->getUsers()); ?>;
