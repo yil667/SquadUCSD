@@ -37,7 +37,7 @@ else {
         // remove the groupid from the student table
         removeGroupFromUser($conn, $id, $groupid);
 
-        // otherwise, remove the user from the groupprofile table
+        // otherwise, remove the user from the groupProfile table
         removeUserFromGroup($conn, $id, $groupid, $currGroupSize);
     }
 }

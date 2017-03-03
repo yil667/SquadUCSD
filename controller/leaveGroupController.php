@@ -20,7 +20,7 @@ function getUserRow($conn, $id)
 
 function getGroupRow($conn, $groupid)
 {
-    $sql = "SELECT * FROM groupprofile WHERE id ='$groupid'";
+    $sql = "SELECT * FROM groupProfile WHERE id ='$groupid'";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     return $row;
@@ -34,10 +34,10 @@ function removeAllUsersInroup($conn, $groupid, $group)
     }
 }
 
-// remove the user from the groupprofile table
+// remove the user from the groupProfile table
 function removeUserFromGroup($conn, $id, $groupid, $currGroupSize)
 {
-    // get the group row in the groupprofile table
+    // get the group row in the groupProfile table
     $groupRow = getGroupRow($conn, $groupid);
 
     // get the list of users in a string form, delimited by commas
@@ -68,14 +68,14 @@ function removeGroupFromUser($conn, $id, $groupid)
 
 function disbandGroup($conn, $groupid)
 {
-    $sql = "DELETE FROM groupprofile where id='$groupid'";
+    $sql = "DELETE FROM groupProfile where id='$groupid'";
     mysqli_query($conn, $sql);
 }
 
 function updateGroupRow($conn, $groupid, $newStr, $currGroupSize)
 {
     $newGroupSize = $currGroupSize - 1;
-    $sql = "UPDATE groupprofile SET users='$newStr', size='$newGroupSize' WHERE id='$groupid'";
+    $sql = "UPDATE groupProfile SET users='$newStr', size='$newGroupSize' WHERE id='$groupid'";
     mysqli_query($conn, $sql);
 }
 
