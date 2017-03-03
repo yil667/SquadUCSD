@@ -11,7 +11,7 @@ $().ready(function () {
             },
             size: {
                 required: true,
-                digits: true.
+                digits: true,
                 max: maxSize,
                 min: minSize
                
