@@ -133,7 +133,7 @@ else if (!$inGroup) {
                             <label for="size" class="col-sm-3 control-label">Group Size</label>
                             <div class="col-sm-9">
                                 <!--replace min with num from backend @DOM @SCOTT -->
-                                <input type="number" class="form-control bfh-number" name="size"
+                                <input type="text" class="form-control bfh-number" name="size"
                                        id="size">
                             </div>
                         </div>
