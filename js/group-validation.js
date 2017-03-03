@@ -1,28 +1,34 @@
 $().ready(function () {
-
+	 var minSize = <?php echo json_encode($group->getSize()); ?>;
     $("#editGroupForm").validate({
         // Specify validation rules
         rules: {
             groupname: {
-                required: true
+                required: true,
+                maxlength: 40
             },
             course: {
-                required: true
+                maxlength: 40
             },
             size: {
-                required: true
+                required: true,
+                min: function() { return minSize; },
+                max: 10
             }
         },
         // Specify validation error messages
         messages: {
             groupname: {
-                required: "Group name cannot be empty"
+                required: "Group name cannot be empty",
+                maxlength: "Group name should be less than 40 characters"
             },
             course: {
-                required: "Course name cannot be empty"
+                maxlength: "Class name should be less than 40 characters"
             },
             size: {
-                required: "Size cannot be empty"
+                required: "Size cannot be empty",
+                min: "Group size cannot be less than current memebers",
+                max: "The maximum group size is 10"
             }
         },
         // Make sure the form is submitted to the destination defined
