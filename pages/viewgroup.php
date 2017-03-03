@@ -158,7 +158,7 @@ else {
                 <h3 id="requestLabel">Request to Join Group</h3>
             </div>
             <div class="modal-body">
-            <form action="../controller/joinGroupRequestAction.php" role="form" method="POST" id="requestform">
+            <form action="../controller/joinGroupRequestAction.php" role="form" method="POST" id="messageform">
                 <div class="form-group">
                     <label name="message" id="message" for="messageboxreq">Message</label>
                     <textarea class="form-control" name="messageboxreq" id="messageboxreq" rows="3"></textarea>
