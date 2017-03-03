@@ -68,7 +68,7 @@ else {
             var course = <?php echo json_encode($group->getClass()); ?>;
             $('#course').html(course);
 
-            var size = <?php echo json_encode($group->getSize()); ?>;
+            var size = <?php echo json_encode($group->getMaxSize()); ?>;
             $('#size').html(size);
 
             var inGroup = <?php echo json_encode($inGroup); ?>;
