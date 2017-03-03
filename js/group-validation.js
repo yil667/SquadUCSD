@@ -11,7 +11,7 @@ $().ready(function () {
             },
             size: {
                 required: true,
-                max: 10,
+                max: maxSize,
                 min: minSize
                
             }

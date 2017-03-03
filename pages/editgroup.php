@@ -49,7 +49,7 @@ else if (!$inGroup) {
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -63,6 +63,7 @@ else if (!$inGroup) {
     
     <script type="text/javascript">
         var minSize = <?php echo json_encode($group->getSize()); ?>;
+        var maxSize = 10;
         $(document).ready(function () {
             $('#common').load('./common.php');
             var users = <?php echo json_encode($group->getUsers()); ?>;
