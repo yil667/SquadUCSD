@@ -141,7 +141,7 @@ if(!$inGroup){
             </div>
             <div class="modal-footer">
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button type="button" onclick="location.href='www.squaducsd.com/pages/leaveGroupAction.php'" class="btn btn-primary">Confirm</button>
+                <button type="button" onclick="location.href='www.squaducsd.com/controller/leaveGroupAction.php'" class="btn btn-primary">Confirm</button>
             </div>
         </div>
     </div>
