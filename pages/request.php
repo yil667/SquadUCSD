@@ -2,7 +2,7 @@
 // wrapper page for requesting to join groups to avoid that layer violation relax
 // to be finished
 
-$id1 = $_GET['id1'];
+$id1 = $_GET['id'];
 $groupid = $_GET['groupid'];
 $hash = $_GET['hash'];
 
