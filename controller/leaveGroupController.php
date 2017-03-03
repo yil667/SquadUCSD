@@ -26,12 +26,6 @@ function getGroupRow($conn, $groupid)
     return $row;
 }
 
-function disbandGroup($conn, $groupid)
-{
-    $sql = "DELETE FROM groupprofile where id='$groupid'";
-    mysqli_query($conn, $sql);
-}
-
 // remove the user from the groupprofile table
 function removeUserFromGroup($conn, $id, $groupid)
 {
@@ -46,12 +40,6 @@ function removeUserFromGroup($conn, $id, $groupid)
 
     // update the group row
     updateGroupRow($conn, $groupid, $newStr);
-}
-
-function updateGroupRow($conn, $groupid, $newStr)
-{
-    $sql = "UPDATE groupprofile SET users='$newStr' WHERE id='$groupid'";
-    mysqli_query($conn, $sql);
 }
 
 // remove the gorupid from the student table
@@ -70,8 +58,21 @@ function removeGroupFromUser($conn, $id, $groupid)
     updateUserRow($conn, $id, $newStr);
 }
 
+function disbandGroup($conn, $groupid)
+{
+    $sql = "DELETE FROM groupprofile where id='$groupid'";
+    mysqli_query($conn, $sql);
+}
+
+function updateGroupRow($conn, $groupid, $newStr)
+{
+    $sql = "UPDATE groupprofile SET users='$newStr' WHERE id='$groupid'";
+    mysqli_query($conn, $sql);
+}
+
 function updateUserRow($conn, $id, $newStr)
 {
     $sql = "UPDATE student SET groups='$newStr' WHERE id='$id'";
     mysqli_query($conn, $sql);
 }
+
