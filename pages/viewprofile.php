@@ -6,7 +6,7 @@ include_once '../controller/startUserSession.php';
 $url = json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to have suffix "user=id"
-if (strrpos($url, "?") == "") {
+if (strrpos($url, "?") === false) {
 
     if (!isLoggedIn())
         handleNotLoggedIn();
@@ -55,9 +55,7 @@ else {
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-            var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
-
-            var isOwnPage = <?php echo json_encode($_GET['userid'] == getUserId()); ?>;
+            var displayButtons = <?php echo json_encode($displayButtons); ?>;
 
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
@@ -83,22 +81,20 @@ else {
             var email = <?php echo json_encode($user->getEmail()); ?>;
             $('#email').html(email);
 
-            var loggedInContent =
-                "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#messageModal'>Message" +
-                "</button>" +
-                "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#inviteModal'>Invite to Existing Group" +
-                "</button>" +
-                "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#formModal'>Invite to Form New Group" +
-                "</button>";
-            var defaultContent = "";
-            var selfProfile = "<a class='btn btn-primary' href='editprofile.php' role='button' id='editprofile' name='editprofile' >Edit Profile" +
-                "</a>";
+            // dynamic element has no spacing. separate them and add spaces in between
+            var messageButton = "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#messageModal'>Message</button>";
+            var inviteButton = "<button type='button' class='btn btn-success' data-toggle='modal' data-target='#inviteModal'>Invite to Existing Group</button>"
+            var inviteFormButton = "<button type='button' class='btn btn-success' data-toggle='modal' data-target='#formModal'>Invite to Form New Group</button>";
 
-            if (isUserLoggedIn && !isOwnPage) {
-                $("#buttons").html(loggedInContent);
-            }
-            else if (isOwnPage) {
-                $("#buttons").html(selfProfile);
+            var defaultContent = "";
+         
+
+         	if (displayButtons) {
+                $("#buttons").append(messageButton);
+                $("#buttons").append(" "); // add spacing
+                $("#buttons").append(inviteButton);
+                $("#buttons").append(" "); // add spacing
+                $("#buttons").append(inviteFormButton);
             }
             else {
                 $("#buttons").html(defaultContent);
@@ -107,112 +103,113 @@ else {
     </script>
 </head>
 <body>
-<div id="common"></div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-            <div class="panel panel-custom">
-                <div class="panel-heading"><h3 id='name'></h3></div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST">
+    <div id="common"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="panel panel-custom">
+                    <div class="panel-heading"><h3 id='name'></h3></div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" role="form" method="POST">
+                            <div class="form-group">
+                                <label for="email" class="col-sm-3 control-label">UCSD Email</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control-static" name="email" id="email"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="phone" class="col-sm-3 control-label">Phone Number</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control-static" name="phone" id="phone"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="major" class="col-sm-3 control-label">Major</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control-static" name="major" id="major"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="about" class="col-sm-3 control-label">About Me</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control-static" name="about" id="about"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="text-center" id="buttons">
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 id="nameMessage"></h3>
+                    </div>
+                    <div class="modal-body">
+                        <form action="../controller/userMessageAction.php" role="form" method="POST" id="messageform">
+                            <div class="form-group">
+                                <label name="message" id="message" for="sendmessageform">Message</label>
+                                <textarea class="form-control" name="sendmessageform" id="sendmessageform" rows="3"></textarea>
+                            </div>
+
+
+                            <div class="modal-footer">
+                                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                <button id="send-btn" type="submit" class="btn btn-primary">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="nameInvite"></h3>
+                </div>
+                <div class="modal-body">
+
+                    <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
                         <div class="form-group">
-                            <label for="email" class="col-sm-3 control-label">UCSD Email</label>
-                            <div class="col-sm-9">
-                                <p class="form-control-static" name="email" id="email"></p>
-                            </div>
+                            <label name="message" id="message" for="groupselect">Select Group</label>
+                            <select id="groupselect" name="groupselect">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label name="message" id="message" for="messageboxinvite">Message</label>
+                            <textarea class="form-control" name="messageboxinvite" id="messageboxinvite"
+                            rows="3"></textarea>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="phone" class="col-sm-3 control-label">Phone Number</label>
-                            <div class="col-sm-9">
-                                <p class="form-control-static" name="phone" id="phone"></p>
-                            </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                            <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="major" class="col-sm-3 control-label">Major</label>
-                            <div class="col-sm-9">
-                                <p class="form-control-static" name="major" id="major"></p>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="about" class="col-sm-3 control-label">About Me</label>
-                            <div class="col-sm-9">
-                                <p class="form-control-static" name="about" id="about"></p>
-                            </div>
-                        </div>
-
-                        <div class="button" id="buttons" name="buttons">
-                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="nameMessage"></h3>
-            </div>
-            <div class="modal-body">
-                <form action="../controller/userMessageAction.php" role="form" method="POST" id="messageform">
-                    <div class="form-group">
-                        <label name="message" id="message" for="sendmessageform">Message</label>
-                        <textarea class="form-control" name="sendmessageform" id="sendmessageform" rows="3"></textarea>
-                    </div>
-
-
-                    <div class="modal-footer">
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="send-btn" type="submit" class="btn btn-primary">Send</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="nameInvite"></h3>
-            </div>
-            <div class="modal-body">
-
-                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
-                    <div class="form-group">
-                        <label name="message" id="message" for="groupselect">Select Group</label>
-                        <select id="groupselect" name="groupselect">
-                            <option></option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label name="message" id="message" for="messageboxinvite">Message</label>
-                        <textarea class="form-control" name="messageboxinvite" id="messageboxinvite"
-                                  rows="3"></textarea>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel"
-     aria-hidden="true">
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="messageLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -224,7 +221,7 @@ else {
                     <div class="form-group">
                         <label name="message" id="message" for="messageboxform">Message</label>
                         <textarea class="form-control" name="messageboxform" id="messageboxform"
-                                  rows="3"></textarea>
+                        rows="3"></textarea>
                     </div>
 
                     <div class="modal-footer">

@@ -21,6 +21,7 @@ else {
     $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -46,18 +47,41 @@ else {
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-//            var users = <?php //echo json_encode($group->getUsers()); ?>//;
-//            $('#users').html(users);
+            var users = <?php echo json_encode($group->getUsers()); ?>;
+            for (i = 0; i < users.length; i++) {
+                var link = "./viewprofile.php?userid=" + users[i]["userid"];
+                $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
+                    + users[i]["fname"] + "</a>");
+            }
 
             // input fields
-            var name = <?php echo json_encode($group->getName()); ?>;
-            document.getElementById('name').value = name;
+            var groupname = <?php echo json_encode($group->getName()); ?>;
+            $('#groupname').html(groupname);
 
             var course = <?php echo json_encode($group->getClass()); ?>;
-            document.getElementById('class').value = course;
+            $('#course').html(course);
 
             var size = <?php echo json_encode($group->getSize()); ?>;
-            document.getElementById('size').value = size;
+            $('#size').html(size);
+
+            var inGroup = <?php echo json_encode($inGroup); ?>;
+            var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
+            var content;
+           
+
+            if (!isUserLoggedIn) {
+                content = "";
+                $("#buttons").html(content);
+            }
+            else if(inGroup){
+                content="<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Group</button>";
+            }
+            else {
+                content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#requestModal'>Request to Join Group</button>";
+            }
+             $("#buttons").html(content);
+        
+
         });
     </script>
 </head>
@@ -82,9 +106,7 @@ else {
                             <label for="members" class="col-sm-3 control-label">Members</label>
                             <div class="col-sm-9">
                                 <div class="list-group" id="memberlist" name="memberlist">
-                                    <a href="#" class="list-group-item">First item</a>
-                                    <a href="#" class="list-group-item">Second item</a>
-                                    <a href="#" class="list-group-item">Third item</a>
+                                    <!-- contents here are inserted dynamically -->
                                 </div>
                             </div>
                         </div>
@@ -92,7 +114,7 @@ else {
                         <div class="form-group">
                             <label for="class" class="col-sm-3 control-label">Class</label>
                             <div class="col-sm-9">
-                                <p class="form-control-static" type="text" name="class" id="class"></p>
+                                <p class="form-control-static" type="text" name="course" id="course"></p>
                             </div>
                         </div>
 
@@ -103,14 +125,8 @@ else {
                             </div>
                         </div>
 
-                        <div class="button">
-                            <!-- use js to choose Leave Group / Request Invite -->
-                            <button type="button" class="btn btn-primary" role="button" data-toggle="modal"
-                                    data-target="#leaveModal">Leave Group
-                            </button>
-                            <button type="button" class="btn btn-primary" role="button" data-toggle="modal"
-                                    data-target="#requestModal">Request to Join Group
-                            </button>
+                        <div class="button" id="buttons" name="buttons">
+                            <!-- contents here is displayed conditionally -->
                         </div>
 
                     </form>
@@ -121,20 +137,6 @@ else {
 </div>
 
 
-<div class="modal fade" id="leaveModal" tabindex="-1" role="dialog" aria-labelledby="leaveLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="leaveLabel">Leave Group?</h3>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button class="btn btn-primary">Confirm</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

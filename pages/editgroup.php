@@ -2,11 +2,30 @@
 <?php
 include_once '../controller/startUserSession.php';
 
-$_SESSION['profileid'] = $_SESSION['id'];
+// no flag is found, redirect to manage group page
+$url = $_SERVER['REQUEST_URI'];
 
+if (strpos($url, "?") === false) {
+    header("Location: ./managegroups.php");
+}
+// if the link contains the flag, but user is not logged in,
+// then the user shouldn't be able to edit profile
+else {
+    if(!isLoggedIn()){
+        $groupid = $_GET['groupid'];
+        header("Location: ./viewgroup.php?groupid=$groupid");
+    }
+}
+
+$_SESSION['groupid'] = $_GET['groupid'];
+$_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 // load the group's data from action controller
 include_once '../controller/viewGroupProfileAction.php';
 
+if(!$inGroup){
+        $groupid = $_GET['groupid'];
+        header("Location: ./viewgroup.php?groupid=$groupid");
+}
 // now the group object contains all the relevant user info
 ?>
 
@@ -33,20 +52,22 @@ include_once '../controller/viewGroupProfileAction.php';
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-
             var users = <?php echo json_encode($group->getUsers()); ?>;
-            $('#users').html(users);
-
+            for (i = 0; i < users.length; i++) {
+                var link = "./viewprofile.php?userid=" + users[i]["userid"];
+                $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
+                    + users[i]["fname"] + "</a>");
+            }
+        
             // input fields
-            var name = <?php echo json_encode($group->getName()); ?>;
-            document.getElementById('name').value = name;
+            var groupname = <?php echo json_encode($group->getName()); ?>;
+            document.getElementById('groupname').value = groupname;
 
             var course = <?php echo json_encode($group->getClass()); ?>;
-            document.getElementById('class').value = course;
+            document.getElementById('course').value = course;
 
-            var size = <?php echo json_encode($group->getSize()); ?>;
+            var size = <?php echo json_encode($group->getMaxSize()); ?>;
             document.getElementById('size').value = size;
-
         });
     </script>
 </head>
@@ -56,32 +77,34 @@ include_once '../controller/viewGroupProfileAction.php';
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3>Edit Group</h3></div>
+                <div class="panel-heading">
+                    <h3>
+                        Edit Group
+                    </h3>
+                </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="../controller/editGroupAction.php">
 
                         <div class="form-group">
-                            <label for="name" class="col-sm-3 control-label">Name</label>
+                            <label for="groupname" class="col-sm-3 control-label">Group Name</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="name" id="name">
+                                <input type="text" class="form-control" name="groupname" id="groupname">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="members" class="col-sm-3 control-label">Members</label>
                             <div class="col-sm-9">
-                                <div class="list-group" name="members" id="members">
-                                    <a href="#" class="list-group-item">First item</a>
-                                    <a href="#" class="list-group-item">Second item</a>
-                                    <a href="#" class="list-group-item">Third item</a>
+                                <div class="list-group" name="memberlist" id="memberlist">
+                                    <!-- contents here are displayed dynamically -->
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="class" class="col-sm-3 control-label">Class</label>
+                            <label for="course" class="col-sm-3 control-label">Class</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="class" id="class">
+                                <input type="text" class="form-control" name="course" id="course">
                             </div>
                         </div>
 
@@ -96,7 +119,9 @@ include_once '../controller/viewGroupProfileAction.php';
 
                         <div class="form-group">
                             <div class="text-center">
+                                <button type="button" onclick="location.href=window.location.href.replace('edit','view')" class="btn btn-primary">View Group Profile</button>
                                 <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <button type="button" class="btn btn-danger" data-toggle='modal' data-target="#leaveModal">Leave Group</button>
                             </div>
                         </div>
                     </form>
@@ -105,5 +130,21 @@ include_once '../controller/viewGroupProfileAction.php';
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="leaveModal" tabindex="-1" role="dialog" aria-labelledby="leaveLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="leaveLabel">Leave Group?</h3>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

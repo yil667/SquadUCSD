@@ -3,10 +3,9 @@
 // we need to adjust the url accordingly (append user id)
 include_once '../controller/startUserSession.php';
 
-$url = json_encode($_SERVER['REQUEST_URI']);
-
-// redirects the url to homepage if the user is not logged in
 handleNotLoggedIn();
+
+include_once '../controller/manageGroupAction.php';
 
 ?>
 
@@ -30,9 +29,21 @@ handleNotLoggedIn();
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
+
         $(document).ready(function () {
             $('#common').load('./common.php');
 
+            var groups = <?php echo json_encode($user->getGroups()); ?>;
+            for(i = 0; i < groups.length; i++ )
+            {
+                var link = "./editgroup.php?groupid=" + groups[i]["groupid"];
+                $('#classlist').append("<a href='" + link + "' class='list-group-item'>"
+                    + groups[i]["name"] + "</a>");
+            }
+
+            if (window.location.href.indexOf("?formed") > -1) {
+                $("#update").html("Group created successfully!");
+            }
         });
 
     </script>
@@ -43,15 +54,15 @@ handleNotLoggedIn();
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3 id='name'>Manage Groups</h3></div>
+                <div class="panel-heading"><h3 id='name'>Manage Groups
+                        <h4 id="update-info"><h4>
+                    </h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <div class="list-group">
-                                    <a href="#" class="list-group-item">CSE100</a>
-                                    <a href="#" class="list-group-item">CSE110</a>
-                                    <a href="#" class="list-group-item">ECON100A</a>
+                                <div class="list-group" id="classlist">
+                                    <!-- contents here are displayed dynamically -->
                                 </div>
                             </div>
                         </div>

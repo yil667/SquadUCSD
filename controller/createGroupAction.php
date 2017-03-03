@@ -10,9 +10,9 @@ $conn = connectToDB();
 $result = mysqli_query($conn, $sql);
 
 // check if the invite exists in the inviteTable
+$valid = false;
 if ($row = mysqli_fetch_assoc($result)) {
     $valid = true;
-
     echo "<h2>we're in the matrix</h2>";
     // delete that row from the inviteTable
     deleteRowInInviteTable($id1, $id2, $hash, $conn);
@@ -23,8 +23,4 @@ if ($row = mysqli_fetch_assoc($result)) {
     // update the "group" field for both individuals in the students table
     updateUserProfiles($id1, $id2, $groupid, $conn);
 } // the invite doesn't exist
-else {
-    // redirect somewhere else
-    $valid = false;
-}
 

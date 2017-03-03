@@ -36,6 +36,10 @@ textarea {
     resize: vertical;
 }
 
-#update-info, .error {
+#error-display, .error {
     color: red;
 }
+
+ #update-info {
+    color: #99ff99;
+ }

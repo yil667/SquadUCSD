@@ -3,8 +3,8 @@
 
 class Group
 {
-    private $groupid;
-    private $name;
+    public $groupid;
+    public $name;
     private $class;
     private $size;
     private $maxSize;
@@ -132,12 +132,12 @@ class Group
     public function hasUser($id)
     {
         // if the user array is empty, return false
-        if (!$this->users)
+        if (!sizeof($this->users == 0))
             return false;
 
         // loop through all the users and determine if a given user is in the group
         foreach ($this->users as $user) {
-            if ($user == $id)
+            if ($user->getUserid() == $id)
                 return true;
         }
 

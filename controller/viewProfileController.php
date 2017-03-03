@@ -17,13 +17,12 @@ function getUserObject($id)
 
     // declare return object
     $user = new User($id, $row['fname'], $row['lname'], $row['email'], $row['phone'], $row['major'], $row['about']);
-
+//    echo ($row['fname']);
     // we now need to get the groups info
     // declare an empty array
     $groups = Array();
-
-    if ($row['groups']) {
-        $groupIDs = explode($row['groups'], ",");
+    if ($row['groups'] != "") {
+        $groupIDs = explode(",", $row['groups']);
 
         // iterate through the groups that the user is affiliated with
         foreach ($groupIDs as $groupId) {
@@ -37,7 +36,6 @@ function getUserObject($id)
             }
         }
     }
-
     $user->setGroups($groups);
 
     // get the classses
@@ -61,13 +59,13 @@ function getGroupObject($id)
     $row = mysqli_fetch_assoc($result);
 
     // declare return object
-    $group = new Group($id, $row['name'], $row['class'], $row['size']);
+    $group = new Group($id, $row['name'], $row['size'], $row['maxSize'], $row['class']);
 
     // we now need to get the users' info
     $users = Array();
 
     if ($row['users']) {
-        $userIDs = explode($row['users'], ",");
+        $userIDs = explode(",", $row['users']);
 
         // iterate through the groups that the user is affiliated with
         foreach ($userIDs as $userId) {

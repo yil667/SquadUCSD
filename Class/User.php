@@ -9,8 +9,8 @@
 class User
 {
     // current
-    private $userid;
-    private $fname;
+    public $userid;
+    public $fname;
     private $lname;
     private $email;
     private $phone;
