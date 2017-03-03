@@ -9,8 +9,15 @@ function deleteRowInInviteTable($id1, $groupid, $hash, $conn)
 // update the group row in the groupProfile table
 function updateGroupProfile($id1, $groupid, $conn)
 {
+    // check to see if the group exists first
+    $sql = "SELECT * FROM groupProfile WHERE id='id1'";
+    $result = mysqli_query($conn, $sql);
+    if(mysqli_num_rows($result) == 0)
+        return false;
+
     $sql = "UPDATE groupProfile SET users=CONCAT(users, ',$id1'), size=size+1 WHERE id='$groupid';";
     mysqli_query($conn, $sql);
+    return true;
 }
 
 // update the "group" field for both individuals in the students table
