@@ -88,7 +88,7 @@ else {
             }
             else {
                 if (fullGroup)
-                    content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#requestModal' disabled>Request to Join Group</button>";
+                    content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#requestModal' disabled>Request to Join Group (Full)</button>";
                 else
                     content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#requestModal'>Request to Join Group</button>";
             }
