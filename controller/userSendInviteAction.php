@@ -27,5 +27,5 @@ addInviteRequestToDB($conn, $userid, $receiverid, $hash);
 // send the email request to the receiver
 sendInviteEmail($conn, $userid, $receiverid, $message, $hash);
 
-//header("Location: ../pages/index.php");
-header("Location: $fromurl");
+// redirect with a flag
+header("Location: $fromurl" . "&invite");

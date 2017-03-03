@@ -58,7 +58,7 @@ else {
             for (i = 0; i < users.length; i++) {
                 var link = "./viewprofile.php?userid=" + users[i]["userid"];
                 $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
-                    + users[i]["fname"] + "</a>");
+                    + users[i]["fname"] + " " + users[i]["lname"] + "</a>");
             }
 
             // input fields

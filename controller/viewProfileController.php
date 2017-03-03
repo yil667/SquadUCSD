@@ -77,8 +77,8 @@ function getGroupObject($id)
                 $sql = "SELECT * FROM student WHERE id='$userId'";
                 $result = mysqli_query($conn, $sql);
                 $userRow = mysqli_fetch_assoc($result);
-                array_push($users, new User($userRow['id'], $userRow['fname'] . " " . $userRow['lname'],
-                    "", "", "", "", ""));
+                array_push($users, new User($userRow['id'], $userRow['fname'], $userRow['lname'],
+                    $userRow['email'], "", "", ""));
 
             }
         }
