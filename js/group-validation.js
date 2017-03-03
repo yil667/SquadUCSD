@@ -1,4 +1,4 @@
-$().ready(function () {
+$(function () {
     $("#editGroupForm").validate({
         // Specify validation rules
         rules: {
