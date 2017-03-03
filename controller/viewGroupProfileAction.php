@@ -4,7 +4,6 @@ include_once "loginController.php";
 include_once "viewProfileController.php";
 
 
-
 $groupid = $_SESSION['groupid']; //?groupid=34
 $group = getGroupObject($groupid);
 

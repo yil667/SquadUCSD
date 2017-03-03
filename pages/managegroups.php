@@ -34,8 +34,7 @@ include_once '../controller/manageGroupAction.php';
             $('#common').load('./common.php');
 
             var groups = <?php echo json_encode($user->getGroups()); ?>;
-            for(i = 0; i < groups.length; i++ )
-            {
+            for (i = 0; i < groups.length; i++) {
                 var link = "./editgroup.php?groupid=" + groups[i]["groupid"];
                 $('#classlist').append("<a href='" + link + "' class='list-group-item'>"
                     + groups[i]["name"] + "</a>");
@@ -43,7 +42,8 @@ include_once '../controller/manageGroupAction.php';
 
             if (window.location.href.indexOf("?formed") > -1) {
                 $("#update").html("Group created successfully!");
-        });
+            }
+            );
 
     </script>
 </head>
@@ -53,9 +53,11 @@ include_once '../controller/manageGroupAction.php';
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3 id='name'>Manage Groups
+                <div class="panel-heading">
+                    <h3 id='name'>Manage Groups
                         <h4 id="update"><h4>
-                    </h3></div>
+                    </h3>
+                </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
                         <div class="form-group">
