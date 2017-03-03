@@ -28,9 +28,9 @@ $().ready(function () {
             },
             size: {
                 required: "Size cannot be empty.",
-                min: "Group size cannot be less than current members.",
+                digits: "Please enter a valid number.",
                 max: "The maximum group size is 15.",
-                digits: "Please enter a valid number."
+                min: "Group size cannot be less than current members."
             }
         },
         // Make sure the form is submitted to the destination defined
