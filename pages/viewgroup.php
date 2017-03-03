@@ -19,7 +19,7 @@ else {
     include_once "../controller/viewGroupProfileAction.php";
 
     // if link is invalid
-    if($group === FALSE){
+    if ($group === FALSE) {
         header("Location: ./error.php");
     }
     $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -34,7 +34,7 @@ else {
 <link rel="stylesheet" type="text/css" href="../css/profile.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
-    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
 
     <title>SquadUCSD</title>
     <meta charset="utf-8">
@@ -73,21 +73,27 @@ else {
 
             var inGroup = <?php echo json_encode($inGroup); ?>;
             var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
-            var content;
-           
+            var fullGroup = <?php echo json_encode($fullGroup); ?>;
+
+
+            var content = "";
+
 
             if (!isUserLoggedIn) {
                 content = "";
                 $("#buttons").html(content);
             }
-            else if(inGroup){
-                content="<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Group</button>";
+            else if (inGroup) {
+                content = "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Group</button>";
             }
             else {
-                content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#requestModal'>Request to Join Group</button>";
+                if (fullGroup)
+                    content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#requestModal' disabled>Request to Join Group</button>";
+                else
+                    content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#requestModal'>Request to Join Group</button>";
             }
-             $("#buttons").html(content);
-        
+            $("#buttons").html(content);
+
 
         });
     </script>
@@ -142,7 +148,6 @@ else {
         </div>
     </div>
 </div>
-
 
 
 <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestLabel" aria-hidden="true">

@@ -6,7 +6,7 @@ include_once '../controller/startUserSession.php';
 $url = json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to have suffix "user=id"
-if (strrpos($url, "?") === false) {
+if (strrpos($url, "?") === FALSE) {
 
     if (!isLoggedIn())
         handleNotLoggedIn();

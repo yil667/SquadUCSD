@@ -10,9 +10,9 @@ function existingEmail($email)
 
     // user account exists in database
     if ($row = mysqli_fetch_assoc($result))
-        return true;
+        return TRUE;
     else
-        return false;
+        return FALSE;
 }
 
 // pre-condition: email does not already exist in the database,

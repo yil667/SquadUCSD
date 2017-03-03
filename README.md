@@ -17,7 +17,7 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
-   
+   <li>(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile)</li> 
    <li>auto complete for classes in edit profile page</li>
    <li>in edit profile, make sure the group name, class, size cannot be empty</li>
    <li>add classes duplicate checks</li>

@@ -11,10 +11,10 @@ function handleForgotPasswordEmail($conn, $email)
         mysqli_query($conn, $sql);
 
         sendForgotPasswordEmail($fname, $email, $hash);
-        return true;
+        return TRUE;
     } else {
         // the user does not exist in the database
-        return false;
+        return FALSE;
     }
 }
 

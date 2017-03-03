@@ -128,20 +128,20 @@ class Group
         return $this->size == $this->maxSize;
     }
 
-    // returns true if the group contains the user with given ID
+    // returns TRUE if the group contains the user with given ID
     public function hasUser($id)
     {
-        // if the user array is empty, return false
+        // if the user array is empty, return FALSE
         if (!sizeof($this->users == 0))
-            return false;
+            return FALSE;
 
         // loop through all the users and determine if a given user is in the group
         foreach ($this->users as $user) {
             if ($user->getUserid() == $id)
-                return true;
+                return TRUE;
         }
 
         // given user is not found in the group
-        return false;
+        return FALSE;
     }
 }

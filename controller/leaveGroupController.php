@@ -3,7 +3,7 @@ function removeFromString($str, $item)
 {
     $parts = explode(',', $str);
 
-    while (($i = array_search($item, $parts)) !== false) {
+    while (($i = array_search($item, $parts)) !== FALSE) {
         unset($parts[$i]);
     }
 
