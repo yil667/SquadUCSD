@@ -18,6 +18,10 @@ else {
     // this action controller will fetch the user data into the $user variable
     include_once "../controller/viewGroupProfileAction.php";
 
+    // if link is invalid
+    if($group === FALSE){
+        header("Location: ./error.php");
+    }
     $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 }
@@ -29,6 +33,9 @@ else {
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
 <link rel="stylesheet" type="text/css" href="../css/profile.css"/>
 <head>
+    <!-- this is the icon in the browser tab. change the image at some point -->
+    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon" />
+
     <title>SquadUCSD</title>
     <meta charset="utf-8">
     <meta name="description" content="UCSD study group searching site">
@@ -67,24 +74,20 @@ else {
             var inGroup = <?php echo json_encode($inGroup); ?>;
             var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
             var content;
-            if (!isUserLoggedIn || inGroup) {
+           
+
+            if (!isUserLoggedIn) {
                 content = "";
+                $("#buttons").html(content);
+            }
+            else if(inGroup){
+                content="<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Group</button>";
             }
             else {
-                content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#leaveModal'>Request to Join Group" +
-                    "</button>"
+                content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#requestModal'>Request to Join Group</button>";
             }
-            $("#buttons").html(content);
-
-
-            var loggedInSelfContent =
-                "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#messageModal'>Message" +
-                "</button>" +
-                "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#inviteModal'>Invite to Existing Group" +
-                "</button>" +
-                "<button type='button' class='btn btn-success' role='button' data-toggle='modal' data-target='#formModal'>Invite to Form New Group" +
-                "</button>";
-            var defaultContent = "";
+             $("#buttons").html(content);
+        
 
         });
     </script>
@@ -141,20 +144,6 @@ else {
 </div>
 
 
-<div class="modal fade" id="leaveModal" tabindex="-1" role="dialog" aria-labelledby="leaveLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="leaveLabel">Leave Group?</h3>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button class="btn btn-primary">Confirm</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

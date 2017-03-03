@@ -1,7 +1,5 @@
 <?php
 include_once '../controller/startUserSession.php';
-
-
 ?>
 
 
@@ -10,6 +8,9 @@ include_once '../controller/startUserSession.php';
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
 <link rel="stylesheet" type="text/css" href="../css/login.css"/>
 <head>
+    <!-- this is the icon in the browser tab. change the image at some point -->
+    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon" />
+
     <title>SquadUCSD</title>
     <meta charset="utf-8">
     <meta name="description" content="UCSD study group searching site">

@@ -2,7 +2,6 @@
 include_once '../controller/startUserSession.php';
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
@@ -27,12 +26,9 @@ include_once '../controller/startUserSession.php';
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-            var welcomeMsg = document.getElementById('welcome');
-            var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
-            var userFirstName = <?php echo json_encode($firstName); ?>;
-            if (isUserLoggedIn) {
-                welcome.innerHTML += ', ' + userFirstName + '!';
-            }
+			setTimeout(function() {
+			  window.location.href = "./index.php";
+			}, 3000);
         });
     </script>
 </head>
@@ -42,12 +38,11 @@ include_once '../controller/startUserSession.php';
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div class="jumbotron">
-                <h1 id="welcome">Welcome</h1>
+                <h1 id="welcome">Error</h1>
 
                 <p>
-                    This web app allows students to form study groups for the classes they are enrolled in. Groups are
-                    formed based on schedule compatibility and individual personalities and preferences. Groups can set
-                    a maximum size to allow however many people in. This can be changed any time.
+                   Sorry. The URL you are trying to access is invalid.
+                   Redirecting to home page in 3...
                 </p>
             </div>
         </div>
@@ -55,4 +50,3 @@ include_once '../controller/startUserSession.php';
 </div>
 </body>
 </html>
-

@@ -1,7 +1,10 @@
 <?php
 include_once 'dbController.php';
+include_once 'loginController.php';
 
 session_start();
+
+handleNotLoggedIn();
 
 // establish connection to the database
 $conn = connectToDB();
@@ -19,7 +22,7 @@ $class5 = mysqli_real_escape_string($conn, $_POST['class5']);
 $class6 = mysqli_real_escape_string($conn, $_POST['class6']);
 
 
-$id = $_SESSION['id'];
+$id = getUserId();
 
 // we assume data validation has already taken place in the front end
 $sql = "UPDATE student SET phone='$phone', major='$major', about='$about', " .
@@ -27,6 +30,6 @@ $sql = "UPDATE student SET phone='$phone', major='$major', about='$about', " .
     "class5='$class5', class6='$class6' WHERE id='$id'";
 
 
-$result = mysqli_query($conn, $sql);
+mysqli_query($conn, $sql);
 
 header("Location: ../pages/editprofile.php?saved");

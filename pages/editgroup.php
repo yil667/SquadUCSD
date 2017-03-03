@@ -2,9 +2,9 @@
 <?php
 include_once '../controller/startUserSession.php';
 
-// no flag is found, redirect to manage group page
 $url = $_SERVER['REQUEST_URI'];
 
+// no flag is found, redirect to manage group page
 if (strpos($url, "?") === false) {
     header("Location: ./managegroups.php");
 }
@@ -13,7 +13,7 @@ if (strpos($url, "?") === false) {
 else {
     if (!isLoggedIn()) {
         $groupid = $_GET['groupid'];
-        header("Location: ./viewgroup.php?$groupid");
+        header("Location: ./viewgroup.php?groupid=$groupid");
     }
 }
 
@@ -22,7 +22,12 @@ $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 // load the group's data from action controller
 include_once '../controller/viewGroupProfileAction.php';
 
-// now the group object contains all the relevant user info
+// if the user is actually not in the group, redirects to view profile instead
+if (!$inGroup) {
+    $groupid = $_GET['groupid'];
+    header("Location: ./viewgroup.php?groupid=$groupid");
+}
+// now the $group object contains all the relevant user info
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +35,9 @@ include_once '../controller/viewGroupProfileAction.php';
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
 <link rel="stylesheet" type="text/css" href="../css/profile.css"/>
 <head>
+    <!-- this is the icon in the browser tab. change the image at some point -->
+    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon" />
+
     <title>SquadUCSD</title>
     <meta charset="utf-8">
     <meta name="description" content="UCSD study group searching site">
@@ -47,7 +55,6 @@ include_once '../controller/viewGroupProfileAction.php';
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-
             var users = <?php echo json_encode($group->getUsers()); ?>;
             for (i = 0; i < users.length; i++) {
                 var link = "./viewprofile.php?userid=" + users[i]["userid"];
@@ -64,6 +71,10 @@ include_once '../controller/viewGroupProfileAction.php';
 
             var size = <?php echo json_encode($group->getMaxSize()); ?>;
             document.getElementById('size').value = size;
+
+            if (window.location.href.indexOf("&saved") > -1) {
+                $("#update-info").html("Group profile updated.");
+            }
         });
     </script>
 </head>
@@ -74,8 +85,8 @@ include_once '../controller/viewGroupProfileAction.php';
         <div class="col-sm-4 col-sm-offset-4">
             <div class="panel panel-custom">
                 <div class="panel-heading">
-                    <h3>
-                        Edit Group
+                    <h3>Edit Group
+                        <h4 id="update-info"><h4>
                     </h3>
                 </div>
                 <div class="panel-body">
@@ -116,8 +127,14 @@ include_once '../controller/viewGroupProfileAction.php';
 
                         <div class="form-group">
                             <div class="text-center">
-                                <button href="" class="btn btn-primary">View Group Profile</button>
+                                <button type="button"
+                                        onclick="location.href=window.location.href.replace('edit','view')"
+                                        class="btn btn-primary">View Group Profile
+                                </button>
                                 <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <button type="button" class="btn btn-danger" data-toggle='modal'
+                                        data-target="#leaveModal">Leave Group
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -126,5 +143,23 @@ include_once '../controller/viewGroupProfileAction.php';
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="leaveModal" tabindex="-1" role="dialog" aria-labelledby="leaveLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="leaveLabel">Leave Group?</h3>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button type="button" onclick="location.href='../controller/leaveGroupAction.php'"
+                        class="btn btn-primary">Confirm
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

@@ -5,6 +5,7 @@ include_once 'changePasswordController.php';
 
 session_start();
 
+handleNotLoggedIn();
 // establish connection to the database
 $conn = connectToDB();
 

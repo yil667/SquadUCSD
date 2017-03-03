@@ -15,6 +15,9 @@ $_SESSION['profileid'] = $_SESSION['id'];
 <link rel="stylesheet" type="text/css" href="../css/search_result_entry.css"/>
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
 <head>
+    <!-- this is the icon in the browser tab. change the image at some point -->
+    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon" />
+
     <title>SquadUCSD</title>
     <meta charset="utf-8">
     <meta name="description" content="UCSD study group searching site">

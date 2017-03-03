@@ -18,15 +18,14 @@ This web app allows students to form study groups for the classes they are enrol
 <h2>Front-end todo list: </h2>
 <ol>
    
+   <li>auto complete for classes in edit profile page</li>
+   <li>in edit profile, make sure the group name, class, size cannot be empty</li>
    <li>add classes duplicate checks</li>
+   <li>member list label hover color darker</li>
    <li>invite to form new group needs group name / group size></li>
-   <li>display groups in user profile</li>
-   <li>in edit profile page add 2 more buttons, view profile and leave group</li>
-   <li>display groups in user profile</li>
-   <li>create generic error page to handle invalid links 
-   (e.g., invalid activation url, invalid request to form url, expired urls, etc.</li>
+   <li>display groups in view user profile</li>
+   <li>display classes in view user profile</li>
 
-//Zi
    <li>dynamically display groups in viewprofile page (invite to existing group)
       display warning if the group if full already when inviting 
       (backend will resize the group)</li>
@@ -34,6 +33,8 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>fix buttons spacing on view profile(match edit group)</strike></li>
+   <li><strike>in edit profile page add 2 more buttons, view profile and leave group</strike></li>
    <li><strike>view profile page updated</strike></li>
    <li><strike>connect the writable text fields correctly (correctly not displaying some shits - from Dom)</strike></li>
    <li><strike>dynamically display button in view profile page</strike></li>
@@ -50,16 +51,18 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
-   <li>managegroups is sometimes broken..? fix that shit </li>
-   <li>implement backend logic for edit group submit form</li>
-   <li>implement backend logic for view group request to join form</li>
+   <li><b>implement backend logic for view group request to join form</b></li>
+   <li><b>implement backend logic for inviting to existing group<b></li>
    <li>implement backend logic for resizing group request when inviting</li>
-   <li>update accept.php when front end error page is done </li>
 
 </ol>
 
 <h2>Back-end recently finished: </h2>
 <ol>
+   <li><strike>update accept.php when front end error page is done </strike></li>
+   <li><strike>implement backend logic for edit group submit form</strike></li>
+   <li><strike>implement backend logic for leave group</strike></li>
+   <li><strike>managegroups is sometimes broken..? fix that shit </strike></li>
    <li><strike>forgot password logic</strike></li>
    <li><strike>add safety page redirection</strike></li>
 </ol>
