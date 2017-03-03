@@ -17,7 +17,8 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
-
+   
+   <li>in edit profile, make sure the group name, class, size cannot be empty, along wi</li>
    <li>add classes duplicate checks</li>
    <li>member list label hover color darker</li>
    <li>invite to form new group needs group name / group size></li>
@@ -49,15 +50,16 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
-   <li>implement backend logic for view group request to join form</li>
+   <li><b>implement backend logic for view group request to join form</b></li>
    <li>implement backend logic for resizing group request when inviting</li>
-   <li>update accept.php when front end error page is done </li>
 
 </ol>
 
 <h2>Back-end recently finished: </h2>
 <ol>
+   <li><strike>update accept.php when front end error page is done </strike></li>
    <li><strike>implement backend logic for edit group submit form</strike></li>
+   <li><strike>implement backend logic for leave group</strike></li>
    <li><strike>managegroups is sometimes broken..? fix that shit </strike></li>
    <li><strike>forgot password logic</strike></li>
    <li><strike>add safety page redirection</strike></li>
