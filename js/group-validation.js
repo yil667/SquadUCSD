@@ -1,5 +1,5 @@
 $().ready(function () {
-	var minSize = <?php echo json_encode($group->getMaxSize()); ?>;
+	var minSize = 2;
     $("#editGroupForm").validate({
         // Specify validation rules
         rules: {
