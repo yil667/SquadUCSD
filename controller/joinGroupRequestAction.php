@@ -10,7 +10,7 @@ session_start();
 handleNotLoggedIn();
 
 $userid = getUserId();
-$groupid = $_SESSION['groupid']; //?groupid=34
+$groupid = $_SESSION['request']; //?groupid=34
 $group = getGroupObject($groupid);
 $fromurl = $_SESSION['fromurl'];
 
