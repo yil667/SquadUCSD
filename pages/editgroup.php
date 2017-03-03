@@ -59,6 +59,7 @@ else if (!$inGroup) {
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     
     <script type="text/javascript">
+        var minSize = <?php echo json_encode($group->getSize()); ?>;
         $(document).ready(function () {
             $('#common').load('./common.php');
             var users = <?php echo json_encode($group->getUsers()); ?>;
@@ -77,7 +78,6 @@ else if (!$inGroup) {
             document.getElementById('course').value = course;
 
             var size = <?php echo json_encode($group->getMaxSize()); ?>;
-            var minSize = <?php echo json_encode($group->getSize()); ?>;
             document.getElementById('size').value = size;
 
             if (window.location.href.indexOf("&saved") > -1) {
