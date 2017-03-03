@@ -46,6 +46,12 @@ include_once '../controller/manageGroupAction.php';
             if (window.location.href.indexOf("?formed") > -1) {
                 $("#update").html("Group created successfully!");
             }
+            else if (window.location.href.indexOf("?leave") > -1) {
+                $("#update").html("You left the group.");
+            }
+            else if (window.location.href.indexOf("?disbanded") > -1) {
+                $("#update").html("Group disbanded.");
+            }
         });
     </script>
 </head>
