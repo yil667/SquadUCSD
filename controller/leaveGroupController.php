@@ -26,6 +26,14 @@ function getGroupRow($conn, $groupid)
     return $row;
 }
 
+// remove users in student table who are in the group
+function removeAllUsersInroup($conn, $groupid, $group)
+{
+    foreach ($group->getUsers() as $user) {
+        removeGroupFromUser($conn, $user->getUserid(), $groupid);
+    }
+}
+
 // remove the user from the groupprofile table
 function removeUserFromGroup($conn, $id, $groupid, $currGroupSize)
 {

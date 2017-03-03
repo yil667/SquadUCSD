@@ -42,7 +42,15 @@ include_once '../controller/manageGroupAction.php';
             }
 
             if (window.location.href.indexOf("?formed") > -1) {
-                $("#update").html("Group created successfully!");
+                $("#update-info").html("Group created successfully!");
+            }
+
+            if (window.location.href.indexOf("?disbanded") > -1) {
+                $("#update-info").html("Group disbanded.");
+            }
+
+            if (window.location.href.indexOf("?leave") > -1) {
+                $("#update-info").html("You left the group.");
             }
         });
 
