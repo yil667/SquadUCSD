@@ -69,7 +69,7 @@ function getUserId()
     return $_SESSION['id'];
 }
 
-// returns TRUE is user is logged in
+// returns true is user is logged in
 function isLoggedIn()
 {
     return isset($_SESSION['fname']);

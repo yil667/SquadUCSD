@@ -12,8 +12,7 @@ function getUserObject($id)
     $sql = "SELECT * FROM student WHERE id='$id'";
     $conn = connectToDB();
     $result = mysqli_query($conn, $sql);
-    if($result === FALSE)
-        return FALSE;
+
     $row = mysqli_fetch_assoc($result);
 
     // declare return object
@@ -56,8 +55,8 @@ function getGroupObject($id)
     $sql = "SELECT * FROM groupProfile WHERE id='$id'";
     $conn = connectToDB();
     $result = mysqli_query($conn, $sql);
-    if($result === FALSE)
-        return FALSE;
+    if ($result === false)
+        return false;
 
     $row = mysqli_fetch_assoc($result);
 

@@ -18,7 +18,7 @@ $group = getGroupObject($groupid);
 
 $inGroup = $group->hasUser($id);
 
-$disbanded = FALSE;
+$disbanded = false;
 // if somehow the user editing is not in the group, redirect to view profile page
 if (!$inGroup)
     header("Location: ../pages/viewgroup.php?groupid=$groupid");
@@ -32,7 +32,7 @@ else {
 
         // disband the group
         disbandGroup($conn, $groupid);
-        $disbanded = TRUE;
+        $disbanded = true;
     } else {
         // remove the groupid from the student table
         removeGroupFromUser($conn, $id, $groupid);

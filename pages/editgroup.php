@@ -5,7 +5,7 @@ include_once '../controller/startUserSession.php';
 $url = $_SERVER['REQUEST_URI'];
 
 // no flag is found, redirect to manage group page
-if (strpos($url, "?") === FALSE) {
+if (strpos($url, "?") === false) {
     header("Location: ./managegroups.php");
 }
 // if the link contains the flag, but user is not logged in,

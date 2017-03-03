@@ -6,7 +6,7 @@ include_once '../controller/startUserSession.php';
 $url = json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to have suffix "user=id"
-if (strrpos($url, "?") === FALSE) {
+if (strrpos($url, "?") === false) {
 
     if (!isLoggedIn())
         handleNotLoggedIn();
@@ -27,7 +27,7 @@ else {
     include_once "../controller/viewProfileAction.php";
 
     // if link is invalid
-    if($user === FALSE){
+    if($user === false){
         header("Location: ./error.php");
     }
 
