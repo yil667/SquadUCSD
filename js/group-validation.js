@@ -14,7 +14,6 @@ $().ready(function () {
                 digits: true,
                 max: maxSize,
                 min: minSize
-               
             }
         },
         // Specify validation error messages
