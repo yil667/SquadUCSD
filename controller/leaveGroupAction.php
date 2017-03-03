@@ -24,12 +24,13 @@ else {
     // remove the groupid from the student table
     removeGroupFromUser($conn, $id, $groupid);
 
+    $currGroupSize = $group->getSize();
     // if the group only has 2 people left
-    if ($group->getSize() <= 2) {
+    if ($currGroupSize <= 2) {
         // disband the group
         disbandGroup($conn, $groupid);
     } else {
         // otherwise, remove the user from the groupprofile table
-        removeUserFromGroup($conn, $id, $groupid);
+        removeUserFromGroup($conn, $id, $groupid, $currGroupSize);
     }
 }

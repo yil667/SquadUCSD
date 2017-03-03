@@ -1,5 +1,6 @@
 <?php
 include_once 'dbController.php';
+include_once 'loginController.php';
 
 session_start();
 
