@@ -18,16 +18,16 @@ $().ready(function () {
         // Specify validation error messages
         messages: {
             groupname: {
-                required: "Group name cannot be empty",
-                maxlength: "Group name should be less than 40 characters"
+                required: "Group name cannot be empty.",
+                maxlength: "Group name should be less than 40 characters."
             },
             course: {
-                maxlength: "Class name should be less than 40 characters"
+                maxlength: "Class name should be less than 40 characters."
             },
             size: {
-                required: "Size cannot be empty",
-                min: "Group size cannot be less than current memebers",
-                max: "The maximum group size is 10"
+                required: "Size cannot be empty.",
+                min: "Group size cannot be less than current memebers.",
+                max: "The maximum group size is 10."
             }
         },
         // Make sure the form is submitted to the destination defined

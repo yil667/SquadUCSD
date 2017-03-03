@@ -15,16 +15,16 @@ $().ready(function () {
         },
         // Specify validation error messages
         messages: {
-            currpassword: "Please enter your current password",
+            currpassword: "Please enter your current password.",
             password: {
-                required: "Please provide a password",
-                minlength: "Your password must be at least 6-12 characters long",
+                required: "Please provide a password.",
+                minlength: "Your password must be at least 6-12 characters long.",
                 pwcheck: true
             },
             password2: {
-                required: "Please re-enter your password",
-                equalTo: "Passwords do not match",
-                pwcheck: "Your password can only consist of characters and numbers"
+                required: "Please re-enter your password.",
+                equalTo: "Passwords do not match.",
+                pwcheck: "Your password can only consist of characters and numbers."
             },
         },
         // Make sure the form is submitted to the destination defined
