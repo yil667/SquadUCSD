@@ -3,6 +3,8 @@ include_once 'dbController.php';
 
 session_start();
 
+handleNotLoggedIn();
+
 // establish connection to the database
 $conn = connectToDB();
 
