@@ -57,11 +57,12 @@ else if (!$inGroup) {
 
      <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    <script src="../js/group-validation.js"></script>
+    
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
             var users = <?php echo json_encode($group->getUsers()); ?>;
+
             for (i = 0; i < users.length; i++) {
                 var link = "./viewprofile.php?userid=" + users[i]["userid"];
                 $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
@@ -76,6 +77,7 @@ else if (!$inGroup) {
             document.getElementById('course').value = course;
 
             var size = <?php echo json_encode($group->getMaxSize()); ?>;
+            var minSize = <?php echo json_encode($group->getSize()); ?>;
             document.getElementById('size').value = size;
 
             if (window.location.href.indexOf("&saved") > -1) {
@@ -83,6 +85,7 @@ else if (!$inGroup) {
             }
         });
     </script>
+    <script src="../js/group-validation.js"></script>
 </head>
 <body>
 <div id="common"></div>

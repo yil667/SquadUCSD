@@ -1,5 +1,4 @@
 $().ready(function () {
-	var minSize = 2;
     $("#editGroupForm").validate({
         // Specify validation rules
         rules: {
