@@ -40,24 +40,6 @@ include_once '../controller/viewProfileAction.php';
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-            if (window.location.href.indexOf("?saved") > -1) {
-                $("#update-info").html("Profile updated.");
-            }
-
-            if (window.location.href.indexOf("?success") > -1) {
-                $("#update-info").html("Password changed successfully.");
-            }
-
-            if (window.location.href.indexOf("?fail") > -1) {
-                $("#update-info").html("Password change failed: Incorrect current password entered.");
-            }
-
-            var name = <?php echo json_encode($user->getFname() . " " . $user->getLname()); ?>;
-            $('#name').html(name);
-
-            var email = <?php echo json_encode($user->getEmail()); ?>;
-            $('#email').html(email);
-
             // input fields
             var major = <?php echo json_encode($user->getMajor()); ?>;
             document.getElementById('major').value = major;
@@ -81,6 +63,23 @@ include_once '../controller/viewProfileAction.php';
             var class6 = <?php echo json_encode($user->getClass6()->getClassName()); ?>;
             document.getElementById('class6').value = class6;
 
+            if (window.location.href.indexOf("?saved") > -1) {
+                $("#update-info").html("Profile updated.");
+            }
+
+            if (window.location.href.indexOf("?success") > -1) {
+                $("#update-info").html("Password changed successfully.");
+            }
+
+            if (window.location.href.indexOf("?fail") > -1) {
+                $("#update-info").html("Password change failed: Incorrect current password entered.");
+            }
+
+            var name = <?php echo json_encode($user->getFname() . " " . $user->getLname()); ?>;
+            $('#name').html(name);
+
+            var email = <?php echo json_encode($user->getEmail()); ?>;
+            $('#email').html(email);
 
         });
     </script>

@@ -11,7 +11,7 @@ if (strpos($url, "?") === false) {
 // if the link contains the flag, but user is not logged in,
 // then the user shouldn't be able to edit profile
 else {
-    if(!isLoggedIn()){
+    if (!isLoggedIn()) {
         $groupid = $_GET['groupid'];
         header("Location: ./viewgroup.php?groupid=$groupid");
     }
@@ -23,9 +23,9 @@ $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 include_once '../controller/viewGroupProfileAction.php';
 
 // if the user is actually not in the group, redirects to view profile instead
-if(!$inGroup){
-        $groupid = $_GET['groupid'];
-        header("Location: ./viewgroup.php?groupid=$groupid");
+if (!$inGroup) {
+    $groupid = $_GET['groupid'];
+    header("Location: ./viewgroup.php?groupid=$groupid");
 }
 // now the $group object contains all the relevant user info
 ?>
@@ -59,7 +59,7 @@ if(!$inGroup){
                 $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
                     + users[i]["fname"] + "</a>");
             }
-        
+
             // input fields
             var groupname = <?php echo json_encode($group->getName()); ?>;
             document.getElementById('groupname').value = groupname;
@@ -69,6 +69,10 @@ if(!$inGroup){
 
             var size = <?php echo json_encode($group->getMaxSize()); ?>;
             document.getElementById('size').value = size;
+
+            if (window.location.href.indexOf("&saved") > -1) {
+                $("#update-info").html("Group profile updated.");
+            }
         });
     </script>
 </head>
@@ -79,8 +83,8 @@ if(!$inGroup){
         <div class="col-sm-4 col-sm-offset-4">
             <div class="panel panel-custom">
                 <div class="panel-heading">
-                    <h3>
-                        Edit Group
+                    <h3>Edit Group
+                        <h4 id="update-info"><h4>
                     </h3>
                 </div>
                 <div class="panel-body">
@@ -120,9 +124,14 @@ if(!$inGroup){
 
                         <div class="form-group">
                             <div class="text-center">
-                                <button type="button" onclick="location.href=window.location.href.replace('edit','view')" class="btn btn-primary">View Group Profile</button>
+                                <button type="button"
+                                        onclick="location.href=window.location.href.replace('edit','view')"
+                                        class="btn btn-primary">View Group Profile
+                                </button>
                                 <button type="submit" class="btn btn-primary">Save Changes</button>
-                                <button type="button" class="btn btn-danger" data-toggle='modal' data-target="#leaveModal">Leave Group</button>
+                                <button type="button" class="btn btn-danger" data-toggle='modal'
+                                        data-target="#leaveModal">Leave Group
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -141,7 +150,9 @@ if(!$inGroup){
             </div>
             <div class="modal-footer">
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button type="button" onclick="location.href='../controller/leaveGroupAction.php'" class="btn btn-primary">Confirm</button>
+                <button type="button" onclick="location.href='../controller/leaveGroupAction.php'"
+                        class="btn btn-primary">Confirm
+                </button>
             </div>
         </div>
     </div>

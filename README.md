@@ -18,7 +18,8 @@ This web app allows students to form study groups for the classes they are enrol
 <h2>Front-end todo list: </h2>
 <ol>
    
-   <li>in edit profile, make sure the group name, class, size cannot be empty, along wi</li>
+   <li>auto complete for classes in edit profile page</li>
+   <li>in edit profile, make sure the group name, class, size cannot be empty</li>
    <li>add classes duplicate checks</li>
    <li>member list label hover color darker</li>
    <li>invite to form new group needs group name / group size></li>
@@ -51,6 +52,7 @@ This web app allows students to form study groups for the classes they are enrol
 <h2>Back-end todo list:</h2>
 <ol>
    <li><b>implement backend logic for view group request to join form</b></li>
+   <li><b>implement backend logic for inviting to existing group<b></li>
    <li>implement backend logic for resizing group request when inviting</li>
 
 </ol>

@@ -27,7 +27,7 @@ else {
     include_once "../controller/viewProfileAction.php";
 
     // if link is invalid
-    if(!$user->getFname()){
+    if($user === FALSE){
         header("Location: ./error.php");
     }
 

@@ -19,7 +19,7 @@ else {
     include_once "../controller/viewGroupProfileAction.php";
 
     // if link is invalid
-    if(!$group->getName()){
+    if($group === FALSE){
         header("Location: ./error.php");
     }
     $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
