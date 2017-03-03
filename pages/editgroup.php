@@ -54,7 +54,9 @@ else if (!$inGroup) {
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <!-- UI for class drop down -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/class-list.js"></script>
      <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     
@@ -120,7 +122,7 @@ else if (!$inGroup) {
 
                         <div class="form-group">
                             <label for="course" class="col-sm-3 control-label">Class</label>
-                            <div class="col-sm-9">
+                             <div class="col-sm-9 ui-widget">
                                 <input type="text" class="form-control" name="course" id="course">
                             </div>
                         </div>
