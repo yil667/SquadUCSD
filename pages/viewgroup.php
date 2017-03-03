@@ -5,7 +5,7 @@ include_once '../controller/startUserSession.php';
 $url = json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to homepage if not groupid found
-if (strrpos($url, "?") == "") {
+if (strrpos($url, "?groupid") == "") {
     // redirects to home page if the user is not logged in
     header("Location: ../pages/index.php");
 }

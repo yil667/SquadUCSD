@@ -5,7 +5,7 @@ include_once '../controller/startUserSession.php';
 $url = $_SERVER['REQUEST_URI'];
 
 // no flag is found, redirect to manage group page
-if (strpos($url, "?") === false) {
+if (strpos($url, "?groupid") === false) {
     header("Location: ./managegroups.php");
 }
 // if the link contains the flag, but user is not logged in,
@@ -22,8 +22,11 @@ $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 // load the group's data from action controller
 include_once '../controller/viewGroupProfileAction.php';
 
+if($group === FALSE)
+    header("Location: ./error.php");
+
 // if the user is actually not in the group, redirects to view profile instead
-if (!$inGroup) {
+else if (!$inGroup) {
     $groupid = $_GET['groupid'];
     header("Location: ./viewgroup.php?groupid=$groupid");
 }
