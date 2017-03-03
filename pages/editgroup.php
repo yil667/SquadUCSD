@@ -54,11 +54,16 @@ else if (!$inGroup) {
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../js/group-validation.js"></script>
+
+     <!-- jQuery form validation -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    
     <script type="text/javascript">
+        var minSize = <?php echo json_encode($group->getSize()); ?>;
         $(document).ready(function () {
             $('#common').load('./common.php');
             var users = <?php echo json_encode($group->getUsers()); ?>;
+
             for (i = 0; i < users.length; i++) {
                 var link = "./viewprofile.php?userid=" + users[i]["userid"];
                 $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
@@ -80,6 +85,7 @@ else if (!$inGroup) {
             }
         });
     </script>
+    <script src="../js/group-validation.js"></script>
 </head>
 <body>
 <div id="common"></div>
@@ -123,7 +129,7 @@ else if (!$inGroup) {
                             <label for="size" class="col-sm-3 control-label">Group Size</label>
                             <div class="col-sm-9">
                                 <!--replace min with num from backend @DOM @SCOTT -->
-                                <input type="number" class="form-control bfh-number" min="2" max="15" name="size"
+                                <input type="number" class="form-control bfh-number" name="size"
                                        id="size">
                             </div>
                         </div>
