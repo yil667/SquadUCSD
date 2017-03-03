@@ -9,10 +9,13 @@ session_start();
 
 handleNotLoggedIn();
 
+$conn = connectToDB();
+
 $userid = getUserId();
-$groupid = $_SESSION['request']; //?groupid=34
+$groupid = $_SESSION['groupid']; //?groupid=34
 $group = getGroupObject($groupid);
 $fromurl = $_SESSION['fromurl'];
+$message = $_POST['messageboxreq'];
 
 $inGroup = $group->hasUser($userid);
 
@@ -23,7 +26,7 @@ if ($inGroup) {
 }
 else {
     // this is the custom message the user wants to send along with the invite request
-    $message = ($_POST['messageboxform']);
+
     $hash = md5(rand(0, 10000));
     $user = getUserObject($userid);
 
