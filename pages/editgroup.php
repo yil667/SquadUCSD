@@ -2,9 +2,9 @@
 <?php
 include_once '../controller/startUserSession.php';
 
-// no flag is found, redirect to manage group page
 $url = $_SERVER['REQUEST_URI'];
 
+// no flag is found, redirect to manage group page
 if (strpos($url, "?") === false) {
     header("Location: ./managegroups.php");
 }
@@ -22,11 +22,12 @@ $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 // load the group's data from action controller
 include_once '../controller/viewGroupProfileAction.php';
 
+// if the user is actually not in the group, redirects to view profile instead
 if(!$inGroup){
         $groupid = $_GET['groupid'];
         header("Location: ./viewgroup.php?groupid=$groupid");
 }
-// now the group object contains all the relevant user info
+// now the $group object contains all the relevant user info
 ?>
 
 <!DOCTYPE html>
