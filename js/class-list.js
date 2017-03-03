@@ -5562,7 +5562,7 @@ $(function () {
             return results(request, response);
         }
     });
-    $("#courses").autocomplete({
+    $("#course").autocomplete({
         source: function (request, response) {
             return results(request, response);
         }
