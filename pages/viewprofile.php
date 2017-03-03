@@ -107,6 +107,11 @@ else {
             else {
                 $("#buttons").html(defaultContent);
             }
+
+            if (window.location.href.indexOf("&invite") > -1) {
+                $("#update-info").html("Invitation sent.");
+            }
+
         });
     </script>
 </head>
@@ -116,7 +121,10 @@ else {
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <div class="panel panel-custom">
-                    <div class="panel-heading"><h3 id='name'></h3></div>
+                    <div class="panel-heading">
+                        <h3 id='name'>
+                            <h4 id="update-info"><h4>
+                        </h3></div>
                     <div class="panel-body">
                         <form class="form-horizontal" role="form" method="POST">
                             <div class="form-group">

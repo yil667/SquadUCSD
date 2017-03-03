@@ -8,7 +8,8 @@ session_start();
 
 handleNotLoggedIn();
 
-// In this action controller, we assume the scenario to be one user intends to invite another user to form a group.
+// In this action controller, we assume the scenario to be one user intends to invite another user
+// to form a group.
 
 // assume we get the user's and receiver's ID's
 $userid = getUserId();
