@@ -49,8 +49,6 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
-   <li>managegroups is sometimes broken..? fix that shit </li>
-   <li>implement backend logic for edit group submit form</li>
    <li>implement backend logic for view group request to join form</li>
    <li>implement backend logic for resizing group request when inviting</li>
    <li>update accept.php when front end error page is done </li>
@@ -59,6 +57,8 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Back-end recently finished: </h2>
 <ol>
+   <li><strike>implement backend logic for edit group submit form</strike></li>
+   <li><strike>managegroups is sometimes broken..? fix that shit </strike></li>
    <li><strike>forgot password logic</strike></li>
    <li><strike>add safety page redirection</strike></li>
 </ol>

@@ -27,7 +27,7 @@ if (!$inGroup)
     header("Location: ../pages/viewgroup.php?groupid=$groupid");
 else {
     // we assume data validation has already taken place in the front end
-    $sql = "UPDATE groupprofile SET name='$groupname', maxSize='$size', class='$course' " .
+    $sql = "UPDATE groupProfile SET name='$groupname', maxSize='$size', class='$course' " .
         "WHERE id='$groupid'";
 
     mysqli_query($conn, $sql);

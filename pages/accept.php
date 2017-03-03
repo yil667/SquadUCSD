@@ -15,7 +15,7 @@ if ($valid) {
 else {
     // redirects to error page
     // for now it's going to redirect to the home page
-    header("Location: ./index.php");
+    header("Location: ./error.php");
 }
 
 ?>
