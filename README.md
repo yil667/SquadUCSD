@@ -33,6 +33,7 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>view non-existent page gets rediected to error page</strike></li>
    <li><strike>fix buttons spacing on view profile(match edit group)</strike></li>
    <li><strike>in edit profile page add 2 more buttons, view profile and leave group</strike></li>
    <li><strike>view profile page updated</strike></li>
