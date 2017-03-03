@@ -8,11 +8,11 @@ $hash = $_GET['hash'];
 
 include_once "../controller/requestAction.php";
 
-if ($valid) {
-    header("Location: ./viewgroup.php?groupid=$groupid&accepted");
-} else {
-    // redirects to error page
-    header("Location: ./error.php");
-}
+//if ($valid) {
+//    header("Location: ./viewgroup.php?groupid=$groupid&accepted");
+//} else {
+//    // redirects to error page
+//    header("Location: ./error.php");
+//}
 
 ?>
