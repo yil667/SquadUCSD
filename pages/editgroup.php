@@ -51,8 +51,7 @@ if (!$inGroup) {
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
+    <script src="../js/group-validation.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
@@ -91,7 +90,8 @@ if (!$inGroup) {
                     </h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="../controller/editGroupAction.php">
+                    <form class="form-horizontal" role="form" id="editGroupForm" name="editGroupForm" method="POST"
+                          action="../controller/editGroupAction.php">
 
                         <div class="form-group">
                             <label for="groupname" class="col-sm-3 control-label">Group Name</label>

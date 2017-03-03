@@ -11,8 +11,7 @@ include_once "../controller/createGroupAction.php";
 
 if ($valid) {
     header("Location: ./managegroups.php?formed");
-}
-else {
+} else {
     // redirects to error page
     // for now it's going to redirect to the home page
     header("Location: ./error.php");
