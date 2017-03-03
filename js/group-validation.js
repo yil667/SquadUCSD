@@ -11,8 +11,9 @@ $().ready(function () {
             },
             size: {
                 required: true,
-                min: minSize,
-                max: 10
+                max: 10,
+                min: minSize
+               
             }
         },
         // Specify validation error messages
@@ -26,7 +27,7 @@ $().ready(function () {
             },
             size: {
                 required: "Size cannot be empty.",
-                min: "Group size cannot be less than current memebers.",
+                min: "Group size cannot be less than current members.",
                 max: "The maximum group size is 10."
             }
         },
