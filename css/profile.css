@@ -12,12 +12,12 @@
 }
 
 .panel-custom > .panel-heading h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
     color: #f2f2f2;
 }
 
 .panel-custom > .panel-heading {
-    margin-top: 10px;
-    margin-bottom: 10px;
     padding-left: 20px;
     vertical-align: middle;
     background-color: #333333;
@@ -25,17 +25,13 @@
 }
 
 .panel-custom > .panel-body label, p {
-    font-size: 16px;
+    font-size: 16px !important;
 }
 
 .panel-custom > .panel-body {
     background-color: #f2f2f2;
     padding-top: 30px;
     margin-bottom: 60px;
-}
-
-.panel-custom > .panel-heading h3 {
-    color: #f2f2f2;
 }
 
 textarea {
