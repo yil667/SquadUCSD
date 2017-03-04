@@ -130,7 +130,7 @@ else {
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-sm-4 col-sm-offset-4">
             <div class="panel panel-custom">
                 <div class="panel-heading"><h3 id='name'></h3></div>
                 <div class="panel-body">
@@ -142,21 +142,21 @@ else {
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group">
                             <label for="phone" class="col-sm-3 control-label">Phone Number</label>
                             <div class="col-sm-9">
                                 <p class="form-control-static" name="phone" id="phone"></p>
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group">
                             <label for="major" class="col-sm-3 control-label">Major</label>
                             <div class="col-sm-9">
                                 <p class="form-control-static" name="major" id="major"></p>
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group">
                             <label for="about" class="col-sm-3 control-label">About Me</label>
                             <div class="col-sm-9">
                                 <p class="form-control-static" name="about" id="about"></p>
@@ -174,7 +174,6 @@ else {
 
                         <div class="form-group">
                             <div class="text-center" id="buttons">
-
                             </div>
                         </div>
                     </form>

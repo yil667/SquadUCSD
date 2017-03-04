@@ -37,7 +37,7 @@ textarea {
 }
 
 #error-display, .error {
-   color: red;
+    color: rgba(255, 0, 2, 0.74);
 }
 
 #update-info {
