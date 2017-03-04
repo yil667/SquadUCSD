@@ -205,11 +205,6 @@ else {
                         </div>
 
                         <div class="form-group">
-                            <label name="classlabel" id="classlabel" for="classname">Class</label>
-                            <input class="form-control" name="classname" id="classname">
-                        </div>
-
-                        <div class="form-group">
                             <label for="courses" class="col-md-3 control-label">Classes</label>
                             <div class="col-md-9">
                                 <div class="list-group" id="courselist" name="courselist">
