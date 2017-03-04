@@ -205,10 +205,8 @@ else {
                         </div>
 
                         <div class="form-group">
-                            <label name="selectlabel" id="selectlabel" for="groupid">Select Group</label>
-                            <select id="groupid" name="groupid">
-                                <!-- groups inserted dynamically -->
-                            </select>
+                            <label name="classlabel" id="classlabel" for="classname">Class</label>
+                            <input class="form-control" name="classname" id="classname">
                         </div>
 
                         <div class="form-group">
