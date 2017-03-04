@@ -200,7 +200,7 @@ else {
                         </div>
 
                         <div class="form-group">
-                            <label for="courses" class="col-sm-3 control-label">Groups</label>
+                            <label for="courses" class="col-sm-3 control-label">Classes</label>
                             <div class="col-sm-9">
                                 <div class="list-group" id="courselist" name="courselist">
                                     <!-- contents here are inserted dynamically -->
