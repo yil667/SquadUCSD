@@ -12,7 +12,7 @@ function updateGroupProfile($id1, $groupid, $conn)
     // check to see if the group exists first
     $sql = "SELECT * FROM groupProfile WHERE id='$groupid'";
     $result = mysqli_query($conn, $sql);
-    if(mysqli_num_rows($result) == 0)
+    if (mysqli_num_rows($result) == 0)
         return false;
 
     $sql = "UPDATE groupProfile SET users=CONCAT(users, ',$id1'), size=size+1 WHERE id='$groupid';";

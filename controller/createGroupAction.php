@@ -10,8 +10,7 @@ $result = mysqli_query($conn, $sql);
 
 $valid = false;
 // check if the invite exists in the inviteTable
-if(mysqli_num_rows($result) > 0)
-{
+if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
     $valid = true;
 

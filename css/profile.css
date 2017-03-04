@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-#memberlist > a.list-group-item:hover, #grouplist > a.list-group-item:hover, #classlist > a.list-group-item:hover{
+#memberlist > a.list-group-item:hover, #grouplist > a.list-group-item:hover, #classlist > a.list-group-item:hover {
     background-color: #d8d8d8;
 }
 
@@ -43,5 +43,5 @@ textarea {
 }
 
 #update-info {
-   color: #99ff99;
+    color: #99ff99;
 }

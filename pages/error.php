@@ -8,7 +8,7 @@ include_once '../controller/startUserSession.php';
 <link rel="stylesheet" type="text/css" href="../css/index.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
-    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
 
     <title>SquadUCSD</title>
     <meta charset="utf-8">
@@ -26,9 +26,9 @@ include_once '../controller/startUserSession.php';
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-			setTimeout(function() {
-			  window.location.href = "./index.php";
-			}, 3000);
+            setTimeout(function () {
+                window.location.href = "./index.php";
+            }, 3000);
         });
     </script>
 </head>
@@ -41,8 +41,8 @@ include_once '../controller/startUserSession.php';
                 <h1 id="welcome">Error</h1>
 
                 <p>
-                   Sorry. The URL you are trying to access is invalid.
-                   Redirecting to home page in 3...
+                    Sorry. The URL you are trying to access is invalid.
+                    Redirecting to home page in 3...
                 </p>
             </div>
         </div>

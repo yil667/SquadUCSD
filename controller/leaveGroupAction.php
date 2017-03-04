@@ -42,7 +42,7 @@ else {
     }
 }
 
-if($disbanded)
+if ($disbanded)
     header("Location: ../pages/managegroups.php?disbanded");
 else
     header("Location: ../pages/managegroups.php?leave");

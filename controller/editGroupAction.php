@@ -23,7 +23,7 @@ $course = mysqli_real_escape_string($conn, $_POST['course']);
 $size = mysqli_real_escape_string($conn, $_POST['size']);
 
 // if the inputted size is less than the current group size
-if($size < $group->getSize())
+if ($size < $group->getSize())
     header("Location: ../pages/editgroup.php?groupid=$groupid&invalidsize");
 
 // if somehow the user editing is not in the group, redirect to view profile page

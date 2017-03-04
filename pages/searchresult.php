@@ -16,7 +16,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
-    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
 
     <title>SquadUCSD</title>
     <meta charset="utf-8">
@@ -26,12 +26,12 @@ $_SESSION['profileid'] = $_SESSION['id'];
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-     <!-- UI for class drop down -->
+    <!-- UI for class drop down -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../js/class-list.js"></script>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-     <!-- jQuery form validation -->
+    <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

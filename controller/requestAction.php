@@ -9,8 +9,7 @@ $result = mysqli_query($conn, $sql);
 
 $valid = false;
 // check if the request exists in the inviteTable
-if(mysqli_num_rows($result) > 0)
-{
+if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
 
     // delete that row from the inviteTable
@@ -20,8 +19,7 @@ if(mysqli_num_rows($result) > 0)
     $result = updateGroupProfile($id1, $groupid, $conn);
 
     // if updated group successfully
-    if($result)
-    {
+    if ($result) {
         // update the "group" field for both individuals in the students table
         updateUserProfiles($id1, $groupid, $conn);
         $valid = true;

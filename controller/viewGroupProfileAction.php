@@ -8,7 +8,6 @@ $groupid = $_SESSION['groupid']; //?groupid=34
 $group = getGroupObject($groupid);
 
 
-
 // if this is a valid group
 if ($group !== false) {
     $inGroup = false;

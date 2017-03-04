@@ -63,7 +63,7 @@ function generateReceivers($group)
     $ret = "";
 
     // append all the emails, separated by commas
-    foreach($group->getUsers() as $user){
+    foreach ($group->getUsers() as $user) {
         $ret = $ret . $user->getEmail() . ",";
     }
 

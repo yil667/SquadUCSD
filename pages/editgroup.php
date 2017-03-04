@@ -22,7 +22,7 @@ $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 // load the group's data from action controller
 include_once '../controller/viewGroupProfileAction.php';
 
-if($group === FALSE)
+if ($group === FALSE)
     header("Location: ./error.php");
 
 // if the user is actually not in the group, redirects to view profile instead
@@ -39,7 +39,7 @@ else if (!$inGroup) {
 <link rel="stylesheet" type="text/css" href="../css/profile.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
-    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
 
     <title>SquadUCSD</title>
     <meta charset="utf-8">
@@ -59,7 +59,7 @@ else if (!$inGroup) {
 
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../js/class-list.js"></script>
-     <!-- jQuery form validation -->
+    <!-- jQuery form validation -->
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script type="text/javascript">
@@ -73,7 +73,7 @@ else if (!$inGroup) {
             for (i = 0; i < users.length; i++) {
                 var link = "./viewprofile.php?userid=" + users[i]["userid"];
                 $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
-                    + users[i]["fname"] + " " + users[i]["lname"]  + "</a>");
+                    + users[i]["fname"] + " " + users[i]["lname"] + "</a>");
             }
 
             // input fields
@@ -132,7 +132,7 @@ else if (!$inGroup) {
 
                         <div class="form-group">
                             <label for="course" class="col-sm-3 control-label">Class</label>
-                             <div class="col-sm-9 ui-widget">
+                            <div class="col-sm-9 ui-widget">
                                 <input type="text" class="form-control" name="course" id="course">
                             </div>
                         </div>
