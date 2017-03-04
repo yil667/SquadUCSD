@@ -13,7 +13,7 @@ $().ready(function () {
                 required: true,
                 digits: true,
                 max: maxSize,
-                min: minSize
+                min: 3
             }
         },
         // Specify validation error messages
