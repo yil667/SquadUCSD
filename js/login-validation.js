@@ -27,13 +27,4 @@ $().ready(function () {
         }
     });
 
-    $.validator.addMethod("pwcheck", function (value) {
-        return /^[A-Za-z0-9\d!@#$%^&*\-._]+$/.test(value) // consists of only these
-    });
-
-    $.validator.addMethod("customemail",
-        function (value, element) {
-            return /^([a-zA-Z0-9_.\-+])+\@(([a-zA-Z0-9-])+\.)*ucsd\.edu+$/.test(value);
-        }
-    );
 });

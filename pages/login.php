@@ -64,6 +64,7 @@ include_once '../controller/startUserSession.php';
             }
         });
     </script>
+    <script src="../js/group-validation.js"></script>
 </head>
 <body>
 <div id="common"></div>
@@ -85,18 +86,18 @@ include_once '../controller/startUserSession.php';
                         </a>
                     </div>
 
-                    <form action="../controller/loginFormAction.php" class="form-horizontal" role="form" method="POST">
+                    <form id="loginForm" action="../controller/loginFormAction.php" class="form-horizontal" role="form" method="POST">
                         <label class="col-md-4 control-label"></label> <!--Fix for register here -->
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-3">
-                                <input type="text" class="form-control" name="email" value=""
+                                <input type="text" class="form-control" name="email" id="email" value=""
                                        placeholder="UCSD Email Address">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-3">
-                                <input type="password" class="form-control" name="password"
+                                <input type="password" class="form-control" name="password" id="password"
                                        placeholder="Password">
                             </div>
                         </div>
