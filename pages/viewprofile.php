@@ -242,7 +242,6 @@ else {
                         <textarea class="form-control" name="sendmessageform" id="sendmessageform" rows="3"></textarea>
                     </div>
 
-
                     <div class="modal-footer">
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         <button id="send-btn" type="submit" class="btn btn-primary">Send</button>
@@ -297,6 +296,17 @@ else {
             </div>
             <div class="modal-body">
                 <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
+
+                    <div class="form-group">
+                        <label name="grouplabel" id="grouplabel" for="groupname">Group Name</label>
+                        <input class="form-control" name="groupname" id="groupname">
+                    </div>
+
+                    <div class="form-group">
+                        <label name="classlabel" id="classlabel" for="classname">Class</label>
+                        <input class="form-control" name="classname" id="classname">
+                    </div>
+
                     <div class="form-group">
                         <label name="message" id="message" for="messageboxform">Message</label>
                         <textarea class="form-control" name="messageboxform" id="messageboxform"
