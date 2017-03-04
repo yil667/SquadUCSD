@@ -17,8 +17,7 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
-   <li>panels in view/edit user profile and view/edit group profile are different sized. need uniform consistency</li>
-   <li>(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile)</li> 
+   <li>(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile) //which hyperlinks</li> 
    <li>in edit profile, make sure the group name, class, size cannot be empty</li>
    <li>add classes duplicate checks</li>
    <li>member list label hover color darker</li>
