@@ -2,8 +2,14 @@ $().ready(function () {
     $("#registrationForm").validate({
         // Specify validation rules
         rules: {
-            first: "required",
-            last: "required",
+            first: {
+                required: true.
+                maxlength: 40
+            },
+            last: {
+                required: true.
+                maxlength: 40
+            },
             email: {
                 required: {
                     depends: function () {
@@ -11,7 +17,8 @@ $().ready(function () {
                         return true;
                     }
                 },
-                customemail: true
+                customemail: true,
+                maxlength: 40
             },
             password: {
                 required: true,
@@ -26,18 +33,28 @@ $().ready(function () {
         },
         // Specify validation error messages
         messages: {
-            first: "Please enter your first name.",
-            last: "Please enter your last name.",
+            first: {
+                required: "Please enter your first name.",
+                maxlength: "The maximum length is 40 characters."
+            },
+            last: {
+                required: "Please enter your last name.",
+                maxlength: "The maximum length is 40 characters."
+            },
             password: {
                 required: "Please provide a password",
                 minlength: "Your password must be at least 6-12 characters long.",
+                maxlength: "Your password must be at least 6-12 characters long.",
                 pwcheck: "Your password can only consist of characters and numbers."
             },
             password2: {
                 required: "Please re-enter your password.",
                 equalTo: "Passwords do not match."
             },
-            email: "Please enter a valid UCSD email address."
+            email: {
+                customemail: "Please enter a valid UCSD email address.",
+                maxlength: "The maximum length is 40 characters."
+            }
         },
         // Make sure the form is submitted to the destination defined
         // in the "action" attribute of the form when valid
