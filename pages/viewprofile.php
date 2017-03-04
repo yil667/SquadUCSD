@@ -272,7 +272,7 @@ else {
             </div>
             <div class="modal-body">
 
-                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="inviteForm">
+                <form action="../controller/inviteToExistingAction.php" role="form" method="POST" id="inviteForm">
                     <div class="form-group">
                         <label name="selectlabel" id="selectlabel" for="groupselect">Select Group</label>
                         <select id="groupselect" name="groupselect">
