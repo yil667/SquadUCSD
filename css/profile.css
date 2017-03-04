@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+a.list-group-item.active:hover{
+    color: #cccccc;
+}
+
 .modal-content {
     border-radius: 0 !important;
     border: none !important;
