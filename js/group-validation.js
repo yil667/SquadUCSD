@@ -12,8 +12,8 @@ $().ready(function () {
             size: {
                 required: true,
                 digits: true,
-                max: maxSize,
-                min: minSize
+                max: 10,
+                min: function(){ return minSize; }
             }
         },
         // Specify validation error messages
@@ -28,7 +28,7 @@ $().ready(function () {
             size: {
                 required: "Size cannot be empty.",
                 digits: "Please enter a valid number.",
-                max: "The maximum group size is 15.",
+                max: "The maximum group size is 10.",
                 min: "Group size cannot be less than current members."
             }
         },
