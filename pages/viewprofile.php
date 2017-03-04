@@ -166,35 +166,35 @@ else {
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-custom">
                 <div class="panel-heading"><h3 id='name'></h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
                         <div class="form-group">
-                            <label for="email" class="col-sm-3 control-label">UCSD Email</label>
-                            <div class="col-sm-9">
+                            <label for="email" class="col-md-3 control-label">UCSD Email</label>
+                            <div class="col-md-9">
                                 <p class="form-control-static" name="email" id="email"></p>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="phone" class="col-sm-3 control-label">Phone Number</label>
-                            <div class="col-sm-9">
+                            <label for="phone" class="col-md-3 control-label">Phone Number</label>
+                            <div class="col-md-9">
                                 <p class="form-control-static" name="phone" id="phone"></p>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="major" class="col-sm-3 control-label">Major</label>
-                            <div class="col-sm-9">
+                            <label for="major" class="col-md-3 control-label">Major</label>
+                            <div class="col-md-9">
                                 <p class="form-control-static" name="major" id="major"></p>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="courses" class="col-sm-3 control-label">Classes</label>
-                            <div class="col-sm-9">
+                            <label for="courses" class="col-md-3 control-label">Classes</label>
+                            <div class="col-md-9">
                                 <div class="list-group" id="courselist" name="courselist">
                                     <!-- contents here are inserted dynamically -->
                                 </div>
@@ -202,15 +202,15 @@ else {
                         </div>
 
                         <div class="form-group">
-                            <label for="about" class="col-sm-3 control-label">About Me</label>
-                            <div class="col-sm-9">
+                            <label for="about" class="col-md-3 control-label">About Me</label>
+                            <div class="col-md-9">
                                 <p class="form-control-static" name="about" id="about"></p>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="groups" class="col-sm-3 control-label">Groups</label>
-                            <div class="col-sm-9">
+                            <label for="groups" class="col-md-3 control-label">Groups</label>
+                            <div class="col-md-9">
                                 <div class="list-group" id="grouplist" name="grouplist">
                                     <!-- contents here are inserted dynamically -->
                                 </div>

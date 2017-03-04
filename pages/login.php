@@ -66,7 +66,7 @@ include_once '../controller/startUserSession.php';
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-custom">
                 <div class="panel-heading" id="login-header">
                     <h3>Login
@@ -75,7 +75,7 @@ include_once '../controller/startUserSession.php';
                 </div>
                 <div class="panel-body">
 
-                    <div class="col-sm-6 col-sm-offset-3" style="margin-bottom:10px;">
+                    <div class="col-md-6 col-md-offset-3" style="margin-bottom:10px;">
                         First time using SquadUCSD? <br>
                         <a href="./register.php">
                             Register here!
@@ -83,16 +83,16 @@ include_once '../controller/startUserSession.php';
                     </div>
 
                     <form action="../controller/loginFormAction.php" class="form-horizontal" role="form" method="POST">
-                        <label class="col-sm-4 control-label"></label> <!--Fix for register here -->
+                        <label class="col-md-4 control-label"></label> <!--Fix for register here -->
                         <div class="form-group">
-                            <div class="col-sm-6 col-sm-offset-3">
+                            <div class="col-md-6 col-md-offset-3">
                                 <input type="text" class="form-control" name="email" value=""
                                        placeholder="UCSD Email Address">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-sm-6 col-sm-offset-3">
+                            <div class="col-md-6 col-md-offset-3">
                                 <input type="password" class="form-control" name="password"
                                        placeholder="Password">
                             </div>

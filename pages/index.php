@@ -40,7 +40,7 @@ include_once '../controller/startUserSession.php';
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-md-8 col-md-offset-2">
             <div class="jumbotron">
                 <h1 id="welcome">Welcome</h1>
 

@@ -62,7 +62,7 @@ include_once '../controller/startUserSession.php';
 
 <footer class="footer">
     <div>
-        <a href="#" class="col-sm-1">
+        <a href="#" class="col-md-1">
         </a>
     </div>
 </footer>

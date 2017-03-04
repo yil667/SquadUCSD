@@ -113,7 +113,7 @@ else {
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-custom">
                 <div class="panel-heading">
                     <h3>View Group
@@ -124,15 +124,15 @@ else {
                     <form class="form-horizontal" role="form" method="POST">
 
                         <div class="form-group">
-                            <label for="groupname" class="col-sm-3 control-label">Name</label>
-                            <div class="col-sm-9">
+                            <label for="groupname" class="col-md-3 control-label">Name</label>
+                            <div class="col-md-9">
                                 <p class="form-control-static" type="text" name="groupname" id="groupname"></p>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="members" class="col-sm-3 control-label">Members</label>
-                            <div class="col-sm-9">
+                            <label for="members" class="col-md-3 control-label">Members</label>
+                            <div class="col-md-9">
                                 <div class="list-group" id="memberlist" name="memberlist">
                                     <!-- contents here are inserted dynamically -->
                                 </div>
@@ -140,15 +140,15 @@ else {
                         </div>
 
                         <div class="form-group">
-                            <label for="class" class="col-sm-3 control-label">Class</label>
-                            <div class="col-sm-9">
+                            <label for="class" class="col-md-3 control-label">Class</label>
+                            <div class="col-md-9">
                                 <p class="form-control-static" type="text" name="course" id="course"></p>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="size" class="col-sm-3 control-label">Group Size</label>
-                            <div class="col-sm-9">
+                            <label for="size" class="col-md-3 control-label">Group Size</label>
+                            <div class="col-md-9">
                                 <p class="form-control-static" type="number" name="size" id="size"></p>
                             </div>
                         </div>

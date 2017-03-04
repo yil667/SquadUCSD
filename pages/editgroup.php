@@ -103,7 +103,7 @@ else if (!$inGroup) {
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-custom">
                 <div class="panel-heading">
                     <h3>Edit Group
@@ -115,15 +115,15 @@ else if (!$inGroup) {
                           action="../controller/editGroupAction.php">
 
                         <div class="form-group">
-                            <label for="groupname" class="col-sm-3 control-label">Name</label>
-                            <div class="col-sm-9">
+                            <label for="groupname" class="col-md-3 control-label">Name</label>
+                            <div class="col-md-9">
                                 <input type="text" class="form-control" name="groupname" id="groupname">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="members" class="col-sm-3 control-label">Members</label>
-                            <div class="col-sm-9">
+                            <label for="members" class="col-md-3 control-label">Members</label>
+                            <div class="col-md-9">
                                 <div class="list-group" name="memberlist" id="memberlist">
                                     <!-- contents here are displayed dynamically -->
                                 </div>
@@ -131,15 +131,15 @@ else if (!$inGroup) {
                         </div>
 
                         <div class="form-group">
-                            <label for="course" class="col-sm-3 control-label">Class</label>
-                            <div class="col-sm-9">
+                            <label for="course" class="col-md-3 control-label">Class</label>
+                            <div class="col-md-9">
                                 <input type="text" class="form-control" name="course" id="course">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="size" class="col-sm-3 control-label">Group Size</label>
-                            <div class="col-sm-9">
+                            <label for="size" class="col-md-3 control-label">Group Size</label>
+                            <div class="col-md-9">
                                 <!--replace min with num from backend @DOM @SCOTT -->
                                 <input type="number" class="form-control bfh-number" name="size"
                                        id="size">

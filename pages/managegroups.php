@@ -59,7 +59,7 @@ include_once '../controller/manageGroupAction.php';
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-custom">
                 <div class="panel-heading">
                     <h3 id='name'>Manage Groups
@@ -69,7 +69,7 @@ include_once '../controller/manageGroupAction.php';
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
                         <div class="form-group">
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <div class="list-group" id="classlist">
                                     <!-- contents here are displayed dynamically -->
                                 </div>

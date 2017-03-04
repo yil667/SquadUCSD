@@ -41,7 +41,7 @@ include_once '../controller/startUserSession.php';
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-custom">
                 <div class="panel-heading">
                     <h3>Register
@@ -49,7 +49,7 @@ include_once '../controller/startUserSession.php';
                     </h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-sm-6 col-sm-offset-3" style="margin-bottom:20px;">
+                    <div class="col-md-6 col-md-offset-3" style="margin-bottom:20px;">
                         Already have an account?
                         <a href="./login.php">
                             Login here!
@@ -58,36 +58,36 @@ include_once '../controller/startUserSession.php';
 
                     <form class="form-horizontal" action="../controller/registerFormAction.php" role="form"
                           method="POST" id="registrationForm">
-                        <label class="col-sm-4 control-label"></label> <!--Fix for login here link-->
+                        <label class="col-md-4 control-label"></label> <!--Fix for login here link-->
                         <div class="form-group">
-                            <div class="col-sm-6 col-sm-offset-3">
+                            <div class="col-md-6 col-md-offset-3">
                                 <input type="email" class="form-control" name="email" id="email" value=""
                                        placeholder="UCSD Email Address">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-sm-6 col-sm-offset-3">
+                            <div class="col-md-6 col-md-offset-3">
                                 <input type="text" class="form-control" name="first" id="first"
                                        placeholder="First Name">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-sm-6 col-sm-offset-3">
+                            <div class="col-md-6 col-md-offset-3">
                                 <input type="text" class="form-control" name="last" id="last" placeholder="Last Name">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-sm-6 col-sm-offset-3">
+                            <div class="col-md-6 col-md-offset-3">
                                 <input type="password" class="form-control" name="password" id="password"
                                        placeholder="Password">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-sm-6 col-sm-offset-3">
+                            <div class="col-md-6 col-md-offset-3">
                                 <input type="password" class="form-control" name="password2" id="password2"
                                        placeholder="Re-enter Password">
                             </div>
