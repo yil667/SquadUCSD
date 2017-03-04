@@ -76,37 +76,37 @@ else {
                     + groups[i]["name"] + "</a>");
             }
 
-            var class1 = <?php echo json_encode($user->getClass1()); ?>;
+            var class1 = <?php echo json_encode($user->getClass1()->getClassName()); ?>;
             if (class1 !== "") {
                 $('#courselist').append("<a class='list-group-item'>"
                     + class1 + "</a>");
             }
 
-            var class2 = <?php echo json_encode($user->getClass2()); ?>;
+            var class2 = <?php echo json_encode($user->getClass2()->getClassName()); ?>;
             if (class2 !== "") {
                 $('#courselist').append("<a class='list-group-item'>"
                     + class2 + "</a>");
             }
 
-            var class3 = <?php echo json_encode($user->getClass3()); ?>;
+            var class3 = <?php echo json_encode($user->getClass3()->getClassName()); ?>;
             if (class3 !== "") {
                 $('#courselist').append("<a class='list-group-item'>"
                     + class3 + "</a>");
             }
 
-            var class4 = <?php echo json_encode($user->getClass4()); ?>;
+            var class4 = <?php echo json_encode($user->getClass4()->getClassName()); ?>;
             if (class4 !== "") {
                 $('#courselist').append("<a class='list-group-item'>"
                     + class4 + "</a>");
             }
 
-            var class5 = <?php echo json_encode($user->getClass5()); ?>;
+            var class5 = <?php echo json_encode($user->getClass5()->getClassName()); ?>;
             if (class5 !== "") {
                 $('#courselist').append("<a class='list-group-item'>"
                     + class5 + "</a>");
             }
 
-            var class6 = <?php echo json_encode($user->getClass6()); ?>;
+            var class6 = <?php echo json_encode($user->getClass6()->getClassName()); ?>;
             if (class6 !== "") {
                 $('#courselist').append("<a class='list-group-item'>"
                     + class6 + "</a>");
