@@ -8,7 +8,7 @@
 .list-group-item {
     border-radius: 0 !important;
     border: none !important;
-    padding-bottom: 2px;
+    margin-bottom: 2px;
 }
 
 a {
