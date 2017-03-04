@@ -91,7 +91,7 @@ include_once '../controller/viewProfileAction.php';
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-sm-4 col-sm-offset-4">
             <div class="panel panel-custom">
                 <div class="panel-heading">
                     <h3>Edit Profile
