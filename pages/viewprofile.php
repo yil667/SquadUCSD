@@ -62,6 +62,8 @@ else {
     <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script src="../js/message-validation.js"></script>
+    <script src="../js/form-validation.js"></script>
+    <script src="../js/invite-validation.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
@@ -74,8 +76,8 @@ else {
             for (i = 0; i < mygroups.length; i++) {
                 // var is full
                 // var is
-                var mygrouplink = "./viewgroup.php?groupid=" + mygroups[i]["groupid"];
-                $('#groupselect').append("<option href='" + mygrouplink + "'>"
+                var mygroupid = mygroups[i]["groupid"];
+                $('#groupselect').append("<option value='" + mygroupid + "'>"
                     + mygroups[i]["name"] + "</option>");
             }
 
@@ -275,7 +277,7 @@ else {
                 <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="inviteForm">
                     <div class="form-group">
                         <label name="selectlabel" id="selectlabel" for="groupselect">Select Group</label>
-                        <select id="groupselect" name="groupselect">
+                        <select id="groupid" name="groupid">
                             <!-- groups inserted dynamically -->
                         </select>
                     </div>
@@ -305,7 +307,7 @@ else {
                 <h3 id="nameForm"></h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="inviteForm">
+                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="createForm">
 
                     <div class="form-group">
                         <label name="grouplabel" id="grouplabel" for="groupname">Group Name</label>
