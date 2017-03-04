@@ -104,14 +104,14 @@ include_once '../controller/viewProfileAction.php';
                         <div class="form-group">
                             <label for="name" class="col-sm-3 control-label">Full Name</label>
                             <div class="col-sm-9">
-                                <label class="form-control-static" name="name" id="name"></label>
+                                <p class="form-control-static" name="name" id="name"></p>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="ucsdemail" class="col-sm-3 control-label">UCSD Email</label>
                             <div class="col-sm-9">
-                                <label class="form-control-static" name="email" id="email"></label>
+                                <p class="form-control-static" name="email" id="email"></p>
                             </div>
                         </div>
 
