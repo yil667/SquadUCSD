@@ -83,7 +83,7 @@ This web app allows students to form study groups for the classes they are enrol
 <br>
 <h2>Bugs: </h2>
 <ol>
-   <li>Manage Groups has empty group on bottom of list</li>
+   <li>when requesting to form group, group name is not saved</li>
    <li></li>
 </ol>
 
