@@ -115,7 +115,7 @@ else if (!$inGroup) {
                           action="../controller/editGroupAction.php">
 
                         <div class="form-group">
-                            <label for="groupname" class="col-sm-3 control-label">Group Name</label>
+                            <label for="groupname" class="col-sm-3 control-label">Name</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" name="groupname" id="groupname">
                             </div>
