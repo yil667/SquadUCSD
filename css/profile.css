@@ -7,7 +7,7 @@
 }
 
 a.list-group-item:hover{
-    color: #cccccc;
+    background-color: #cccccc;
 }
 
 .modal-content {
