@@ -2,15 +2,13 @@
     margin-top: 150px;
 }
 
-.panel-body p {
-    font-size: 25px;
-}
-
 .panel-custom > .panel-heading h3 {
     color: #f2f2f2;
 }
 
 .panel-custom > .panel-heading {
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding-left: 20px;
     vertical-align: middle;
     background-color: #333333;
