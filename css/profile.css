@@ -37,9 +37,9 @@ textarea {
 }
 
 #error-display, .error {
-    color: red;
+   color: red;
 }
 
- #update-info {
-    color: #99ff99;
- }
+#update-info {
+   color: #99ff99;
+}
