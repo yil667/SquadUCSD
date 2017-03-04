@@ -73,6 +73,7 @@ else {
 
             var inGroup = <?php echo json_encode($inGroup); ?>;
             var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
+            var fullGroup = <?php echo json_encode($fullGroup); ?>;
 
             var content;
 
