@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-a.list-group-item:hover{
+.a.list-group-item:hover{
     background-color: #cccccc;
 }
 
