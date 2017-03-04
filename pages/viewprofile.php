@@ -205,6 +205,13 @@ else {
                         </div>
 
                         <div class="form-group">
+                            <label name="selectlabel" id="selectlabel" for="groupid">Select Group</label>
+                            <select id="groupid" name="groupid">
+                                <!-- groups inserted dynamically -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
                             <label for="courses" class="col-md-3 control-label">Classes</label>
                             <div class="col-md-9">
                                 <div class="list-group" id="courselist" name="courselist">
@@ -329,9 +336,7 @@ else {
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
-
                 </form>
-
             </div>
         </div>
     </div>
