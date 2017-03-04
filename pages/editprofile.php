@@ -131,7 +131,7 @@ include_once '../controller/viewProfileAction.php';
 
                         <div class="form-group">
                             <label for="major" class="col-sm-3 control-label">Classes</label>
-                            <div class="col-sm-9 ui-widget">
+                            <div class="col-sm-9">
                                 <input type="text" class="form-control" name="class1" id="class1">
                                 <input type="text" class="form-control" name="class2" id="class2">
                                 <input type="text" class="form-control" name="class3" id="class3">
