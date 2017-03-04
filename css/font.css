@@ -3,14 +3,15 @@
 .navbar-brand {
     font-family: 'Fira Sans', sans-serif;
 }
+
 .nav > li > a {
     font-family: 'Fira Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, button {
+h1, h2, h3, h4, h5, h6{
     font-family: 'Fira Sans', sans-serif;
 }
 
-p, label, input, a, textarea {
+p, label, input, a, textarea, button {
     font-family: 'Open Sans', sans-serif;
 }
