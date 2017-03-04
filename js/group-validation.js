@@ -1,28 +1,35 @@
 $().ready(function () {
-
     $("#editGroupForm").validate({
         // Specify validation rules
         rules: {
             groupname: {
-                required: true
+                required: true,
+                maxlength: 40
             },
             course: {
-                required: true
+                maxlength: 40
             },
             size: {
-                required: true
+                required: true,
+                digits: true,
+                max: 10,
+                min: function(){ return minSize; }
             }
         },
         // Specify validation error messages
         messages: {
             groupname: {
-                required: "Group name cannot be empty"
+                required: "Group name cannot be empty.",
+                maxlength: "Group name should be less than 40 characters."
             },
             course: {
-                required: "Course name cannot be empty"
+                maxlength: "Class name should be less than 40 characters."
             },
             size: {
-                required: "Size cannot be empty"
+                required: "Size cannot be empty.",
+                digits: "Please enter a valid number.",
+                max: "The maximum group size is 10.",
+                min: "Group size cannot be less than current members."
             }
         },
         // Make sure the form is submitted to the destination defined

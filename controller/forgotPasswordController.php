@@ -7,7 +7,7 @@ function handleForgotPasswordEmail($conn, $email)
         $fname = $row['fname'];
         $hash = md5(rand(0, 1000)); // generate a random hash
         $email = $row['email'];
-        $sql = "UPDATE student SET hash1='$hash' WHERE email='$email'";
+        $sql = "UPDATE student SET forgotPwdHash='$hash' WHERE email='$email'";
         mysqli_query($conn, $sql);
 
         sendForgotPasswordEmail($fname, $email, $hash);

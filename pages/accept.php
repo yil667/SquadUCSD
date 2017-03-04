@@ -1,7 +1,5 @@
 <?php
-// wrapper page for creating groups (the controller) to avoid that layer violation relax
-// to be finished
-
+// wrapper page for creating groups to avoid that layer violation relax
 
 $id1 = $_GET['id1'];
 $id2 = $_GET['id2'];

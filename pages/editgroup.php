@@ -5,7 +5,7 @@ include_once '../controller/startUserSession.php';
 $url = $_SERVER['REQUEST_URI'];
 
 // no flag is found, redirect to manage group page
-if (strpos($url, "?") === false) {
+if (strpos($url, "?groupid") === false) {
     header("Location: ./managegroups.php");
 }
 // if the link contains the flag, but user is not logged in,
@@ -22,8 +22,11 @@ $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 // load the group's data from action controller
 include_once '../controller/viewGroupProfileAction.php';
 
+if($group === FALSE)
+    header("Location: ./error.php");
+
 // if the user is actually not in the group, redirects to view profile instead
-if (!$inGroup) {
+else if (!$inGroup) {
     $groupid = $_GET['groupid'];
     header("Location: ./viewgroup.php?groupid=$groupid");
 }
@@ -45,21 +48,32 @@ if (!$inGroup) {
     <meta name="author" content="Zifan Yang">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../js/group-validation.js"></script>
+    <!-- UI for class drop down -->
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/class-list.js"></script>
+     <!-- jQuery form validation -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script type="text/javascript">
+        var minSize = <?php echo json_encode($group->getSize()); ?>;//this returns a string which causes problem for jquery validation
+        minSize = parseInt(minSize, 10);//string to int
+
         $(document).ready(function () {
             $('#common').load('./common.php');
             var users = <?php echo json_encode($group->getUsers()); ?>;
+
             for (i = 0; i < users.length; i++) {
                 var link = "./viewprofile.php?userid=" + users[i]["userid"];
                 $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
-                    + users[i]["fname"] + "</a>");
+                    + users[i]["fname"] + " " + users[i]["lname"]  + "</a>");
             }
 
             // input fields
@@ -77,6 +91,7 @@ if (!$inGroup) {
             }
         });
     </script>
+    <script src="../js/group-validation.js"></script>
 </head>
 <body>
 <div id="common"></div>
@@ -111,7 +126,7 @@ if (!$inGroup) {
 
                         <div class="form-group">
                             <label for="course" class="col-sm-3 control-label">Class</label>
-                            <div class="col-sm-9">
+                             <div class="col-sm-9 ui-widget">
                                 <input type="text" class="form-control" name="course" id="course">
                             </div>
                         </div>
@@ -120,7 +135,7 @@ if (!$inGroup) {
                             <label for="size" class="col-sm-3 control-label">Group Size</label>
                             <div class="col-sm-9">
                                 <!--replace min with num from backend @DOM @SCOTT -->
-                                <input type="number" class="form-control bfh-number" min="2" max="15" name="size"
+                                <input type="number" class="form-control bfh-number" name="size"
                                        id="size">
                             </div>
                         </div>

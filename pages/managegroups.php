@@ -44,7 +44,13 @@ include_once '../controller/manageGroupAction.php';
             }
 
             if (window.location.href.indexOf("?formed") > -1) {
-                $("#update").html("Group created successfully!");
+                $("#update-info").html("Group created successfully!");
+            }
+            else if (window.location.href.indexOf("?leave") > -1) {
+                $("#update-info").html("You left the group.");
+            }
+            else if (window.location.href.indexOf("?disbanded") > -1) {
+                $("#update-info").html("Group disbanded.");
             }
         });
     </script>
@@ -57,7 +63,7 @@ include_once '../controller/manageGroupAction.php';
             <div class="panel panel-custom">
                 <div class="panel-heading">
                     <h3 id='name'>Manage Groups
-                        <h4 id="update"><h4>
+                        <h4 id="update-info"><h4>
                     </h3>
                 </div>
                 <div class="panel-body">

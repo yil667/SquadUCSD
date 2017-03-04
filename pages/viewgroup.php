@@ -5,7 +5,7 @@ include_once '../controller/startUserSession.php';
 $url = json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to homepage if not groupid found
-if (strrpos($url, "?") == "") {
+if (strrpos($url, "?groupid") == "") {
     // redirects to home page if the user is not logged in
     header("Location: ../pages/index.php");
 }
@@ -19,7 +19,7 @@ else {
     include_once "../controller/viewGroupProfileAction.php";
 
     // if link is invalid
-    if($group === FALSE){
+    if ($group === false) {
         header("Location: ./error.php");
     }
     $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -34,7 +34,7 @@ else {
 <link rel="stylesheet" type="text/css" href="../css/profile.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
-    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
 
     <title>SquadUCSD</title>
     <meta charset="utf-8">
@@ -58,7 +58,7 @@ else {
             for (i = 0; i < users.length; i++) {
                 var link = "./viewprofile.php?userid=" + users[i]["userid"];
                 $('#memberlist').append("<a href='" + link + "' class='list-group-item'>"
-                    + users[i]["fname"] + "</a>");
+                    + users[i]["fname"] + " " + users[i]["lname"] + "</a>");
             }
 
             // input fields
@@ -68,25 +68,42 @@ else {
             var course = <?php echo json_encode($group->getClass()); ?>;
             $('#course').html(course);
 
-            var size = <?php echo json_encode($group->getSize()); ?>;
+            var size = <?php echo json_encode($group->getMaxSize()); ?>;
             $('#size').html(size);
 
             var inGroup = <?php echo json_encode($inGroup); ?>;
             var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
+
             var content;
 
             if (!isUserLoggedIn) {
                 content = "";
                 $("#buttons").html(content);
             }
-            else if(inGroup){
-                content="<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Group</button>";
+            else if (inGroup) {
+                content = "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Group</button>";
             }
             else {
-                content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modaldata-target='#requestModal'>Request to Join Group</button>";
+                //unused var???
+                if (fullGroup)
+                    content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#requestModal' disabled>Request to Join Group (Full)</button>";
+                else
+                    content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#requestModal'>Request to Join Group</button>";
             }
-             $("#buttons").html(content);
-        
+            $("#buttons").html(content);
+
+            if (window.location.href.indexOf("&request") > -1) {
+                $("#update-info").html("Request sent.");
+            }
+
+            else if (window.location.href.indexOf("&exist") > -1) {
+                $("#update-info").html("You are already in the group.");
+            }
+
+            else if (window.location.href.indexOf("&accepted") > -1) {
+                $("#update-info").html("New member added!");
+            }
+
 
         });
     </script>
@@ -97,7 +114,10 @@ else {
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3>View Group</h3></div>
+                <div class="panel-heading">
+                    <h3>View Group
+                        <h4 id="update-info"><h4>
+                    </h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
 
@@ -143,7 +163,6 @@ else {
 </div>
 
 
-
 <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -152,16 +171,16 @@ else {
                 <h3 id="requestLabel">Request to Join Group</h3>
             </div>
             <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label name="message" id="message" for="messageboxreq">Message</label>
-                        <textarea class="form-control" name="messageboxreq" id="messageboxreq" rows="3"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
+            <form action="../controller/joinGroupRequestAction.php" role="form" method="POST" id="messageform">
+                <div class="form-group">
+                    <label name="message" id="message" for="messageboxreq">Message</label>
+                    <textarea class="form-control" name="messageboxreq" id="messageboxreq" rows="3"></textarea>
+                </div>
+                 <div class="modal-footer">
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                 <button class="btn btn-primary">Send Request</button>
+            </div>
+            </form>
             </div>
         </div>
     </div>

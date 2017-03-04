@@ -5,7 +5,7 @@ include_once 'dbController.php';
 $email = $_SESSION['forgetEmail'];
 $hash = $_SESSION['hash'];
 
-$sql = "SELECT * FROM student WHERE email='$email' AND hash1='$hash'";
+$sql = "SELECT * FROM student WHERE email='$email' AND forgotPwdHash='$hash'";
 $conn = connectToDB();
 $result = mysqli_query($conn, $sql);
 

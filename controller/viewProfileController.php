@@ -12,8 +12,9 @@ function getUserObject($id)
     $sql = "SELECT * FROM student WHERE id='$id'";
     $conn = connectToDB();
     $result = mysqli_query($conn, $sql);
-    if($result === FALSE)
-        return FALSE;
+    if(mysqli_num_rows($result) == 0)
+        return false;
+
     $row = mysqli_fetch_assoc($result);
 
     // declare return object
@@ -56,8 +57,8 @@ function getGroupObject($id)
     $sql = "SELECT * FROM groupProfile WHERE id='$id'";
     $conn = connectToDB();
     $result = mysqli_query($conn, $sql);
-    if($result === FALSE)
-        return FALSE;
+    if(mysqli_num_rows($result) == 0)
+        return false;
 
     $row = mysqli_fetch_assoc($result);
 
@@ -76,8 +77,8 @@ function getGroupObject($id)
                 $sql = "SELECT * FROM student WHERE id='$userId'";
                 $result = mysqli_query($conn, $sql);
                 $userRow = mysqli_fetch_assoc($result);
-                array_push($users, new User($userRow['id'], $userRow['fname'] . " " . $userRow['lname'],
-                    "", "", "", "", ""));
+                array_push($users, new User($userRow['id'], $userRow['fname'], $userRow['lname'],
+                    $userRow['email'], "", "", ""));
 
             }
         }

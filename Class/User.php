@@ -11,7 +11,7 @@ class User
     // current
     public $userid;
     public $fname;
-    private $lname;
+    public $lname;
     private $email;
     private $phone;
     private $major;

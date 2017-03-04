@@ -11,14 +11,14 @@ This web app allows students to form study groups for the classes they are enrol
 <h2>Non-Coding related todo list: </h2>
 <ol>
    <li>Rewrite blurb on <a href="http://www.squaducsd.com/pages/">welcome</a> page</li>
-   <li>Go over Use Cases and Design Use cases and update to be consistent with final product</li>
+   <li>Go over Use Cases, User Stories, System Requirements and Design Use cases and update to be consistent with final product</li>
    <li>Start testing the site</li>
 </ol>
 
 <h2>Front-end todo list: </h2>
 <ol>
    
-   <li>auto complete for classes in edit profile page</li>
+   <li>(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile)</li> 
    <li>in edit profile, make sure the group name, class, size cannot be empty</li>
    <li>add classes duplicate checks</li>
    <li>member list label hover color darker</li>
@@ -33,6 +33,9 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>auto complete for classes in edit profile page</strike></li>
+   <li><strike>add a message popup box for request to join group button in view group profile</strike></li> 
+   <li><strike>view non-existent page gets rediected to error page</strike></li>
    <li><strike>fix buttons spacing on view profile(match edit group)</strike></li>
    <li><strike>in edit profile page add 2 more buttons, view profile and leave group</strike></li>
    <li><strike>view profile page updated</strike></li>
@@ -51,7 +54,7 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
-   <li><b>implement backend logic for view group request to join form</b></li>
+   
    <li><b>implement backend logic for inviting to existing group</b></li>
    <li>implement backend logic for resizing group request when inviting</li>
 
@@ -59,6 +62,7 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Back-end recently finished: </h2>
 <ol>
+   <li><strike><b>implement backend logic for view group request to join form</b></strike></li>
    <li><strike>update accept.php when front end error page is done </strike></li>
    <li><strike>implement backend logic for edit group submit form</strike></li>
    <li><strike>implement backend logic for leave group</strike></li>
