@@ -1,8 +1,14 @@
 @import "font.css";
 
-.panel, .panel > .panel-heading, button, input, .jumbotron, textarea, a, .list-group-item, p {
+.panel, .panel > .panel-heading, button, input, .jumbotron, textarea, a {
     border-radius: 0 !important;
     border: none !important;
+}
+
+.list-group-item {
+    border-radius: 0 !important;
+    border: none !important;
+    padding-bottom: 2px;
 }
 
 a {
