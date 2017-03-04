@@ -24,7 +24,6 @@ This web app allows students to form study groups for the classes they are enrol
    <li>member list label hover color darker</li>
    <li>invite to form new group needs group name / group size></li>
    <li>display classes in view user profile</li>
-
    <li>dynamically display groups in viewprofile page (invite to existing group)
       display warning if the group if full already when inviting 
       (backend will resize the group)</li>
@@ -32,6 +31,7 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>panels in view/edit user profile and view/edit group profile are different sized. need uniform consistency</strike></li>
    <li><strike>display groups in view user profile</strike></li>
    <li><strike>auto complete for classes in edit profile page</strike></li>
    <li><strike>add a message popup box for request to join group button in view group profile</strike></li> 
