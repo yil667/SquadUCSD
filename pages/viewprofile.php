@@ -54,9 +54,6 @@ else {
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!-- UI for class drop down -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../js/class-list.js"></script>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- jQuery form validation -->
@@ -66,6 +63,9 @@ else {
     <script src="../js/invite-validation.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- UI for class drop down -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/class-list.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
@@ -307,7 +307,7 @@ else {
                 <h3 id="nameForm"></h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="createForm">
+                <form class="ui-front" action="../controller/userSendInviteAction.php" role="form" method="POST" id="createForm">
 
                     <div class="form-group">
                         <label name="grouplabel" id="grouplabel" for="groupname">Group Name</label>

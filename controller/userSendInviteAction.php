@@ -18,15 +18,18 @@ $fromurl = $_SESSION['fromurl'];
 
 $conn = connectToDB();
 
+$groupName = mysqli_escape_string($conn, $_POST['groupname']);
+$className = mysqli_escape_string($conn, $_POST['classname']);
+
 // this is the custom message the user wants to send along with the invite request
 $message = ($_POST['messageboxform']);
 $hash = md5(rand(0, 10000));
 
 // add a request to the Invite HashCode Table
-addInviteRequestToDB($conn, $userid, $receiverid, $hash);
+addInviteRequestToDB($conn, $userid, $receiverid, $groupName, $className, $hash);
 
 // send the email request to the receiver
-sendInviteEmail($conn, $userid, $receiverid, $message, $hash);
+sendInviteEmail($conn, $userid, $receiverid, $groupName, $className, $message, $hash);
 
 // redirect with a flag
 header("Location: $fromurl" . "&invite");

@@ -67,7 +67,7 @@ $groupProfile
 Here is $senderfname's email:
 $senderEmail
 
-If you would like to join $groupProfile, please click on the link below: 
+If you would like to join $groupName, please click on the link below: 
 $inviteUrl
 
 SquadUCSD";

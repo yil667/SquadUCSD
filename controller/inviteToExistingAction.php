@@ -20,7 +20,7 @@ $receiverid = $_SESSION['profileid'];
 $fromurl = $_SESSION['fromurl'];
 $message = ($_POST['messageboxinvite']);
 
-$groupid = $_SESSION['groupid'];
+$groupid = $_POST['groupid'];
 $group = getGroupObject($groupid);
 
 // if the group already has max
