@@ -36,6 +36,13 @@
 
 textarea {
     resize: vertical;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+input {
+    border-radius: 0 !important;
+    border: none !important;
 }
 
 #error-display, .error {
