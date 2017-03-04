@@ -12,8 +12,8 @@ $().ready(function () {
             size: {
                 required: true,
                 digits: true,
-                max: maxSize,
-                min: 3
+                max: 15,
+                min: function(){ return minSize; }
             }
         },
         // Specify validation error messages

@@ -64,7 +64,6 @@ else if (!$inGroup) {
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script type="text/javascript">
         var minSize = <?php echo json_encode($group->getSize()); ?>;
-        var maxSize = 15;
         $(document).ready(function () {
             $('#common').load('./common.php');
             var users = <?php echo json_encode($group->getUsers()); ?>;
