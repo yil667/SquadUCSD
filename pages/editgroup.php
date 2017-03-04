@@ -132,7 +132,7 @@ else if (!$inGroup) {
 
                         <div class="form-group">
                             <label for="course" class="col-sm-3 control-label">Class</label>
-                            <div class="col-sm-9 ui-widget">
+                            <div class="col-sm-9">
                                 <input type="text" class="form-control" name="course" id="course">
                             </div>
                         </div>
