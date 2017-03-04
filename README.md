@@ -28,7 +28,7 @@ Feature Suggestion: Search for individual users/groups by name, add a search bar
    ╚ Are these the same?
    <li>add classes duplicate checks</li>
    <li>add character checking/autocomplete functionality in invite to form new group name/size</li>
-   <li>dynamically display groups in viewprofile page (invite to existing group)
+   <li>dynamically display groups in viewprofile page (invite to existing group)</li>
    <li>display warning if the group if full already when inviting (backend will resize the group)</li>
 </ol>
 
@@ -60,6 +60,7 @@ Feature Suggestion: Search for individual users/groups by name, add a search bar
    
 <h2>Back-end todo list:</h2>
 <ol>
+<li>autocomplete tries to run on viewprofile page for classes when they are static fields</li>
    <li>check if already in group in viewprofile page, cannot invite to a group user is already a part of</li>
    <li><b>implement backend logic for inviting to existing group</b></li>
    <li>implement backend logic for resizing group request when inviting</li>
