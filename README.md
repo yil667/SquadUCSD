@@ -6,6 +6,12 @@ This web app allows students to form study groups for the classes they are enrol
 </p>
 
 <h1>Add new issues here as well as the issues tab in github</h1>
+   <ol>
+    <li>When attempting to login with blank fields, the message, "Please complete your email verification!" appears</li>
+    <li>Password length error message should be the same whether the password is too short or too long. Let Annie or Quinn know when change is complete</li>
+    <li>when requesting to form group, group name is not saved</li>
+    <li>cannot set group size when inviting to form group</li>
+   </ol>
 <h1>As issues are resolved, close issues on issue tab in github and delete entry here</h1>
 
 <h2>Non-Coding related todo list: </h2>
@@ -18,7 +24,8 @@ This web app allows students to form study groups for the classes they are enrol
 </ol>
 
 <h2>General todo list: </h2>
-Feature Suggestion: Search for individual users/groups by name, add a search bar on top, and go to profile using autocomplete or new page
+<li>Feature Suggestion: Search for individual users/groups by name, add a search bar on top, and go to profile using autocomplete or new page</li>
+<li>Working on mobile optimizations</li>
 
 <h2>Front-end todo list: </h2>
 <ol>
@@ -75,8 +82,4 @@ Feature Suggestion: Search for individual users/groups by name, add a search bar
    <li><strike>forgot password logic</strike></li>
    <li><strike>add safety page redirection</strike></li>
 </ol>
-
-
-
-
 </html>
