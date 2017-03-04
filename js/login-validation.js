@@ -5,7 +5,7 @@ $().ready(function () {
             email: {
                 required: true,
                 maxlength: 40
-            }
+            },
             password: {
                 required: true,
                 maxlength: 12
