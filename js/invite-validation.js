@@ -20,16 +20,15 @@ $().ready(function () {
         messages: {
             message: {
                 required: "Your message cannot be empty.",
-                maxlength: "Your message should be less than 200 characters.",
-                formatcheck: ""
+                maxlength: "Your message should be less than 200 characters."
             },
             classname: {
-                required: "Your message cannot be empty.",
+                required: "Your class name cannot be empty.",
                 maxlength: "Your message should be less than 200 characters.",
                 formatcheck: "Please use only alphabetical characters and spaces."
             },
             groupname: {
-                required: "Your message cannot be empty.",
+                required: "Your group name cannot be empty.",
                 maxlength: "Your message should be less than 200 characters."
             }
         },
