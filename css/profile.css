@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-a.list-group-item:hover{
+#memberlist.list-group-item:hover{
     background-color: #ababab;
 }
 
