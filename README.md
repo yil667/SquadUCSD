@@ -22,18 +22,16 @@ Feature Suggestion: Search for individual users/groups by name, add a search bar
 
 <h2>Front-end todo list: </h2>
 <ol>
-   ╔
-   <li>║(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile)</li> 
-   <li>║member list label hover color darker</li>
-   ╚ Are these the same?
+   <li>(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile) //don't understand, clarify pls</li> 
    <li>add classes duplicate checks</li>
    <li>add character checking/autocomplete functionality in invite to form new group name/size</li>
-   <li>dynamically display groups in viewprofile page (invite to existing group)</li>
    <li>display warning if the group if full already when inviting (backend will resize the group)</li>
 </ol>
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>dynamically display groups in viewprofile page</strike></li>
+   <li><strike>member list label hover color darker</strike></li>
    <li><strike>invite to form new group needs group name / group size</strike></li>
    <li><strike>display classes in view user profile</strike></li>
    <li><strike>in edit profile, make sure the group name, class, size cannot be empty</strike></li>
