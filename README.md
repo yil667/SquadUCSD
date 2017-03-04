@@ -15,6 +15,7 @@ This web app allows students to form study groups for the classes they are enrol
    <li>Start testing the site</li>
 </ol>
 
+<h2>General todo list: </h2>
 Feature Suggestion: Search for individual users/groups by name, add a search bar on top, and go to profile using autocomplete or new page
 
 <h2>Front-end todo list: </h2>
