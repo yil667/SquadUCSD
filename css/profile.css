@@ -6,8 +6,8 @@
     text-align: center;
 }
 
-.a.list-group-item:hover{
-    background-color: #cccccc;
+a.list-group-item:hover{
+    background-color: #ababab;
 }
 
 .modal-content {
