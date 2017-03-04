@@ -73,11 +73,8 @@ else {
 
             var inGroup = <?php echo json_encode($inGroup); ?>;
             var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
-            var fullGroup = <?php echo json_encode($fullGroup); ?>;
 
-
-            var content = "";
-
+            var content;
 
             if (!isUserLoggedIn) {
                 content = "";
@@ -87,6 +84,7 @@ else {
                 content = "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Group</button>";
             }
             else {
+                //unused var???
                 if (fullGroup)
                     content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#requestModal' disabled>Request to Join Group (Full)</button>";
                 else

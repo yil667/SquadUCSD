@@ -17,13 +17,12 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
-   
+   <li>panels in view/edit user profile and view/edit group profile are different sized. need uniform consistency</li>
    <li>(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile)</li> 
    <li>in edit profile, make sure the group name, class, size cannot be empty</li>
    <li>add classes duplicate checks</li>
    <li>member list label hover color darker</li>
    <li>invite to form new group needs group name / group size></li>
-   <li>display groups in view user profile</li>
    <li>display classes in view user profile</li>
 
    <li>dynamically display groups in viewprofile page (invite to existing group)
@@ -33,6 +32,7 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>display groups in view user profile</strike></li>
    <li><strike>auto complete for classes in edit profile page</strike></li>
    <li><strike>add a message popup box for request to join group button in view group profile</strike></li> 
    <li><strike>view non-existent page gets rediected to error page</strike></li>
