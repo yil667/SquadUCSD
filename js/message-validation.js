@@ -1,5 +1,5 @@
 $().ready(function () {
-    $("#messageform").validate({
+    $("#messageForm").validate({
         // Specify validation rules
         rules: {
             message: {

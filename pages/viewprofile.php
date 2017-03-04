@@ -246,7 +246,7 @@ else {
                 <h3 id="nameMessage"></h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/userMessageAction.php" role="form" method="POST" id="messageform">
+                <form action="../controller/userMessageAction.php" role="form" method="POST" id="messageForm">
                     <div class="form-group">
                         <label name="message" id="message" for="sendmessageform">Message</label>
                         <textarea class="form-control" name="sendmessageform" id="sendmessageform" rows="3"></textarea>
@@ -272,7 +272,7 @@ else {
             </div>
             <div class="modal-body">
 
-                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
+                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="inviteForm">
                     <div class="form-group">
                         <label name="selectlabel" id="selectlabel" for="groupselect">Select Group</label>
                         <select id="groupselect" name="groupselect">
@@ -305,7 +305,7 @@ else {
                 <h3 id="nameForm"></h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
+                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="inviteForm">
 
                     <div class="form-group">
                         <label name="grouplabel" id="grouplabel" for="groupname">Group Name</label>
