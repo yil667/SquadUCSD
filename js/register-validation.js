@@ -3,12 +3,14 @@ $().ready(function () {
         // Specify validation rules
         rules: {
             first: {
-                required: true.
-                maxlength: 40
+                required: true,
+                maxlength: 40,
+                formatcheck: true
             },
             last: {
-                required: true.
-                maxlength: 40
+                required: true,
+                maxlength: 40,
+                formatcheck: true
             },
             email: {
                 required: {
@@ -35,11 +37,13 @@ $().ready(function () {
         messages: {
             first: {
                 required: "Please enter your first name.",
-                maxlength: "The maximum length is 40 characters."
+                maxlength: "The maximum length is 40 characters.",
+                formatcheck: "Please use only alphabetical characters and spaces."
             },
             last: {
                 required: "Please enter your last name.",
-                maxlength: "The maximum length is 40 characters."
+                maxlength: "The maximum length is 40 characters.",
+                formatcheck: "Please use only alphabetical characters and spaces."
             },
             password: {
                 required: "Please provide a password",
@@ -72,4 +76,8 @@ $().ready(function () {
             return /^([a-zA-Z0-9_.\-+])+\@(([a-zA-Z0-9-])+\.)*ucsd\.edu+$/.test(value);
         }
     );
+
+    $.validator.addMethod("formatcheck", function (value) {
+         return /^[A-Za-z\ ]+$/.test(value) // consists of only these
+    });     
 });
