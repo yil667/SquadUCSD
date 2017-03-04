@@ -22,6 +22,9 @@ include_once '../controller/startUserSession.php';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <!-- jQuery form validation -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="../js/login-validation.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
@@ -61,6 +64,7 @@ include_once '../controller/startUserSession.php';
             }
         });
     </script>
+    <script src="../js/group-validation.js"></script>
 </head>
 <body>
 <div id="common"></div>
@@ -82,18 +86,18 @@ include_once '../controller/startUserSession.php';
                         </a>
                     </div>
 
-                    <form action="../controller/loginFormAction.php" class="form-horizontal" role="form" method="POST">
+                    <form id="loginForm" action="../controller/loginFormAction.php" class="form-horizontal" role="form" method="POST">
                         <label class="col-md-4 control-label"></label> <!--Fix for register here -->
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-3">
-                                <input type="text" class="form-control" name="email" value=""
+                                <input type="text" class="form-control" name="email" id="email" value=""
                                        placeholder="UCSD Email Address">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-3">
-                                <input type="password" class="form-control" name="password"
+                                <input type="password" class="form-control" name="password" id="password"
                                        placeholder="Password">
                             </div>
                         </div>

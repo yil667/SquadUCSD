@@ -69,6 +69,13 @@ else {
 
             var displayButtons = <?php echo json_encode($displayButtons); ?>;
 
+            var mygroups = <?php echo json_encode($self->getGroups()); ?>;
+            for (i = 0; i < mygroups.length; i++) {
+                var mygrouplink = "./viewgroup.php?groupid=" + mygroups[i]["groupid"];
+                $('#groupselect').append("<option href='" + mygrouplink + "'>"
+                    + mygroups[i]["name"] + "</option>");
+            }
+
             var groups = <?php echo json_encode($user->getGroups()); ?>;
             for (i = 0; i < groups.length; i++) {
                 var link = "./viewgroup.php?groupid=" + groups[i]["groupid"];
@@ -76,40 +83,40 @@ else {
                     + groups[i]["name"] + "</a>");
             }
 
-            var class1 = <?php echo json_encode($user->getClass1()->getClassName()); ?>;
-            if (class1 !== "") {
+            var class_1 = <?php echo json_encode($user->getClass1()->getClassName()); ?>;
+            if (class_1 !== "") {
                 $('#courselist').append("<p class='list-group-item'>"
-                    + class1 + "</p>");
+                    + class_1 + "</p>");
             }
 
-            var class2 = <?php echo json_encode($user->getClass2()->getClassName()); ?>;
-            if (class2 !== "") {
+            var class_2 = <?php echo json_encode($user->getClass2()->getClassName()); ?>;
+            if (class_2 !== "") {
                 $('#courselist').append("<p class='list-group-item'>"
-                    + class2 + "</p>");
+                    + class_2 + "</p>");
             }
 
-            var class3 = <?php echo json_encode($user->getClass3()->getClassName()); ?>;
-            if (class3 !== "") {
+            var class_3 = <?php echo json_encode($user->getClass3()->getClassName()); ?>;
+            if (class_3 !== "") {
                 $('#courselist').append("<p class='list-group-item'>"
-                    + class3 + "</p>");
+                    + class_3 + "</p>");
             }
 
-            var class4 = <?php echo json_encode($user->getClass4()->getClassName()); ?>;
-            if (class4 !== "") {
+            var class_4 = <?php echo json_encode($user->getClass4()->getClassName()); ?>;
+            if (class_4 !== "") {
                 $('#courselist').append("<p class='list-group-item'>"
-                    + class4 + "</p>");
+                    + class_4 + "</p>");
             }
 
-            var class5 = <?php echo json_encode($user->getClass5()->getClassName()); ?>;
-            if (class5 !== "") {
+            var class_5 = <?php echo json_encode($user->getClass5()->getClassName()); ?>;
+            if (class_5 !== "") {
                 $('#courselist').append("<p class='list-group-item'>"
-                    + class5 + "</p>");
+                    + class_5 + "</p>");
             }
 
-            var class6 = <?php echo json_encode($user->getClass6()->getClassName()); ?>;
-            if (class6 !== "") {
+            var class_6 = <?php echo json_encode($user->getClass6()->getClassName()); ?>;
+            if (class_6 !== "") {
                 $('#courselist').append("<p class='list-group-item'>"
-                    + class6 + "</p>");
+                    + class_6 + "</p>");
             }
 
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
@@ -264,9 +271,9 @@ else {
 
                 <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
                     <div class="form-group">
-                        <label name="message" id="message" for="groupselect">Select Group</label>
+                        <label name="selectlabel" id="selectlabel" for="groupselect">Select Group</label>
                         <select id="groupselect" name="groupselect">
-                            <option></option>
+                            <!-- groups inserted dynamically -->
                         </select>
                     </div>
                     <div class="form-group">
