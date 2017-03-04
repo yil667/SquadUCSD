@@ -59,8 +59,8 @@ else if (!$inGroup) {
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../js/class-list.js"></script>
      <!-- jQuery form validation -->
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
     <script type="text/javascript">
         var minSize = <?php echo json_encode($group->getSize()); ?>;
         var maxSize = 15;
@@ -133,7 +133,7 @@ else if (!$inGroup) {
                             <label for="size" class="col-sm-3 control-label">Group Size</label>
                             <div class="col-sm-9">
                                 <!--replace min with num from backend @DOM @SCOTT -->
-                                <input type="number" class="form-control" name="size"
+                                <input type="number" class="form-control bfh-number" name="size"
                                        id="size">
                             </div>
                         </div>
