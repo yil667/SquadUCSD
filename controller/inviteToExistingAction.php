@@ -18,7 +18,7 @@ $conn = connectToDB();
 $userid = getUserId();
 $receiverid = $_SESSION['profileid'];
 $fromurl = $_SESSION['fromurl'];
-$message = ($_POST['messageboxform']);
+$message = ($_POST['messageboxinvite']);
 
 $groupid = $_SESSION['groupid'];
 $group = getGroupObject($groupid);
