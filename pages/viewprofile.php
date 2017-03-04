@@ -307,7 +307,7 @@ else {
                 <h3 id="nameForm"></h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="createForm">
+                <form class="ui-front" action="../controller/userSendInviteAction.php" role="form" method="POST" id="createForm">
 
                     <div class="form-group">
                         <label name="grouplabel" id="grouplabel" for="groupname">Group Name</label>
