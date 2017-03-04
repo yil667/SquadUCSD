@@ -54,16 +54,18 @@ else {
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!-- UI for class drop down -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../js/class-list.js"></script>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script src="../js/message-validation.js"></script>
+    <script src="../js/form-validation.js"></script>
+    <script src="../js/invite-validation.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- UI for class drop down -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/class-list.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
@@ -74,8 +76,8 @@ else {
             for (i = 0; i < mygroups.length; i++) {
                 // var is full
                 // var is
-                var mygrouplink = "./viewgroup.php?groupid=" + mygroups[i]["groupid"];
-                $('#groupselect').append("<option href='" + mygrouplink + "'>"
+                var mygroupid = mygroups[i]["groupid"];
+                $('#groupid').append("<option value='" + mygroupid + "'>"
                     + mygroups[i]["name"] + "</option>");
             }
 
@@ -274,8 +276,8 @@ else {
 
                 <form action="../controller/inviteToExistingAction.php" role="form" method="POST" id="inviteForm">
                     <div class="form-group">
-                        <label name="selectlabel" id="selectlabel" for="groupselect">Select Group</label>
-                        <select id="groupselect" name="groupselect">
+                        <label name="selectlabel" id="selectlabel" for="groupid">Select Group</label>
+                        <select id="groupid" name="groupid">
                             <!-- groups inserted dynamically -->
                         </select>
                     </div>
@@ -305,7 +307,7 @@ else {
                 <h3 id="nameForm"></h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="inviteForm">
+                <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="createForm">
 
                     <div class="form-group">
                         <label name="grouplabel" id="grouplabel" for="groupname">Group Name</label>
@@ -327,9 +329,7 @@ else {
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
-
                 </form>
-
             </div>
         </div>
     </div>
