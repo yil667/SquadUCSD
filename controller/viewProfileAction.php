@@ -11,8 +11,4 @@ $displayButtons = isLoggedIn() && ($id != getUserId());
 
 $user = getUserObject($id);
 
-
-
-
-
 ?>
