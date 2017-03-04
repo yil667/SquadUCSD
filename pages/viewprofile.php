@@ -77,7 +77,7 @@ else {
                 // var is full
                 // var is
                 var mygroupid = mygroups[i]["groupid"];
-                $('#groupselect').append("<option value='" + mygroupid + "'>"
+                $('#groupid').append("<option value='" + mygroupid + "'>"
                     + mygroups[i]["name"] + "</option>");
             }
 
@@ -276,7 +276,7 @@ else {
 
                 <form action="../controller/inviteToExistingAction.php" role="form" method="POST" id="inviteForm">
                     <div class="form-group">
-                        <label name="selectlabel" id="selectlabel" for="groupselect">Select Group</label>
+                        <label name="selectlabel" id="selectlabel" for="groupid">Select Group</label>
                         <select id="groupid" name="groupid">
                             <!-- groups inserted dynamically -->
                         </select>
