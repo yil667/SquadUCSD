@@ -92,7 +92,7 @@ else if (!$inGroup) {
 
             if (window.location.href.indexOf("&invalidsize") > -1) {
                 $('#update-info').attr('id', 'error-display');
-                $("#update-info").html("New group size cannot be below number of members currently in group.");
+                $("#error-display").html("New group size cannot be below number of members currently in group.");
             }
 
         });
