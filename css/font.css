@@ -4,6 +4,10 @@
     font-family: 'Fira Sans', sans-serif;
 }
 
+.dropdown-menu > a{
+    font-family: 'Fira Sans', sans-serif;
+}
+
 .nav > li > a {
     font-family: 'Fira Sans', sans-serif;
 }
