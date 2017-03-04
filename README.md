@@ -7,8 +7,9 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h1>Add new issues here as well as the issues tab in github</h1>
    <ol>
-      <li>When attempting to login with blank fields, the message, "Please complete your email verification!" appears</li>
-      <li>Password length error message should be the same whether the password is too short or too long. Let Annie or Quinn know when change is complete</li>
+        <li>When attempting to login with blank fields, the message, "Please complete your email verification!" appears</li>
+        <li>Password length error message should be the same whether the password is too short or too long. Let Annie or Quinn know when change is complete</li>
+        <li>when requesting to form group, group name is not saved</li>
    </ol>
 <h1>As issues are resolved, close issues on issue tab in github and delete entry here</h1>
 
@@ -80,15 +81,4 @@ This web app allows students to form study groups for the classes they are enrol
    <li><strike>forgot password logic</strike></li>
    <li><strike>add safety page redirection</strike></li>
 </ol>
-<br>
-<h2>Bugs: </h2>
-<ol>
-   <li>when requesting to form group, group name is not saved</li>
-   <li></li>
-</ol>
-
-
-
-
-
 </html>
