@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700,900|Open+Sans');
 
-.navbar-brand > a {
+.navbar-brand {
     font-family: 'Fira Sans', sans-serif;
 }
-.nav > a {
+.nav > li > a {
     font-family: 'Fira Sans', sans-serif;
 }
 
