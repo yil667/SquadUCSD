@@ -8,8 +8,8 @@
  */
 class Course
 {
-    private $className;
-    private $searchGroup;
+    public $className;
+    public $searchGroup;
 
     /**
      * Course constructor.
