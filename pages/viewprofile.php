@@ -76,6 +76,42 @@ else {
                     + groups[i]["name"] + "</a>");
             }
 
+            var class1 = <?php echo json_encode($user->getClass1()); ?>;
+            if (class1 !== "") {
+                $('#courselist').append("<a class='list-group-item'>"
+                    + class1 + "</a>");
+            }
+
+            var class2 = <?php echo json_encode($user->getClass2()); ?>;
+            if (class2 !== "") {
+                $('#courselist').append("<a class='list-group-item'>"
+                    + class2 + "</a>");
+            }
+
+            var class3 = <?php echo json_encode($user->getClass3()); ?>;
+            if (class3 !== "") {
+                $('#courselist').append("<a class='list-group-item'>"
+                    + class3 + "</a>");
+            }
+
+            var class4 = <?php echo json_encode($user->getClass4()); ?>;
+            if (class4 !== "") {
+                $('#courselist').append("<a class='list-group-item'>"
+                    + class4 + "</a>");
+            }
+
+            var class5 = <?php echo json_encode($user->getClass5()); ?>;
+            if (class5 !== "") {
+                $('#courselist').append("<a class='list-group-item'>"
+                    + class5 + "</a>");
+            }
+
+            var class6 = <?php echo json_encode($user->getClass6()); ?>;
+            if (class6 !== "") {
+                $('#courselist').append("<a class='list-group-item'>"
+                    + class6 + "</a>");
+            }
+
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
             $('#name').html(name);
 
@@ -160,6 +196,15 @@ else {
                             <label for="about" class="col-sm-3 control-label">About Me</label>
                             <div class="col-sm-9">
                                 <p class="form-control-static" name="about" id="about"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="courses" class="col-sm-3 control-label">Groups</label>
+                            <div class="col-sm-9">
+                                <div class="list-group" id="courselist" name="courselist">
+                                    <!-- contents here are inserted dynamically -->
+                                </div>
                             </div>
                         </div>
 
