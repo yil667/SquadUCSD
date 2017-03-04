@@ -24,7 +24,7 @@
     border-color: transparent;
 }
 
-.panel-body p {
+.panel-custom > .panel-body label, p {
     font-size: 16px;
 }
 
