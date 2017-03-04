@@ -316,7 +316,7 @@ else {
 
                     <div class="form-group">
                         <label name="classlabel" id="classlabel" for="classname">Class</label>
-                        <input class="form-control" name="classname" id="classname">
+                        <input class="form-control ui-front" name="classname" id="classname">
                     </div>
 
                     <div class="form-group">
