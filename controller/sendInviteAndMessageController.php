@@ -21,7 +21,7 @@ function generateInviteUrl($senderid, $receiverid, $hash)
     return "http://www.squaducsd.com/pages/accept.php?id1=$senderid&id2=$receiverid&hash=$hash";
 }
 
-function generateInviteMessage($senderRow, $receiverRow, $userMessage, $hash)
+function generateInviteMessage($senderRow, $receiverRow, $groupName, $className, $userMessage, $hash)
 {
     $senderfname = $senderRow['fname'];
     $senderlname = $senderRow['lname'];
@@ -36,7 +36,7 @@ function generateInviteMessage($senderRow, $receiverRow, $userMessage, $hash)
     $message = "
 Hi $receiverfname, 
 	
-$senderfname $senderlname invited you to form a study group. Here is the included message from $senderfname: 
+$senderfname $senderlname invited you to form a study group named $groupName for $className. Here is the included message from $senderfname: 
 	
 ------------------------
 $userMessage
@@ -99,19 +99,19 @@ function generateMessageSubject($senderRow)
 }
 
 // insert info of two users as well as the hash into the invite table
-function addInviteRequestToDB($conn, $userid, $receiverid, $hash)
+function addInviteRequestToDB($conn, $userid, $receiverid, $groupName, $className, $hash)
 {
-    $sql = "INSERT INTO inviteTable (id1, id2, hash) VALUES ('$userid', '$receiverid', '$hash')";
+    $sql = "INSERT INTO inviteTable (id1, id2, hash, groupName, className) VALUES ('$userid', '$receiverid', '$hash', '$groupName', '$className')";
     mysqli_query($conn, $sql);
 }
 
-function sendInviteEmail($conn, $userid, $receiverid, $userMessage, $hash)
+function sendInviteEmail($conn, $userid, $receiverid, $groupName, $className, $userMessage, $hash)
 {
     // get the rows
     $senderRow = getRow($conn, $userid);
     $receiverRow = getRow($conn, $receiverid);
 
-    $message = generateInviteMessage($senderRow, $receiverRow, $userMessage, $hash);
+    $message = generateInviteMessage($senderRow, $receiverRow, $groupName, $className, $userMessage, $hash);
     $headers = 'From: message' . "\r\n"; // Set from headers (perhaps change this in the future?)
     $subject = generateInviteSubject($senderRow); // Give the email a subject
 
