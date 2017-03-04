@@ -1,5 +1,5 @@
 $().ready(function () {
-    $("#loginForm").validate({
+    $("#messageForm").validate({
         // Specify validation rules
         rules: {
             message: {
@@ -38,9 +38,10 @@ $().ready(function () {
         submitHandler: function (form) {
             form.submit();
         }
-         $.validator.addMethod("formatcheck", function (value) {
-             return /^[A-Za-z\ ]+$/.test(value) // consists of only these
-         });   
+        
     });
+     $.validator.addMethod("formatcheck", function (value) {
+         return /^[A-Za-z\ ]+$/.test(value); // consists of only these
+     });   
 
 });
