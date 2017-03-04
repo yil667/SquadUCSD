@@ -77,7 +77,7 @@ function generateReceivers($group)
 function sendRequestEmail($conn, $user, $group, $message, $hash)
 {
     $message = generateRequestToJoinMessage($user, $group, $message, $hash);
-    $headers = 'From: request' . "\r\n"; // Set from headers (perhaps change this in the future?)
+    $headers = 'From: message' . "\r\n"; // Set from headers (perhaps change this in the future?)
     $subject = generateRequestSubject($user->getFname(), $user->getLname()); // Give the email a subject
 
     $receivers = generateReceivers($group);
