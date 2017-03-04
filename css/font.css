@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700,900|Open+Sans');
 
-a {
+.navbar {
     font-family: 'Fira Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, button {
     font-family: 'Fira Sans', sans-serif;
 }
 
-p, label, input {
+p, label, input, a {
     font-family: 'Open Sans', sans-serif;
 }
