@@ -12,22 +12,23 @@ class User
     public $userid;
     public $fname;
     public $lname;
-    private $email;
-    private $phone;
-    private $major;
-    private $about; // about me
-    private $groups; // user's affiliated groups
+    public $email;
+    public $phone;
+    public $major;
+    public $about; // about me
+    public $groups; // user's affiliated groups
 
-    private $class1;
-    private $class2;
-    private $class3;
-    private $class4;
-    private $class5;
-    private $class6;
+
+    public $class1;
+    public $class2;
+    public $class3;
+    public $class4;
+    public $class5;
+    public $class6;
 
     // unimplemented
-    private $tags;
-    private $picture;
+    public $tags;
+    public $picture;
 
     /**
      * User constructor.
@@ -49,7 +50,6 @@ class User
         $this->major = $major;
         $this->about = $about;
     }
-
 
     /**
      * @return mixed

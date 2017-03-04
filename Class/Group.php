@@ -3,12 +3,16 @@
 
 class Group
 {
+    public $MAX_GROUP_SIZE = 10;
+
     public $groupid;
     public $name;
-    private $class;
-    private $size;
-    private $maxSize;
-    private $users;
+    public $class;
+    public $size;
+    public $maxSize;
+    public $users;
+    public $isFull;
+    public $isMax;
 
     /**
      * Group constructor.
@@ -143,5 +147,10 @@ class Group
 
         // given user is not found in the group
         return false;
+    }
+
+    public function isMax()
+    {
+        return $this->size == $this->MAX_GROUP_SIZE;
     }
 }

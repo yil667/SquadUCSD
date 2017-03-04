@@ -64,7 +64,8 @@ function getGroupObject($id)
 
     // declare return object
     $group = new Group($id, $row['name'], $row['size'], $row['maxSize'], $row['class']);
-
+    $group->isFull = $group->isFull();
+    $group->isMax = $group->isMax();
     // we now need to get the users' info
     $users = Array();
 
