@@ -25,7 +25,7 @@ $().ready(function () {
                 required: "Please re-enter your password.",
                 equalTo: "Passwords do not match.",
                 pwcheck: "Your password can only consist of characters, numbers and '!@#$%^&*-._'."
-            },
+            }
         },
         // Make sure the form is submitted to the destination defined
         // in the "action" attribute of the form when valid

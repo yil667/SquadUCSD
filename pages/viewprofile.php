@@ -71,6 +71,8 @@ else {
 
             var mygroups = <?php echo json_encode($self->getGroups()); ?>;
             for (i = 0; i < mygroups.length; i++) {
+                // var is full
+                // var is
                 var mygrouplink = "./viewgroup.php?groupid=" + mygroups[i]["groupid"];
                 $('#groupselect').append("<option href='" + mygrouplink + "'>"
                     + mygroups[i]["name"] + "</option>");
