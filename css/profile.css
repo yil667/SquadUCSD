@@ -6,8 +6,8 @@
     text-align: center;
 }
 
-a.list-group-item.active:hover{
-    color: #333333;
+a.list-group-item:hover{
+    color: #cccccc;
 }
 
 .modal-content {
