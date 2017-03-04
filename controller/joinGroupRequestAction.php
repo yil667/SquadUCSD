@@ -24,7 +24,6 @@ if ($inGroup) {
     // redirect directly with a flag
     header("Location: $fromurl" . "&exist");
 } else {
-    // this is the custom message the user wants to send along with the invite request
 
     $hash = md5(rand(0, 10000));
     $user = getUserObject($userid);

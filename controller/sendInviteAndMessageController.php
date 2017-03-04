@@ -13,7 +13,7 @@ function getRow($conn, $id)
 // generates a user's url for the profile's page
 function getProfileUrl($id)
 {
-    return "http://squaducsd.com/pages/viewprofile.php?userid=$id";
+    return "http://www.squaducsd.com/pages/viewprofile.php?userid=$id";
 }
 
 function generateInviteUrl($senderid, $receiverid, $hash)
