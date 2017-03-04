@@ -94,6 +94,18 @@ else {
             }
             $("#buttons").html(content);
 
+            if (window.location.href.indexOf("&request") > -1) {
+                $("#update-info").html("Request sent.");
+            }
+
+            else if (window.location.href.indexOf("&exist") > -1) {
+                $("#update-info").html("You are already in the group.");
+            }
+
+            else if (window.location.href.indexOf("&accepted") > -1) {
+                $("#update-info").html("New member added!");
+            }
+
 
         });
     </script>
@@ -104,7 +116,10 @@ else {
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3>View Group</h3></div>
+                <div class="panel-heading">
+                    <h3>View Group
+                        <h4 id="update-info"><h4>
+                    </h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
 
