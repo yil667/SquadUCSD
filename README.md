@@ -81,7 +81,7 @@ This web app allows students to form study groups for the classes they are enrol
    <li><strike>add safety page redirection</strike></li>
 </ol>
 <br>
-<h2>Back-end recently finished: </h2>
+<h2>Bugs: </h2>
 <ol>
    <li>Manage Groups has empty group on bottom of list</li>
    <li></li>
