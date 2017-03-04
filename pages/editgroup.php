@@ -91,8 +91,10 @@ else if (!$inGroup) {
             }
 
             if (window.location.href.indexOf("&invalidsize") > -1) {
-                $("#update-info").html("New group size cannot be below number of members currently in group.");
+                $('#update-info').attr('id', 'error-display');
+                $("#error-display").html("New group size cannot be below number of members currently in group.");
             }
+
         });
     </script>
     <script src="../js/group-validation.js"></script>
