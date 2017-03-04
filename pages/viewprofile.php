@@ -69,6 +69,13 @@ else {
 
             var displayButtons = <?php echo json_encode($displayButtons); ?>;
 
+            var mygroups = <?php echo json_encode($self->getGroups()); ?>;
+            for (i = 0; i < mygroups.length; i++) {
+                var mygrouplink = "./viewgroup.php?groupid=" + mygroups[i]["groupid"];
+                $('#groupselect').append("<option href='" + mygrouplink + "'>"
+                    + mygroups[i]["name"] + "</option>");
+            }
+
             var groups = <?php echo json_encode($user->getGroups()); ?>;
             for (i = 0; i < groups.length; i++) {
                 var link = "./viewgroup.php?groupid=" + groups[i]["groupid"];
@@ -264,9 +271,9 @@ else {
 
                 <form action="../controller/userSendInviteAction.php" role="form" method="POST" id="messageform">
                     <div class="form-group">
-                        <label name="message" id="message" for="groupselect">Select Group</label>
+                        <label name="selectlabel" id="selectlabel" for="groupselect">Select Group</label>
                         <select id="groupselect" name="groupselect">
-                            <option></option>
+                            <!-- groups inserted dynamically -->
                         </select>
                     </div>
                     <div class="form-group">
