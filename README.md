@@ -17,19 +17,20 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
-   <li>(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile) //which hyperlinks</li> 
-   <li>in edit profile, make sure the group name, class, size cannot be empty</li>
+   ╔
+   <li>║(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile)</li> 
+   <li>║member list label hover color darker</li>
+   ╚ Are these the same?
    <li>add classes duplicate checks</li>
-   <li>member list label hover color darker</li>
    <li>invite to form new group needs group name / group size></li>
-   <li>display classes in view user profile</li>
    <li>dynamically display groups in viewprofile page (invite to existing group)
-      display warning if the group if full already when inviting 
-      (backend will resize the group)</li>
+   <li>display warning if the group if full already when inviting (backend will resize the group)</li>
 </ol>
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>display classes in view user profile</strike></li>
+   <li><strike>in edit profile, make sure the group name, class, size cannot be empty</strike></li>
    <li><strike>panels in view/edit user profile and view/edit group profile are different sized. need uniform consistency</strike></li>
    <li><strike>display groups in view user profile</strike></li>
    <li><strike>auto complete for classes in edit profile page</strike></li>
@@ -53,7 +54,7 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
-   
+   <li>check if already in group in viewprofile page, cannot invite to a group user is already a part of</li>
    <li><b>implement backend logic for inviting to existing group</b></li>
    <li>implement backend logic for resizing group request when inviting</li>
 
