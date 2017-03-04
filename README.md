@@ -25,13 +25,14 @@ Feature Suggestion: Search for individual users/groups by name, add a search bar
    <li>║member list label hover color darker</li>
    ╚ Are these the same?
    <li>add classes duplicate checks</li>
-   <li>invite to form new group needs group name / group size></li>
+   <li>add character checking/autocomplete functionality in invite to form new group name/size</li>
    <li>dynamically display groups in viewprofile page (invite to existing group)
    <li>display warning if the group if full already when inviting (backend will resize the group)</li>
 </ol>
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>invite to form new group needs group name / group size</strike></li>
    <li><strike>display classes in view user profile</strike></li>
    <li><strike>in edit profile, make sure the group name, class, size cannot be empty</strike></li>
    <li><strike>panels in view/edit user profile and view/edit group profile are different sized. need uniform consistency</strike></li>
