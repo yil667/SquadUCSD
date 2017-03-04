@@ -14,11 +14,12 @@
 }
 
 .panel-custom > .panel-body {
+    font-size: 16px;
     background-color: #f2f2f2;
     padding-top: 30px;
     margin-bottom: 60px;
 }
 
 #email-error, #login-error, #register-error, .error {
-    color: rgba(255, 0, 2, 0.74);
+    color: #ff6666;
 }
