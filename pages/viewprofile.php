@@ -84,7 +84,11 @@ else {
 
 
             // initial check for the selection box (need to add more if's)
+<<<<<<< HEAD
              // check if ingroup full fullfull also clear error message
+=======
+            $('#invite-error').html("");
+>>>>>>> origin/master
             $('#invite-btn').prop('disabled', false);
             $('#invite-btn').html("Send Invite");
             var initialSelectBox = document.getElementById("groupid");
@@ -328,7 +332,7 @@ else {
                     </div>
 
                     <div class="modal-footer">
-                        <h4 id="invite-error"><h4>
+                        <h5 class="text-left" id="invite-error"></h5>
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         <button id="invite-btn" type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
