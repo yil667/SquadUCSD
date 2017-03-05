@@ -84,6 +84,7 @@ else {
 
 
             // initial check for the selection box (need to add more if's)
+            $('#invite-error').html("");
             $('#invite-btn').prop('disabled', false);
             $('#invite-btn').html("Send Invite");
             var initialSelectBox = document.getElementById("groupid");
