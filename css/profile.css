@@ -38,11 +38,11 @@ textarea {
     resize: vertical;
 }
 
-#form-error, #error-display, .error {
+#invite-error, #error-display, .error {
     color: #ff6666;
 }
 
-#update-info {
+#update-info, #message-sent, #invite-sent {
     color: #99ff99;
 }
 

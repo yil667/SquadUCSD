@@ -19,8 +19,8 @@ $().ready(function () {
             currpassword: "Please enter your current password.",
             password: {
                 required: "Please provide a password.",
-                minlength: "Your password must be at least 6-12 characters long.",
-                maxlength: "Your password must be at least 6-12 characters long.",
+                minlength: "Your password must be between 6-12 characters long.",
+                maxlength: "Your password must be between 6-12 characters long.",
                 pwcheck: "Your password can only consist of characters, numbers and '!@#$%^&*-._'."
             },
             password2: {

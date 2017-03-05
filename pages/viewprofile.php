@@ -125,6 +125,7 @@ else {
             }
 
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
+            name = name + $('#name').html();
             $('#name').html(name);
 
             var nameMessage = <?php echo json_encode("Message " . $user->getFname()); ?>;
@@ -167,11 +168,32 @@ else {
                 $("#buttons").html(defaultContent);
             }
 
+            $("#update-info").html("");
+
             if (window.location.href.indexOf("&invite") > -1) {
-                $("#update-info").html("Invitation sent.");
+                $("#update-info").html("Invitation to group sent.");
             }
 
+
+            if (window.location.href.indexOf("&message") > -1) {
+                $("#update-info").html("Message sent.");
+            }
+
+            if (window.location.href.indexOf("&create") > -1) {
+                $("#update-info").html("Invitation to form group sent");
+            }
+
+            if (window.location.href.indexOf("&receiverexist") > -1) {
+                $('#update-info').attr('id', 'error-display');
+                $("#error-display").html("User is already in this group.");
+            }
+
+            if (window.location.href.indexOf("&exceedsizelimit") > -1) {
+                $('#update-info').attr('id', 'error-display');
+                $("#error-display").html("This group is at its size limit!");
+            }
         });
+
     </script>
 </head>
 <body>
@@ -180,7 +202,11 @@ else {
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3 id='name'></h3></div>
+                <div class="panel-heading">
+                    <h3 id='name'>
+                        <h4 id="update-info"><h4>
+                    </h3>
+                </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
                         <div class="form-group">
@@ -288,8 +314,9 @@ else {
                     </div>
 
                     <div class="modal-footer">
+                        <h4 id="invite-error"><h4>
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
+                        <button id="invite-btn" type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
 
                 </form>
@@ -326,7 +353,6 @@ else {
                     </div>
 
                     <div class="modal-footer">
-                        <h4 id="form-error"><h4>
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
@@ -336,6 +362,16 @@ else {
     </div>
 </div>
 
+ <script type="text/javascript">
+    $('#groupid').change(function(){
+         $('#invite-btn').prop('disabled', true);
+
+     
+   
+    });
+
+
+  </script>
 
 </body>
 
