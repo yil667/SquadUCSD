@@ -84,6 +84,7 @@ else {
 
 
             // initial check for the selection box (need to add more if's)
+             // check if ingroup full fullfull also clear error message
             $('#invite-btn').prop('disabled', false);
             $('#invite-btn').html("Send Invite");
             var initialSelectBox = document.getElementById("groupid");
@@ -380,6 +381,7 @@ else {
         $('#invite-btn').prop('disabled', false);
         $('#invite-btn').html("Send Invite");
         var selectBox = document.getElementById("groupid");
+        // check if ingroup full fullfull also clear error message
         if(mygroups[selectBox.selectedIndex]["isFull"]){
              $('#invite-btn').prop('disabled', true);
              $('#invite-btn').html("Continue");
