@@ -1,35 +1,21 @@
 $().ready(function () {
-    $("#messageForm").validate({
+    $("#inviteForm").validate({
         // Specify validation rules
         rules: {
-            message: {
-                required: true,
+            messageboxinvite: {
                 maxlength: 200
             },
-            classname: {
-                required: true,
-                maxlength: 40,
-                formatcheck: true
-            },
-            groupname: {
-                required: true,
-                maxlength: 40
+            groupid: {
+                required: true
             }
         },
         // Specify validation error messages
         messages: {
-            message: {
-                required: "Your message cannot be empty.",
+            messageboxinvite: {
                 maxlength: "Your message should be less than 200 characters."
             },
-            classname: {
-                required: "Your class name cannot be empty.",
-                maxlength: "Your message should be less than 200 characters.",
-                formatcheck: "Please use only alphabetical characters and spaces."
-            },
-            groupname: {
-                required: "Your group name cannot be empty.",
-                maxlength: "Your message should be less than 200 characters."
+            groupid: {
+                required: "You must select a group"
             }
         },
         // Make sure the form is submitted to the destination defined
