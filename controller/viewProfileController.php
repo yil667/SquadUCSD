@@ -68,7 +68,7 @@ function getGroupObject($id)
     $row = mysqli_fetch_assoc($result);
 
     // declare return object
-    $group = new Group($id, $row['name'], $row['size'], $row['maxSize'], $row['class'], "");
+    $group = new Group($id, $row['name'], $row['size'], $row['maxSize'], $row['class'], $row['users']);
     $group->isFull = $group->isFull();
     $group->isMax = $group->isMax();
     // we now need to get the users' info
@@ -104,16 +104,13 @@ function getInGroupInfo($groups, $id)
     $inGroup = Array();
 
     // loop through each group in the $groups array
-    foreach ($groups as $group)
-    {
+    foreach ($groups as $group) {
         // separate the comma delimited string of $group->getUsers()
         $user_arr = explode(",", $group->getUsers());
         $found = false;
-        foreach ($user_arr as $userid)
-        {
+        foreach ($user_arr as $userid) {
             // linear search and find the user
-            if ($userid != "" && $userid == $id)
-            {
+            if ($userid != "" && $userid == $id) {
                 $found = true;
                 break;
             }
