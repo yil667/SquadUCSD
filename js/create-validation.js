@@ -7,12 +7,12 @@ $().ready(function () {
             },
             classname: {
                 required: true,
-                maxlength: 40,
-                formatcheck: true
+                maxlength: 40
             },
             groupname: {
                 required: true,
-                maxlength: 40
+                maxlength: 40,
+                formatcheck: true
             }
         },
         // Specify validation error messages
@@ -22,12 +22,12 @@ $().ready(function () {
             },
             classname: {
                 required: "Your class name cannot be empty.",
-                maxlength: "Your message should be less than 200 characters.",
-                formatcheck: "Please use only alphabetical characters and spaces."
+                maxlength: "Your message should be less than 200 characters."
             },
             groupname: {
                 required: "Your group name cannot be empty.",
-                maxlength: "Your message should be less than 200 characters."
+                maxlength: "Your message should be less than 200 characters.",
+                formatcheck: "Please use only alphabetical characters and spaces."
             }
         },
         // Make sure the form is submitted to the destination defined
