@@ -277,7 +277,7 @@ else {
                 <form action="../controller/inviteToExistingAction.php" role="form" method="POST" id="inviteForm">
                     <div class="form-group">
                         <label name="selectlabel" id="selectlabel" for="groupid">Select Group</label>
-                        <select id="groupid" name="groupid" onchange="changeStatus();">
+                        <select id="groupid" name="groupid">
                             <!-- groups inserted dynamically -->
                         </select>
                     </div>
@@ -337,16 +337,13 @@ else {
 </div>
 
  <script type="text/javascript">
+    $('#groupid').change(function(){
+        $('#invite-btn').attr('disabled', 'disabled');
 
-   function changeStatus() {
-        from.removeAttr("disabled");
-        var selectBox = document.getElementById("groupid");
-        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-        if(true){
-             $('#invite-btn').attr('disabled', 'disabled');
-             $('#invite-error').html("The group is full. Group size will be increased by 1 when the user accepts.")
-        }
-   }
+     
+   
+    });
+
 
   </script>
 
