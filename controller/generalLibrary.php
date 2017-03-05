@@ -1,6 +1,6 @@
 <?php
 
-// this function clears all the flags in an url, after and including the question mark (?)
+// this function clears all the flags in an url, after and including &
 function clearFlags($url)
 {
     $pos = strpos($url, "?");
@@ -9,6 +9,6 @@ function clearFlags($url)
     if($pos === false)
         return $url;
 
-    return substr($url, 0, $pos + 1);
+    return substr($url, 0, $pos);
 
 }
