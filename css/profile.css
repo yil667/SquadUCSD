@@ -42,7 +42,7 @@ textarea {
     color: #ff6666;
 }
 
-#update-info {
+#update-info, #message-sent, #invite-sent {
     color: #99ff99;
 }
 

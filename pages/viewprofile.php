@@ -125,6 +125,7 @@ else {
             }
 
             var name = <?php echo json_encode($user->getFname() . "'s Profile"); ?>;
+            name = name + $('#name').html();
             $('#name').html(name);
 
             var nameMessage = <?php echo json_encode("Message " . $user->getFname()); ?>;
@@ -168,10 +169,18 @@ else {
             }
 
             if (window.location.href.indexOf("&invite") > -1) {
-                $("#update-info").html("Invitation sent.");
+                $("#update-info").html("Invitation to group sent.");
             }
 
+            if (window.location.href.indexOf("&message") > -1) {
+                $("#update-info").html("Message sent.");
+            }
+
+            if (window.location.href.indexOf("&create") > -1) {
+                $("#update-info").html("Invitation to form group sent");
+            }
         });
+
     </script>
 </head>
 <body>
@@ -180,7 +189,11 @@ else {
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-custom">
-                <div class="panel-heading"><h3 id='name'></h3></div>
+                <div class="panel-heading">
+                    <h3 id='name'>
+                        <h4 id="update-info"><h4>
+                    </h3>
+                </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
                         <div class="form-group">

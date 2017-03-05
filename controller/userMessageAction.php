@@ -27,4 +27,4 @@ $message = ($_POST['sendmessageform']);
 sendEmail($conn, $userid, $receiverid, $message);
 
 //header("Location: ../pages/index.php");
-header("Location: $fromurl");
+header("Location: $fromurl" . "&message");

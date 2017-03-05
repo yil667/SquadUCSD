@@ -32,4 +32,4 @@ addInviteRequestToDB($conn, $userid, $receiverid, $groupName, $className, $hash)
 sendInviteEmail($conn, $userid, $receiverid, $groupName, $className, $message, $hash);
 
 // redirect with a flag
-header("Location: $fromurl" . "&invite");
+header("Location: $fromurl" . "&create");
