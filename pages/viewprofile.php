@@ -59,7 +59,7 @@ else {
     <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script src="../js/message-validation.js"></script>
-    <script src="../js/create-validation.js"></script>
+    <script src="../js/form-validation.js"></script>
     <script src="../js/invite-validation.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -374,11 +374,10 @@ else {
         $('#invite-btn').prop('disabled', false);
         $('#invite-btn').html("Send Invite");
         var selectBox = document.getElementById("groupid");
-        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
         if(true){
              $('#invite-btn').prop('disabled', true);
              $('#invite-btn').html("Continue");
-             $('#invite-error').html(selectBox.selectedIndex + " " + selectedValue + " Group is full. The group size will be increased by 1 if the user accepts.");
+             $('#invite-error').html(selectBox.selectedIndex + " Group is full. The group size will be increased by 1 if the user accepts.");
         }
 
      
