@@ -174,6 +174,7 @@ else {
                 $("#update-info").html("Invitation to group sent.");
             }
 
+
             if (window.location.href.indexOf("&message") > -1) {
                 $("#update-info").html("Message sent.");
             }
@@ -363,7 +364,7 @@ else {
 
  <script type="text/javascript">
     $('#groupid').change(function(){
-        $('#invite-btn').attr('disabled', 'disabled');
+         $('#invite-btn').prop('disabled', true);
 
      
    
