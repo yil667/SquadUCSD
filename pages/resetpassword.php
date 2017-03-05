@@ -43,6 +43,7 @@ include_once "../controller/resetPasswordLinkAction.php";
             $('#common').load('./common.php');
         });
     </script>
+    <script src="../js/resetpassword-validation.js"></script>
 </head>
 <body>
 <div id="common"></div>
@@ -71,7 +72,7 @@ include_once "../controller/resetPasswordLinkAction.php";
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-3">
                                 <input type="password" class="form-control" name="confirmpass" value=""
-                                       placeholder="Confirm New Password">
+                                       placeholder="Confirm New Password" id="confirmpass">
                             </div>
                         </div>
 

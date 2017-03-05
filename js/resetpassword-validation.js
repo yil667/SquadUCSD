@@ -2,28 +2,26 @@ $().ready(function () {
     $("#changePasswordForm").validate({
         // Specify validation rules
         rules: {
-            currpassword: "required",
-            password: {
+            newpassword: {
                 required: true,
                 minlength: 6,
                 maxlength: 12,
                 pwcheck: true
             },
-            password2: {
+            confirmpass: {
                 required: true,
                 equalTo: "#password"
             }
         },
         // Specify validation error messages
         messages: {
-            currpassword: "Please enter your current password.",
-            password: {
+            newpassword: {
                 required: "Please provide a password.",
                 minlength: "Your password must be at least 6-12 characters long.",
                 maxlength: "Your password must be at least 6-12 characters long.",
                 pwcheck: "Your password can only consist of characters, numbers and '!@#$%^&*-._'."
             },
-            password2: {
+            confirmpass: {
                 required: "Please re-enter your password.",
                 equalTo: "Passwords do not match."
             }
