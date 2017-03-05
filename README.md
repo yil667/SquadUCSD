@@ -28,13 +28,13 @@ This web app allows students to form study groups for the classes they are enrol
 <h2>Front-end todo list: </h2>
 <ol>
    <li>(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile) //don't understand, clarify pls</li> 
-   <li>display warning if the group if full already when inviting (backend will resize the group)</li>
-    <li>autocomplete tries to run on viewprofile page for classes when they are static fields</li>
-    <li>check if already in group in viewprofile page, cannot invite to a group user is already a part of</li>
 </ol>
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>display warning if the group if full already when inviting (backend will resize the group)</strike></li>
+   <li><strike>autocomplete tries to run on viewprofile page for classes when they are static fields</strike></li>
+   <li><strike>check if already in group in viewprofile page, cannot invite to a group user is already a part of</strike></li>
    <li><strike>Password length error message should be the same whether the password is too short or too long. Let Annie or Quinn know when change is complete</strike></li>
    <li><strike>When attempting to login with blank fields, the message, "Please complete your email verification!" appears</strike></li>
    <li><strike>add character checking/autocomplete functionality in invite to form new group name/size</strike></li>
