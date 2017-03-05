@@ -326,6 +326,7 @@ else {
                     </div>
 
                     <div class="modal-footer">
+                        <h4 id="form-error"><h4>
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
