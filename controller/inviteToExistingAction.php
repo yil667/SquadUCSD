@@ -48,7 +48,6 @@ else {
 
     // redirect with a flag
     header("Location: $fromurl" . "&invite");
-
 }
 
 

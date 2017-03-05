@@ -168,6 +168,8 @@ else {
                 $("#buttons").html(defaultContent);
             }
 
+            $("#update-info").html("");
+
             if (window.location.href.indexOf("&invite") > -1) {
                 $("#update-info").html("Invitation to group sent.");
             }
@@ -178,6 +180,16 @@ else {
 
             if (window.location.href.indexOf("&create") > -1) {
                 $("#update-info").html("Invitation to form group sent");
+            }
+
+            if (window.location.href.indexOf("&receiverexist") > -1) {
+                $('#update-info').attr('id', 'error-display');
+                $("#error-display").html("User is already in this group.");
+            }
+
+            if (window.location.href.indexOf("&exceedsizelimit") > -1) {
+                $('#update-info').attr('id', 'error-display');
+                $("#error-display").html("This group is at its size limit!");
             }
         });
 

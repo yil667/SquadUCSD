@@ -105,7 +105,7 @@ else if (!$inGroup) {
             <div class="panel panel-custom">
                 <div class="panel-heading">
                     <h3>Edit Group
-                        <h4 id="update-info"><h4>
+                        <h4 id="update-info"></h4>
                     </h3>
                 </div>
                 <div class="panel-body">
