@@ -82,10 +82,11 @@ else {
             }
             // initial check for the selection box
             $('#invite-btn').prop('disabled', false);
-                var initialSelectBox = document.getElementById("groupid");
-                if(mygroups[initialSelectBox.selectedIndex]["isFull"]){
-                     $('#invite-btn').prop('disabled', true);
-                     $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
+            $('#invite-btn').html("Send Invite");
+            var initialSelectBox = document.getElementById("groupid");
+            if(mygroups[initialSelectBox.selectedIndex]["isFull"]){
+                 $('#invite-btn').prop('disabled', true);
+                 $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
             }
             var groups = <?php echo json_encode($user->getGroups()); ?>;
             for (i = 0; i < groups.length; i++) {
@@ -371,10 +372,12 @@ else {
  <script type="text/javascript">
     $('#groupid').change(function(){
         $('#invite-btn').prop('disabled', false);
+        $('#invite-btn').html("Send Invite");
         var selectBox = document.getElementById("groupid");
         var selectedValue = selectBox.options[selectBox.selectedIndex].value;
         if(mygroups[selectBox.selectedIndex]["isFull"]){
              $('#invite-btn').prop('disabled', true);
+             $('#invite-btn').html("Continue");
              $('#invite-error').html(selectBox.selectedIndex + " " + selectedValue + " Group is full. The group size will be increased by 1 if the user accepts.");
         }
 
