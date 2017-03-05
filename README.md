@@ -30,13 +30,12 @@ This web app allows students to form study groups for the classes they are enrol
 <h2>Front-end todo list: </h2>
 <ol>
    <li>(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile) //don't understand, clarify pls</li> 
-   <li>add classes duplicate checks</li>
-   <li>add character checking/autocomplete functionality in invite to form new group name/size</li>
    <li>display warning if the group if full already when inviting (backend will resize the group)</li>
 </ol>
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>add character checking/autocomplete functionality in invite to form new group name/size</strike></li>
    <li><strike>dynamically display groups in viewprofile page</strike></li>
    <li><strike>member list label hover color darker</strike></li>
    <li><strike>invite to form new group needs group name / group size</strike></li>
