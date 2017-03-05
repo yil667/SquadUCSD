@@ -38,7 +38,7 @@ textarea {
     resize: vertical;
 }
 
-#form-error, #error-display, .error {
+#invite-error, #error-display, .error {
     color: #ff6666;
 }
 

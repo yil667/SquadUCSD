@@ -277,7 +277,7 @@ else {
                 <form action="../controller/inviteToExistingAction.php" role="form" method="POST" id="inviteForm">
                     <div class="form-group">
                         <label name="selectlabel" id="selectlabel" for="groupid">Select Group</label>
-                        <select id="groupid" name="groupid">
+                        <select id="groupid" name="groupid" onchange="changeStatus(value);">
                             <!-- groups inserted dynamically -->
                         </select>
                     </div>
@@ -288,8 +288,9 @@ else {
                     </div>
 
                     <div class="modal-footer">
+                        <h4 id="invite-error"><h4>
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
+                        <button id="invite-btn" type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
 
                 </form>
@@ -326,7 +327,6 @@ else {
                     </div>
 
                     <div class="modal-footer">
-                        <h4 id="form-error"><h4>
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
@@ -336,6 +336,19 @@ else {
     </div>
 </div>
 
+ <script type="text/javascript">
+
+   function changeStatus() {
+        from.removeAttr("disabled");
+        var selectBox = document.getElementById("groupid");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        if(mygroups[selectBox.selectedIndex]['isFull']){
+             $('#invite-btn').attr('disabled', 'disabled');
+             $('#invite-error').html("The group is full. Group size will be increased by 1 when the user accepts.")
+        }
+   }
+
+  </script>
 
 </body>
 
