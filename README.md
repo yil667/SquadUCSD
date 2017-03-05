@@ -66,13 +66,13 @@ This web app allows students to form study groups for the classes they are enrol
 <ol>
 <li>autocomplete tries to run on viewprofile page for classes when they are static fields</li>
    <li>check if already in group in viewprofile page, cannot invite to a group user is already a part of</li>
-   <li><b>implement backend logic for inviting to existing group</b></li>
-   <li>implement backend logic for resizing group request when inviting</li>
 
 </ol>
 
 <h2>Back-end recently finished: </h2>
 <ol>
+   <li><strike><b>implement backend logic for inviting to existing group</strike></b></li>
+   <li><strike>implement backend logic for resizing group request when inviting</strike></li>
    <li><strike><b>implement backend logic for view group request to join form</b></strike></li>
    <li><strike>update accept.php when front end error page is done </strike></li>
    <li><strike>implement backend logic for edit group submit form</strike></li>
