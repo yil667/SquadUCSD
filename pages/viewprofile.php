@@ -67,12 +67,13 @@ else {
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../js/class-list.js"></script>
     <script type="text/javascript">
+        var mygroups;
         $(document).ready(function () {
             $('#common').load('./common.php');
 
             var displayButtons = <?php echo json_encode($displayButtons); ?>;
 
-            var mygroups = <?php echo json_encode($self->getGroups()); ?>;
+            mygroups = <?php echo json_encode($self->getGroups()); ?>;
             for (i = 0; i < mygroups.length; i++) {
                 // var is full
                 // var is
@@ -80,6 +81,19 @@ else {
                 $('#groupid').append("<option value='" + mygroupid + "'>"
                     + mygroups[i]["name"] + "</option>");
             }
+
+
+            // initial check for the selection box (need to add more if's)
+            $('#invite-error').html("");
+            $('#invite-btn').prop('disabled', false);
+            $('#invite-btn').html("Send Invite");
+            var initialSelectBox = document.getElementById("groupid");
+            if(mygroups[initialSelectBox.selectedIndex]["isFull"]){
+                 $('#invite-btn').prop('disabled', true);
+                 $('#invite-btn').html("Continue");
+                 $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
+            }
+
 
             var groups = <?php echo json_encode($user->getGroups()); ?>;
             for (i = 0; i < groups.length; i++) {
@@ -314,7 +328,7 @@ else {
                     </div>
 
                     <div class="modal-footer">
-                        <h4 id="invite-error"><h4>
+                        <h5 class="text-left" id="invite-error"></h5>
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         <button id="invite-btn" type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
@@ -365,11 +379,12 @@ else {
  <script type="text/javascript">
     $('#groupid').change(function(){
         $('#invite-btn').prop('disabled', false);
+        $('#invite-btn').html("Send Invite");
         var selectBox = document.getElementById("groupid");
-        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-        if(true){
+        if(mygroups[selectBox.selectedIndex]["isFull"]){
              $('#invite-btn').prop('disabled', true);
-             $('#invite-error').html(selectBox.selectedIndex + " " + selectedValue + " Group is full. The group size will be increased by 1 if the user accepts.")
+             $('#invite-btn').html("Continue");
+             $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
         }
 
      

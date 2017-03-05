@@ -1,21 +1,15 @@
 $().ready(function () {
-    $("#inviteForm").validate({
+    $("#messageForm").validate({
         // Specify validation rules
         rules: {
-            groupselect: {
-                required: true
-            },
-            message: {
+            sendmessageform: {
                 required: true,
                 maxlength: 200
             }
         },
         // Specify validation error messages
         messages: {
-            groupselect: {
-                required: "You must select a group."
-            },
-            message: {
+            sendmessageform: {
                 required: "Your message cannot be empty.",
                 maxlength: "Your message should be less than 200 characters."
             }
