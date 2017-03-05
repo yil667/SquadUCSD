@@ -367,7 +367,7 @@ else {
         $('#invite-btn').prop('disabled', false);
         var selectBox = document.getElementById("groupid");
         var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-        if(mygroups[selectBox.selectedIndex]['isFull']){
+        if(true){
              $('#invite-btn').prop('disabled', true);
         }
 
