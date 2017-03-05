@@ -1,5 +1,5 @@
 $().ready(function () {
-    $("#changePasswordForm").validate({
+    $("#resetForm").validate({
         // Specify validation rules
         rules: {
             newpassword: {

@@ -59,7 +59,7 @@ include_once "../controller/resetPasswordLinkAction.php";
                     </div>
 
                     <form action="../controller/resetPasswordFormAction.php" class="form-horizontal" role="form"
-                          method="POST">
+                          name="resetForm" id="resetForm" method="POST">
                         <label class="col-md-4 control-label"></label> <!--Fix for register here -->
 
                         <div class="form-group">
