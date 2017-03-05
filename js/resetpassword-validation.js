@@ -10,7 +10,7 @@ $().ready(function () {
             },
             confirmpass: {
                 required: true,
-                equalTo: "#password"
+                equalTo: "#newpassword"
             }
         },
         // Specify validation error messages
