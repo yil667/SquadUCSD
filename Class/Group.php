@@ -11,6 +11,7 @@ class Group
     public $size;
     public $maxSize;
     public $users;
+
     public $isFull;
     public $isMax;
 
@@ -21,6 +22,7 @@ class Group
      * @param $class
      * @param $size
      * @param $maxSize
+     * @param $users
      */
     public function __construct($groupid, $name, $size, $maxSize, $class, $users)
     {
