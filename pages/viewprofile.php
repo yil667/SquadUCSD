@@ -67,12 +67,13 @@ else {
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../js/class-list.js"></script>
     <script type="text/javascript">
+        var mygroups;
         $(document).ready(function () {
             $('#common').load('./common.php');
 
             var displayButtons = <?php echo json_encode($displayButtons); ?>;
 
-            var mygroups = <?php echo json_encode($self->getGroups()); ?>;
+            mygroups = <?php echo json_encode($self->getGroups()); ?>;
             for (i = 0; i < mygroups.length; i++) {
                 // var is full
                 // var is
@@ -377,7 +378,7 @@ else {
         if(mygroups[selectBox.selectedIndex]["isFull"]){
              $('#invite-btn').prop('disabled', true);
              $('#invite-btn').html("Continue");
-             $('#invite-error').html(mygroups[selectBox.selectedIndex]["size"] + " Group is full. The group size will be increased by 1 if the user accepts.");
+             $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
         }
 
      
