@@ -81,14 +81,19 @@ else {
                 $('#groupid').append("<option value='" + mygroupid + "'>"
                     + mygroups[i]["name"] + "</option>");
             }
-            // initial check for the selection box
+
+
+            // initial check for the selection box (need to add more if's)
             $('#invite-btn').prop('disabled', false);
             $('#invite-btn').html("Send Invite");
             var initialSelectBox = document.getElementById("groupid");
             if(mygroups[initialSelectBox.selectedIndex]["isFull"]){
                  $('#invite-btn').prop('disabled', true);
+                 $('#invite-btn').html("Continue");
                  $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
             }
+
+
             var groups = <?php echo json_encode($user->getGroups()); ?>;
             for (i = 0; i < groups.length; i++) {
                 var link = "./viewgroup.php?groupid=" + groups[i]["groupid"];
