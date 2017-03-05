@@ -80,7 +80,13 @@ else {
                 $('#groupid').append("<option value='" + mygroupid + "'>"
                     + mygroups[i]["name"] + "</option>");
             }
-
+            // initial check for the selection box
+            $('#invite-btn').prop('disabled', false);
+                var initialSelectBox = document.getElementById("groupid");
+                if(mygroups[initialSelectBox.selectedIndex]["isFull"]){
+                     $('#invite-btn').prop('disabled', true);
+                     $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
+            }
             var groups = <?php echo json_encode($user->getGroups()); ?>;
             for (i = 0; i < groups.length; i++) {
                 var link = "./viewgroup.php?groupid=" + groups[i]["groupid"];
@@ -367,9 +373,9 @@ else {
         $('#invite-btn').prop('disabled', false);
         var selectBox = document.getElementById("groupid");
         var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-        if(true){
+        if(mygroups[selectBox.selectedIndex]["isFull"]){
              $('#invite-btn').prop('disabled', true);
-             $('#invite-error').html(selectBox.selectedIndex + " " + selectedValue + " Group is full. The group size will be increased by 1 if the user accepts.")
+             $('#invite-error').html(selectBox.selectedIndex + " " + selectedValue + " Group is full. The group size will be increased by 1 if the user accepts.");
         }
 
      
