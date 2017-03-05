@@ -22,13 +22,14 @@ class Group
      * @param $size
      * @param $maxSize
      */
-    public function __construct($groupid, $name, $size, $maxSize, $class)
+    public function __construct($groupid, $name, $size, $maxSize, $class, $users)
     {
         $this->groupid = $groupid;
         $this->name = $name;
         $this->size = $size;
         $this->maxSize = $maxSize;
         $this->class = $class;
+        $this->users = $users;
     }
 
     /**

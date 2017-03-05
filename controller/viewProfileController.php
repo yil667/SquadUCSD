@@ -34,7 +34,7 @@ function getUserObject($id)
                 $groupRow = mysqli_fetch_assoc($result);
                 array_push($groups, new Group(
                     $groupRow['id'], $groupRow['name'], $groupRow['size'],
-                    $groupRow['maxSize'], $groupRow['class']));
+                    $groupRow['maxSize'], $groupRow['class'], $groupRow['users']));
             }
         }
     }
@@ -63,7 +63,7 @@ function getGroupObject($id)
     $row = mysqli_fetch_assoc($result);
 
     // declare return object
-    $group = new Group($id, $row['name'], $row['size'], $row['maxSize'], $row['class']);
+    $group = new Group($id, $row['name'], $row['size'], $row['maxSize'], $row['class'], "");
     $group->isFull = $group->isFull();
     $group->isMax = $group->isMax();
     // we now need to get the users' info
@@ -88,4 +88,33 @@ function getGroupObject($id)
     $group->setUsers($users);
 
     return $group;
+}
+
+// this returns a boolean array, e.g., [true, false, true],
+// indicating the whether the owner of the profile page is in the groups of the logged
+// in user
+function getInGroupInfo($groups, $id)
+{
+    // initialize empty array
+    $inGroup = Array();
+
+    // loop through each group in the $groups array
+    foreach ($groups as $group)
+    {
+        // separate the comma delimited string of $group->getUsers()
+        $user_arr = explode(",", $group->getUsers());
+        $found = false;
+        foreach ($user_arr as $userid)
+        {
+            // linear search and find the user
+            if ($userid != "" && $userid == $id)
+            {
+                $found = true;
+                break;
+            }
+        }
+        array_push($inGroup, $found);
+    }
+
+    return $inGroup;
 }
