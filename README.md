@@ -31,6 +31,8 @@ This web app allows students to form study groups for the classes they are enrol
 <ol>
    <li>(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile) //don't understand, clarify pls</li> 
    <li>display warning if the group if full already when inviting (backend will resize the group)</li>
+    <li>autocomplete tries to run on viewprofile page for classes when they are static fields</li>
+    <li>check if already in group in viewprofile page, cannot invite to a group user is already a part of</li>
 </ol>
 
 <h2>Front-end recently finished: </h2>
@@ -64,8 +66,7 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
-<li>autocomplete tries to run on viewprofile page for classes when they are static fields</li>
-   <li>check if already in group in viewprofile page, cannot invite to a group user is already a part of</li>
+
 
 </ol>
 
