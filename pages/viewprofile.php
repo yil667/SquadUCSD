@@ -374,10 +374,10 @@ else {
         $('#invite-btn').prop('disabled', false);
         $('#invite-btn').html("Send Invite");
         var selectBox = document.getElementById("groupid");
-        if(true){
+        if(mygroups[selectBox.selectedIndex]["isFull"]){
              $('#invite-btn').prop('disabled', true);
              $('#invite-btn').html("Continue");
-             $('#invite-error').html(selectBox.selectedIndex + " Group is full. The group size will be increased by 1 if the user accepts.");
+             $('#invite-error').html(mygroups[selectBox.selectedIndex]["size"] + " Group is full. The group size will be increased by 1 if the user accepts.");
         }
 
      
