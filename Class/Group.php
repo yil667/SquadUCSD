@@ -11,6 +11,7 @@ class Group
     public $size;
     public $maxSize;
     public $users;
+
     public $isFull;
     public $isMax;
 
