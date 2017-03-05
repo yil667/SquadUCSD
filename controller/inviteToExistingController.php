@@ -35,7 +35,7 @@ function getGroupProfileUrl($groupid)
 
 function generateInviteUrl($senderid, $receiverid, $groupid, $hash)
 {
-    return "http://www.squaducsd.com/pages/invitetoexiting.php?id1=$senderid&id2=$receiverid&groupid=$groupid&hash=$hash";
+    return "http://www.squaducsd.com/pages/acceptexisting.php?id1=$senderid&id2=$receiverid&groupid=$groupid&hash=$hash";
 }
 
 function generateInviteMessage($user, $receiver, $group, $message, $hash)
