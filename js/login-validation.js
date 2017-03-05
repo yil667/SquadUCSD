@@ -17,8 +17,10 @@ $().ready(function () {
                 required: "Your password cannot be empty.",
                 maxlength: "The password your entered was too long. Please check again."
             },
-            email: "Please enter a valid UCSD email address.",
-            maxlength: "The email you entered was too long. Please check again."
+            email: {
+                required: "Your email cannot be empty.",
+                maxlength: "The email you entered was too long. Please check again."
+            }
         },
         // Make sure the form is submitted to the destination defined
         // in the "action" attribute of the form when valid
