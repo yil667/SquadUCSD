@@ -7,10 +7,8 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h1>Add new issues here as well as the issues tab in github</h1>
    <ol>
-    <li>When attempting to login with blank fields, the message, "Please complete your email verification!" appears</li>
-    <li>Password length error message should be the same whether the password is too short or too long. Let Annie or Quinn know when change is complete</li>
-    <li>when requesting to form group, group name is not saved</li>
-    <li>cannot set group size when inviting to form group</li>
+    <li>when requesting to form group, group name is not saved //relax incomplete feature</li>
+    <li>cannot set group size when inviting to form group //in progress</li>
    </ol>
 <h1>As issues are resolved, close issues on issue tab in github and delete entry here</h1>
 
@@ -37,6 +35,8 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>Password length error message should be the same whether the password is too short or too long. Let Annie or Quinn know when change is complete</strike></li>
+   <li><strike>When attempting to login with blank fields, the message, "Please complete your email verification!" appears</strike></li>
    <li><strike>add character checking/autocomplete functionality in invite to form new group name/size</strike></li>
    <li><strike>dynamically display groups in viewprofile page</strike></li>
    <li><strike>member list label hover color darker</strike></li>
