@@ -171,7 +171,7 @@ else {
             if (window.location.href.indexOf("&invite") > -1) {
                 $("#update-info").html("Invitation to group sent.");
             }
-                    $('#invite-btn').attr('disabled', 'disabled');
+            $('#invite-btn').prop('disabled', true);
 
 
             if (window.location.href.indexOf("&message") > -1) {
