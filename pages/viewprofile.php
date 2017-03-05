@@ -83,12 +83,9 @@ else {
             }
 
 
-            // initial check for the selection box (need to add more if's)
-<<<<<<< HEAD
+            // initial check for the selection box (need to add more if
              // check if ingroup full fullfull also clear error message
-=======
             $('#invite-error').html("");
->>>>>>> origin/master
             $('#invite-btn').prop('disabled', false);
             $('#invite-btn').html("Send Invite");
             var initialSelectBox = document.getElementById("groupid");
@@ -382,9 +379,11 @@ else {
 
  <script type="text/javascript">
     $('#groupid').change(function(){
+        $('#invite-error').html("")
         $('#invite-btn').prop('disabled', false);
         $('#invite-btn').html("Send Invite");
         var selectBox = document.getElementById("groupid");
+        // initial check for the selection box (need to add more if
         // check if ingroup full fullfull also clear error message
         if(mygroups[selectBox.selectedIndex]["isFull"]){
              $('#invite-btn').prop('disabled', true);
