@@ -32,9 +32,14 @@ function getUserObject($id)
                 $sql = "SELECT * FROM groupProfile WHERE id='$groupId'";
                 $result = mysqli_query($conn, $sql);
                 $groupRow = mysqli_fetch_assoc($result);
-                array_push($groups, new Group(
+
+                $group = new Group(
                     $groupRow['id'], $groupRow['name'], $groupRow['size'],
-                    $groupRow['maxSize'], $groupRow['class'], $groupRow['users']));
+                    $groupRow['maxSize'], $groupRow['class'], $groupRow['users']);
+                $group->isFull = $group->isFull();
+                $group->isMax = $group->isMax();
+
+                array_push($groups, $group);
             }
         }
     }
