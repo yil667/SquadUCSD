@@ -59,7 +59,7 @@ else {
     <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script src="../js/message-validation.js"></script>
-    <script src="../js/form-validation.js"></script>
+    <script src="../js/create-validation.js"></script>
     <script src="../js/invite-validation.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
