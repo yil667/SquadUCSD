@@ -301,8 +301,9 @@ else {
                     </div>
 
                     <div class="modal-footer">
+                        <h4 id="invite-error"><h4>
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
+                        <button id="invite-btn" type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
 
                 </form>
@@ -339,7 +340,6 @@ else {
                     </div>
 
                     <div class="modal-footer">
-                        <h4 id="form-error"><h4>
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
                     </div>
@@ -349,6 +349,16 @@ else {
     </div>
 </div>
 
+ <script type="text/javascript">
+    $('#groupid').change(function(){
+        $('#invite-btn').attr('disabled', 'disabled');
+
+     
+   
+    });
+
+
+  </script>
 
 </body>
 
