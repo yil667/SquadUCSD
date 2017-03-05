@@ -3,6 +3,7 @@
 include_once "loginController.php";
 include_once "dbController.php";
 include_once "sendInviteAndMessageController.php";
+include_once "generalLibrary.php";
 
 session_start();
 
@@ -15,6 +16,7 @@ handleNotLoggedIn();
 $userid = getUserId();
 $receiverid = $_SESSION['profileid'];
 $fromurl = $_SESSION['fromurl'];
+$fromurl = clearFlags($fromurl);
 
 $conn = connectToDB();
 

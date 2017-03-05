@@ -4,6 +4,7 @@ include_once "loginController.php";
 include_once "dbController.php";
 include_once "inviteToExistingController.php";
 include_once "viewProfileController.php";
+include_once "generalLibrary.php";
 
 // absolute max possible size for all groups
 // modifiable
@@ -18,6 +19,8 @@ $conn = connectToDB();
 $userid = getUserId();
 $receiverid = $_SESSION['profileid'];
 $fromurl = $_SESSION['fromurl'];
+$fromurl = clearFlags($fromurl);
+
 $message = ($_POST['messageboxinvite']);
 
 $groupid = $_POST['groupid'];

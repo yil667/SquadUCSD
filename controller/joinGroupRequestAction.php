@@ -4,6 +4,7 @@ include_once "loginController.php";
 include_once "dbController.php";
 include_once "requestToJoinController.php";
 include_once "viewProfileController.php";
+include_once "generalLibrary.php";
 
 session_start();
 
@@ -15,6 +16,7 @@ $userid = getUserId();
 $groupid = $_SESSION['groupid']; //?groupid=34
 $group = getGroupObject($groupid);
 $fromurl = $_SESSION['fromurl'];
+$fromurl = clearFlags($fromurl);
 $message = $_POST['messageboxreq'];
 
 $inGroup = $group->hasUser($userid);
