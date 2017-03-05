@@ -16,10 +16,14 @@ function updateGroupProfile($id2, $groupid, $MAX_GROUP_SIZE, $conn)
         return false;
 
     $row = mysqli_fetch_assoc($result);
-    if($row['size'] >= $MAX_GROUP_SIZE)
+    if ($row['size'] >= $MAX_GROUP_SIZE)
         return false;
 
-    $sql = "UPDATE groupProfile SET users=CONCAT(users, ',$id2'), size=size+1 WHERE id='$groupid';";
+    if ($row['size'] == $row['maxSize'])
+        $sql = "UPDATE groupProfile SET users=CONCAT(users, ',$id2'), size=size+1, maxSize=maxSize+1 WHERE id='$groupid';";
+    else
+        $sql = "UPDATE groupProfile SET users=CONCAT(users, ',$id2'), size=size+1 WHERE id='$groupid';";
+
     mysqli_query($conn, $sql);
     return true;
 }
