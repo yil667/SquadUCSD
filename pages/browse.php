@@ -58,7 +58,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                         </div>
                     </div>
 
-                    <div class="text-center buttons" id="button">
+                    <div class="text-center buttons col-md-12" id="button">
                         <button type="button" class="btn btn-primary" role="button">View Profile
                         </button>
                     </div>
