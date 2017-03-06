@@ -92,7 +92,11 @@ else {
                 $('#invite-btn').prop('disabled', false);
                 $('#invite-btn').html("Send Invite");
                 var initialSelectBox = document.getElementById("groupid");
-                if (isInGroup[initialSelectBox.selectedIndex]) {
+                if(mygroups.length == 0){
+                    $('#invite-btn').prop('disabled', true);
+                    $('#invite-error').html("Sorry, you don't have any existing groups...");
+                }
+                else if (isInGroup[initialSelectBox.selectedIndex]) {
                     $('#invite-btn').prop('disabled', true);
                     $('#invite-error').html("The user is already in the group you selected!");
                 }
@@ -395,7 +399,11 @@ else {
         var selectBox = document.getElementById("groupid");
         // initial check for the selection box (need to add more if
         // check if ingroup full fullfull also clear error message
-        if(isInGroup[selectBox.selectedIndex]){
+        if(mygroups.length == 0){
+            $('#invite-btn').prop('disabled', true);
+            $('#invite-error').html("Sorry, you don't have any existing groups...");
+        }
+        else if(isInGroup[selectBox.selectedIndex]){
                 $('#invite-btn').prop('disabled', true);
                 $('#invite-error').html("The user is already in the group you selected!");
         }
