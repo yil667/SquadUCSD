@@ -10,7 +10,7 @@
     color: #262626;
 }
 
-#classes > p.col-md-3.list-group-item{
+#classes > a.col-md-3.list-group-item{
     margin-right: 2px;
 }
 
