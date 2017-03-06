@@ -53,9 +53,9 @@ $_SESSION['profileid'] = $_SESSION['id'];
                     <div class="basicinfo">
                         <label for="classes">Matched Classes:</label>
                         <div class="list-inline" name="classes" id="classes">
-                            <a class="list-group-item">CSE11</a>
-                            <a class="list-group-item">CSE11</a>
-                            <a class="list-group-item">CSE11</a>
+                            <a class="list-inline-item">CSE11</a>
+                            <a class="list-inline-item">CSE11</a>
+                            <a class="list-inline-item">CSE11</a>
                         </div>
                     </div>
 
