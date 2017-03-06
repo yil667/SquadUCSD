@@ -404,7 +404,7 @@ else {
             $('#invite-btn').prop('disabled', true);
             $('#invite-error').html("The group has reached its maximum capacity(10).");
         }
-
+        // need more testing
      
    
     });
