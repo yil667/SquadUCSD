@@ -88,7 +88,21 @@ else {
 
                 // initial check for the selection box (need to add more if
                 // check if ingroup full fullfull also clear error message
-              
+                $('#invite-error').html("");
+                $('#invite-btn').prop('disabled', false);
+                $('#invite-btn').html("Send Invite");
+                var initialSelectBox = document.getElementById("groupid");
+                if (isInGroup[initialSelectBox.selectedIndex]) {
+                    $('#invite-btn').prop('disabled', true);
+                    $('#invite-error').html("The user is already in the group you selected!");
+                }
+                else if (mygroups[initialSelectBox.selectedIndex]["isFull"]) {
+                    $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
+                }
+                else if (mygroups[initialSelectBox.selectedIndex]["isMax"]) {
+                    $('#invite-btn').prop('disabled', true);
+                    $('#invite-error').html("The group has reached its maximum capacity(10).");
+                }
             }
 
 
