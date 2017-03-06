@@ -90,10 +90,12 @@ else {
             $('#invite-btn').html("Send Invite");
             var initialSelectBox = document.getElementById("groupid");
             if(mygroups[initialSelectBox.selectedIndex]["isFull"]){
-                 $('#invite-btn').prop('disabled', true);
-                 $('#invite-btn').html("Continue");
-                 $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
+                $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
             }
+            else if(mygroups[selectBox.selectedIndex]["isMax"]){
+                $('#invite-btn').prop('disabled', true);
+                $('#invite-error').html("The group has reached its maximum capacity(10).");
+            }   
 
 
             var groups = <?php echo json_encode($user->getGroups()); ?>;
@@ -386,9 +388,11 @@ else {
         // initial check for the selection box (need to add more if
         // check if ingroup full fullfull also clear error message
         if(mygroups[selectBox.selectedIndex]["isFull"]){
-             $('#invite-btn').prop('disabled', true);
-             $('#invite-btn').html("Continue");
-             $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
+             $('#invite-error').html("The group is full. The group size will be increased by 1 if the user accepts.");
+        }
+        else if(mygroups[selectBox.selectedIndex]["isMax"]){
+            $('#invite-btn').prop('disabled', true);
+            $('#invite-error').html("The group has reached its maximum capacity(10).");
         }
 
      
