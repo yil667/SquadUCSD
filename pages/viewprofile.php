@@ -73,35 +73,37 @@ else {
             $('#common').load('./common.php');
 
             var displayButtons = <?php echo json_encode($displayButtons); ?>;
+            var loggedIn = <?php echo json_encode(isLoggedIn()); ?>;
+            if(loggedIn) {
+                mygroups = <?php echo json_encode($self->getGroups()); ?>;
+                isInGroup = <?php echo json_encode($inGroup); ?>;
+                for (i = 0; i < mygroups.length; i++) {
+                    // var is full
+                    // var is
+                    var mygroupid = mygroups[i]["groupid"];
+                    $('#groupid').append("<option value='" + mygroupid + "'>"
+                        + mygroups[i]["name"] + "</option>");
+                }
 
-            mygroups = <?php echo json_encode($self->getGroups()); ?>;
-            isInGroup = <?php echo json_encode($inGroup); ?>;
-            for (i = 0; i < mygroups.length; i++) {
-                // var is full
-                // var is
-                var mygroupid = mygroups[i]["groupid"];
-                $('#groupid').append("<option value='" + mygroupid + "'>"
-                    + mygroups[i]["name"] + "</option>");
-            }
 
-
-            // initial check for the selection box (need to add more if
-             // check if ingroup full fullfull also clear error message
-            $('#invite-error').html("");
-            $('#invite-btn').prop('disabled', false);
-            $('#invite-btn').html("Send Invite");
-            var initialSelectBox = document.getElementById("groupid");
-            if(isInGroup[initialSelectBox.selectedIndex]){
-                $('#invite-btn').prop('disabled', true);
-                $('#invite-error').html("The user is already in the group you selected!");
+                // initial check for the selection box (need to add more if
+                // check if ingroup full fullfull also clear error message
+                $('#invite-error').html("");
+                $('#invite-btn').prop('disabled', false);
+                $('#invite-btn').html("Send Invite");
+                var initialSelectBox = document.getElementById("groupid");
+                if (isInGroup[initialSelectBox.selectedIndex]) {
+                    $('#invite-btn').prop('disabled', true);
+                    $('#invite-error').html("The user is already in the group you selected!");
+                }
+                else if (mygroups[initialSelectBox.selectedIndex]["isFull"]) {
+                    $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
+                }
+                else if (mygroups[selectBox.selectedIndex]["isMax"]) {
+                    $('#invite-btn').prop('disabled', true);
+                    $('#invite-error').html("The group has reached its maximum capacity(10).");
+                }
             }
-            else if(mygroups[initialSelectBox.selectedIndex]["isFull"]){
-                $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
-            }
-            else if(mygroups[selectBox.selectedIndex]["isMax"]){
-                $('#invite-btn').prop('disabled', true);
-                $('#invite-error').html("The group has reached its maximum capacity(10).");
-            }   
 
 
             var groups = <?php echo json_encode($user->getGroups()); ?>;
