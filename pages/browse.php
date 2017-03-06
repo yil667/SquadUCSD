@@ -51,11 +51,11 @@ $_SESSION['profileid'] = $_SESSION['id'];
                 <div class="panel-heading"><h4>Name</h4></div>
                 <div class="panel-body">
                     <div class="basicinfo">
-                        <div class="list-inline">
-                            <label for="classes">Matched Classes:</label>
-                            <p class="list-group-item" name="classes" id="classes">CSE11</p>
-                            <p class="list-group-item" name="classes" id="classes">CSE11</p>
-                            <p class="list-group-item" name="classes" id="classes">CSE11</p>
+                        <label for="classes">Matched Classes:</label>
+                        <div class="list-inline" name="classes" id="classes">
+                            <a class="list-group-item">CSE11</a>
+                            <a class="list-group-item">CSE11</a>
+                            <a class="list-group-item">CSE11</a>
                         </div>
                     </div>
 
