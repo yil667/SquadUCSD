@@ -56,9 +56,10 @@ $_SESSION['profileid'] = $_SESSION['id'];
                             <p class="list-group-item" name="classes" id="classes">CSE11</p>
                         </div>
                     </div>
-                    <div class="button">
-                        <button type="button" class="btn btn-primary" role="button" data-toggle="modal"
-                                data-target="#messageModal">View Profile
+
+
+                    <div class="text-center buttons" id="button">
+                        <button type="button" class="btn btn-primary" role="button">View Profile
                         </button>
                     </div>
                 </div>
