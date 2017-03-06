@@ -68,12 +68,14 @@ else {
     <script src="../js/class-list.js"></script>
     <script type="text/javascript">
         var mygroups;
+        var isInGroup;
         $(document).ready(function () {
             $('#common').load('./common.php');
 
             var displayButtons = <?php echo json_encode($displayButtons); ?>;
 
             mygroups = <?php echo json_encode($self->getGroups()); ?>;
+            isInGroup = <?php echo json_encode($inGroup); ?>;
             for (i = 0; i < mygroups.length; i++) {
                 // var is full
                 // var is
@@ -89,7 +91,11 @@ else {
             $('#invite-btn').prop('disabled', false);
             $('#invite-btn').html("Send Invite");
             var initialSelectBox = document.getElementById("groupid");
-            if(mygroups[initialSelectBox.selectedIndex]["isFull"]){
+            if(isInGroup[initialSelectBox.selectedIndex]){
+                $('#invite-btn').prop('disabled', true);
+                $('#invite-error').html("The user is already in the group you selected!");
+            }
+            else if(mygroups[initialSelectBox.selectedIndex]["isFull"]){
                 $('#invite-error').html("Group is full. The group size will be increased by 1 if the user accepts.");
             }
             else if(mygroups[selectBox.selectedIndex]["isMax"]){
@@ -387,7 +393,11 @@ else {
         var selectBox = document.getElementById("groupid");
         // initial check for the selection box (need to add more if
         // check if ingroup full fullfull also clear error message
-        if(mygroups[selectBox.selectedIndex]["isFull"]){
+        if(isInGroup[selectBox.selectedIndex]){
+                $('#invite-btn').prop('disabled', true);
+                $('#invite-error').html("The user is already in the group you selected!");
+        }
+        else if(mygroups[selectBox.selectedIndex]["isFull"]){
              $('#invite-error').html("The group is full. The group size will be increased by 1 if the user accepts.");
         }
         else if(mygroups[selectBox.selectedIndex]["isMax"]){
