@@ -82,7 +82,7 @@ else {
                 $("#buttons").html(content);
             }
             else if (inGroup) {
-                content = "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Group</button>";
+                content = "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Group</button> " +  "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#messagegroupModal'>Message</button>";
             }
             else {
                 //unused var???
@@ -181,6 +181,29 @@ else {
                     <div class="modal-footer">
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         <button class="btn btn-primary">Send Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="messagegroupModal" tabindex="-1" role="dialog" aria-labelledby="messagegroupLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="messagegroupLabel">Message Group Members</h3>
+            </div>
+            <div class="modal-body">
+                <form action="../controller/messageGroupAction.php" role="form" method="POST" id="messagegroupform">
+                    <div class="form-group">
+                        <label name="message" id="message" for="messageboxreq">Message</label>
+                        <textarea class="form-control" name="messagegroup" id="messagegroup" rows="3"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button class="btn btn-primary">Send</button>
                     </div>
                 </form>
             </div>
