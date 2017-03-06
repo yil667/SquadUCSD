@@ -10,7 +10,7 @@
     color: #262626;
 }
 
-#classes > list-group-item{
+#classes > p.col-md-3.list-group-item{
     padding-right: 2px
 }
 
