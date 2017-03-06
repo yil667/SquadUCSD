@@ -1,21 +1,15 @@
 $().ready(function () {
-    $("#inviteForm").validate({
+    $("#requestForm").validate({
         // Specify validation rules
         rules: {
-            messageboxinvite: {
+            messageboxreq: {
                 maxlength: 200
-            },
-            groupid: {
-                required: true
             }
         },
         // Specify validation error messages
         messages: {
-            messageboxinvite: {
+            messageboxreq: {
                 maxlength: "Your message should be less than 200 characters."
-            },
-            groupid: {
-                required: "You must select a group"
             }
         },
         // Make sure the form is submitted to the destination defined

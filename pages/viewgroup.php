@@ -43,10 +43,13 @@ else {
     <meta name="author" content="Zifan Yang">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+	
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+	 <!-- jQuery form validation -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="../js/message-validation.js"></script>
+    <script src="../js/request-validation.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -173,7 +176,7 @@ else {
                 <h3 id="requestLabel">Request to Join Group</h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/joinGroupRequestAction.php" role="form" method="POST" id="messageform">
+                <form action="../controller/joinGroupRequestAction.php" role="form" method="POST" id="requestForm">
                     <div class="form-group">
                         <label name="message" id="message" for="messageboxreq">Message</label>
                         <textarea class="form-control" name="messageboxreq" id="messageboxreq" rows="3"></textarea>
@@ -196,10 +199,10 @@ else {
                 <h3 id="messagegroupLabel">Message Group Members</h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/messageGroupAction.php" role="form" method="POST" id="messagegroupform">
+                <form action="../controller/messageGroupAction.php" role="form" method="POST" id="messageForm">
                     <div class="form-group">
                         <label name="message" id="message" for="messageboxreq">Message</label>
-                        <textarea class="form-control" name="messagegroup" id="messagegroup" rows="3"></textarea>
+                        <textarea class="form-control" name="sendmessageform" id="sendmessageform" rows="3"></textarea>
                     </div>
                     <div class="modal-footer">
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
