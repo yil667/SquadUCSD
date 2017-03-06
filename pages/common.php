@@ -25,9 +25,7 @@ include_once '../controller/startUserSession.php';
                 "<li><a href='./viewprofile.php'>View Profile</a></li>" +
                 "<li><a href='managegroups.php'>Manage Groups</a></li>" +
                 "<li><a href='../controller/logoutAction.php'>" +
-                "<span class='glyphicon glyphicon-log-out'>" +
-                "</span> Logout</a></li></ul></li>";
-
+                "<span class='glyphicon glyphicon-log-out'>" + "</span> Logout</a></li></ul></li>";
             if (isUserLoggedIn) {
                 $('#navList li:nth-child(1)').after(browseNav);
                 $("#rightNav").html(loggedInContent);
@@ -54,7 +52,7 @@ include_once '../controller/startUserSession.php';
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left" id = "navList">
                 <li><a href="./index.php">Home</a></li>
-                <li><a href='#'>Contact</a></li>
+                <li><a href='./contact.php'>Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" id="rightNav"></ul>
         </div>
