@@ -16,6 +16,8 @@ include_once '../controller/startUserSession.php';
             var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
             var userFirstName = <?php echo json_encode($firstName); ?>;
             var defaultContent = "<li><a href='./register.php'><span class='glyphicon glyphicon-user'></span> Register</a></li><li><a href='./login.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
+            var browseNav =
+                "<li><a href='#'>Browse</a></li>";
             var loggedInContent =
                 "<li class='dropdown'>" +
                 "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + userFirstName + " <span class='caret'></span></a><ul class='dropdown-menu'>" +
@@ -23,16 +25,17 @@ include_once '../controller/startUserSession.php';
                 "<li><a href='./viewprofile.php'>View Profile</a></li>" +
                 "<li><a href='managegroups.php'>Manage Groups</a></li>" +
                 "<li><a href='../controller/logoutAction.php'>" +
-                "<span class='glyphicon glyphicon-log-out'>" + "</span> Logout</a></li></ul></li>";
+                "<span class='glyphicon glyphicon-log-out'>" +
+                "</span> Logout</a></li></ul></li>";
 
             if (isUserLoggedIn) {
+                $('#navList li:nth-child(1)').after(browseNav);
                 $("#rightNav").html(loggedInContent);
                 $(".dropdown-toggle").dropdown();
             }
             else {
                 $("#rightNav").html(defaultContent);
             }
-
         });
     </script>
 
@@ -49,11 +52,9 @@ include_once '../controller/startUserSession.php';
             <a class="navbar-brand" href="./index.php">squaducsd</a>
         </div>
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-left">
+            <ul class="nav navbar-nav navbar-left" id = "navList">
                 <li><a href="./index.php">Home</a></li>
-                <li><a href="#">Browse</a></li>
-                <li><a href="#">Contact</a></li>
-
+                <li><a href='#'>Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" id="rightNav"></ul>
         </div>
