@@ -358,7 +358,29 @@ else {
 </div>
 
  <script type="text/javascript">
+    $('#groupid').change(function(){
+        $('#invite-error').html("")
+        $('#invite-btn').prop('disabled', false);
+        $('#invite-btn').html("Send Invite");
+        var selectBox = document.getElementById("groupid");
+        // initial check for the selection box (need to add more if
+        // check if ingroup full fullfull also clear error message
+        if(isInGroup[selectBox.selectedIndex]){
+                $('#invite-btn').prop('disabled', true);
+                $('#invite-error').html("The user is already in the group you selected!");
+        }
+        else if(mygroups[selectBox.selectedIndex]["isFull"]){
+             $('#invite-error').html("The group is full. The group size will be increased by 1 if the user accepts.");
+        }
+        else if(mygroups[selectBox.selectedIndex]["isMax"]){
+            $('#invite-btn').prop('disabled', true);
+            $('#invite-error').html("The group has reached its maximum capacity(10).");
+        }
+        // need more testing
+     
    
+    });
+
 
   </script>
 
