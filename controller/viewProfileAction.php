@@ -11,12 +11,13 @@ $displayButtons = isLoggedIn() && ($id != getUserId());
 $user = getUserObject($id);
 $myGroup = 0;
 $inGroup = 0;
+
 if(isLoggedIn()) {
     $myGroup = getUserObject(getUserId())->getGroups();
 
     // this returns a boolean array, e.g., [true, false, true],
     // indicating the whether the owner of the profile page is in the groups of the logged
     // in user
-    $inGroup = getInGroupInfo($self->getGroups(), $id);
+    $inGroup = getInGroupInfo($myGroup, $id);
 }
 ?>
