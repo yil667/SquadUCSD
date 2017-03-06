@@ -150,6 +150,8 @@ else if (!$inGroup) {
                                         onclick="location.href=window.location.href.replace('edit','view')"
                                         class="btn btn-primary">View Group Profile
                                 </button>
+                                <button type="button" class="btn btn-primary" data-toggle='modal'
+                                    data-target="#messagegroupModal">Message</button>
                                 <button type="submit" class="btn btn-primary">Save Changes</button>
                                 <button type="button" class="btn btn-danger" data-toggle='modal'
                                         data-target="#leaveModal">Leave Group
@@ -175,6 +177,29 @@ else if (!$inGroup) {
                 <button type="button" onclick="location.href='../controller/leaveGroupAction.php'"
                         class="btn btn-primary">Confirm
                 </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="messagegroupModal" tabindex="-1" role="dialog" aria-labelledby="messagegroupLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="messagegroupLabel">Message Group Members</h3>
+            </div>
+            <div class="modal-body">
+                <form action="../controller/messageGroupAction.php" role="form" method="POST" id="messageForm">
+                    <div class="form-group">
+                        <label name="message" id="message" for="messageboxreq">Message</label>
+                        <textarea class="form-control" name="sendmessageform" id="sendmessageform" rows="3"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button class="btn btn-primary">Send</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
