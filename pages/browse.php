@@ -12,7 +12,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
 ?>
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="../css/search_result_entry.css"/>
+<link rel="stylesheet" type="text/css" href="../css/browse.css"/>
 <link rel="stylesheet" type="text/css" href="../css/common.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
@@ -26,9 +26,6 @@ $_SESSION['profileid'] = $_SESSION['id'];
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!-- UI for class drop down -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../js/class-list.js"></script>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- jQuery form validation -->
