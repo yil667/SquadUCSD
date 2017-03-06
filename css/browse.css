@@ -10,9 +10,11 @@
     color: #f2f2f2;
 }
 
+#classes > a.list-group-item:hover {
+    background-color: #d8d8d8;
+}
+
 .panel-custom > .panel-heading {
-    padding-left: 20px;
-    padding-top: 10px;
     padding-bottom: 10px;
     vertical-align: middle;
     background-color: #333333;
