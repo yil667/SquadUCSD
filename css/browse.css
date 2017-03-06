@@ -10,7 +10,11 @@
     color: #262626;
 }
 
-#classes > a.list-group-item:hover {
+#classes > list-inline-item{
+    padding-right: 2px
+}
+
+#classes > a.list-inline-item:hover {
     background-color: #d8d8d8;
 }
 
