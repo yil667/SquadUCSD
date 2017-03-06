@@ -7,7 +7,10 @@
 }
 
 .panel-custom > .panel-heading h4 {
-    color: #dcdcdc;
+    color: #f2f2f2;
+}
+.panel-custom > panel-heading {
+    background-color: #dcdcdc;
 }
 
 #classes > a.list-group-item:hover {
