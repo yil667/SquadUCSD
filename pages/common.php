@@ -17,7 +17,7 @@ include_once '../controller/startUserSession.php';
             var userFirstName = <?php echo json_encode($firstName); ?>;
             var defaultContent = "<li><a href='./register.php'><span class='glyphicon glyphicon-user'></span> Register</a></li><li><a href='./login.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
             var browseNav =
-                "<li><a href='#'>Browse</a></li>";
+                "<li><a href='./browse.php'>Browse</a></li>";
             var loggedInContent =
                 "<li class='dropdown'>" +
                 "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + userFirstName + " <span class='caret'></span></a><ul class='dropdown-menu'>" +

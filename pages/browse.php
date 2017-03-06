@@ -51,18 +51,14 @@ $_SESSION['profileid'] = $_SESSION['id'];
                 <div class="panel-heading"><h4>Name</h4></div>
                 <div class="panel-body">
                     <div class="basicinfo">
-                        <label for="classes">Matched Classes:</label>
-                        <p name="classes" id="classes">CSE11, CSE12, CSE13</p>
+                        <div class="list-group">
+                            <label for="classes">Matched Classes:</label>
+                            <p class="list-group-item" name="classes" id="classes">CSE11</p>
+                        </div>
                     </div>
                     <div class="button">
                         <button type="button" class="btn btn-primary" role="button" data-toggle="modal"
-                                data-target="#messageModal">Message
-                        </button>
-                        <button type="button" class="btn btn-success" role="button" data-toggle="modal"
-                                data-target="#inviteModal">Invite to Existing Group
-                        </button>
-                        <button type="button" class="btn btn-success" role="button" data-toggle="modal"
-                                data-target="#formModal">Invite to Form New Group
+                                data-target="#messageModal">View Profile
                         </button>
                     </div>
                 </div>
