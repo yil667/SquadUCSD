@@ -9,9 +9,6 @@
 .panel-custom > .panel-heading h4 {
     color: #f2f2f2;
 }
-.panel-custom > .panel-heading {
-    background-color: #dcdcdc;
-}
 
 #classes > a.list-group-item:hover {
     background-color: #d8d8d8;
@@ -20,7 +17,7 @@
 .panel-custom > .panel-heading {
     padding-bottom: 10px;
     vertical-align: middle;
-    background-color: #333333;
+    background-color: #dcdcdc;
     border-color: transparent;
 }
 
