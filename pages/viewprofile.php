@@ -74,8 +74,8 @@ else {
 
             var displayButtons = <?php echo json_encode($displayButtons); ?>;
             var loggedIn = <?php echo json_encode(isLoggedIn()); ?>;
-            if(false) {
-                mygroups = <?php echo json_encode($self->getGroups()); ?>;
+            if(loggedIn) {
+                mygroups = <?php echo json_encode($myGroup()); ?>;
                 isInGroup = <?php echo json_encode($inGroup); ?>;
                 for (i = 0; i < mygroups.length; i++) {
                     // var is full

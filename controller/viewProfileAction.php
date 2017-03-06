@@ -9,9 +9,10 @@ $id = $_SESSION['profileid']; // fetches the id from the url
 $displayButtons = isLoggedIn() && ($id != getUserId());
 
 $user = getUserObject($id);
-
+$myGroup = 0;
+$inGroup = 0;
 if(isLoggedIn()) {
-    $self = getUserObject(getUserId());
+    $myGroup = getUserObject(getUserId())->getGroups();
 
     // this returns a boolean array, e.g., [true, false, true],
     // indicating the whether the owner of the profile page is in the groups of the logged
