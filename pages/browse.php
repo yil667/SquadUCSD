@@ -57,7 +57,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
 
                     <div class="form-group col-md-6">
                         <label for="searchtype" class="control-label">Type</label>
-                        <select class="col-md-9" id="searchtype" name="searchtype">
+                        <select id="searchtype" name="searchtype">
                             <option value="users">Users</option>
                             <option value="groups">Groups</option>
                         </select>
