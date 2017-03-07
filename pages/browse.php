@@ -72,41 +72,39 @@ $_SESSION['profileid'] = $_SESSION['id'];
         </div>
     </div>
     <div class="col-md-8">
-        <div class="panel panel-custom main-panel">
-            <div class="panel-heading" name="mainHeading" id="mainHeading"><h3>Search Results</h3></div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="panel panel-custom col-md-6 result-panel">
-                        <div class="panel-heading"><h4>Name</h4></div>
-                        <div class="panel-body">
+        <div class="jumbotron">
+            <h1>Search Results</h1>
+            <div class="panel panel-custom col-md-6 result-panel">
+                <div class="panel-heading"><h4>Name</h4></div>
+                <div class="panel-body">
 
-                            <form class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="major" class="col-md-3 control-label">Major</label>
-                                    <div class="col-md-9">
-                                        <p class="form-control-static" name="major" id="major"></p>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="courses" class="col-md-3 control-label">Classes</label>
-                                    <div class="col-md-9">
-                                        <div class="list-group" id="courselist" name="courselist">
-                                            <!-- contents here are inserted dynamically -->
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="text-center buttons col-md-12" id="button">
-                                    <button type="button" class="btn btn-primary" role="button">View Profile
-                                    </button>
-                                </div>
-                            </form>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="major" class="col-md-3 control-label">Major</label>
+                            <div class="col-md-9">
+                                <p class="form-control-static" name="major" id="major"></p>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="form-group">
+                            <label for="courses" class="col-md-3 control-label">Classes</label>
+                            <div class="col-md-9">
+                                <div class="list-group" id="courselist" name="courselist">
+                                    <!-- contents here are inserted dynamically -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center buttons col-md-12" id="button">
+                            <button type="button" class="btn btn-primary" role="button">View Profile
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
+</div>
 </body>
 </html>
