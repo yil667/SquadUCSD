@@ -44,10 +44,10 @@ $_SESSION['profileid'] = $_SESSION['id'];
 
 <div id="common"></div>
 <div class="container-fluid">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-3 col-md-offset-3">
         <div class="panel panel-custom">
             <div class="panel-body">
-                <form class="form-inline" role="form" id="searchForm" name="searchForm" method="POST"
+                <form class="form-horizontal" role="form" id="searchForm" name="searchForm" method="POST"
                       action="../controller/searchAction.php">
 
 
@@ -74,7 +74,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6 col-md-offset-1">
         <div class="panel panel-custom">
             <div class="row">
                 <div class="panel panel-custom col-md-10 col-md-offset-1">
