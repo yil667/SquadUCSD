@@ -6,18 +6,19 @@
     text-align: center;
 }
 
-.mainHeading h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #f2f2f2;
-}
-
 .mainHeading {
     padding-left: 20px;
     vertical-align: middle;
     background-color: #333333;
     border-color: transparent;
 }
+
+.mainHeading h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #f2f2f2;
+}
+
 
 .panel-custom > .panel-heading h4 {
     color: #262626;
