@@ -10,6 +10,10 @@
     color: #262626;
 }
 
+#searchForm{
+    display: inline-flex;
+}
+
 #classes > a.col-md-3.list-group-item{
     margin-right: 2px;
 }
