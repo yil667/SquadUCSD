@@ -44,8 +44,36 @@ $_SESSION['profileid'] = $_SESSION['id'];
 
 <div id="common"></div>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-6 col-md-offset-2">
+        <div class="panel panel-custom">
+            <div class="panel-body">
+                <form class="form-horizontal" role="form" id="searchForm" name="searchForm" method="POST"
+                      action="../controller/searchAction.php">
+
+                    <div class="form-group">
+                        <label for="class" class="col-md-2 control-label">Course</label>
+                        <input type="text" class="col-md-3 form-control" name="class" id="class">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="searchtype" class="col-md-2 control-label">Type</label>
+                        <select id="searchtype" name="searchtype">
+
+                        </select>
+                    </div>
+
+                    <div class="form-group" name="submit" id="submit">
+                        <div class="text-center buttons col-md-2" id="button">
+                            <button type="submit" class="btn btn-primary" role="button">Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <div class="row">
             <div class="panel panel-custom">
                 <div class="panel-heading"><h4>Name</h4></div>
                 <div class="panel-body">
