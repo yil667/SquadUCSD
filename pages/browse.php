@@ -104,15 +104,6 @@ $_SESSION['profileid'] = $_SESSION['id'];
                             </form>
                         </div>
                     </div>
-                    <div class="panel panel-custom col-md-6 result-panel">
-                        <div class="panel-heading"><h4>Name</h4></div>
-                        <div class="panel-body">
-                            <div class="text-center buttons col-md-12" id="button">
-                                <button type="button" class="btn btn-primary" role="button">View Profile
-                                </button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
