@@ -48,7 +48,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
         <div class="panel panel-custom">
             <div class="panel-body">
                 <row>
-                    <form class="form-horizontal" role="form" id="searchForm" name="searchForm" method="POST"
+                    <form class="form" role="form" id="searchForm" name="searchForm" method="POST"
                           action="../controller/searchAction.php">
 
 
