@@ -46,7 +46,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
 <div class="container-fluid">
     <div class="col-md-2 col-md-offset-1">
         <div class="panel panel-custom">
-            <div class="panel-body mainpanel">
+            <div class="panel-body main-panel">
                 <row>
                     <form class="form" role="form" id="searchForm" name="searchForm" method="POST"
                           action="../controller/searchAction.php">
@@ -86,6 +86,22 @@ $_SESSION['profileid'] = $_SESSION['id'];
                                 <a class="col-md-3 list-group-item">CSE11</a>
                             </div>
 
+                            <div class="list-group">
+                                <label for="major" class="col-md-3 control-label">Major</label>
+                                <div class="col-md-9">
+                                    <p class="form-control-static" name="major" id="major"></p>
+                                </div>
+                            </div>
+
+                            <div class="list-group">
+                                <label for="courses" class="col-md-3 control-label">Classes</label>
+                                <div class="col-md-9">
+                                    <div class="list-group" id="courselist" name="courselist">
+                                        <!-- contents here are inserted dynamically -->
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="text-center buttons col-md-12" id="button">
                                 <button type="button" class="btn btn-primary" role="button">View Profile
                                 </button>
@@ -95,13 +111,6 @@ $_SESSION['profileid'] = $_SESSION['id'];
                     <div class="panel panel-custom col-md-6 result-panel">
                         <div class="panel-heading"><h4>Name</h4></div>
                         <div class="panel-body">
-                            <label for="classes control-label">Matched Classes:</label>
-                            <div class="list-group" name="classes" id="classes">
-                                <a class="col-md-3 list-group-item">CSE11</a>
-                                <a class="col-md-3 list-group-item">CSE11</a>
-                                <a class="col-md-3 list-group-item">CSE11</a>
-                            </div>
-
                             <div class="text-center buttons col-md-12" id="button">
                                 <button type="button" class="btn btn-primary" role="button">View Profile
                                 </button>
