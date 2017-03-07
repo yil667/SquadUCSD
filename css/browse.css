@@ -23,8 +23,8 @@
 }
 
 .resultPanel{
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .panel-custom > .panel-heading {
