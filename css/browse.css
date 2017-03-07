@@ -21,7 +21,8 @@
 }
 
 #course{
-    flex: 1 auto;
+    flex-grow: 1;
+    margin-left: 2px;
 }
 
 #typeFormGroup{
@@ -30,7 +31,8 @@
 }
 
 #searchtype{
-    flex: 1 auto;
+    flex-grow: 1;
+    margin-left: 2px;
 }
 
 #classes > a.col-md-3.list-group-item{
