@@ -44,7 +44,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
 
 <div id="common"></div>
 <div class="container-fluid">
-    <div class="col-md-6 col-md-offset-2">
+    <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-custom">
             <div class="panel-body">
                 <form class="form-inline" role="form" id="searchForm" name="searchForm" method="POST"
@@ -55,7 +55,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                         <input type="text" class="form-control" name="class" id="class">
                     </div>
 
-                    <div class="form-group mx-md-3">
+                    <div class="form-group">
                         <label for="searchtype" class="control-label">Type</label>
                         <select class="col-md-9" id="searchtype" name="searchtype">
                             <option value="users">Users</option>
@@ -63,12 +63,8 @@ $_SESSION['profileid'] = $_SESSION['id'];
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <div class="text-center buttons" id="button">
-                            <button type="submit" class="btn btn-primary" role="button">Search
-                            </button>
-                        </div>
-                    </div>
+                    <button type="submit" class="btn btn-primary" role="button">Search
+                    </button>
                 </form>
             </div>
         </div>
