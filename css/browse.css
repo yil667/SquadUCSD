@@ -30,12 +30,13 @@
     background-color: #f2f2f2;
 }
 
-.mainpanel{
+.main-panel{
     margin-top: 30px;
 }
 
-.resultPanel{
+.result-panel{
     margin-left: 10px;
+    margin-right: 10px;
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
