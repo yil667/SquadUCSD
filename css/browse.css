@@ -41,9 +41,9 @@
 }
 
 #mainHeading {
-    padding-left: 20px;
-    vertical-align: middle;
-    background-color: #333333;
+    padding-left: 20px !important;
+    vertical-align: middle !important;
+    background-color: #333333 !important;
     border-color: transparent;
 }
 
