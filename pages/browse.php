@@ -51,21 +51,17 @@ $_SESSION['profileid'] = $_SESSION['id'];
                       action="../controller/searchAction.php">
 
 
-                    <div class="">
-                        <div class="form-group" id="courseFormGroup" name="courseFormGroup">
-                            <label for="course" class="control-label">Course</label>
-                            <input type="text" class="form-control" name="course" id="course">
-                        </div>
+                    <div class="form-group" id="courseFormGroup" name="courseFormGroup">
+                        <label for="course" class="control-label">Course</label>
+                        <input type="text" class="form-control" name="course" id="course">
                     </div>
 
-                    <div class="">
-                        <div class="form-group" id="typeFormGroup" name="typeFormGroup">
-                            <label for="searchtype" class="control-label">Type</label>
-                            <select id="searchtype" name="searchtype">
-                                <option value="users">Users</option>
-                                <option value="groups">Groups</option>
-                            </select>
-                        </div>
+                    <div class="form-group" id="typeFormGroup" name="typeFormGroup">
+                        <label for="searchtype" class="control-label">Type</label>
+                        <select id="searchtype" name="searchtype">
+                            <option value="users">Users</option>
+                            <option value="groups">Groups</option>
+                        </select>
                     </div>
 
                     <button type="submit" class="btn btn-primary" role="button">Search
@@ -74,7 +70,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-md-offset-1">
+    <div class="col-md-7">
         <div class="panel panel-custom">
             <div class="row">
                 <div class="panel panel-custom col-md-10 col-md-offset-1">
