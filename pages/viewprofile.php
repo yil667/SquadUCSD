@@ -332,7 +332,7 @@ else {
                 <form action="../controller/inviteToExistingAction.php" role="form" method="POST" id="inviteForm">
                     <div class="form-group">
                         <label name="selectlabel" id="selectlabel" for="groupid">Select Group</label>
-                        <select id="groupid" name="groupid">
+                        <select class="form-control" id="groupid" name="groupid">
                             <!-- groups inserted dynamically -->
                         </select>
                     </div>
