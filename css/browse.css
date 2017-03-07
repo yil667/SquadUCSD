@@ -10,31 +10,6 @@
     color: #262626;
 }
 
-#searchForm{
-    align-items: baseline;
-    display: flex;
-}
-
-#courseFormGroup{
-    align-items: baseline;
-    display: flex;
-}
-
-#course{
-    flex-grow: 1;
-    margin-left: 5px;
-}
-
-#typeFormGroup{
-    align-items: baseline;
-    display: flex;
-}
-
-#searchtype{
-    flex-grow: 1;
-    margin-left: 5px;
-}
-
 #classes > a.col-md-3.list-group-item{
     margin-right: 2px;
 }
