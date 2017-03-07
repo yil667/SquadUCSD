@@ -21,7 +21,7 @@
 }
 
 #course{
-    flex: auto;
+    flex: 1 auto;
 }
 
 #typeFormGroup{
@@ -30,7 +30,7 @@
 }
 
 #searchtype{
-    flex:auto;
+    flex: 1 auto;
 }
 
 #classes > a.col-md-3.list-group-item{
