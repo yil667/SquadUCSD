@@ -50,19 +50,19 @@ $_SESSION['profileid'] = $_SESSION['id'];
                 <form class="form-horizontal" role="form" id="searchForm" name="searchForm" method="POST"
                       action="../controller/searchAction.php">
 
-                    <div class="form-group">
-                        <label for="class" class="col-md-2 control-label">Course</label>
-                        <input type="text" class="col-md-3 form-control" name="class" id="class">
+                    <div class="form-group col-md-6">
+                        <label for="class" class="control-label">Course</label>
+                        <input type="text" class="form-control" name="class" id="class">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group col-md-4">
                         <label for="searchtype" class="col-md-2 control-label">Type</label>
                         <select id="searchtype" name="searchtype">
 
                         </select>
                     </div>
 
-                    <div class="form-group" name="submit" id="submit">
+                    <div class="form-group col-md-2">
                         <div class="text-center buttons col-md-2" id="button">
                             <button type="submit" class="btn btn-primary" role="button">Search
                             </button>
