@@ -44,7 +44,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
 
 <div id="common"></div>
 <div class="container-fluid">
-    <div class="col-md-3 col-md-offset-3">
+    <div class="col-md-4 col-md-offset-1">
         <div class="panel panel-custom">
             <div class="panel-body">
                 <form class="form-horizontal" role="form" id="searchForm" name="searchForm" method="POST"
