@@ -51,19 +51,20 @@ $_SESSION['profileid'] = $_SESSION['id'];
                       action="../controller/searchAction.php">
 
                     <div class="form-group col-md-6">
-                        <label for="class" class="control-label">Course</label>
-                        <input type="text" class="form-control" name="class" id="class">
+                        <label for="class" class="col-md-3 control-label">Course</label>
+                        <input type="text" class="col-md-9 form-control" name="class" id="class">
                     </div>
 
                     <div class="form-group col-md-4">
-                        <label for="searchtype" class="col-md-2 control-label">Type</label>
-                        <select id="searchtype" name="searchtype">
-
+                        <label for="searchtype" class="col-md-3 control-label">Type</label>
+                        <select class="col-md-9 form-control" id="searchtype" name="searchtype">
+                            <option value="users">Users</option>
+                            <option value="groups">Groups</option>
                         </select>
                     </div>
 
                     <div class="form-group col-md-2">
-                        <div class="text-center buttons col-md-2" id="button">
+                        <div class="text-center buttons" id="button">
                             <button type="submit" class="btn btn-primary" role="button">Search
                             </button>
                         </div>
@@ -74,27 +75,28 @@ $_SESSION['profileid'] = $_SESSION['id'];
     </div>
     <div class="col-md-6 col-md-offset-2">
         <div class="panel panel-custom">
-        <div class="row">
-            <div class="panel panel-custom">
-                <div class="panel-heading"><h4>Name</h4></div>
-                <div class="panel-body">
-                    <label for="classes control-label">Matched Classes:</label>
-                    <div class="list-group" name="classes" id="classes">
-                        <a class="col-md-3 list-group-item">CSE11</a>
-                        <a class="col-md-3 list-group-item">CSE11</a>
-                        <a class="col-md-3 list-group-item">CSE11</a>
-                    </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="panel panel-custom">
+                        <div class="panel-heading"><h4>Name</h4></div>
+                        <div class="panel-body">
+                            <label for="classes control-label">Matched Classes:</label>
+                            <div class="list-group" name="classes" id="classes">
+                                <a class="col-md-3 list-group-item">CSE11</a>
+                                <a class="col-md-3 list-group-item">CSE11</a>
+                                <a class="col-md-3 list-group-item">CSE11</a>
+                            </div>
 
-                    <div class="text-center buttons col-md-12" id="button">
-                        <button type="button" class="btn btn-primary" role="button">View Profile
-                        </button>
+                            <div class="text-center buttons col-md-12" id="button">
+                                <button type="button" class="btn btn-primary" role="button">View Profile
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
     </div>
-</div>
 
 </body>
 </html>
