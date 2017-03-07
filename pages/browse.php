@@ -73,7 +73,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
     </div>
     <div class="col-md-8">
         <div class="panel panel-custom main-panel">
-            <div class="panel-heading" name="mainHeading" id="mainHeading" ><h3>Search Results</h3></div>
+            <div class="panel-heading" name="mainHeading" id="mainHeading"><h3>Search Results</h3></div>
             <div class="panel-body">
                 <div class="row">
                     <div class="panel panel-custom col-md-6 result-panel">
@@ -85,7 +85,9 @@ $_SESSION['profileid'] = $_SESSION['id'];
                                 <div class="col-md-9">
                                     <p class="list-group-item" name="major" id="major"></p>
                                 </div>
+                            </div>
 
+                            <div class="list-group">
                                 <label for="courses" class="col-md-3 control-label">Classes</label>
                                 <div class="col-md-9">
                                     <div class="list-group-item" id="courselist" name="courselist">
