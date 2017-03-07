@@ -15,6 +15,16 @@
     display: inline-flex;
 }
 
+#courseFormGroup{
+    align-items: center;
+    display: inline-flex;
+}
+
+#typeFormGroup{
+    align-items: center;
+    display: inline-flex;
+}
+
 #classes > a.col-md-3.list-group-item{
     margin-right: 2px;
 }
