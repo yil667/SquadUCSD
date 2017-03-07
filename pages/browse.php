@@ -79,24 +79,16 @@ $_SESSION['profileid'] = $_SESSION['id'];
                     <div class="panel panel-custom col-md-6 result-panel">
                         <div class="panel-heading"><h4>Name</h4></div>
                         <div class="panel-body">
-                            <label for="classes control-label">Matched Classes:</label>
-                            <div class="list-group" name="classes" id="classes">
-                                <a class="col-md-3 list-group-item">CSE11</a>
-                                <a class="col-md-3 list-group-item">CSE11</a>
-                                <a class="col-md-3 list-group-item">CSE11</a>
-                            </div>
 
                             <div class="list-group">
                                 <label for="major" class="col-md-3 control-label">Major</label>
                                 <div class="col-md-9">
-                                    <p class="form-control-static" name="major" id="major"></p>
+                                    <p class="list-group-item" name="major" id="major"></p>
                                 </div>
-                            </div>
 
-                            <div class="list-group">
                                 <label for="courses" class="col-md-3 control-label">Classes</label>
                                 <div class="col-md-9">
-                                    <div class="list-group" id="courselist" name="courselist">
+                                    <div class="list-group-item" id="courselist" name="courselist">
                                         <!-- contents here are inserted dynamically -->
                                     </div>
                                 </div>
