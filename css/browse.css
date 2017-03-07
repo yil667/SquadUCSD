@@ -20,9 +20,17 @@
     display: inline-flex;
 }
 
+#course{
+    flex: auto;
+}
+
 #typeFormGroup{
     align-items: center;
     display: inline-flex;
+}
+
+#searchtype{
+    flex:auto;
 }
 
 #classes > a.col-md-3.list-group-item{
