@@ -73,6 +73,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
         </div>
     </div>
     <div class="col-md-6 col-md-offset-2">
+        <div class="panel panel-custom">
         <div class="row">
             <div class="panel panel-custom">
                 <div class="panel-heading"><h4>Name</h4></div>
@@ -90,6 +91,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </div>
