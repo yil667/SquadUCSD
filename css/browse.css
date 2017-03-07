@@ -12,12 +12,12 @@
 
 #searchForm{
     align-items: center;
-    display: inline-flex;
+    display: flex;
 }
 
 #courseFormGroup{
     align-items: center;
-    display: inline-flex;
+    display: flex;
 }
 
 #course{
@@ -27,7 +27,7 @@
 
 #typeFormGroup{
     align-items: center;
-    display: inline-flex;
+    display: flex;
 }
 
 #searchtype{
