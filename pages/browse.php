@@ -50,12 +50,12 @@ $_SESSION['profileid'] = $_SESSION['id'];
                 <form class="form-inline" role="form" id="searchForm" name="searchForm" method="POST"
                       action="../controller/searchAction.php">
 
-                    <div class="form-group">
+                    <div class="form-group col-md-3">
                         <label for="class" class="control-label">Course</label>
                         <input type="text" class="form-control" name="class" id="class">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group col-md-6">
                         <label for="searchtype" class="control-label">Type</label>
                         <select class="col-md-9" id="searchtype" name="searchtype">
                             <option value="users">Users</option>
@@ -69,11 +69,11 @@ $_SESSION['profileid'] = $_SESSION['id'];
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-md-offset-2">
+    <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-custom">
             <div class="panel-body">
                 <div class="row">
-                    <div class="panel panel-custom">
+                    <div class="panel panel-custom col-md-10 col-md-offset-1">
                         <div class="panel-heading"><h4>Name</h4></div>
                         <div class="panel-body">
                             <label for="classes control-label">Matched Classes:</label>
