@@ -48,7 +48,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
         <div class="panel panel-custom">
             <div class="panel-body main-panel">
                 <row>
-                    <form class="form" role="form" id="searchForm" name="searchForm" method="POST"
+                    <form class="form" role="search" id="searchForm" name="searchForm" method="POST"
                           action="../controller/searchAction.php">
 
                         <div class="form-group" id="courseFormGroup" name="courseFormGroup">
@@ -80,26 +80,28 @@ $_SESSION['profileid'] = $_SESSION['id'];
                         <div class="panel-heading"><h4>Name</h4></div>
                         <div class="panel-body">
 
-                            <div class="list-group">
-                                <label for="major" class="col-md-3 control-label">Major</label>
-                                <div class="col-md-9">
-                                    <p class="list-group-item" name="major" id="major"></p>
-                                </div>
-                            </div>
-
-                            <div class="list-group">
-                                <label for="courses" class="col-md-3 control-label">Classes</label>
-                                <div class="col-md-9">
-                                    <div class="list-group-item" id="courselist" name="courselist">
-                                        <!-- contents here are inserted dynamically -->
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="major" class="col-md-3 control-label">Major</label>
+                                    <div class="col-md-9">
+                                        <p class="form-control-static" name="major" id="major"></p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="text-center buttons col-md-12" id="button">
-                                <button type="button" class="btn btn-primary" role="button">View Profile
-                                </button>
-                            </div>
+                                <div class="form-group">
+                                    <label for="courses" class="col-md-3 control-label">Classes</label>
+                                    <div class="col-md-9">
+                                        <div class="list-group" id="courselist" name="courselist">
+                                            <!-- contents here are inserted dynamically -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center buttons col-md-12" id="button">
+                                    <button type="button" class="btn btn-primary" role="button">View Profile
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <div class="panel panel-custom col-md-6 result-panel">
