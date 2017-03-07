@@ -51,13 +51,13 @@ $_SESSION['profileid'] = $_SESSION['id'];
                       action="../controller/searchAction.php">
 
                     <div class="form-group col-md-6">
-                        <label for="class" class="col-md-3 control-label">Course</label>
-                        <input type="text" class="col-md-9 form-control" name="class" id="class">
+                        <label for="class" class="control-label">Course</label>
+                        <input type="text" class="form-control" name="class" id="class">
                     </div>
 
                     <div class="form-group col-md-4">
-                        <label for="searchtype" class="col-md-3 control-label">Type</label>
-                        <select class="col-md-9 form-control" id="searchtype" name="searchtype">
+                        <label for="searchtype" class="control-label">Type</label>
+                        <select class="col-md-9" id="searchtype" name="searchtype">
                             <option value="users">Users</option>
                             <option value="groups">Groups</option>
                         </select>
