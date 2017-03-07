@@ -27,7 +27,7 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
-   <li>(low priority) in edit profile make the input fields stand out from the hyperlinks(user profile) //don't understand, clarify pls</li> 
+<li>(low priority) in edit <b>group</b> profile make the input fields stand out from the hyperlinks(user profile) //don't understand, clarify pls</li> 
 </ol>
 
 <h2>Front-end recently finished: </h2>
