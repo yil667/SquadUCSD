@@ -1,5 +1,11 @@
 <?php
 include_once './controller/startUserSession.php';
+
+echo $_SERVER['HTTP_HOST'];
+echo "--------------";
+echo $_SERVER['REQUEST_URI'];
+echo "--------------";
+echo $_SERVER['DOCUMENT_ROOT'];
 ?>
 
 
