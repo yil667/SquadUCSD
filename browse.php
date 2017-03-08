@@ -64,7 +64,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                       action="./controller/searchAction.php">
 
                     <div class="form-group" id="courseFormGroup" name="courseFormGroup">
-                        <label for="course" class="control-label">Course</label>
+                        <label for="course" class="control-label">Class</label>
                         <input type="text" class="form-control" name="course" id="course">
                     </div>
 
