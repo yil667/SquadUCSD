@@ -44,7 +44,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                 totalPages: 35,
                 visiblePages: 7,
                 onPageClick: function (event, page) {
-                    window.href.location(window.href.location.split(/[?#]/)[0] + '?page=' + page);
+                    window.href.location = window.href.location.split(/[?#]/)[0] + '?page=' + page;
                     $('#page-content').text('Page ' + page);
                 }
             });
