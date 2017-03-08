@@ -7,8 +7,8 @@
 }
 
 
-#memberlist > a.list-group-item, #grouplist > a.list-group-item, #classlist > a.list-group-item {
-    background-color: #f3f3f3;
+#memberlist > list-group-item, #grouplist > list-group-item, #classlist > list-group-item {
+    background-color: #eaeaea;
 }
 
 #memberlist > a.list-group-item:hover, #grouplist > a.list-group-item:hover, #classlist > a.list-group-item:hover {
