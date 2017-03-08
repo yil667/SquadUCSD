@@ -49,7 +49,7 @@ function login($email, $password)
     $_SESSION['id'] = $row['id'];
 
     // redirect to the homepage
-    header("Location: $_SERVER[DOCUMENT_ROOT]/index.php");
+    header("Location: ../index.php");
 }
 
 // pre-condition: user is already logged in
@@ -79,5 +79,5 @@ function handleNotLoggedIn()
 {
     if (!isLoggedIn())
         // redirect to the homepage
-        header("Location: $_SERVER[DOCUMENT_ROOT]/index.php");
+        header("Location: ../index.php");
 }
