@@ -47,7 +47,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Squad<span style="font-weight: 700">UCSD</span></a>
+            <a class="navbar-brand" href="index.php">SquadUCSD</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left" id = "navList">
