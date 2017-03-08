@@ -1,6 +1,6 @@
 <?php
-include_once 'loginController.php';
-include_once 'forgotPasswordController.php';
+include_once "loginController.php";
+include_once "forgotPasswordController.php";
 
 session_start();
 

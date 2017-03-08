@@ -4,4 +4,4 @@
 $hash = $_GET['hash'];
 $email = $_GET['email'];
 
-include_once "./controller/verifyAction.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/verifyAction.php";

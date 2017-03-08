@@ -1,7 +1,7 @@
 <?php
 //if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
-include_once './controller/startUserSession.php';
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 
 $url = json_encode($_SERVER['REQUEST_URI']);
 
@@ -24,7 +24,7 @@ else {
     $_SESSION['profileid'] = $_GET['userid'];
 
     // this action controller will fetch the user data into the $user variable
-    include_once "./controller/viewProfileAction.php";
+    include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 
     // if link is invalid
     if ($user === FALSE) {

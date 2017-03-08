@@ -1,6 +1,6 @@
 <?php
-include_once 'registerController.php';
-include_once 'loginController.php';
+include_once "registerController.php";
+include_once "loginController.php";
 
 session_start();
 

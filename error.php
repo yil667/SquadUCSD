@@ -1,5 +1,5 @@
 <?php
-include_once './controller/startUserSession.php';
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 ?>
 
 <!DOCTYPE html>

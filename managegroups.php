@@ -1,11 +1,11 @@
 <?php
 // if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
-include_once './controller/startUserSession.php';
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 
 handleNotLoggedIn();
 
-include_once './controller/manageGroupAction.php';
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/manageGroupAction.php";
 
 ?>
 

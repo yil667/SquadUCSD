@@ -1,11 +1,11 @@
 <?php
 
-include_once './controller/startUserSession.php';
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 
 $_SESSION['hash'] = $_GET['hash'];
 $_SESSION['forgetEmail'] = $_GET['email'];
 
-include_once "./controller/resetPasswordLinkAction.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/resetPasswordLinkAction.php";
 
 
 // the script return a $valid variable for checking whether the activation

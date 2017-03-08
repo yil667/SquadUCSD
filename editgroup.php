@@ -1,6 +1,6 @@
 <!-- remove '/' in </?php @BACKEND -->
 <?php
-include_once './controller/startUserSession.php';
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 
 $url = $_SERVER['REQUEST_URI'];
 
@@ -20,7 +20,7 @@ else {
 $_SESSION['groupid'] = $_GET['groupid'];
 $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 // load the group's data from action controller
-include_once './controller/viewGroupProfileAction.php';
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewGroupProfileAction.php";
 
 if ($group === FALSE)
     header("Location: http://www.squaducsd.com/error.php");

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'dbController.php';
+include_once "dbController.php";
 
 $email = $_SESSION['forgetEmail'];
 $newPassword = $_POST['newpassword'];

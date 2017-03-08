@@ -6,7 +6,7 @@ $id2 = $_GET['id2'];
 $groupid = $_GET['groupid'];
 $hash = $_GET['hash'];
 
-include_once "./controller/acceptExistingAction.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/acceptExistingAction.php";
 
 if ($valid) {
     header("Location: http://www.squaducsd.com/viewgroup.php?groupid=$groupid&accepted");

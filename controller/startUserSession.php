@@ -1,6 +1,6 @@
 <?php
 
-include_once 'loginController.php';
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/loginController.php";
 session_start();
 
 $isLoggedIn = isLoggedIn() ? 1 : 0;

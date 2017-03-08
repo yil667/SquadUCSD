@@ -1,12 +1,12 @@
 <?php
-include_once './controller/startUserSession.php';
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 
 handleNotLoggedIn();
 
 $_SESSION['profileid'] = $_SESSION['id'];
 
 // load the user's data from action controller
-include_once './controller/viewProfileAction.php';
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 
 // now the user object contains all the relevant user info
 ?>

@@ -1,6 +1,6 @@
 <?php
-include_once 'dbController.php';
-include_once 'acceptExistingActionController.php';
+include_once "dbController.php";
+include_once "acceptExistingActionController.php";
 
 $conn = connectToDB();
 $MAX_GROUP_SIZE = 10;

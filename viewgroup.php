@@ -1,6 +1,6 @@
 <?php
 // we need to adjust the url accordingly (append user id)
-include_once './controller/startUserSession.php';
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 
 $url = json_encode($_SERVER['REQUEST_URI']);
 
@@ -16,7 +16,7 @@ else {
     $_SESSION['groupid'] = $_GET['groupid'];
 
     // this action controller will fetch the user data into the $user variable
-    include_once "./controller/viewGroupProfileAction.php";
+    include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewGroupProfileAction.php";
 
     // if link is invalid
     if ($group === false) {

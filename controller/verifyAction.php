@@ -1,6 +1,6 @@
 <?php
 
-include_once 'dbController.php';
+include_once "dbController.php";
 
 $sql = "SELECT * FROM student WHERE email='$email' AND hash='$hash' AND active='0'";
 $conn = connectToDB();
