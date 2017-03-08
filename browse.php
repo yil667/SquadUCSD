@@ -1,14 +1,24 @@
 <?php
+// we need to adjust the url accordingly (append user id)
 include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 
-handleNotLoggedIn();
+$url = json_encode($_SERVER['REQUEST_URI']);
 
-$_SESSION['profileid'] = $_SESSION['id'];
+// redirects the url to homepage if not groupid foun
+if (strrpos($url, "?class=") !== false &&
+    strpos($url, "&type=" !== false)
+) {
 
-// load the user's data from action controller
-//include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
+    $_SESSION['class'] = $_GET['class'];
+    $_SESSION['type'] = $_GET['type'];
 
-// now the user object contains all the relevant user info
+    // after this include, a variable named $result will be available, storing
+    // an array of user objects or group objects depending on the request
+    include_once "$_SERVER[DOCUMENT_ROOT]/controller/getSearchResultAction.php";
+}
+else // otherwise reset the array
+    $result = Array();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +40,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-     <script src="js/browse-validation.js"></script>
+    <script src="js/browse-validation.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- UI for class drop down -->
