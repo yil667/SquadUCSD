@@ -39,14 +39,14 @@ $_SESSION['profileid'] = $_SESSION['id'];
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-        });
 
-        $('#pagination-demo').twbsPagination({
-            totalPages: 35,
-            visiblePages: 7,
-            onPageClick: function (event, page) {
-                $('#page-content').text('Page ' + page);
-            }
+            $('#pagination-demo').twbsPagination({
+                totalPages: 35,
+                visiblePages: 7,
+                onPageClick: function (event, page) {
+                    $('#page-content').text('Page ' + page);
+                }
+            });
         });
     </script>
 </head>
