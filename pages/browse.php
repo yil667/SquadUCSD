@@ -1,4 +1,4 @@
-<?php
+</?php
 include_once '../controller/startUserSession.php';
 
 handleNotLoggedIn();
@@ -47,63 +47,96 @@ $_SESSION['profileid'] = $_SESSION['id'];
     <div class="col-md-2 col-md-offset-1">
         <div class="panel panel-custom">
             <div class="panel-body main-panel">
-                <row>
-                    <form class="form" role="search" id="searchForm" name="searchForm" method="POST"
-                          action="../controller/searchAction.php">
+                <form class="form" role="search" id="searchForm" name="searchForm" method="POST"
+                      action="../controller/searchAction.php">
 
-                        <div class="form-group" id="courseFormGroup" name="courseFormGroup">
-                            <label for="course" class="control-label">Course</label>
-                            <input type="text" class="form-control" name="course" id="course">
-                        </div>
+                    <div class="form-group" id="courseFormGroup" name="courseFormGroup">
+                        <label for="course" class="control-label">Course</label>
+                        <input type="text" class="form-control" name="course" id="course">
+                    </div>
 
-                        <div class="form-group" id="typeFormGroup" name="typeFormGroup">
-                            <label for="searchtype" class="control-label">Type</label>
-                            <select id="searchtype" name="searchtype">
-                                <option value="users">Users</option>
-                                <option value="groups">Groups</option>
-                            </select>
-                        </div>
+                    <div class="form-group" id="typeFormGroup" name="typeFormGroup">
+                        <label for="searchtype" class="control-label">Type</label>
+                        <select id="searchtype" name="searchtype">
+                            <option value="users">Users</option>
+                            <option value="groups">Groups</option>
+                        </select>
+                    </div>
 
-                        <button type="submit" class="btn btn-primary" role="button">Search
-                        </button>
-                    </form>
-                </row>
+                    <button type="submit" class="btn btn-primary" role="button">Search
+                    </button>
+                </form>
             </div>
         </div>
     </div>
     <div class="col-md-8">
-        <div class="jumbotron">
-            <h1>Search Results</h1>
-            <div class="panel panel-default col-md-6 result-panel">
-                <div class="panel-heading"><h4>Name</h4></div>
-                <div class="panel-body">
-
-                    <form class="form-horizontal">
-                        <div class="form-group">
-                            <label for="major" class="col-md-3 control-label">Major</label>
-                            <div class="col-md-9">
-                                <p class="form-control-static" name="major" id="major"></p>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="courses" class="col-md-3 control-label">Classes</label>
-                            <div class="col-md-9">
-                                <div class="list-group" id="courselist" name="courselist">
-                                    <!-- contents here are inserted dynamically -->
+        <div class="panel panel-custom main-panel">
+            <div class="panel-heading" name="mainHeading" id="mainHeading">
+                <h3>Search Results</h3>
+            </div>
+            <div class="panel-body panel-custom main-body">
+                <div class="col-md-6">
+                    <div class="panel panel-custom col-md-12 result-panel">
+                        <div class="panel-heading"><h4>Name</h4></div>
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="major" class="col-md-3 control-label">Major</label>
+                                    <div class="col-md-9">
+                                        <p class="form-control-static" name="major" id="major"></p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="text-center buttons col-md-12" id="button">
-                            <button type="button" class="btn btn-primary" role="button">View Profile
-                            </button>
+                                <div class="form-group">
+                                    <label for="courses" class="col-md-3 control-label">Classes</label>
+                                    <div class="col-md-9">
+                                        <div class="list-group" id="courselist" name="courselist">
+                                            <!-- contents here are inserted dynamically -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center buttons col-md-12" id="button">
+                                    <button type="button" class="btn btn-primary" role="button">View Profile
+                                    </button>
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-custom col-md-12 result-panel">
+                        <div class="panel-heading"><h4>Name</h4></div>
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="major" class="col-md-3 control-label">Major</label>
+                                    <div class="col-md-9">
+                                        <p class="form-control-static" name="major" id="major"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="courses" class="col-md-3 control-label">Classes</label>
+                                    <div class="col-md-9">
+                                        <div class="list-group" id="courselist" name="courselist">
+                                            <!-- contents here are inserted dynamically -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center buttons col-md-12" id="button">
+                                    <button type="button" class="btn btn-primary" role="button">View Profile
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 </body>
