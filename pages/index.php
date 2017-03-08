@@ -31,7 +31,7 @@ include_once '../controller/startUserSession.php';
             var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
             var userFirstName = <?php echo json_encode($firstName); ?>;
             if (isUserLoggedIn) {
-                welcome.innerHTML += ', ' + userFirstName + '!';
+                welcome.innerHTML = 'Welcome, ' + userFirstName + '!';
             }
         });
     </script>
