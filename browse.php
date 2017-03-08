@@ -30,6 +30,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+     <script src="js/browse-validation.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- UI for class drop down -->
@@ -64,7 +65,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                       action="./controller/searchAction.php">
 
                     <div class="form-group" id="courseFormGroup" name="courseFormGroup">
-                        <label for="course" class="control-label">Course</label>
+                        <label for="course" class="control-label">Class</label>
                         <input type="text" class="form-control" name="course" id="course">
                     </div>
 
