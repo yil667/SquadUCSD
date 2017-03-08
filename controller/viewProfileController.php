@@ -1,8 +1,8 @@
 <?php
 
-include_once "../Class/User.php";
-include_once "../Class/Group.php";
-include_once "../Class/Course.php";
+include_once "./Class/User.php";
+include_once "./Class/Group.php";
+include_once "./Class/Course.php";
 
 
 // returns a user object containing the relevant information of the user

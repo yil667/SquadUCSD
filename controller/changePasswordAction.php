@@ -15,7 +15,7 @@ $newPassword = $_POST['password'];
 
 if (validCurrPassword($conn, $id, $currPassword)) {
     updatePassword($conn, $id, $newPassword);
-    header("Location: ../editprofile.php?success");
+    header("Location: ./editprofile.php?success");
 } else {
-    header("Location: ../editprofile.php?fail");
+    header("Location: ./editprofile.php?fail");
 }
