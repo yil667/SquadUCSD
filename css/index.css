@@ -3,11 +3,11 @@
 }
 
 .list-group-item-heading{
-    margin-top: 5px;
+    margin-top: 5px; !important;
 }
 
 .list-group-item-text{
-    margin-bottom: 5px;
+    margin-bottom: 5px; !important;
 }
 
 .panel-custom > .panel-heading h3 {
