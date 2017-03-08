@@ -9,6 +9,7 @@ include_once '../controller/startUserSession.php';
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css"/>
 
     <!-- login status check -->
     <script>

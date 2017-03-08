@@ -74,7 +74,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
     <div class="col-md-8">
         <div class="jumbotron">
             <h1>Search Results</h1>
-            <div class="panel panel-custom col-md-6 result-panel">
+            <div class="panel panel-default col-md-6 result-panel">
                 <div class="panel-heading"><h4>Name</h4></div>
                 <div class="panel-body">
 
