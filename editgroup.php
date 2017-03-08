@@ -52,7 +52,6 @@ else if (!$inGroup) {
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.18.9/URI.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- UI for class drop down -->
@@ -147,7 +146,7 @@ else if (!$inGroup) {
                         <div class="form-group">
                             <div class="text-center">
                                 <button type="button"
-                                        onclick="location.href=URI.query("")"
+                                        onclick="location.href=window.location.href.replace('edit','view').split('&')[0]"
                                         class="btn btn-primary">View Group Profile
                                 </button>
                                 <button type="button" class="btn btn-primary" data-toggle='modal'
@@ -204,6 +203,10 @@ else if (!$inGroup) {
         </div>
     </div>
 </div>
-
+<script type="text/javascript">
+function redirect() {
+    
+}
+</script>
 </body>
 </html>
