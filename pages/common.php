@@ -53,7 +53,7 @@ include_once '../controller/startUserSession.php';
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left" id = "navList">
                 <li><a href="./index.php">Home</a></li>
-                <li><a href='./contact.php'>Contact</a></li>
+                <li><a href='./about.php'>About</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" id="rightNav"></ul>
         </div>
