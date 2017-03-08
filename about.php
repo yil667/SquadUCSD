@@ -53,7 +53,7 @@ include_once './controller/startUserSession.php';
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="" class="img-responsive img-thumbnail img-rounded" alt="Responsive image">
+                            <img src="./img/weeaboo.png" class="img-responsive img-thumbnail img-rounded" alt="Responsive image">
                         </div>
                         <div class="media-body">
                             <div class="list-group-item">
@@ -64,7 +64,7 @@ include_once './controller/startUserSession.php';
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/weeaboo.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -76,7 +76,7 @@ include_once './controller/startUserSession.php';
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/weeaboo.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -88,7 +88,7 @@ include_once './controller/startUserSession.php';
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/weeaboo.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -112,7 +112,7 @@ include_once './controller/startUserSession.php';
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/weeaboo.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -124,7 +124,7 @@ include_once './controller/startUserSession.php';
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/weeaboo.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -136,7 +136,7 @@ include_once './controller/startUserSession.php';
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/weeaboo.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -148,7 +148,7 @@ include_once './controller/startUserSession.php';
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/weeaboo.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -160,7 +160,7 @@ include_once './controller/startUserSession.php';
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/weeaboo.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
