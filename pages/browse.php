@@ -35,8 +35,8 @@ $_SESSION['profileid'] = $_SESSION['id'];
     <!-- UI for class drop down -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--jqueryplugin for pagination-->
-    <script src="../js/jquery.twbsPagination.min.js"></script>
-    <script src="../js/pagination.js"></script>
+    <script src="../js/jquery.twbsPagination.min.js" type="text/javascript"></script>
+    <script src="../js/pagination.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
