@@ -54,7 +54,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
 
 <div id="common"></div>
 <div class="container-fluid">
-    <div class="col-md-2 col-md-offset-1">
+    <div class="col-md-3 col-md-offset-2">
         <div class="panel panel-custom">
             <div class="panel-body main-panel">
                 <form class="form" role="search" id="searchForm" name="searchForm" method="POST"
@@ -79,7 +79,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
             </div>
         </div>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-6">
         <div class="panel panel-custom main-panel">
             <div class="panel-heading" name="mainHeading" id="mainHeading">
                 <h3>Search Results</h3>
