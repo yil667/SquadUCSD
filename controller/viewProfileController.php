@@ -1,8 +1,8 @@
 <?php
 
-include_once "$_SERVER[DOCUMENT_ROOT]/SquadUCSD/Class/User.php";
-include_once "$_SERVER[DOCUMENT_ROOT]/SquadUCSD/Class/Group.php";
-include_once "$_SERVER[DOCUMENT_ROOT]/SquadUCSD/Class/Course.php";
+include_once "http://www.squaducsd.com/Class/User.php";
+include_once "http://www.squaducsd.com/Class/Group.php";
+include_once "http://www.squaducsd.com/Class/Course.php";
 
 
 // returns a user object containing the relevant information of the user
