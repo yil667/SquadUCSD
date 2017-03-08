@@ -43,6 +43,8 @@
 .result-panel{
     padding-left: 0 !important;
     padding-right: 0 !important;
+    border: 10px !important;
+    border-color: black !important;
 }
 
 .result-body{
@@ -67,6 +69,3 @@
     font-weight: normal;
 }
 
-.panel-result {
-    border: 10px !important;
-}
