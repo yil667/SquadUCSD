@@ -49,7 +49,7 @@ function login($email, $password)
     $_SESSION['id'] = $row['id'];
 
     // redirect to the homepage
-    header("Location: www.squaducsd.com/index.php");
+    header("Location: http://www.squaducsd.com/index.php");
 }
 
 // pre-condition: user is already logged in
