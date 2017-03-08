@@ -36,10 +36,17 @@ $_SESSION['profileid'] = $_SESSION['id'];
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--jqueryplugin for pagination-->
     <script src="../js/jquery.twbsPagination.min.js" type="text/javascript"></script>
-    <script src="../js/pagination.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
+        });
+
+        $('#pagination-demo').twbsPagination({
+            totalPages: 35,
+            visiblePages: 7,
+            onPageClick: function (event, page) {
+                $('#page-content').text('Page ' + page);
+            }
         });
     </script>
 </head>
@@ -136,7 +143,9 @@ $_SESSION['profileid'] = $_SESSION['id'];
                         </div>
                     </div>
                 </div>
-                <ul id="pagination-demo" class="pagination-sm pagination"></ul>
+                <div class="text-center row">
+                    <ul id="pagination-demo" class="pagination-sm pagination"></ul>
+                </div>
             </div>
         </div>
     </div>
