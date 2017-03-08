@@ -203,10 +203,5 @@ else if (!$inGroup) {
         </div>
     </div>
 </div>
-<script type="text/javascript">
-function redirect() {
-    
-}
-</script>
 </body>
 </html>

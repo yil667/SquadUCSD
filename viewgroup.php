@@ -85,7 +85,7 @@ else {
                 $("#buttons").html(content);
             }
             else if (inGroup) {
-                content = "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit')" + " class='btn btn-primary'>Edit Group</button> " +  "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#messagegroupModal'>Message</button>";
+                content = "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit').split('&')[0]" + " class='btn btn-primary'>Edit Group</button> " +  "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#messagegroupModal'>Message</button>";
             }
             else {
                 //unused var???
