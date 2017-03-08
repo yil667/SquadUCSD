@@ -91,7 +91,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                 <div class="col-md-6">
                     <div class="panel panel-custom col-md-12 result-panel">
                         <div class="panel-heading"><h4>Name</h4></div>
-                        <div class="panel-body">
+                        <div class="panel-body result-body">
                             <form class="form-horizontal">
                                 <div class="form-group">
                                     <label for="major" class="col-md-3 control-label">Major</label>
@@ -120,7 +120,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                 <div class="col-md-6">
                     <div class="panel panel-custom col-md-12 result-panel">
                         <div class="panel-heading"><h4>Name</h4></div>
-                        <div class="panel-body">
+                        <div class="panel-body result-body">
                             <form class="form-horizontal">
                                 <div class="form-group">
                                     <label for="major" class="col-md-3 control-label">Major</label>
