@@ -36,8 +36,23 @@ include_once '../controller/startUserSession.php';
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="jumbotron">
-                <h1 id="welcome">Contact Us</h1>
-
+                <h1>About</h1>
+                <h2>Team</h2>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Project Manager</h4>
+                        <p class="list-group-item-text">Tommy Chen</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Second List Group Item Heading</h4>
+                        <p class="list-group-item-text">List Group Item Text</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Third List Group Item Heading</h4>
+                        <p class="list-group-item-text">List Group Item Text</p>
+                    </a>
+                </div>
+                <h2>Contact Us</h2>
                 <p>
                     Having trouble with the web application? Want to learn more about SquadUCSD?
                     Contact us at <a href= "mailto:contact@squaducsd.com">contact@squaducsd.com</a> and we’ll get back to you as soon as possible.
