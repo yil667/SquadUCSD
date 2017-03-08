@@ -36,6 +36,8 @@ $_SESSION['profileid'] = $_SESSION['id'];
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--jqueryplugin for pagination-->
     <script src="../js/jquery.twbsPagination.min.js" type="text/javascript"></script>
+    <!--jquery object-->
+    <script src="../js/jquery.query-object.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
@@ -44,8 +46,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                 totalPages: 35,
                 visiblePages: 7,
                 onPageClick: function (event, page) {
-                    window.href.location = window.href.location.split(/[?#]/)[0] + '?page=' + page;
-                    $('#page-content').text('Page ' + page);
+                    window.href.location = $.query.set("page", page);
                 }
             });
         });
