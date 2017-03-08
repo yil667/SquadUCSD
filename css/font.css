@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700,900|Open+Sans:400,700');
 
 .navbar-brand {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fira Sans', sans-serif !important;
 }
 
 .dropdown-menu > li > a {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fira Sans', sans-serif !important;
 }
 
 .nav > li > a {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fira Sans', sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fira Sans', sans-serif !important;
 }
 
 body, p, label, input, a, textarea, button {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
 }

@@ -30,7 +30,7 @@
 }
 
 .panel-custom > .panel-body {
-    background-color: #f2f2f2 !important;
+    background-color: #f2f2f2;
 }
 
 .main-panel{
@@ -46,7 +46,7 @@
 }
 
 .result-body{
-    background-color: #c5c5c5;
+    background-color: #eee !important;
 }
 
 #mainHeading {
