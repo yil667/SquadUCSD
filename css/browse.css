@@ -6,6 +6,9 @@
     text-align: center;
 }
 
+.pagination > li > a{
+    font-size: 14px;
+}
 
 .panel-custom > .panel-heading h4 {
     color: #262626;
