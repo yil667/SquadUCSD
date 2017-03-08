@@ -26,6 +26,6 @@
 }
 
 .error {
-     font-weight: normal;
+     font-weight: normal !important;
      color: #ff6666;
 }
