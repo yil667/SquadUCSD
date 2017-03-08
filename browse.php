@@ -87,7 +87,7 @@ else // otherwise reset the array
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" role="button">Search
+                    <button type="submit" class="btn btn-primary btn-responsive" role="button">Search
                     </button>
                 </form>
             </div>
@@ -121,7 +121,7 @@ else // otherwise reset the array
                                 </div>
 
                                 <div class="text-center buttons col-md-12" id="button">
-                                    <button type="button" class="btn btn-primary" role="button">View Profile
+                                    <button type="button" class="btn btn-primary btn-responsive" role="button">View Profile
                                     </button>
                                 </div>
                             </form>
@@ -150,7 +150,7 @@ else // otherwise reset the array
                                 </div>
 
                                 <div class="text-center buttons col-md-12" id="button">
-                                    <button type="button" class="btn btn-primary" role="button">View Profile
+                                    <button type="button" class="btn btn-primary btn-responsive" role="button">View Profile
                                     </button>
                                 </div>
                             </form>
