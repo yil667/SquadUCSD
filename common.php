@@ -37,7 +37,6 @@ include_once './controller/startUserSession.php';
             }
         });
     </script>
-
 </head>
 <body>
 <nav class="navbar navbar-black">
