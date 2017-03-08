@@ -12,8 +12,8 @@ $_SESSION['profileid'] = $_SESSION['id'];
 ?>
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="css/browse.css"/>
 <link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/browse.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
     <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
