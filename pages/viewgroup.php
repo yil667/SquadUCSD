@@ -116,7 +116,7 @@ else {
 <div id="common"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-lg-4 col-lg-offset-4 col-md-8 col-md-offset-2">
             <div class="panel panel-custom">
                 <div class="panel-heading">
                     <h3>View Group
