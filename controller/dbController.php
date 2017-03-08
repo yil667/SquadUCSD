@@ -4,7 +4,7 @@
 function connectToDB()
 {
     // attempt to connect to the database
-    return mysqli_connect("localhost", "root", "8CMr1YZUXb", "logintest");
+    return mysqli_connect("localhost", "root", "8CMr1YZUXb", "squaducsd");
 }
 
 
