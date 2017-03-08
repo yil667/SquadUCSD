@@ -10,10 +10,6 @@
     font-size: 14px !important;
 }
 
-.panel-custom > .panel-heading h4 {
-    color: #f2f2f2;
-}
-
 #classes > a.col-md-3.list-group-item{
     margin-right: 2px;
 }
@@ -25,7 +21,7 @@
 .panel-custom > .panel-heading {
     padding-bottom: 10px;
     vertical-align: middle;
-    background-color: #337ab7;
+    background-color: #eee !important;
     border-color: transparent;
 }
 
