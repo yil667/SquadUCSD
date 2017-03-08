@@ -38,20 +38,20 @@ include_once '../controller/startUserSession.php';
             <div class="jumbotron">
                 <h1>About</h1>
                 <h2>Team</h2>
-                <div class="list-group">
-                    <a href="#" class="list-group-item">
+                <ul class="list-group">
+                    <li class="list-group-item">
                         <h4 class="list-group-item-heading">Project Manager</h4>
                         <p class="list-group-item-text">Tommy Chen</p>
-                    </a>
-                    <a href="#" class="list-group-item">
+                    </li>
+                    <li class="list-group-item">
                         <h4 class="list-group-item-heading">Second List Group Item Heading</h4>
                         <p class="list-group-item-text">List Group Item Text</p>
-                    </a>
-                    <a href="#" class="list-group-item">
+                    </li>
+                    <li class="list-group-item">
                         <h4 class="list-group-item-heading">Third List Group Item Heading</h4>
                         <p class="list-group-item-text">List Group Item Text</p>
-                    </a>
-                </div>
+                    </li>
+                </ul>
                 <h2>Contact Us</h2>
                 <p>
                     Having trouble with the web application? Want to learn more about SquadUCSD?
