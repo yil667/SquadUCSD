@@ -45,8 +45,10 @@ include_once '../controller/startUserSession.php';
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">Project Manager</h4>
-                            <p class="list-group-item-text">Tommy Chen</p>
+                            <div class="list-group-item">
+                                <h4 class="media-heading">Project Manager</h4>
+                                <p class="list-group-item-text">Tommy Chen</p>
+                            </div>
                         </div>
                     </div>
                     <div class="media">
@@ -54,10 +56,10 @@ include_once '../controller/startUserSession.php';
                             <img src="" class="img-responsive img-thumbnail img-rounded" alt="Responsive image">
                         </div>
                         <div class="media-body">
-                            <li class="list-group-item">
+                            <div class="list-group-item">
                                 <h4 class="media-heading">Business Analyst</h4>
                                 <p class="list-group-item-text">Wenyi Chen</p>
-                            </li>
+                            </div>
                         </div>
                     </div>
                     <div class="media">
@@ -66,8 +68,10 @@ include_once '../controller/startUserSession.php';
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">Senior System Analyst</h4>
-                            <p class="list-group-item-text">Bradley Jason Anderson</p>
+                            <div class="list-group-item">
+                                <h4 class="media-heading">Senior System Analyst</h4>
+                                <p class="list-group-item-text">Bradley Jason Anderson</p>
+                            </div>
                         </div>
                     </div>
                     <div class="media">
@@ -76,8 +80,10 @@ include_once '../controller/startUserSession.php';
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">Software Architect</h4>
-                            <p class="list-group-item-text">Annie Pui Man Wai</p>
+                            <div class="list-group-item">
+                                <h4 class="media-heading">Software Architect</h4>
+                                <p class="list-group-item-text">Annie Pui Man Wai</p>
+                            </div>
                         </div>
                     </div>
                     <div class="media">
@@ -86,8 +92,10 @@ include_once '../controller/startUserSession.php';
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">Software Development Lead</h4>
-                            <p class="list-group-item-text">Yi-Chun Lee</p>
+                            <div class="list-group-item">
+                                <h4 class="media-heading">Software Development Lead</h4>
+                                <p class="list-group-item-text">Yi-Chun Lee</p>
+                            </div>
                         </div>
                     </div>
                     <div class="media">
@@ -96,8 +104,10 @@ include_once '../controller/startUserSession.php';
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">Software Development Lead</h4>
-                            <p class="list-group-item-text">Scott Yenhsun Chen</p>
+                            <div class="list-group-item">
+                                <h4 class="media-heading">Software Development Lead</h4>
+                                <p class="list-group-item-text">Scott Yenhsun Chen</p>
+                            </div>
                         </div>
                     </div>
                     <div class="media">
@@ -106,8 +116,10 @@ include_once '../controller/startUserSession.php';
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">Algorithm Specialist</h4>
-                            <p class="list-group-item-text">Chenzhong Tao</p>
+                            <div class="list-group-item">
+                                <h4 class="media-heading">Algorithm Specialist</h4>
+                                <p class="list-group-item-text">Chenzhong Tao</p>
+                            </div>
                         </div>
                     </div>
                     <div class="media">
@@ -116,8 +128,10 @@ include_once '../controller/startUserSession.php';
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">Algorithm Specialist</h4>
-                            <p class="list-group-item-text">Jimmy Tani</p>
+                            <div class="list-group-item">
+                                <h4 class="media-heading">Algorithm Specialist</h4>
+                                <p class="list-group-item-text">Jimmy Tani</p>
+                            </div>
                         </div>
                     </div>
                     <div class="media">
@@ -126,8 +140,10 @@ include_once '../controller/startUserSession.php';
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">Database Specialist</h4>
-                            <p class="list-group-item-text">Quinn Wong</p>
+                            <div class="list-group-item">
+                                <h4 class="media-heading">Database Specialist</h4>
+                                <p class="list-group-item-text">Quinn Wong</p>
+                            </div>
                         </div>
                     </div>
                     <div class="media">
@@ -136,8 +152,10 @@ include_once '../controller/startUserSession.php';
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">Quality Assurance Lead</h4>
-                            <p class="list-group-item-text">Jiaxin Yang</p>
+                            <div class="list-group-item">
+                                <h4 class="media-heading">Quality Assurance Lead</h4>
+                                <p class="list-group-item-text">Jiaxin Yang</p>
+                            </div>
                         </div>
                     </div>
                     <div class="media">
@@ -146,8 +164,10 @@ include_once '../controller/startUserSession.php';
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">User Interface Specialist</h4>
-                            <p class="list-group-item-text">Zifan Yang</p>
+                            <div class="list-group-item">
+                                <h4 class="media-heading">User Interface Specialist</h4>
+                                <p class="list-group-item-text">Zifan Yang</p>
+                            </div>
                         </div>
                     </div>
                 </div>
