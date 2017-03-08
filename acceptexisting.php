@@ -9,11 +9,11 @@ $hash = $_GET['hash'];
 include_once "./controller/acceptExistingAction.php";
 
 if ($valid) {
-    header("Location: ./viewgroup.php?groupid=$groupid&accepted");
+    header("Location: http://www.squaducsd.com/viewgroup.php?groupid=$groupid&accepted");
 } else {
     // redirects to error page
     // for now it's going to redirect to the home page
-    header("Location: ./error.php");
+    header("Location: http://www.squaducsd.com/error.php");
 }
 
 ?>

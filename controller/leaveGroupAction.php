@@ -21,7 +21,7 @@ $inGroup = $group->hasUser($id);
 $disbanded = false;
 // if somehow the user editing is not in the group, redirect to view profile page
 if (!$inGroup)
-    header("Location: ./viewgroup.php?groupid=$groupid");
+    header("Location: http://www.squaducsd.com/viewgroup.php?groupid=$groupid");
 else {
 
 
@@ -43,6 +43,6 @@ else {
 }
 
 if ($disbanded)
-    header("Location: ./managegroups.php?disbanded");
+    header("Location: http://www.squaducsd.com/managegroups.php?disbanded");
 else
-    header("Location: ./managegroups.php?leave");
+    header("Location: http://www.squaducsd.com/managegroups.php?leave");

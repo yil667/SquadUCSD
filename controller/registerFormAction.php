@@ -16,7 +16,7 @@ if ($duplicateEmail) {
     // notify the front end that
     // the user email already exists in the database
     // with the flag in the url
-    header("Location: ./register.php?fail");
+    header("Location: http://www.squaducsd.com/register.php?fail");
 } // Create the new user in the database
 
 else {
@@ -27,5 +27,5 @@ else {
     sendverificationEmail($first, $email, $hash);
 
     // redirect to the homepage
-    header("Location: ./login.php?verify");
+    header("Location: http://www.squaducsd.com/login.php?verify");
 }

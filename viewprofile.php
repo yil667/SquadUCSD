@@ -28,7 +28,7 @@ else {
 
     // if link is invalid
     if ($user === FALSE) {
-        header("Location: ./error.php");
+        header("Location: http://www.squaducsd.com/error.php");
     }
 
     $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";

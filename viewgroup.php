@@ -7,7 +7,7 @@ $url = json_encode($_SERVER['REQUEST_URI']);
 // redirects the url to homepage if not groupid found
 if (strrpos($url, "?groupid") == "") {
     // redirects to home page if the user is not logged in
-    header("Location: ./index.php");
+    header("Location: http://www.squaducsd.com/index.php");
 }
 
 // otherwise we load the id into the session variable and
@@ -20,7 +20,7 @@ else {
 
     // if link is invalid
     if ($group === false) {
-        header("Location: ./error.php");
+        header("Location: http://www.squaducsd.com/error.php");
     }
     $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 

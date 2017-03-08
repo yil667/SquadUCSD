@@ -6,14 +6,14 @@ $url = $_SERVER['REQUEST_URI'];
 
 // no flag is found, redirect to manage group page
 if (strpos($url, "?groupid") === false) {
-    header("Location: ./managegroups.php");
+    header("Location: http://www.squaducsd.com/managegroups.php");
 }
 // if the link contains the flag, but user is not logged in,
 // then the user shouldn't be able to edit profile
 else {
     if (!isLoggedIn()) {
         $groupid = $_GET['groupid'];
-        header("Location: ./viewgroup.php?groupid=$groupid");
+        header("Location: http://www.squaducsd.com/viewgroup.php?groupid=$groupid");
     }
 }
 
@@ -23,12 +23,12 @@ $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 include_once './controller/viewGroupProfileAction.php';
 
 if ($group === FALSE)
-    header("Location: ./error.php");
+    header("Location: http://www.squaducsd.com/error.php");
 
 // if the user is actually not in the group, redirects to view profile instead
 else if (!$inGroup) {
     $groupid = $_GET['groupid'];
-    header("Location: ./viewgroup.php?groupid=$groupid");
+    header("Location: http://www.squaducsd.com/viewgroup.php?groupid=$groupid");
 }
 // now the $group object contains all the relevant user info
 ?>

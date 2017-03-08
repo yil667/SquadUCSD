@@ -9,7 +9,7 @@ $sql = "UPDATE student SET forgotPwdHash='', pwd='$newPassword' WHERE email='$em
 $conn = connectToDB();
 mysqli_query($conn, $sql);
 
-header("Location: ./login.php?reset");
+header("Location: http://www.squaducsd.com/login.php?reset");
 
 ?>
 <!-- stop PHP Code -->

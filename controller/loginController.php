@@ -79,5 +79,5 @@ function handleNotLoggedIn()
 {
     if (!isLoggedIn())
         // redirect to the homepage
-        header("Location: ../index.php");
+        header("Location: http://www.squaducsd.com/index.php");
 }

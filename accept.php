@@ -8,11 +8,11 @@ $hash = $_GET['hash'];
 include_once "./controller/createGroupAction.php";
 
 if ($valid) {
-    header("Location: ./managegroups.php?formed");
+    header("Location: http://www.squaducsd.com/managegroups.php?formed");
 } else {
     // redirects to error page
     // for now it's going to redirect to the home page
-    header("Location: ./error.php");
+    header("Location: http://www.squaducsd.com/error.php");
 }
 
 ?>
