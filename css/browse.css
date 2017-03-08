@@ -25,7 +25,7 @@
     border-color: transparent;
 }
 
-.panel-custom > .panel-heading > a {
+.panel-custom > .panel-heading > h4 {
     color: #f2f2f2;
 }
 
