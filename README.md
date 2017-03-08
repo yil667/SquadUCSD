@@ -14,7 +14,7 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Non-Coding related todo list: </h2>
 <ol>
-   <li>Rewrite blurb on <a href="http://www.squaducsd.com/pages/">welcome</a> page</li>
+   <li>Rewrite blurb on <a href="http://www.squaducsd.com/">welcome</a> page</li>
    <li>Write some shit for the contact page and give it to some coder to implement</li>
    <li>Go over Use Cases, User Stories, System Requirements and Design Use cases and update to be consistent with final product</li>
    <li>Use Site as reference while doing this. Change Use Cases that do not exactly match up with what appears on the site</li>

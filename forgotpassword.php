@@ -1,12 +1,12 @@
 <?php
-include_once '../controller/startUserSession.php';
+include_once './controller/startUserSession.php';
 ?>
 
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
     <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
@@ -50,7 +50,7 @@ include_once '../controller/startUserSession.php';
                         Enter your UCSD email address and a reset link will be sent to your email.
                     </div>
 
-                    <form action="../controller/forgotPasswordFormAction.php" class="form-horizontal" role="form"
+                    <form action="controller/forgotPasswordFormAction.php" class="form-horizontal" role="form"
                           method="POST">
                         <label class="col-md-4 control-label"></label> <!--Fix for register here -->
 

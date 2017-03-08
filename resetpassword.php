@@ -1,11 +1,11 @@
 <?php
 
-include_once '../controller/startUserSession.php';
+include_once './controller/startUserSession.php';
 
 $_SESSION['hash'] = $_GET['hash'];
 $_SESSION['forgetEmail'] = $_GET['email'];
 
-include_once "../controller/resetPasswordLinkAction.php";
+include_once "./controller/resetPasswordLinkAction.php";
 
 
 // the script return a $valid variable for checking whether the activation
@@ -21,8 +21,8 @@ include_once "../controller/resetPasswordLinkAction.php";
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
     <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
@@ -40,13 +40,13 @@ include_once "../controller/resetPasswordLinkAction.php";
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    <script src="../js/register-validation.js"></script>
+    <script src="js/register-validation.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
         });
     </script>
-    <script src="../js/resetpassword-validation.js"></script>
+    <script src="js/resetpassword-validation.js"></script>
 </head>
 <body>
 <div id="common"></div>
@@ -61,7 +61,7 @@ include_once "../controller/resetPasswordLinkAction.php";
                         Enter and confirm your new password.
                     </div>
 
-                    <form action="../controller/resetPasswordFormAction.php" class="form-horizontal" role="form"
+                    <form action="controller/resetPasswordFormAction.php" class="form-horizontal" role="form"
                           name="resetForm" id="resetForm" method="POST">
                         <label class="col-md-4 control-label"></label> <!--Fix for register here -->
 

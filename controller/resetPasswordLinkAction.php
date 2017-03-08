@@ -12,7 +12,7 @@ $result = mysqli_query($conn, $sql);
 // if the email and hash are correct
 if (!$row = mysqli_fetch_assoc($result)) {
     // No match -> Invalid or expired reset password link.
-    header("Location: ./login.php?invalidreset");
+    header("Location: ../login.php?invalidreset");
 }
 ?>
 <!-- stop PHP Code -->

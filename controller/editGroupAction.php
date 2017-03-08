@@ -24,11 +24,11 @@ $size = mysqli_real_escape_string($conn, $_POST['size']);
 
 // if the inputted size is less than the current group size
 if ($size < $group->getSize())
-    header("Location: ../pages/editgroup.php?groupid=$groupid&invalidsize");
+    header("Location: ../editgroup.php?groupid=$groupid&invalidsize");
 
 // if somehow the user editing is not in the group, redirect to view profile page
 if (!$inGroup)
-    header("Location: ../pages/viewgroup.php?groupid=$groupid");
+    header("Location: ../viewgroup.php?groupid=$groupid");
 else {
     // we assume data validation has already taken place in the front end
     $sql = "UPDATE groupProfile SET name='$groupname', maxSize='$size', class='$course' " .
@@ -36,7 +36,7 @@ else {
 
     mysqli_query($conn, $sql);
 
-    header("Location: ../pages/editgroup.php?groupid=$groupid&saved");
+    header("Location: ../editgroup.php?groupid=$groupid&saved");
 
 }
 

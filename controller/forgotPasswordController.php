@@ -30,7 +30,7 @@ function sendForgotPasswordEmail($fname, $email, $hash)
 
 function generateForgotPasswordUrl($email, $hash)
 {
-    return "http://www.squaducsd.com/pages/resetpassword.php?email=$email&hash=$hash";
+    return "http://www.squaducsd.com/resetpassword.php?email=$email&hash=$hash";
 }
 
 function generateForgotPasswordEmail($fname, $email, $hash)

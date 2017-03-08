@@ -1,12 +1,12 @@
 <?php
-include_once '../controller/startUserSession.php';
+include_once './controller/startUserSession.php';
 ?>
 
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+<link rel="stylesheet" type="text/css" href="./css/common.css"/>
+<link rel="stylesheet" type="text/css" href="./css/index.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
     <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
@@ -27,12 +27,6 @@ include_once '../controller/startUserSession.php';
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-            var welcomeMsg = document.getElementById('welcome');
-            var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
-            var userFirstName = <?php echo json_encode($firstName); ?>;
-            if (isUserLoggedIn) {
-                welcome.innerHTML = 'Welcome, ' + userFirstName + '!';
-            }
         });
     </script>
 </head>
@@ -42,16 +36,11 @@ include_once '../controller/startUserSession.php';
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="jumbotron">
-                <h1 id="welcome">Welcome!</h1>
+                <h1 id="welcome">Contact Us</h1>
 
                 <p>
-                    SquadUCSD is a web application that helps simplify the process of finding study or project
-                    groups for University of California, San Diego students. Simply create an account with your
-                    UCSD email address and fill out a profile page to utilize our browse function. Browse allows
-                    students to view existing groups or individuals looking for a group. Just want to find a
-                    partner for a homework assignment or need a group of 10 for a project? Don’t worry, this web
-                    application allows students to customize the size of their groups, allowing other students to
-                    see if existing groups want more members.
+                    Having trouble with the web application? Want to learn more about SquadUCSD?
+                    Contact us at <a href= "mailto:contact@squaducsd.com">contact@squaducsd.com</a> and we’ll get back to you as soon as possible.
                 </p>
             </div>
         </div>

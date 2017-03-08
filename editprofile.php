@@ -1,20 +1,20 @@
 <?php
-include_once '../controller/startUserSession.php';
+include_once './controller/startUserSession.php';
 
 handleNotLoggedIn();
 
 $_SESSION['profileid'] = $_SESSION['id'];
 
 // load the user's data from action controller
-include_once '../controller/viewProfileAction.php';
+include_once './controller/viewProfileAction.php';
 
 // now the user object contains all the relevant user info
 ?>
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-<link rel="stylesheet" type="text/css" href="../css/profile.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/profile.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
     <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
@@ -34,11 +34,11 @@ include_once '../controller/viewProfileAction.php';
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- UI for class drop down -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../js/class-list.js"></script>
+    <script src="js/class-list.js"></script>
     <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    <script src="../js/profile-validation.js"></script>
-    <script src="../js/changepassword-validation.js"></script>
+    <script src="js/profile-validation.js"></script>
+    <script src="js/changepassword-validation.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
@@ -100,7 +100,7 @@ include_once '../controller/viewProfileAction.php';
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal" id="editProfileForm" role="form" method="POST"
-                          action="../controller/editProfileAction.php">
+                          action="controller/editProfileAction.php">
                         <div class="form-group">
                             <label for="name" class="col-md-3 control-label">Full Name</label>
                             <div class="col-md-9">
@@ -156,7 +156,7 @@ include_once '../controller/viewProfileAction.php';
                     </form>
 
                     <form class="form-horizontal" id="changePasswordForm" role="form" method="POST"
-                          action="../controller/changePasswordAction.php">
+                          action="controller/changePasswordAction.php">
 
                         <div class="form-group">
                             <label for="currpassword" class="col-md-3 control-label">Enter Current Password</label>

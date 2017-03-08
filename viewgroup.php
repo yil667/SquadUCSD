@@ -1,13 +1,13 @@
 <?php
 // we need to adjust the url accordingly (append user id)
-include_once '../controller/startUserSession.php';
+include_once './controller/startUserSession.php';
 
 $url = json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to homepage if not groupid found
 if (strrpos($url, "?groupid") == "") {
     // redirects to home page if the user is not logged in
-    header("Location: ../pages/index.php");
+    header("Location: ./index.php");
 }
 
 // otherwise we load the id into the session variable and
@@ -16,7 +16,7 @@ else {
     $_SESSION['groupid'] = $_GET['groupid'];
 
     // this action controller will fetch the user data into the $user variable
-    include_once "../controller/viewGroupProfileAction.php";
+    include_once "./controller/viewGroupProfileAction.php";
 
     // if link is invalid
     if ($group === false) {
@@ -30,8 +30,8 @@ else {
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-<link rel="stylesheet" type="text/css" href="../css/profile.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/profile.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
     <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
@@ -48,8 +48,8 @@ else {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	 <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    <script src="../js/message-validation.js"></script>
-    <script src="../js/request-validation.js"></script>
+    <script src="js/message-validation.js"></script>
+    <script src="js/request-validation.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -176,7 +176,7 @@ else {
                 <h3 id="requestLabel">Request to Join Group</h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/joinGroupRequestAction.php" role="form" method="POST" id="requestForm">
+                <form action="controller/joinGroupRequestAction.php" role="form" method="POST" id="requestForm">
                     <div class="form-group">
                         <label name="message" id="message" for="messageboxreq">Message</label>
                         <textarea class="form-control" name="messageboxreq" id="messageboxreq" rows="3"></textarea>
@@ -199,7 +199,7 @@ else {
                 <h3 id="messagegroupLabel">Message Group Members</h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/messageGroupAction.php" role="form" method="POST" id="messageForm">
+                <form action="./controller/messageGroupAction.php" role="form" method="POST" id="messageForm">
                     <div class="form-group">
                         <label name="message" id="message" for="messageboxreq">Message</label>
                         <textarea class="form-control" name="sendmessageform" id="sendmessageform" rows="3"></textarea>

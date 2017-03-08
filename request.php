@@ -6,7 +6,7 @@ $id1 = $_GET['id'];
 $groupid = $_GET['groupid'];
 $hash = $_GET['hash'];
 
-include_once "../controller/requestAction.php";
+include_once "./controller/requestAction.php";
 
 if ($valid) {
     header("Location: ./viewgroup.php?groupid=$groupid&accepted");

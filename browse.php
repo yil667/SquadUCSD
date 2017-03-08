@@ -1,19 +1,19 @@
 <?php
-include_once '../controller/startUserSession.php';
+include_once './controller/startUserSession.php';
 
 handleNotLoggedIn();
 
 $_SESSION['profileid'] = $_SESSION['id'];
 
 // load the user's data from action controller
-//include_once '../controller/viewProfileAction.php';
+//include_once './controller/viewProfileAction.php';
 
 // now the user object contains all the relevant user info
 ?>
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="../css/browse.css"/>
-<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/browse.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
     <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
@@ -35,9 +35,9 @@ $_SESSION['profileid'] = $_SESSION['id'];
     <!-- UI for class drop down -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--jqueryplugin for pagination-->
-    <script src="../js/jquery.twbsPagination.min.js" type="text/javascript"></script>
+    <script src="js/jquery.twbsPagination.min.js" type="text/javascript"></script>
     <!--jquery object-->
-    <script src="../js/jquery.query-object.js" type="text/javascript"></script>
+    <script src="js/jquery.query-object.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
@@ -60,7 +60,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
         <div class="panel panel-custom">
             <div class="panel-body main-panel">
                 <form class="form" role="search" id="searchForm" name="searchForm" method="POST"
-                      action="../controller/searchAction.php">
+                      action="./controller/searchAction.php">
 
                     <div class="form-group" id="courseFormGroup" name="courseFormGroup">
                         <label for="course" class="control-label">Course</label>

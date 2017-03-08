@@ -35,7 +35,7 @@ Thank you for registering!
 Your account has been created, you can log in after you have activated your account. 
 
 Please click the following link to activate your account:
-http://www.squaducsd.com/pages/activate.php?email=$email&hash=$hash
+http://www.squaducsd.com/activate.php?email=$email&hash=$hash
 
 
 SquadUCSD";

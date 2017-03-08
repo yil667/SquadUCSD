@@ -30,12 +30,12 @@ function generateInviteSubject($user)
 
 function getGroupProfileUrl($groupid)
 {
-    return "http://www.squaducsd.com/pages/viewgroup.php?groupid=$groupid";
+    return "http://www.squaducsd.com/viewgroup.php?groupid=$groupid";
 }
 
 function generateInviteUrl($senderid, $receiverid, $groupid, $hash)
 {
-    return "http://www.squaducsd.com/pages/acceptexisting.php?id1=$senderid&id2=$receiverid&groupid=$groupid&hash=$hash";
+    return "http://www.squaducsd.com/acceptexisting.php?id1=$senderid&id2=$receiverid&groupid=$groupid&hash=$hash";
 }
 
 function generateInviteMessage($user, $receiver, $group, $message, $hash)

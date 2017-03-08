@@ -1,12 +1,11 @@
 <?php
-include_once '../controller/startUserSession.php';
+include_once './controller/startUserSession.php';
 ?>
-
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
     <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
@@ -27,6 +26,9 @@ include_once '../controller/startUserSession.php';
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
+            setTimeout(function () {
+                window.location.href = "index.php";
+            }, 3000);
         });
     </script>
 </head>
@@ -36,11 +38,11 @@ include_once '../controller/startUserSession.php';
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="jumbotron">
-                <h1 id="welcome">Contact Us</h1>
+                <h1 id="welcome">Error</h1>
 
                 <p>
-                    Having trouble with the web application? Want to learn more about SquadUCSD?
-                    Contact us at <a href= "mailto:contact@squaducsd.com">contact@squaducsd.com</a> and we’ll get back to you as soon as possible.
+                    Sorry. The URL you are trying to access is invalid.
+                    Redirecting to home page in 3...
                 </p>
             </div>
         </div>
@@ -48,4 +50,3 @@ include_once '../controller/startUserSession.php';
 </div>
 </body>
 </html>
-

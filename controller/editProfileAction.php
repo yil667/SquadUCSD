@@ -32,4 +32,4 @@ $sql = "UPDATE student SET phone='$phone', major='$major', about='$about', " .
 
 mysqli_query($conn, $sql);
 
-header("Location: ../pages/editprofile.php?saved");
+header("Location: ../editprofile.php?saved");

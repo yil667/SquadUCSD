@@ -13,12 +13,12 @@ function getRow($conn, $id)
 // generates a user's url for the profile's page
 function getProfileUrl($id)
 {
-    return "http://www.squaducsd.com/pages/viewprofile.php?userid=$id";
+    return "http://www.squaducsd.com/viewprofile.php?userid=$id";
 }
 
 function generateInviteUrl($senderid, $receiverid, $hash)
 {
-    return "http://www.squaducsd.com/pages/accept.php?id1=$senderid&id2=$receiverid&hash=$hash";
+    return "http://www.squaducsd.com/accept.php?id1=$senderid&id2=$receiverid&hash=$hash";
 }
 
 function generateInviteMessage($senderRow, $receiverRow, $groupName, $className, $userMessage, $hash)

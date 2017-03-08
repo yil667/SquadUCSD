@@ -11,6 +11,6 @@ $result = handleForgotPasswordEmail($conn, $email);
 
 // email exists
 if ($result)
-    header("Location: ../pages/login.php?sent");
+    header("Location: ../login.php?sent");
 else
-    header("Location: ../pages/forgotpassword.php?fail");
+    header("Location: ../forgotpassword.php?fail");

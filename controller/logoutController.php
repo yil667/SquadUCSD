@@ -6,6 +6,6 @@ function logout()
     session_destroy();
 
     // redirects the user to the homepage
-    header("Location: ../pages/index.php");
+    header("Location: ../index.php");
 }
 

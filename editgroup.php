@@ -1,6 +1,6 @@
 <!-- remove '/' in </?php @BACKEND -->
 <?php
-include_once '../controller/startUserSession.php';
+include_once './controller/startUserSession.php';
 
 $url = $_SERVER['REQUEST_URI'];
 
@@ -20,7 +20,7 @@ else {
 $_SESSION['groupid'] = $_GET['groupid'];
 $_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 // load the group's data from action controller
-include_once '../controller/viewGroupProfileAction.php';
+include_once './controller/viewGroupProfileAction.php';
 
 if ($group === FALSE)
     header("Location: ./error.php");
@@ -35,8 +35,8 @@ else if (!$inGroup) {
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-<link rel="stylesheet" type="text/css" href="../css/profile.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/profile.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
     <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
@@ -57,7 +57,7 @@ else if (!$inGroup) {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- UI for class drop down -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../js/class-list.js"></script>
+    <script src="js/class-list.js"></script>
     <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script type="text/javascript">
@@ -95,7 +95,7 @@ else if (!$inGroup) {
 
         });
     </script>
-    <script src="../js/group-validation.js"></script>
+    <script src="js/group-validation.js"></script>
 </head>
 <body>
 <div id="common"></div>
@@ -110,7 +110,7 @@ else if (!$inGroup) {
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" id="editGroupForm" name="editGroupForm" method="POST"
-                          action="../controller/editGroupAction.php">
+                          action="controller/editGroupAction.php">
 
                         <div class="form-group">
                             <label for="groupname" class="col-md-3 control-label">Name</label>
@@ -174,7 +174,7 @@ else if (!$inGroup) {
             </div>
             <div class="modal-footer">
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button type="button" onclick="location.href='../controller/leaveGroupAction.php'"
+                <button type="button" onclick="location.href='controller/leaveGroupAction.php'"
                         class="btn btn-primary">Confirm
                 </button>
             </div>
@@ -190,7 +190,7 @@ else if (!$inGroup) {
                 <h3 id="messagegroupLabel">Message Group Members</h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/messageGroupAction.php" role="form" method="POST" id="messageForm">
+                <form action="./controller/messageGroupAction.php" role="form" method="POST" id="messageForm">
                     <div class="form-group">
                         <label name="message" id="message" for="messageboxreq">Message</label>
                         <textarea class="form-control" name="sendmessageform" id="sendmessageform" rows="3"></textarea>

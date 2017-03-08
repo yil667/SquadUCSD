@@ -1,19 +1,19 @@
 <?php
 // if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
-include_once '../controller/startUserSession.php';
+include_once './controller/startUserSession.php';
 
 handleNotLoggedIn();
 
-include_once '../controller/manageGroupAction.php';
+include_once './controller/manageGroupAction.php';
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-<link rel="stylesheet" type="text/css" href="../css/profile.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/profile.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
     <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>

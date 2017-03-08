@@ -13,12 +13,12 @@ function generateRequestSubject($fname, $lname)
 
 function getRequesterProfileUrl($requesterId)
 {
-    return "http://www.squaducsd.com/pages/viewprofile.php?userid=$requesterId";
+    return "http://www.squaducsd.com/viewprofile.php?userid=$requesterId";
 }
 
 function generateRequestUrl($requesterId, $groupId, $hash)
 {
-    return "http://www.squaducsd.com/pages/request.php?id=$requesterId&groupid=$groupId&hash=$hash";
+    return "http://www.squaducsd.com/request.php?id=$requesterId&groupid=$groupId&hash=$hash";
 
 }
 

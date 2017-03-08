@@ -1,7 +1,7 @@
 <?php
 //if the user clicks on the view profile themselves
 // we need to adjust the url accordingly (append user id)
-include_once '../controller/startUserSession.php';
+include_once './controller/startUserSession.php';
 
 $url = json_encode($_SERVER['REQUEST_URI']);
 
@@ -24,7 +24,7 @@ else {
     $_SESSION['profileid'] = $_GET['userid'];
 
     // this action controller will fetch the user data into the $user variable
-    include_once "../controller/viewProfileAction.php";
+    include_once "./controller/viewProfileAction.php";
 
     // if link is invalid
     if ($user === FALSE) {
@@ -40,8 +40,8 @@ else {
 <!DOCTYPE html>
 <html>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-<link rel="stylesheet" type="text/css" href="../css/profile.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/profile.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
     <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
@@ -58,14 +58,14 @@ else {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    <script src="../js/message-validation.js"></script>
-    <script src="../js/create-validation.js"></script>
-    <script src="../js/invite-validation.js"></script>
+    <script src="js/message-validation.js"></script>
+    <script src="js/create-validation.js"></script>
+    <script src="js/invite-validation.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- UI for class drop down -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../js/class-list.js"></script>
+    <script src="js/class-list.js"></script>
     <script type="text/javascript">
         var mygroups;
         var isInGroup;
@@ -303,7 +303,7 @@ else {
                 <h3 id="nameMessage"></h3>
             </div>
             <div class="modal-body">
-                <form action="../controller/userMessageAction.php" role="form" method="POST" id="messageForm">
+                <form action="controller/userMessageAction.php" role="form" method="POST" id="messageForm">
                     <div class="form-group">
                         <label name="message" id="message" for="sendmessageform">Message</label>
                         <textarea class="form-control" name="sendmessageform" id="sendmessageform" rows="3"></textarea>
@@ -329,7 +329,7 @@ else {
             </div>
             <div class="modal-body">
 
-                <form action="../controller/inviteToExistingAction.php" role="form" method="POST" id="inviteForm">
+                <form action="controller/inviteToExistingAction.php" role="form" method="POST" id="inviteForm">
                     <div class="form-group">
                         <label name="selectlabel" id="selectlabel" for="groupid">Select Group</label>
                         <select class="form-control" id="groupid" name="groupid">
@@ -363,7 +363,7 @@ else {
                 <h3 id="nameForm"></h3>
             </div>
             <div class="modal-body">
-                <form class="ui-front" action="../controller/userSendInviteAction.php" role="form" method="POST" id="createForm">
+                <form class="ui-front" action="controller/userSendInviteAction.php" role="form" method="POST" id="createForm">
 
                     <div class="form-group">
                         <label name="grouplabel" id="grouplabel" for="groupname">Group Name</label>

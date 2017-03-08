@@ -1,11 +1,11 @@
 <?php
-include_once '../controller/startUserSession.php';
+include_once './controller/startUserSession.php';
 ?>
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
 <head>
     <!-- this is the icon in the browser tab. change the image at some point -->
     <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
@@ -23,13 +23,13 @@ include_once '../controller/startUserSession.php';
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    <script src="../js/register-validation.js"></script>
+    <script src="js/register-validation.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
             var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
             if (isUserLoggedIn) {
-                document.location.href = './index.php';
+                document.location.href = 'index.php';
             }
             if (window.location.href.indexOf("fail") > -1) {
                 $("#register-error").html("The email you entered is already registered! ");
@@ -56,7 +56,7 @@ include_once '../controller/startUserSession.php';
                         </a>
                     </div>
 
-                    <form class="form-horizontal" action="../controller/registerFormAction.php" role="form"
+                    <form class="form-horizontal" action="controller/registerFormAction.php" role="form"
                           method="POST" id="registrationForm">
                         <label class="col-md-4 control-label"></label> <!--Fix for login here link-->
                         <div class="form-group">

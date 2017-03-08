@@ -3,13 +3,12 @@
 
 $id1 = $_GET['id1'];
 $id2 = $_GET['id2'];
-$groupid = $_GET['groupid'];
 $hash = $_GET['hash'];
 
-include_once "../controller/acceptExistingAction.php";
+include_once "./controller/createGroupAction.php";
 
 if ($valid) {
-    header("Location: ./viewgroup.php?groupid=$groupid&accepted");
+    header("Location: ./managegroups.php?formed");
 } else {
     // redirects to error page
     // for now it's going to redirect to the home page
