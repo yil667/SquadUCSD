@@ -61,3 +61,7 @@
     margin-bottom: 10px;
     color: #f2f2f2;
 }
+
+.error {
+    color: #ff6666;
+}
