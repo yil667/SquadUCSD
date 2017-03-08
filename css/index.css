@@ -2,6 +2,10 @@
     margin-top: 30px;
 }
 
+.list-group-item{
+    vertical-align: middle;
+}
+
 .panel-custom > .panel-heading h3 {
     margin-top: 10px;
     margin-bottom: 10px;
