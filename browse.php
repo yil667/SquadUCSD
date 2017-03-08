@@ -34,6 +34,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- UI for class drop down -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/class-list.js"></script>
     <!--jqueryplugin for pagination-->
     <script src="js/jquery.twbsPagination.min.js" type="text/javascript"></script>
     <!--jquery object-->
