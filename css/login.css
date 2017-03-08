@@ -21,6 +21,11 @@
     margin-bottom: 60px;
 }
 
-#email-error, #login-error, #register-error, .error {
+#email-error, #login-error, #register-error {
     color: #ff6666;
+}
+
+.error {
+     font-weight: normal !important;
+     color: #ff6666;
 }

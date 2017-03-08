@@ -43,7 +43,12 @@ textarea {
     resize: vertical;
 }
 
-#invite-error, #error-display, .error {
+#invite-error, #error-display {
+    color: #ff6666;
+}
+
+.error {
+    font-weight: normal;
     color: #ff6666;
 }
 

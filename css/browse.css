@@ -10,10 +10,6 @@
     font-size: 14px !important;
 }
 
-.panel-custom > .panel-heading h4 {
-    color: #262626;
-}
-
 #classes > a.col-md-3.list-group-item{
     margin-right: 2px;
 }
@@ -25,12 +21,16 @@
 .panel-custom > .panel-heading {
     padding-bottom: 10px;
     vertical-align: middle;
-    background-color: #e6e6e6;
+    background-color: #555 !important;
     border-color: transparent;
 }
 
+.panel-custom > .panel-heading > h4 {
+    color: #f2f2f2;
+}
+
 .panel-custom > .panel-body {
-    background-color: #f2f2f2;
+    background-color: #e6e6e6;
 }
 
 .main-panel{
@@ -52,17 +52,17 @@
 #mainHeading {
     padding-left: 20px;
     vertical-align: middle;
-    background-color: #333333;
+    background-color: #333333 !important;
     border-color: transparent;
 }
 
 #mainHeading h3 {
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #f2f2f2;
+    color: #f2f2f2 !important;
 }
 
 .error {
     color: #ff6666;
-    font-weight: 500;
+    font-weight: normal;
 }
