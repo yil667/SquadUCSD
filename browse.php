@@ -77,7 +77,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" role="button">Search
+                    <button type="submit" class="btn btn-primary btn-sm-block" role="button">Search
                     </button>
                 </form>
             </div>
@@ -111,7 +111,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                                 </div>
 
                                 <div class="text-center buttons col-md-12" id="button">
-                                    <button type="button" class="btn btn-primary" role="button">View Profile
+                                    <button type="button" class="btn btn-primary btn-sm-block" role="button">View Profile
                                     </button>
                                 </div>
                             </form>
@@ -140,7 +140,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                                 </div>
 
                                 <div class="text-center buttons col-md-12" id="button">
-                                    <button type="button" class="btn btn-primary" role="button">View Profile
+                                    <button type="button" class="btn btn-primary btn-sm-block" role="button">View Profile
                                     </button>
                                 </div>
                             </form>

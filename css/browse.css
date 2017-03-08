@@ -11,7 +11,7 @@
 }
 
 .panel-custom > .panel-heading h4 {
-    color: #262626;
+    color: #f2f2f2;
 }
 
 #classes > a.col-md-3.list-group-item{
@@ -25,12 +25,12 @@
 .panel-custom > .panel-heading {
     padding-bottom: 10px;
     vertical-align: middle;
-    background-color: #e6e6e6;
+    background-color: #337ab7;
     border-color: transparent;
 }
 
 .panel-custom > .panel-body {
-    background-color: #f2f2f2;
+    background-color: #e6e6e6;
 }
 
 .main-panel{
