@@ -50,18 +50,17 @@
 #mainHeading {
     padding-left: 20px;
     vertical-align: middle;
-    background-color: #333333;
+    background-color: #333333 !important;
     border-color: transparent;
 }
 
 #mainHeading h3 {
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #f2f2f2;
+    color: #f2f2f2 !important;
 }
 
 .error {
     color: #ff6666;
     font-weight: normal;
 }
-
