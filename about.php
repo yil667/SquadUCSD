@@ -39,10 +39,12 @@ include_once './controller/startUserSession.php';
                 <h1>About</h1>
                 <h2>Team</h2>
                 <ul class="list-group">
+                    <img src="" class="img-responsive img-thumbnail img-rounded" alt="Responsive image">
                     <li class="list-group-item">
                         <h4 class="list-group-item-heading">Project Manager</h4>
                         <p class="list-group-item-text">Tommy Chen</p>
                     </li>
+                    <img src="" class="img-responsive img-thumbnail img-rounded" alt="Responsive image">
                     <li class="list-group-item">
                         <h4 class="list-group-item-heading">Business Analyst</h4>
                         <p class="list-group-item-text">Wenyi Chen</p>
