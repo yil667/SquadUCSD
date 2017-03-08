@@ -39,9 +39,14 @@
 
 .main-body{
 }
+
 .result-panel{
     padding-left: 0 !important;
     padding-right: 0 !important;
+}
+
+.result-body{
+    background-color: #e2e2e2;
 }
 
 #mainHeading {
