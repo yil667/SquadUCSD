@@ -39,7 +39,8 @@ include_once '../controller/startUserSession.php';
                 <h1 id="welcome">Contact Us</h1>
 
                 <p>
-                    placeholder
+                    Having trouble with the web application? Want to learn more about SquadUCSD?
+                    Contact us at <a href= "mailto:contact@squaducsd.com">contact@squaducsd.com</a> and we’ll get back to you as soon as possible.
                 </p>
             </div>
         </div>

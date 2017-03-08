@@ -42,12 +42,16 @@ include_once '../controller/startUserSession.php';
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="jumbotron">
-                <h1 id="welcome">Welcome</h1>
+                <h1 id="welcome">Welcome!</h1>
 
                 <p>
-                    This web app allows students to form study groups for the classes they are enrolled in. Groups are
-                    formed based on schedule compatibility and individual personalities and preferences. Groups can set
-                    a maximum size to allow however many people in. This can be changed any time.
+                    SquadUCSD is a web application that helps simplify the process of finding study or project
+                    groups for University of California, San Diego students. Simply create an account with your
+                    UCSD email address and fill out a profile page to utilize our browse function. Browse allows
+                    students to view existing groups or individuals looking for a group. Just want to find a
+                    partner for a homework assignment or need a group of 10 for a project? Don’t worry, this web
+                    application allows students to customize the size of their groups, allowing other students to
+                    see if existing groups want more members.
                 </p>
             </div>
         </div>
