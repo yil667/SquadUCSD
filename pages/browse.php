@@ -136,7 +136,7 @@ $_SESSION['profileid'] = $_SESSION['id'];
                         </div>
                     </div>
                 </div>
-                <ul id="pagination-demo" class="pagination-sm"></ul>
+                <ul id="pagination-demo" class="pagination-sm pagination"></ul>
             </div>
         </div>
     </div>
