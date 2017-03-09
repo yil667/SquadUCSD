@@ -73,8 +73,8 @@ echo sizeof($result);
                 renderResult(result[i]['fname'], result[i]['lname'], result[i]['major'], result[i]['userid']);
             }
             $('#pagination-demo').twbsPagination({
-                totalPages: 35,
-                visiblePages: 7,
+                totalPages: Math.ceil((float(result.size()) / float(10))),
+                visiblePages: 4,
                 onPageClick: function (event, page) {
                     $('#page-content').text('Page ' + page);
                 }
