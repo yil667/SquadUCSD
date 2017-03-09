@@ -12,6 +12,10 @@ if (strrpos($url, "?class=") !== false &&
     $_SESSION['class'] = $_GET['class'];
     $_SESSION['type'] = $_GET['type'];
 
+    echo $_SESSION['class'];
+    echo "-----";
+    echo $_SESSION['type'];
+
     // after this include, a variable named $result will be available, storing
     // an array of user objects or group objects depending on the request
     include_once "$_SERVER[DOCUMENT_ROOT]/controller/getSearchResultAction.php";
