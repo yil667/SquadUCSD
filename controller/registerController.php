@@ -21,7 +21,10 @@ function existingEmail($email)
 // tentative parameter list (do we want to pass in the user info, or do we want to use $_POST[] ?)
 function addUser($email, $password, $first, $last, $hash)
 {
-    $sql = "INSERT INTO student (fname, lname, email, pwd, hash) VALUES ('$first', '$last', '$email', '$password', '$hash')";
+    // hash the password for encryption
+    $pw_hash = password_hash($password, PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO student (fname, lname, email, pwd, hash) VALUES ('$first', '$last', '$email', '$pw_hash', '$hash')";
     $conn = connectToDB();
     mysqli_query($conn, $sql);
 }

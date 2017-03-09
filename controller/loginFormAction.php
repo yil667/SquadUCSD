@@ -17,5 +17,5 @@ else if ($retVal == -1) {
 } else if ($retVal == -3) {
     header("Location: http://www.squaducsd.com/login.php?not_verified");
 } else if ($retVal == 0) {
-    login($email, $password);
+    login($email);
 }

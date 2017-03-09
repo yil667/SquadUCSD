@@ -6,39 +6,37 @@ include_once "dbController.php";
 // return 0 if it's correct login info
 // return -1 if account doesn't exist
 // return -2 if account exists, but password is incorrect.
+// return -3 if account exists, but not verified
 function validLogin($email, $password)
 {
-    $sql = "SELECT * FROM student WHERE email='$email' AND pwd='$password'";
+
+    $sql = "SELECT * FROM student WHERE email='$email'";
 
     $conn = connectToDB();
     $result = mysqli_query($conn, $sql);
 
-    // if the login info was valid
+    // if the email is found in the database
     if ($row = mysqli_fetch_assoc($result)) {
+        if($row['active'] == 0)
+            return -3;
 
-        $sql = "SELECT * FROM student WHERE email='$email' AND pwd='$password' AND active=1";
-        $result = mysqli_query($conn, $sql);
-        if ($row = mysqli_fetch_assoc($result))
+        $pw_hash = $row['pwd'];
+        $valid = password_verify($password, $pw_hash);
+
+        if ($valid)
             return 0;
         else
-            return -3;
-    } // otherwise
-    else {
-        $sql = "SELECT * FROM student WHERE email='$email'";
-        $result = mysqli_query($conn, $sql);
-
-        // user account exists in database
-        if ($row = mysqli_fetch_assoc($result))
             return -2;
-        else // user account does not exist in database
-            return -1;
+    } // otherwise account doesn't exist
+    else {
+        return -1;
     }
 }
 
 // pre-condition: correct login credentials
-function login($email, $password)
+function login($email)
 {
-    $sql = "SELECT * FROM student WHERE email='$email' AND pwd='$password'";
+    $sql = "SELECT * FROM student WHERE email='$email'";
     $conn = connectToDB();
     $result = mysqli_query($conn, $sql);
 
