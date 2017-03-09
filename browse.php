@@ -24,8 +24,7 @@ if (strrpos($url, "?class=") !== false &&
     // after this include, a variable named $result will be available, storing
     // an array of user objects or group objects depending on the request
     include_once "$_SERVER[DOCUMENT_ROOT]/controller/getSearchResultAction.php";
-}
-else // otherwise reset the array
+} else // otherwise reset the array
     $result = Array();
 
 echo "hi";
@@ -64,26 +63,33 @@ echo sizeof($result);
     <script src="js/URI.js" type="text/javascript"></script>
     <script type="text/javascript">
         var result = <?php echo json_encode($result); ?>;
+        var show = 2;
+        var start = 0;
+
+        function resetPage(){
+            if (window.location.href.indexOf("&type=users") > -1) {
+                for (i = start; i < start + show; i++)
+                    renderResult(result[i]['fname'], result[i]['lname'], result[i]['major'], result[i]['userid']);
+            }
+            else if (window.location.href.indexOf("&type=groups") > -1) {
+                for (i = start; i < start + show; i++)
+                    renderResultGroup(result[i]['name'], result[i]['size'], result[i]['groupid']);
+            }
+        }
+
         $(document).ready(function () {
             $('#common').load('./common.php');
             if (result.length == 0) {
                 $('#main-body').html("Sorry, we couldn't find any results... ");
             }
-            if(window.location.href.indexOf("&type=users") > -1){
-                for (i = 0; i < result.length; i++)
-                    renderResult(result[i]['fname'], result[i]['lname'], result[i]['major'], result[i]['userid']);
-            }
-            else{
-                 for (i = 0; i < result.length; i++)
-                    renderResultGroup(result[i]['name'], result[i]['size'], result[i]['groupid']);
-            }
+            resetPage();
             $('#pagination-demo').twbsPagination({
-                totalPages: Math.ceil((result.length / 2)),
+                totalPages: Math.ceil(result / show),
                 visiblePages: 4,
                 initiateStartPageClick: false,
                 onPageClick: function (event, page) {
                     $('#page-content').text('Page ' + page);
-                    window.location.href = URI(window.location.href).setSearch({ page: page });
+                    start = (page - 1) * show;
                 }
             });
         });
@@ -140,7 +146,7 @@ echo sizeof($result);
             fname + " " + lname + "</h4></div><div class='panel-body result-body'><form class='form-horizontal'><div class='form-group'><label for='major' class='col-md-3 control-label'>Major</label><div class='col-md-9'><p class='form-control-static' name='major' id='major'>" + major + "</p></div></div><div class='text-center buttons col-md-12' id='button'><button type='button' class='btn btn-primary btn-sm-block' onclick=" +
             "location.href='viewprofile.php?userid=" + id + "' role='button'>View Profile</button></div></form></div></div></div>");
     }
-     function renderResultGroup(name, size, id) {
+    function renderResultGroup(name, size, id) {
         $("#main-body").append("<div class='col-md-6'><div class='panel panel-custom col-md-12 result-panel'><div class='panel-heading'><h4>" +
             name + "</h4></div><div class='panel-body result-body'><form class='form-horizontal'><div class='form-group'><label for='major' class='col-md-3 control-label'>Size</label><div class='col-md-9'><p class='form-control-static' name='size' id='size'>" + size + "</p></div></div><div class='text-center buttons col-md-12' id='button'><button type='button' class='btn btn-primary btn-sm-block' onclick=" +
             "location.href='viewgroup.php?groupid=" + id + "' role='button'>View Group Profile</button></div></form></div></div></div>");
