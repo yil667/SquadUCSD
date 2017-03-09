@@ -67,6 +67,7 @@ echo sizeof($result);
         var start = 0;
 
         function resetPage(){
+            $("#main-body").html("");
             if (window.location.href.indexOf("&type=users") > -1) {
                 for (i = start; i < start + show; i++)
                     renderResult(result[i]['fname'], result[i]['lname'], result[i]['major'], result[i]['userid']);
@@ -83,14 +84,14 @@ echo sizeof($result);
                 $('#main-body').html("Sorry, we couldn't find any results... ");
             }
             resetPage();
-            $('#pagination-demo').twbsPagination({
+            $('#pagination').twbsPagination({
                 totalPages: Math.ceil(result.length / show),
                 visiblePages: 4,
                 initiateStartPageClick: false,
                 onPageClick: function (event, page) {
-                    $('#page-content').text('Page ' + page);
                     start = (page - 1) * show;
                     resetPage();
+                    $('#page-content').text('Page ' + page);
                 }
             });
         });
@@ -130,10 +131,11 @@ echo sizeof($result);
             <div class="panel-heading" name="mainHeading" id="mainHeading">
                 <h3>Search Results</h3>
             </div>
+            <div class="text-center row">
+                <ul id="pagination" class="pagination-md pagination"></ul>
+            </div>
             <div id="main-body" class="panel-body panel-custom main-body">
-                <div class="text-center row">
-                    <ul id="pagination-demo" class="pagination-sm pagination"></ul>
-                </div>
+
             </div>
         </div>
     </div>
