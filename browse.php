@@ -88,6 +88,7 @@ echo sizeof($result);
                 totalPages: Math.ceil(result.length / show),
                 visiblePages: 4,
                 initiateStartPageClick: false,
+                hideOnlyOnePage: false,
                 onPageClick: function (event, page) {
                     start = (page - 1) * show;
                     resetPage();
