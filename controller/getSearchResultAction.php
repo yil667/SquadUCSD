@@ -11,7 +11,7 @@ $conn = connectToDB();
 $id = getUserId();// fetches the id from the url
 $user = getUserObject($id);
 $type = $_SESSION['type'];
-$class = mysqli_escape_string($conn, $_SESSION['class']);
+$class = mysqli_escape_string($conn, urldecode($_SESSION['class']));
 
 if($type == "users")
     $result = getListOfUsers($conn, $class, $user);

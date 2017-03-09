@@ -87,7 +87,7 @@ else // otherwise reset the array
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-sm-block" role="button">Search
+                    <button type="submit" class="btn btn-primary btn-block-xs" role="button">Search
                     </button>
                 </form>
             </div>
@@ -100,7 +100,6 @@ else // otherwise reset the array
             </div>
             <div id="main-body" class="panel-body panel-custom main-body">
               
-      
                 <div class="text-center row">
                     <ul id="pagination-demo" class="pagination-sm pagination"></ul>
                 </div>
