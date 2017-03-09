@@ -119,7 +119,7 @@ else {
 
             var class_1 = <?php echo json_encode($user->getClass1()->getClassName()); ?>; 
             if (class_1 !== "") {
-                $('#courselist').append("<a class='list-group-item' href='browse.php?class=" + class_1 + "&type=users' >" 
+                $('#courselist').append("<a class='list-group-item' href=" + "'browse.php?class=" + class_1 + "&type=users' >" 
                     + class_1 + "</a>");
             }
 
