@@ -61,7 +61,7 @@ echo sizeof($result);
     <!--jqueryplugin for pagination-->
     <script src="js/jquery.twbsPagination.min.js" type="text/javascript"></script>
     <!--jquery object-->
-    <script src="js/jquery.query-object.js" type="text/javascript"></script>
+    <script src="js/URI.js" type="text/javascript"></script>
     <script type="text/javascript">
         var result = <?php echo json_encode($result); ?>;
         $(document).ready(function () {
@@ -78,9 +78,11 @@ echo sizeof($result);
                     renderResultGroup(result[i]['name'], result[i]['size'], result[i]['groupid']);
             }
             $('#pagination-demo').twbsPagination({
-                totalPages: Math.ceil((float(result.size()) / float(10))),
+                totalPages: Math.ceil((result.length / 2)),
                 visiblePages: 4,
+                initiateStartPageClick: false,
                 onPageClick: function (event, page) {
+                    window.location.href = URI(window.location.href).query({ page: page });
                     $('#page-content').text('Page ' + page);
                 }
             });
