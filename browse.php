@@ -99,7 +99,7 @@ echo sizeof($result);
 
                     <div class="form-group" id="courseFormGroup" name="courseFormGroup">
                         <label for="course" class="control-label">Class</label>
-                        <input type="text" class="form-control" name="course" id="course">
+                        <input type="text" placeholder="Enter something to search" class="form-control" name="course" id="course">
                     </div>
 
                     <div class="form-group" id="typeFormGroup" name="typeFormGroup">
