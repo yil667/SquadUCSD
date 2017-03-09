@@ -88,9 +88,13 @@ else if (!$inGroup) {
                 $("#update-info").html("Group profile updated.");
             }
 
-            if (window.location.href.indexOf("&invalidsize") > -1) {
+            else if (window.location.href.indexOf("&invalidsize") > -1) {
                 $('#update-info').attr('id', 'error-display');
                 $("#error-display").html("New group size cannot be below number of members currently in group.");
+            }
+
+            else if (window.location.href.indexOf("&message") > -1) {
+                $("#update-info").html("Message sent.");
             }
 
         });

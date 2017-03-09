@@ -43,7 +43,7 @@ else {
     <meta name="author" content="Zifan Yang">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	 <!-- jQuery form validation -->
@@ -106,6 +106,14 @@ else {
 
             else if (window.location.href.indexOf("&accepted") > -1) {
                 $("#update-info").html("New member added!");
+            }
+
+            else if (window.location.href.indexOf("&message") > -1) {
+                $("#update-info").html("Message sent.");
+            }
+
+            else if (window.location.href.indexOf("&formed") > -1) {
+                $("#update-info").html("Group created successfully!");
             }
 
 
