@@ -53,7 +53,7 @@ else // otherwise reset the array
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-
+            renderResult("Test","Gender Studies", 3);
             $('#pagination-demo').twbsPagination({
                 totalPages: 35,
                 visiblePages: 7,
@@ -98,67 +98,7 @@ else // otherwise reset the array
             <div class="panel-heading" name="mainHeading" id="mainHeading">
                 <h3>Search Results</h3>
             </div>
-            <div class="panel-body panel-custom main-body">
-                <div class="col-md-6">
-                    <div class="panel panel-custom col-md-12 result-panel">
-                        <div class="panel-heading"><h4>Name</h4></div>
-                        <div class="panel-body result-body">
-                            <form class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="major" class="col-md-3 control-label">Major</label>
-                                    <div class="col-md-9">
-                                        <p class="form-control-static" name="major" id="major"></p>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="courses" class="col-md-3 control-label">Classes</label>
-                                    <div class="col-md-9">
-                                        <div class="list-group" id="courselist" name="courselist">
-                                            <!-- contents here are inserted dynamically -->
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="text-center buttons col-md-12" id="button">
-                                    <button type="button" class="btn btn-primary btn-block-xs" role="button">View Profile
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-custom col-md-12 result-panel">
-                        <div class="panel-heading"><h4>Name</h4></div>
-                        <div class="panel-body result-body">
-                            <form class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="major" class="col-md-3 control-label">Major</label>
-                                    <div class="col-md-9">
-                                        <p class="form-control-static" name="major" id="major"></p>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="courses" class="col-md-3 control-label">Classes</label>
-                                    <div class="col-md-9">
-                                        <div class="list-group" id="courselist" name="courselist">
-                                            <!-- contents here are inserted dynamically -->
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="text-center buttons col-md-12" id="button">
-                                    <button type="button" class="btn btn-primary hidden-sm" role="button">View Profile
-                                    </button>
-                                    <button type="button" class="btn btn-primary btn-block btn-lg visible-sm" role="button">View Profile
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+            <div id="main-body" class="panel-body panel-custom main-body">
                 <div class="text-center row">
                     <ul id="pagination-demo" class="pagination-sm pagination"></ul>
                 </div>
@@ -168,5 +108,13 @@ else // otherwise reset the array
 </div>
 </div>
 </div>
+
+<script type="text/javascript">
+function renderResult(name, major, id) {
+      $("#main-body").append("<div class='col-md-6'><div class='panel panel-custom col-md-12 result-panel'><div class='panel-heading'><h4>" +
+        name + "</h4></div><div class='panel-body result-body'><form class='form-horizontal'><div class='form-group'><label for='major' class='col-md-3 control-label'>Major</label><div class='col-md-9'><p class='form-control-static' name='major' id='major'>" + major + "</p></div></div><div class='text-center buttons col-md-12' id='button'><button type='button' class='btn btn-primary btn-sm-block' onclick=" +
+        "location.href='viewprofile.php?userid=" + id + "' role='button'>View Profile</button></div></form></div></div></div>");
+}
+</script>
 </body>
 </html>
