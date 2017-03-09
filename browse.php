@@ -84,7 +84,7 @@ echo sizeof($result);
             }
             resetPage();
             $('#pagination-demo').twbsPagination({
-                totalPages: Math.ceil(result / show),
+                totalPages: Math.ceil(result.length / show),
                 visiblePages: 4,
                 initiateStartPageClick: false,
                 onPageClick: function (event, page) {
