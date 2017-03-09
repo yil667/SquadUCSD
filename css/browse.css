@@ -11,6 +11,10 @@
     text-align: center;
 }
 
+.pagination > li {
+    background-color: #f6f7f9 !important;
+}
+
 .pagination > li > a{
     font-size: 14px !important;
 }
