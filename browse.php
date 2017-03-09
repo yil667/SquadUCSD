@@ -78,7 +78,7 @@ echo sizeof($result);
                     renderResultGroup(result[i]['name'], result[i]['size'], result[i]['groupid']);
             }
             $('#pagination-demo').twbsPagination({
-                totalPages: Math.ceil((result.size() / 2)),
+                totalPages: Math.ceil((result.length / 2)),
                 visiblePages: 4,
                 initiateStartPageClick: false,
                 onPageClick: function (event, page) {
