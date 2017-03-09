@@ -19,6 +19,9 @@ if (strrpos($url, "?class=") !== false &&
 else // otherwise reset the array
     $result = Array();
 
+echo "hi";
+echo sizeof($result);
+
 ?>
 <!DOCTYPE html>
 <html>
