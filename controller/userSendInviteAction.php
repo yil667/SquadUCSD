@@ -24,7 +24,7 @@ $groupName = mysqli_escape_string($conn, $_POST['groupname']);
 $className = mysqli_escape_string($conn, $_POST['classname']);
 
 // this is the custom message the user wants to send along with the invite request
-$message = ($_POST['messageboxform']);
+$message = substr($_POST['messageboxform'], 0, 210);
 $hash = md5(rand(0, 10000));
 
 // add a request to the Invite HashCode Table

@@ -17,7 +17,8 @@ $groupid = $_SESSION['groupid']; //?groupid=34
 $group = getGroupObject($groupid);
 $fromurl = $_SESSION['fromurl'];
 $fromurl = clearFlags($fromurl);
-$message = $_POST['messageboxreq'];
+
+$message = substr($_POST['messageboxreq'], 0, 210);
 
 $inGroup = $group->hasUser($userid);
 
