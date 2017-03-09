@@ -119,37 +119,37 @@ else {
 
             var class_1 = <?php echo json_encode($user->getClass1()->getClassName()); ?>; 
             if (class_1 !== "") {
-                $('#courselist').append("<a class='list-group-item' onclick =" + "location.href='browse.php?class=" + class_1 + "&type=users' >" 
+                $('#courselist').append("<a class='list-group-item' href='browse.php?class=" + class_1 + "&type=users' >" 
                     + class_1 + "</a>");
             }
 
             var class_2 = <?php echo json_encode($user->getClass2()->getClassName()); ?>;
             if (class_2 !== "") {
-                $('#courselist').append("<a class='list-group-item' onclick =" + "location.href='browse.php?class=" + class_2 + "&type=users' >" 
+                $('#courselist').append("<a class='list-group-item' href='browse.php?class=" + class_2 + "&type=users' >" 
                     + class_2 + "</a>");
             }
 
             var class_3 = <?php echo json_encode($user->getClass3()->getClassName()); ?>;
             if (class_3 !== "") {
-                $('#courselist').append("<a class='list-group-item' onclick =" + "location.href='browse.php?class=" + class_3 + "&type=users' >" 
+                $('#courselist').append("<a class='list-group-item' href='browse.php?class=" + class_3 + "&type=users' >" 
                     + class_3 + "</a>");
             }
 
             var class_4 = <?php echo json_encode($user->getClass4()->getClassName()); ?>;
             if (class_4 !== "") {
-                $('#courselist').append("<a class='list-group-item' onclick =" + "location.href='browse.php?class=" + class_4 + "&type=users' >" 
+                $('#courselist').append("<a class='list-group-item' href='browse.php?class=" + class_4 + "&type=users' >"  
                     + class_4 + "</a>");
             }
 
             var class_5 = <?php echo json_encode($user->getClass5()->getClassName()); ?>;
             if (class_5 !== "") {
-                $('#courselist').append("<a class='list-group-item' onclick =" + "location.href='browse.php?class=" + class_5 + "&type=users' >" 
+                $('#courselist').append("<a class='list-group-item' href='browse.php?class=" + class_5 + "&type=users' >" 
                     + class_5 + "</a>");
             }
 
             var class_6 = <?php echo json_encode($user->getClass6()->getClassName()); ?>;
             if (class_6 !== "") {
-                $('#courselist').append("<a class='list-group-item' onclick =" + "location.href='browse.php?class=" + class_6 + "&type=users' >" 
+                $('#courselist').append("<a class='list-group-item' href='browse.php?class=" + class_6 + "&type=users' >" 
                     + class_6 + "</a>");
             }
 
