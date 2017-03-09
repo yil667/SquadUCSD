@@ -67,10 +67,15 @@ echo sizeof($result);
         $(document).ready(function () {
             $('#common').load('./common.php');
             if (result.length == 0) {
-                $('#main-body').html("No results retard");
+                $('#main-body').html("Sorry, we couldn't find any results... ");
             }
-            for (i = 0; i < result.length; i++) {
-                renderResult(result[i]['fname'], result[i]['lname'], result[i]['major'], result[i]['userid']);
+            if(window.location.href.indexOf("&type=users") > -1){
+                for (i = 0; i < result.length; i++)
+                    renderResult(result[i]['fname'], result[i]['lname'], result[i]['major'], result[i]['userid']);
+            }
+            else{
+                 for (i = 0; i < result.length; i++)
+                    renderResultGroup(result[i]['name'], result[i]['size'], result[i]['groupid']);
             }
             $('#pagination-demo').twbsPagination({
                 totalPages: Math.ceil((float(result.size()) / float(10))),
@@ -94,7 +99,7 @@ echo sizeof($result);
 
                     <div class="form-group" id="courseFormGroup" name="courseFormGroup">
                         <label for="course" class="control-label">Class</label>
-                        <input type="text" class="form-control" name="course" id="course">
+                        <input type="text" placeholder="Enter a Class" class="form-control" name="course" id="course">
                     </div>
 
                     <div class="form-group" id="typeFormGroup" name="typeFormGroup">
@@ -132,6 +137,11 @@ echo sizeof($result);
         $("#main-body").append("<div class='col-md-6'><div class='panel panel-custom col-md-12 result-panel'><div class='panel-heading'><h4>" +
             fname + " " + lname + "</h4></div><div class='panel-body result-body'><form class='form-horizontal'><div class='form-group'><label for='major' class='col-md-3 control-label'>Major</label><div class='col-md-9'><p class='form-control-static' name='major' id='major'>" + major + "</p></div></div><div class='text-center buttons col-md-12' id='button'><button type='button' class='btn btn-primary btn-sm-block' onclick=" +
             "location.href='viewprofile.php?userid=" + id + "' role='button'>View Profile</button></div></form></div></div></div>");
+    }
+     function renderResultGroup(name, size, id) {
+        $("#main-body").append("<div class='col-md-6'><div class='panel panel-custom col-md-12 result-panel'><div class='panel-heading'><h4>" +
+            name + "</h4></div><div class='panel-body result-body'><form class='form-horizontal'><div class='form-group'><label for='major' class='col-md-3 control-label'>Size</label><div class='col-md-9'><p class='form-control-static' name='size' id='size'>" + size + "</p></div></div><div class='text-center buttons col-md-12' id='button'><button type='button' class='btn btn-primary btn-sm-block' onclick=" +
+            "location.href='viewgroup.php?groupid=" + id + "' role='button'>View Group Profile</button></div></form></div></div></div>");
     }
 </script>
 </body>
