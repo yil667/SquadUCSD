@@ -131,11 +131,10 @@ echo sizeof($result);
             <div class="panel-heading" name="mainHeading" id="mainHeading">
                 <h3>Search Results</h3>
             </div>
-            <div class="text-center row">
+            <div class="text-center row page-row">
                 <ul id="pagination" class="pagination-md pagination"></ul>
             </div>
             <div id="main-body" class="panel-body panel-custom main-body">
-
             </div>
         </div>
     </div>
