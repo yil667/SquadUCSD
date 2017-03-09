@@ -90,6 +90,7 @@ echo sizeof($result);
                 onPageClick: function (event, page) {
                     $('#page-content').text('Page ' + page);
                     start = (page - 1) * show;
+                    resetPage();
                 }
             });
         });
