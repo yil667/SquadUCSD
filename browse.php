@@ -51,9 +51,15 @@ else // otherwise reset the array
     <!--jquery object-->
     <script src="js/jquery.query-object.js" type="text/javascript"></script>
     <script type="text/javascript">
+        var result = <?php echo json_encode($result); ?>;
         $(document).ready(function () {
             $('#common').load('./common.php');
-            renderResult("Test","Gender Studies", 3);
+            if(result.length == 0){
+                $('#main-body').html("No results retard");
+            }
+            for (i = 0; i < result.length; i++) {
+                   renderResult(result[i]['fname'], result[i]['major'], result[i]['userid']);
+            }
             $('#pagination-demo').twbsPagination({
                 totalPages: 35,
                 visiblePages: 7,
