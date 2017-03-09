@@ -112,7 +112,7 @@ else {
                 $("#update-info").html("Message sent.");
             }
 
-            else if (window.location.href.indexOf("?formed") > -1) {
+            else if (window.location.href.indexOf("&formed") > -1) {
                 $("#update-info").html("Group created successfully!");
             }
 
