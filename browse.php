@@ -53,7 +53,7 @@ else // otherwise reset the array
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-            renderResult("Test","Gender Studies", 6);
+            renderResult("Test","Gender Studies", 3);
             $('#pagination-demo').twbsPagination({
                 totalPages: 35,
                 visiblePages: 7,
