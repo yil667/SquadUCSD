@@ -181,8 +181,10 @@ else {
             // dynamic element has no spacing. separate them and add spaces in between
             var messageButton = "<button type='button' class='btn btn-primary hidden-xs' data-toggle='modal' data-target='#messageModal'>Message</button>" +
                 "<button type='button' class='btn btn-primary btn-block btn-lg visible-xs' data-toggle='modal' data-target='#messageModal' role='button'>Message</button>";
-            var inviteButton = "<button type='button' class='btn btn-success' data-toggle='modal' data-target='#inviteModal'>Invite to Existing Group</button>"
-            var inviteFormButton = "<button type='button' class='btn btn-success' data-toggle='modal' data-target='#formModal'>Invite to Form New Group</button>";
+            var inviteButton = "<button type='button' class='btn btn-success hidden-xs' data-toggle='modal' data-target='#inviteModal'>Invite to Existing Group</button>" +
+                "<button type='button' class='btn btn-success btn-lg visible-xs' data-toggle='modal' data-target='#inviteModal'>Invite to Existing Group</button>";
+            var inviteFormButton = "<button type='button' class='btn btn-success hidden-xs' data-toggle='modal' data-target='#formModal'>Invite to Form New Group</button>" +
+                "<button type='button' class='btn btn-success btn-lg visible-xs' data-toggle='modal' data-target='#formModal'>Invite to Form New Group</button>";
 
             var defaultContent = "";
 
