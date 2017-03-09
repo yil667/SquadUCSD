@@ -27,7 +27,11 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
-<li>(low priority) in edit <b>group</b> profile make the input fields stand out from the hyperlinks(user profile) //don't understand, clarify pls</li> 
+<li>add about section in edit group/ view group</li> 
+<li>add avatar in edit profile</li>
+<li>add about in browse page under each user/group </li>
+<li>add capability to search users directly in browse </li>
+ 
 </ol>
 
 <h2>Front-end recently finished: </h2>
@@ -66,7 +70,8 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
-
+<li>avatar backend logic </li> 
+<li>accommodate front end feature needs </li>
 
 </ol>
 

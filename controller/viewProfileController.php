@@ -19,7 +19,7 @@ function getUserObject($id)
 
     // declare return object
     $user = new User($id, $row['fname'], $row['lname'], $row['email'], $row['phone'], $row['major'], $row['about']);
-//    echo ($row['fname']);
+
     // we now need to get the groups info
     // declare an empty array
     $groups = Array();
