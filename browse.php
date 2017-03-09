@@ -15,8 +15,7 @@ if (strrpos($url, "?class=") !== false &&
     // after this include, a variable named $result will be available, storing
     // an array of user objects or group objects depending on the request
     include_once "$_SERVER[DOCUMENT_ROOT]/controller/getSearchResultAction.php";
-}
-else // otherwise reset the array
+} else // otherwise reset the array
     $result = Array();
 
 echo "hi";
@@ -57,11 +56,11 @@ echo sizeof($result);
         var result = <?php echo json_encode($result); ?>;
         $(document).ready(function () {
             $('#common').load('./common.php');
-            if(result.length == 0){
+            if (result.length == 0) {
                 $('#main-body').html("No results retard");
             }
             for (i = 0; i < result.length; i++) {
-                   renderResult(result[i]['fname'], result[i]['major'], result[i]['userid']);
+                renderResult(result[i]['fname'], result[i]['lname'], result[i]['major'], result[i]['userid']);
             }
             $('#pagination-demo').twbsPagination({
                 totalPages: 35,
@@ -119,11 +118,11 @@ echo sizeof($result);
 </div>
 
 <script type="text/javascript">
-function renderResult(name, major, id) {
-      $("#main-body").append("<div class='col-md-6'><div class='panel panel-custom col-md-12 result-panel'><div class='panel-heading'><h4>" +
-        name + "</h4></div><div class='panel-body result-body'><form class='form-horizontal'><div class='form-group'><label for='major' class='col-md-3 control-label'>Major</label><div class='col-md-9'><p class='form-control-static' name='major' id='major'>" + major + "</p></div></div><div class='text-center buttons col-md-12' id='button'><button type='button' class='btn btn-primary btn-sm-block' onclick=" +
-        "location.href='viewprofile.php?userid=" + id + "' role='button'>View Profile</button></div></form></div></div></div>");
-}
+    function renderResult(fname, lname, major, id) {
+        $("#main-body").append("<div class='col-md-6'><div class='panel panel-custom col-md-12 result-panel'><div class='panel-heading'><h4>" +
+            fname + " " + lname + "</h4></div><div class='panel-body result-body'><form class='form-horizontal'><div class='form-group'><label for='major' class='col-md-3 control-label'>Major</label><div class='col-md-9'><p class='form-control-static' name='major' id='major'>" + major + "</p></div></div><div class='text-center buttons col-md-12' id='button'><button type='button' class='btn btn-primary btn-sm-block' onclick=" +
+            "location.href='viewprofile.php?userid=" + id + "' role='button'>View Profile</button></div></form></div></div></div>");
+    }
 </script>
 </body>
 </html>
