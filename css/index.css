@@ -16,6 +16,10 @@
     color: #f2f2f2;
 }
 
+.media-body {
+    color: #90949c
+}
+
 .panel-custom > .panel-heading {
     padding-left: 20px;
     vertical-align: middle;
