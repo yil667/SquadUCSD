@@ -138,6 +138,9 @@ echo sizeof($result);
                 </div>
                 <div id="results-container">
                 </div>
+                <div class="text-center col-md-12 page-row">
+                    <ul id="pagination" class="pagination-lg pagination"></ul>
+                </div>
             </div>
         </div>
     </div>
