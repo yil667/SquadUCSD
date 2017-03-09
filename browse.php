@@ -67,7 +67,7 @@ echo sizeof($result);
         $(document).ready(function () {
             $('#common').load('./common.php');
             if (result.length == 0) {
-                $('#main-body').html("No results retard");
+                $('#main-body').html("Sorry, we couldn't find any results... ");
             }
             if(window.location.href.indexOf("&type=users") > -1){
                 for (i = 0; i < result.length; i++)
