@@ -43,10 +43,8 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/manageGroupAction.php";
                     + groups[i]["name"] + "</a>");
             }
 
-            if (window.location.href.indexOf("?formed") > -1) {
-                $("#update-info").html("Group created successfully!");
-            }
-            else if (window.location.href.indexOf("?leave") > -1) {
+
+            if (window.location.href.indexOf("?leave") > -1) {
                 $("#update-info").html("You left the group.");
             }
             else if (window.location.href.indexOf("?disbanded") > -1) {

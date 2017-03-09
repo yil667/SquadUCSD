@@ -8,7 +8,7 @@ $hash = $_GET['hash'];
 include_once "$_SERVER[DOCUMENT_ROOT]/controller/createGroupAction.php";
 
 if ($valid) {
-    header("Location: http://www.squaducsd.com/managegroups.php?formed");
+    header("Location: http://www.squaducsd.com/viewgroup.php?groupid=$groupid&formed");
 } else {
     // redirects to error page
     // for now it's going to redirect to the home page
