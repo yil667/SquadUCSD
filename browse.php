@@ -63,7 +63,7 @@ echo sizeof($result);
     <script src="js/URI.js" type="text/javascript"></script>
     <script type="text/javascript">
         var result = <?php echo json_encode($result); ?>;
-        var show = 2;
+        var show = 8;
         var start = 0;
 
         function resetPage(){
