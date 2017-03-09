@@ -82,8 +82,8 @@ echo sizeof($result);
                 visiblePages: 4,
                 initiateStartPageClick: false,
                 onPageClick: function (event, page) {
-                    window.location.href = URI(window.location.href).setSearch({ page: page });
                     $('#page-content').text('Page ' + page);
+                    window.location.href = URI(window.location.href).setSearch({ page: page });
                 }
             });
         });
