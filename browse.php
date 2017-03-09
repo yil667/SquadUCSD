@@ -69,11 +69,11 @@ echo sizeof($result);
         function resetPage(){
             $("#results-container").html("");
             if (window.location.href.indexOf("&type=users") > -1) {
-                for (i = start; i < start + show && i < result.size(); i++)
+                for (i = start; i < start + show && i < result.length; i++)
                     renderResult(result[i]['fname'], result[i]['lname'], result[i]['major'], result[i]['userid']);
             }
             else if (window.location.href.indexOf("&type=groups") > -1) {
-                for (i = start; i < start + show && i < result.size(); i++)
+                for (i = start; i < start + show && i < result.length; i++)
                     renderResultGroup(result[i]['name'], result[i]['size'], result[i]['groupid']);
             }
         }
