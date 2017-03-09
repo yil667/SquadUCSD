@@ -4,9 +4,14 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 
 $url = json_encode($_SERVER['REQUEST_URI']);
 
+echo "!!";
+echo strrpos($url, "?class=") !== false;
+echo strrpos($url, "&type=" !== false;
+echo "!!";
+
 // redirects the url to homepage if not groupid foun
 if (strrpos($url, "?class=") !== false &&
-    strpos($url, "&type=" !== false)
+    strrpos($url, "&type=" !== false)
 ) {
 
     $_SESSION['class'] = $_GET['class'];
