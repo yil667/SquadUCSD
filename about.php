@@ -94,7 +94,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                         <div class="media-body">
                             <div class="list-group-item">
                                 <h4 class="media-heading">Software Development Lead</h4>
-                                <p class="list-group-item-text">Yi-Chun Lee</p>
+                                <p class="list-group-item-text">Yi-Chun "Dom" Lee</p>
                             </div>
                         </div>
                     </div>
@@ -166,7 +166,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                         <div class="media-body">
                             <div class="list-group-item">
                                 <h4 class="media-heading">User Interface Specialist</h4>
-                                <p class="list-group-item-text">Zifan Yang</p>
+                                <p class="list-group-item-text">Zifan "Z" Yang</p>
                             </div>
                         </div>
                     </div>
