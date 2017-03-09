@@ -75,7 +75,8 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
             }
 
             if (window.location.href.indexOf("?fail") > -1) {
-                $("#update-info").html("Password change failed: Incorrect current password entered.");
+            	$("#update-info").attr("id","error-display");
+                $("#error-display").html("Password change failed: Incorrect current password entered.");
             }
 
             var name = <?php echo json_encode($user->getFname() . " " . $user->getLname()); ?>;
