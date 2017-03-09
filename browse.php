@@ -95,6 +95,17 @@ echo sizeof($result);
                     $('#page-content').text('Page ' + page);
                 }
             });
+            $('#pagination2').twbsPagination({
+                totalPages: Math.ceil(result.length / show),
+                visiblePages: 4,
+                initiateStartPageClick: false,
+                hideOnlyOnePage: false,
+                onPageClick: function (event, page) {
+                    start = (page - 1) * show;
+                    resetPage();
+                    $('#page-content').text('Page ' + page);
+                }
+            });
         });
     </script>
 </head>
@@ -139,7 +150,7 @@ echo sizeof($result);
                 <div id="results-container">
                 </div>
                 <div class="text-center col-md-12 page-row">
-                    <ul id="pagination" class="pagination-lg pagination"></ul>
+                    <ul id="pagination2" class="pagination-lg pagination"></ul>
                 </div>
             </div>
         </div>
