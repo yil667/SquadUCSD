@@ -21,7 +21,7 @@ $receiverid = $_SESSION['profileid'];
 $fromurl = $_SESSION['fromurl'];
 $fromurl = clearFlags($fromurl);
 
-$message = ($_POST['messageboxinvite']);
+$message = substr($_POST['messageboxinvite'], 0, 210);
 
 $groupid = $_POST['groupid'];
 $group = getGroupObject($groupid);

@@ -22,8 +22,8 @@ $fromurl = clearFlags($fromurl);
 
 $conn = connectToDB();
 
-// this is the custom message the user wants to send along with the invite request
-$message = $_POST['sendmessageform'];
+// this is the custom message the user wants to send
+$message = substr($_POST['sendmessageform'], 0, 210);
 
 // send the email request to the receiver
 sendEmail($user, $group, $message);
