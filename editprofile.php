@@ -111,7 +111,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         <div class="form-group">
                         	<label for="choose" class="col-md-3 control-label"></label>
                         	<div class="col-md-9">
-                        	    <h5 id="upload-info">Maximum size: 200KB. Format: jpg, png or gif.</h5>
+                        	    <h5 id="upload-info">Maximum size: 200KB.</h5>
 							</div>
                         </div>
                         <div class="form-group">
@@ -126,7 +126,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                                     Choose File
                                 </label>
                                 <button type="submit" class="btn btn-primary hidden-xs" id="upload-btn">Upload</button>
-                                <button type="submit" class="btn btn-primary btn-lg visible-xs" id="upload-btn">Upload</button>
+                                <button type="submit" class="btn btn-primary btn-block btn-lg visible-xs" id="upload-btn">Upload</button>
 							</div>
                         </div>
                     </form>
@@ -230,7 +230,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 		$("#upload-btn").prop('disabled', true);
 		if (typeof FileReader !== "undefined") {
 		    var size = input.files[0].size;
-		    if(size > 100000){
+		    if(size > 200000){
 		    	validSize = false;
 		    	$("#upload-info").html("The file you selected exceeded 200KB!")
 		    }
@@ -245,7 +245,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                     .width(128)
                     .height(128);
             };
-
+            $("#upload-info").html("Click upload to change your avatar.")
             reader.readAsDataURL(input.files[0]);
         }
     }
