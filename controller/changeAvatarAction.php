@@ -24,11 +24,11 @@ echo "relax nig";
 //else
 //    echo "relax it didn't2";
 
-$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
+//$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
 
-echo "The file name is " . $_FILES["filename"]["name"];
+echo $_FILES["filename"]["name"];
 echo "-------";
-echo "extension gets you " . $suffix;
+//echo "extension gets you " . $suffix;
 
 
 //$target_str =  $target_dir . "user_" . $userid . $suffix;
