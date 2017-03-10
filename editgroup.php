@@ -87,6 +87,9 @@ else if (!$inGroup) {
             var about = <?php echo json_encode($group->getAbout()); ?>;
             document.getElementById('about').value = about;
 
+            var avatar = <?php echo json_encode($group->getAvatar()); ?>;
+            $('#avatar').attr("src", avatar);
+
             if (window.location.href.indexOf("&saved") > -1) {
                 $("#update-info").html("Group profile updated.");
             }
@@ -116,6 +119,42 @@ else if (!$inGroup) {
                     </h3>
                 </div>
                 <div class="panel-body">
+                    <form class="form-horizontal" id="changeAvatarForm" role="form" method="POST"
+                          enctype="multipart/form-data"
+                          action="controller/changeGroupAvatarAction.php">
+                        <div class="form-group">
+                            <label for="avatar" class="col-md-3 control-label">Group Avatar</label>
+                            <div class="col-md-9">
+                                <img src="#" style="width:128px;height:128px;" id="avatar">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-9 col-md-offset-3">
+                                <h5 id="upload-info">Maximum size: 200KB.</h5>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-9 col-md-9 col-md-offset-3">
+                                <label type="button" class="btn btn-success btn-block btn-lg visible-xs" id="choose"
+                                       name="choose">
+                                    <input type="file" id="filename2" name="filename2" style="display:none"
+                                           accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
+                                    Choose File
+                                </label>
+                                <label type="button" class="btn btn-success hidden-xs" id="choose" name="choose">
+                                    <input type="file" id="filename" name="filename" style="display:none"
+                                           accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
+                                    Choose File
+                                </label>
+
+                                <input type="submit" class="btn btn-primary btn-block btn-lg visible-xs upload-btn"
+                                       value="Upload">
+                                <input type="submit" class="btn btn-primary hidden-xs upload-btn" value="Upload">
+                            </div>
+                        </div>
+                    </form>
+
+
                     <form class="form-horizontal" role="form" id="editGroupForm" name="editGroupForm" method="POST"
                           action="controller/editGroupAction.php">
 

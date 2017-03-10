@@ -82,23 +82,23 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
             }
 
             else if (window.location.href.indexOf("?invalidimage") > -1) {
-                $("#update-info").attr("id","error-display");
+                $("#update-info").attr("id", "error-display");
                 $("#error-display").html("Invalid image type.");
 
             }
 
             else if (window.location.href.indexOf("?invalidsize") > -1) {
-                $("#update-info").attr("id","error-display");
+                $("#update-info").attr("id", "error-display");
                 $("#error-display").html("File size exceeds 200 KB.");
             }
 
             else if (window.location.href.indexOf("?avatarfail") > -1) {
-                $("#update-info").attr("id","error-display");
+                $("#update-info").attr("id", "error-display");
                 $("#error-display").html("Unexpected error during avatar update.");
             }
 
             else if (window.location.href.indexOf("?fail") > -1) {
-            	$("#update-info").attr("id","error-display");
+                $("#update-info").attr("id", "error-display");
                 $("#error-display").html("Password change failed: Incorrect current password entered.");
             }
 
@@ -123,33 +123,38 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                     </h3>
                 </div>
                 <div class="panel-body">
-                	 <form class="form-horizontal" id="changeAvatarForm" role="form" method="POST" enctype="multipart/form-data"
+                    <form class="form-horizontal" id="changeAvatarForm" role="form" method="POST"
+                          enctype="multipart/form-data"
                           action="controller/changeAvatarAction.php">
-	                	 <div class="form-group">
+                        <div class="form-group">
                             <label for="avatar" class="col-md-3 control-label">Avatar</label>
                             <div class="col-md-9">
                                 <img src="#" style="width:128px;height:128px;" id="avatar">
                             </div>
                         </div>
                         <div class="form-group">
-                        	<div class="col-md-9 col-md-offset-3">
-                        	    <h5 id="upload-info">Maximum size: 200KB.</h5>
-							</div>
+                            <div class="col-md-9 col-md-offset-3">
+                                <h5 id="upload-info">Maximum size: 200KB.</h5>
+                            </div>
                         </div>
                         <div class="form-group">
-                        	<div class="col-md-9 col-md-9 col-md-offset-3">
-                                <label type="button" class="btn btn-success btn-block btn-lg visible-xs" id="choose" name="choose">
-                                    <input type="file" id="filename2" name="filename2" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
+                            <div class="col-md-9 col-md-9 col-md-offset-3">
+                                <label type="button" class="btn btn-success btn-block btn-lg visible-xs" id="choose"
+                                       name="choose">
+                                    <input type="file" id="filename2" name="filename2" style="display:none"
+                                           accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
                                     Choose File
                                 </label>
                                 <label type="button" class="btn btn-success hidden-xs" id="choose" name="choose">
-                                    <input type="file" id="filename" name="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
+                                    <input type="file" id="filename" name="filename" style="display:none"
+                                           accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
                                     Choose File
                                 </label>
 
-                                <input type="submit" class="btn btn-primary btn-block btn-lg visible-xs upload-btn" value="Upload">
+                                <input type="submit" class="btn btn-primary btn-block btn-lg visible-xs upload-btn"
+                                       value="Upload">
                                 <input type="submit" class="btn btn-primary hidden-xs upload-btn" value="Upload">
-							</div>
+                            </div>
                         </div>
                     </form>
                     <form class="form-horizontal" id="editProfileForm" role="form" method="POST"
@@ -204,7 +209,8 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         <div class="form-group">
                             <div class="text-center col-md-12">
                                 <button type="submit" class="btn btn-primary hidden-xs">Save Changes</button>
-                                <button type='submit' class='btn btn-primary btn-block btn-lg visible-xs'>Save Changes</button>
+                                <button type='submit' class='btn btn-primary btn-block btn-lg visible-xs'>Save Changes
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -237,7 +243,9 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         <div class="form-group">
                             <div class="text-center col-md-12">
                                 <button type="submit" class="btn btn-primary hidden-xs">Change Password</button>
-                                <button type='submit' class='btn btn-primary btn-block btn-lg visible-xs'>Change Password</button>
+                                <button type='submit' class='btn btn-primary btn-block btn-lg visible-xs'>Change
+                                    Password
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -247,18 +255,18 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
     </div>
 </div>
 <script type="text/javascript">
-	function preview(input) {
-		var validSize = true;
-		$(".upload-btn").prop('disabled', true);
-		if (typeof FileReader !== "undefined") {
-		    var size = input.files[0].size;
-		    if(size > 200000){
-		    	validSize = false;
-		    	$("#upload-info").html("The file you selected exceeded 200KB!")
-		    }
-		}
+    function preview(input) {
+        var validSize = true;
+        $(".upload-btn").prop('disabled', true);
+        if (typeof FileReader !== "undefined") {
+            var size = input.files[0].size;
+            if (size > 200000) {
+                validSize = false;
+                $("#upload-info").html("The file you selected exceeded 200KB!")
+            }
+        }
         if (input.files && input.files[0] && validSize) {
-        	$(".upload-btn").prop('disabled', false);
+            $(".upload-btn").prop('disabled', false);
             var reader = new FileReader();
 
             reader.onload = function (e) {
