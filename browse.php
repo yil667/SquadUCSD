@@ -78,7 +78,7 @@ if (strrpos($url, "?query=") !== false &&
             if (window.location.href.indexOf("&type=groups") > -1) {
             	 $('#searchtype option[value=groups]').attr('selected','selected');
             }
-            $("#query").value = prefill;
+            document.getElementById('query').value = prefill;
 
             resetPage();
             $('#pagination').twbsPagination({
