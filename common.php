@@ -29,7 +29,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                 "<li><a href='managegroups.php'>Manage Groups</a></li>" +
                 "<li><a href='controller/logoutAction.php'>" +
                 "<span class='glyphicon glyphicon-log-out'>" + "</span> Logout</a></li></ul></li>" +
-                "<img src='" + avatar + "'" + " style='width:40px;height:40px;' id='avatar'>";
+                "<img src='" + avatar + "'" + " height='40px' width='40px' id='avatar'>";
             if (isUserLoggedIn) {
                 $('#navList li:nth-child(1)').after(browseNav);
                 $("#rightNav").html(loggedInContent);
