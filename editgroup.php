@@ -149,7 +149,7 @@ else if (!$inGroup) {
                         </div>
 
                         <div class="form-group">
-                            <div class="text-center">
+                            <div class="text-center col-md-12">
                                 <button type="button"
                                         onclick="location.href=window.location.href.replace('edit','view').split('&')[0]"
                                         class="btn btn-primary hidden-xs">View Group Profile
