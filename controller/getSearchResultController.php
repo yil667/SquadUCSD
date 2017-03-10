@@ -64,6 +64,7 @@ function getListOfGroups($conn, $query, $userObj)
         // search group names
         // search for the substrings, where space is the delimiter
         $arr = explode(" ", $query);
+        array_unshift($arr, $query);
         foreach ($arr as $str) {
             if ($str !== "") {
                 $sql = "SELECT * FROM groupProfile WHERE name='$str'";
