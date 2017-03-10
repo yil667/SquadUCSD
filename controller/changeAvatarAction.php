@@ -26,10 +26,9 @@ else if (!$validSize)
     header("Location: http://www.squaducsd.com/editprofile.php?invalidsize");
 else {
     // put the file in the disk
-    unlink($target_str);
     if (move_uploaded_file($_FILES["filename"]["tmp_name"], $target_str)) {
         // change permission
-        chmod($target_str, 777);
+        chmod($target_str, 0777);
 
         // update the database
         updateUserProfile($conn, $userid, $file_name);
