@@ -33,14 +33,22 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                 document.location.href = 'index.php';
             }
 
-            if (window.location.href.indexOf("?verify") > -1 || window.location.href.indexOf("?not_verified") > -1) {
-                $("#update-info").html("Please complete your email verification!");
+            if (window.location.href.indexOf("?verify") > -1) {
+                $("#update-info").html("A verification email has been sent to your registered email.");
             }
+
+            else if (window.location.href.indexOf("?not_verified") > -1) {
+                $("#update-info").attr("id", "error-display");
+                $("#error-display").html("Please complete your email verification!");
+            }
+
             else if (window.location.href.indexOf("?nonexistent_account") > -1) {
-                $("#update-info").html("The account you entered does not exist!");
+                $("#update-info").attr("id", "error-display");
+                $("#error-display").html("The account you entered does not exist!");
             }
             else if (window.location.href.indexOf("?wrong_password") > -1) {
-                $("#update-info").html("Invalid login info! Please make sure you entered the correct password.");
+                $("#update-info").attr("id", "error-display");
+                $("#error-display").html("Invalid login info! Please make sure you entered the correct password.");
             }
 
             else if (window.location.href.indexOf("?verified") > -1) {
@@ -48,7 +56,8 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
             }
 
             else if (window.location.href.indexOf("?activate_invalid") > -1) {
-                $("#update-info").html("Invalid activation link or account already activated.");
+                $("#update-info").attr("id", "error-display");
+                $("#error-display").html("Invalid activation link or account already activated.");
             }
 
             else if (window.location.href.indexOf("?reset") > -1) {
@@ -60,7 +69,8 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
             }
 
             else if (window.location.href.indexOf("?invalidreset") > -1) {
-                $("#update-info").html("Invalid or expired reset password link.");
+                $("#update-info").attr("id", "error-display");
+                $("#error-display").html("Invalid or expired reset password link.");
             }
         });
     </script>
