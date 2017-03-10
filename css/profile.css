@@ -11,6 +11,15 @@ button {
     margin-top: 2px !important;
 }
 
+.btn {
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+html [type="button"] {
+    -webkit-appearance: none !important;
+}
+
 #memberlist > list-group-item, #grouplist > list-group-item, #classlist > list-group-item {
     background-color: #eaeaea;
 }

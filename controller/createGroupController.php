@@ -34,10 +34,55 @@ function updateUserProfiles($id1, $id2, $groupid, $conn)
 
 function updateIndividualGroupInfo($id, $groupid, $conn)
 {
-    $sql = "SELECT * FROM student WHERE id='$id'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
+    $row = getUserRow($conn, $id);
     $newGroupString = $row['groups'] . "," . $groupid;
     $sql = "UPDATE student SET groups='$newGroupString' where id='$id'";
     mysqli_query($conn, $sql);
+}
+
+function getUserRow($conn, $id)
+{
+    $sql = "SELECT * FROM student WHERE id='$id'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row;
+}
+
+function sendConfirmationEmail($conn, $id1, $id2, $groupName, $groupid, $className)
+{
+    // get the rows
+    $senderRow = getUserRow($conn, $id1);
+    $receiverRow = getUserRow($conn, $id2);
+
+    $message = generateSendMessage($senderRow, $receiverRow, $groupName, $groupid, $className);
+    $headers = 'From: message' . "\r\n";
+    $subject = generateMessageSubject($receiverRow, $groupName); // Give the email a subject
+
+    // send the email
+    mail($senderRow['email'], $subject, $message, $headers);
+}
+
+function generateMessageSubject($receiverRow, $groupName)
+{
+    $receiverFname = $receiverRow['fname'];
+    $receiverLname = $receiverRow['lname'];
+
+    return "$receiverFname $receiverLname has accepted your invite to form group $groupName on SquadUCSD!";
+}
+
+function generateSendMessage($senderRow, $receiverRow, $groupName, $groupid, $className)
+{
+    $senderFname = $senderRow['fname'];
+    $receiverFname = $receiverRow['fname'];
+    $receiverLname = $receiverRow['lname'];
+
+    $message = "
+Hi $senderFname,
+
+$receiverFname $receiverLname has accepted your invitation to form the group $groupName for $className. Here is the group profile page for $groupName:
+http://www.squaducsd.com/viewgroup.php?groupid=$groupid 
+
+SquadUCSD";
+
+    return $message;
 }
