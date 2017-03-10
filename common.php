@@ -17,7 +17,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
         $(document).ready(function () {
             var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
             var userFirstName = <?php echo json_encode($firstName); ?>;
-            var avatar = <?php echo json_encode($avatar); ?>;
+            var common_avatar = <?php echo json_encode($avatar); ?>;
             var defaultContent = "<li><a href='register.php'><span class='glyphicon glyphicon-user'></span> Register</a></li><li><a href='login.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
             var browseNav =
                 "<li><a href='./browse.php'>Browse</a></li>";
@@ -29,7 +29,8 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                 "<li><a href='managegroups.php'>Manage Groups</a></li>" +
                 "<li><a href='controller/logoutAction.php'>" +
                 "<span class='glyphicon glyphicon-log-out'>" + "</span> Logout</a></li></ul></li>" +
-                "<img src='" + avatar + "'" + " height='100' width='100' id='avatar'>";
+                // for the id of the avatar, don't use "avatar" cuz it conflicts with some elements in other pages
+                "<img src='" + common_avatar + "'" + " height='100' width='100' id='common_avatar'>";
             if (isUserLoggedIn) {
                 $('#navList li:nth-child(1)').after(browseNav);
                 $("#rightNav").html(loggedInContent);
