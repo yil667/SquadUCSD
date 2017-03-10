@@ -171,7 +171,8 @@ else {
                         <div class="form-group">
                             <label for="class" class="col-md-3 control-label">Class</label>
                             <div class="col-md-9">
-                                <p class="form-control-static" type="text" name="course" id="course"></p>
+                                <div class="list-group" id="course" name="course">
+                                </div>
                             </div>
                         </div>
 
