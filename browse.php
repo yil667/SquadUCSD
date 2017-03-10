@@ -66,7 +66,7 @@ echo sizeof($result);
         var show = 8;
         var start = 0;
 
-        function resetPage(){
+        function resetPage() {
             $("#results-container").html("");
             if (window.location.href.indexOf("&type=users") > -1) {
                 for (i = start; i < start + show && i < result.length; i++)
@@ -121,8 +121,9 @@ echo sizeof($result);
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-block-xs" role="button">Search
+                    <button type="submit" class="btn btn-primary hidden-xs" role="button">Search
                     </button>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg visible-xs">Search</button>
                 </form>
             </div>
         </div>
@@ -147,14 +148,54 @@ echo sizeof($result);
 
 <script type="text/javascript">
     function renderResult(fname, lname, major, id) {
-        $("#results-container").append("<div class='col-md-6'><div class='panel panel-custom col-md-12 result-panel'><div class='panel-heading'><h4>" +
-            fname + " " + lname + "</h4></div><div class='panel-body result-body'><form class='form-horizontal'><div class='form-group'><label for='major' class='col-md-3 control-label'>Major</label><div class='col-md-9'><p class='form-control-static' name='major' id='major'>" + major + "</p></div></div><div class='text-center buttons col-md-12' id='button'><button type='button' class='btn btn-primary btn-sm-block' onclick=" +
-            "location.href='viewprofile.php?userid=" + id + "' role='button'>View Profile</button></div></form></div></div></div>");
+        $("#results-container").append(
+            "<div class='col-md-6'>" +
+                "<div class='panel panel-custom col-md-12 result-panel'>" +
+                    "<div class='panel-heading'><h4>" + fname + " " + lname + "</h4></div>" +
+                    "<div class='panel-body result-body'>" +
+                        "<form class='form-horizontal'>" +
+                            "<div class='form-group'>" +
+                                "<label for='major' class='col-md-3 control-label'>Major</label>" +
+                                "<div class='col-md-9'>" +
+                                    "<p class='form-control-static' id='major'>" + major + "</p>" +
+                                "</div>" +
+                            "</div>" +
+                            "<div class='text-center buttons col-md-12' id='button'>" +
+                                "<button type='button' class='btn btn-primary xs-hidden' onclick=" +
+                                        "location.href='viewprofile.php?userid=" + id + "'>View Profile</button>" +
+                                "<button type='button' class='btn btn-primary btn-block btn-lg xs-visible' onclick=" +
+                                        "location.href='viewprofile.php?userid=" + id + "'>View Profile</button>" +
+                            "</div>" +
+                        "</form>" +
+                    "</div>" +
+                "</div>" +
+            "</div>"
+        );
     }
     function renderResultGroup(name, size, id) {
-        $("#results-container").append("<div class='col-md-6'><div class='panel panel-custom col-md-12 result-panel'><div class='panel-heading'><h4>" +
-            name + "</h4></div><div class='panel-body result-body'><form class='form-horizontal'><div class='form-group'><label for='major' class='col-md-3 control-label'>Size</label><div class='col-md-9'><p class='form-control-static' name='size' id='size'>" + size + "</p></div></div><div class='text-center buttons col-md-12' id='button'><button type='button' class='btn btn-primary btn-sm-block' onclick=" +
-            "location.href='viewgroup.php?groupid=" + id + "' role='button'>View Group Profile</button></div></form></div></div></div>");
+        $("#results-container").append(
+            "<div class='col-md-6'>" +
+                "<div class='panel panel-custom col-md-12 result-panel'>" +
+                    "<div class='panel-heading'><h4>" + name + "</h4></div>" +
+                    "<div class='panel-body result-body'>" +
+                        "<form class='form-horizontal'>" +
+                            "<div class='form-group'>" +
+                                "<label for='major' class='col-md-3 control-label'>Size</label>" +
+                                "<div class='col-md-9'>" +
+                                    "<p class='form-control-static' id='size'>" + size + "</p>" +
+                                "</div>" +
+                            "</div>" +
+                            "<div class='text-center buttons col-md-12' id='button'>" +
+                                "<button type='button' class='btn btn-primary xs-hidden' onclick=" +
+                                        "location.href='viewgroup.php?groupid=" + id + "'>View Group Profile</button>" +
+                                "<button type='button' class='btn btn-primary btn-block btn-lg xs-visible' onclick=" +
+                                        "location.href='viewgroup.php?groupid=" + id + "'>View Group Profile</button>" +
+                            "</div>" +
+                        "</form>" +
+                    "</div>" +
+                "</div>" +
+            "</div>"
+        );
     }
 </script>
 </body>
