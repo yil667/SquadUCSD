@@ -17,17 +17,19 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
-   
+   <li>display group avatar </li>
+   <li>in login.php make update-info display in green instead of red</li>
    <li>make class in view group clickable</li> 
-   <li>pre fill search bar in browse with what's in the url</li> 
-   <li>add about section in edit group/ view group - in progress</li> 
-   <li>add avatar in edit profile - in progress</li>
    <li>add about in browse page under each user/group </li>
-   <li>add capability to search users directly in browse </li>
+   <li>add avatar in browse page under each user/group </li>
 </ol>
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>add avatar in edit profile</strike></li>
+   <li><strike>add capability to search users directly in browse </strike></li>
+   <li><strike>add about section in edit group/ view group</strike></li> 
+   <li><strike>pre fill search bar in browse with what's in the url</strike></li> 
    <li><strike>Go over Use Cases, User Stories, System Requirements and Design Use cases and update to be consistent with final product</strike></li>
    <li><strike>Use Site as reference while doing this. Change Use Cases that do not exactly match up with what appears on the site</strike></li>
    <li><strike>Start testing the site and writing Test Cases based on Revised Use Cases -> ALTER USE CASES FIRST</strike></li>
@@ -70,14 +72,16 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
-   <li>filename2 for edit profile avatar</li> 
-<li>avatar backend logic </li> 
+<li>avatar for groups logic </li>
 <li>accommodate front end feature needs </li>
-
 </ol>
 
 <h2>Back-end recently finished: </h2>
 <ol>
+
+   <li><strike>forgot password logic updated for encryption</strike></li> 
+   <li><strike>mobile support for edit profile avatar</strike></li> 
+   <li><strike>avatar backend logic </strike></li> 
    <li><strike>added confirmation email for invite to form group</strike></li>
    <li><strike>added confirmation email for invite to exisint group </strike></li>
    <li><strike>added confirmation email for request to join group</strike></li>
