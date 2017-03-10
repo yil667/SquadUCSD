@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700,900|Open+Sans:400,700|Montserrat:500,700,900' );
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700,900|Open+Sans:400,700|Montserrat:500' );
 
 .navbar-brand {
     font-family: 'Montserrat', sans-serif !important;
@@ -13,10 +13,10 @@
     font-family: 'Fira Sans', sans-serif !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4{
     font-family: 'Fira Sans', sans-serif !important;
 }
 
-body, p, label, input, a, textarea, button {
+body, p, label, input, a, textarea, button, h5, h6  {
     font-family: 'Open Sans', sans-serif !important;
 }
