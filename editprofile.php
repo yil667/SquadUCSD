@@ -42,7 +42,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-
+            $("#upload-btn").prop("disable","true");
             // input fields
             var major = <?php echo json_encode($user->getMajor()); ?>;
             document.getElementById('major').value = major;
@@ -115,12 +115,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 								    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
 								    Choose File
                                 </label>
-                                <label type="button" class="btn btn-primary btn-lg btn-block visible-xs" id="choose" name="choose">
-                                    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
-                                    Choose File
-                                </label>
-                                <button type="submit" class="btn btn-primary hidden-xs">Upload</button>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block visible-xs">Upload</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block visible-xs" id="upload-btn">Upload</button>
 							</div>
                         </div>
                     </form>
