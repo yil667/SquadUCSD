@@ -150,7 +150,7 @@ else {
                         </div>
 
                         <div class="form-group">
-                            <label for="avatar" class="col-md-3 control-label">Avatar</label>
+                            <label for="avatar" class="col-md-3 control-label">Group Avatar</label>
                             <div class="col-md-9">
                                 <img src="#" style="width:128px;height:128px;" id="avatar">
                             </div>
