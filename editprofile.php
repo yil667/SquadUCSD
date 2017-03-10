@@ -53,6 +53,9 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
             var phone = <?php echo json_encode($user->getPhone()); ?>;
             document.getElementById('phone').value = phone;
 
+            var avatar = <?php echo json_encode($user->getAvatar()); ?>;
+            $('#avatar').attr("src", avatar);
+
             var class1 = <?php echo json_encode($user->getClass1()->getClassName()); ?>;
             document.getElementById('class1').value = class1;
             var class2 = <?php echo json_encode($user->getClass2()->getClassName()); ?>;
@@ -105,7 +108,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 	                	 <div class="form-group">
                             <label for="avatar" class="col-md-3 control-label">Avatar</label>
                             <div class="col-md-9">
-                                <img src="img/default.jpg" style="width:128px;height:128px;" id="avatar">
+                                <img src="#" style="width:128px;height:128px;" id="avatar">
                             </div>
                         </div>
                         <div class="form-group">
