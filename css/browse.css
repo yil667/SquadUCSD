@@ -11,6 +11,11 @@
     text-align: center;
 }
 
+button {
+    margin-bottom: 2px !important;
+    margin-top: 2px !important;
+}
+
 .pagination > li {
     background-color: #f6f7f9 !important;
 }

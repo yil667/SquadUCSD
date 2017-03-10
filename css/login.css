@@ -29,3 +29,8 @@
      font-weight: normal !important;
      color: #ff6666;
 }
+
+button {
+    margin-bottom: 2px !important;
+    margin-top: 2px !important;
+}
