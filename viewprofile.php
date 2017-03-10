@@ -176,7 +176,10 @@ else {
             $('#phone').html(phone);
 
             var email = <?php echo json_encode($user->getEmail()); ?>;
-            $('#email').html(email);
+            $('#email').html(email)
+
+            var avatar = <?php echo json_encode($user->getAvatar()); ?>;
+            $('#avatar').attr("src", avatar);
 
             // dynamic element has no spacing. separate them and add spaces in between
             var messageButton = "<button type='button' class='btn btn-primary hidden-xs' data-toggle='modal' data-target='#messageModal'>Message</button>" +
@@ -244,7 +247,7 @@ else {
                         <div class="form-group">
                             <label for="avatar" class="col-md-3 control-label">Avatar</label>
                             <div class="col-md-9">
-                                <img src="img/default.jpg" style="width:128px;height:128px;" id="avatar">
+                                <img src="#" style="width:128px;height:128px;" id="avatar">
                             </div>
                         </div>
                         <div class="form-group">
