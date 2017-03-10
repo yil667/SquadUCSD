@@ -77,6 +77,9 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Back-end recently finished: </h2>
 <ol>
+   <li><strike>added confirmation email for invite to form group</strike></li>
+   <li><strike>added confirmation email for invite to exisint group </strike></li>
+   <li><strike>added confirmation email for request to join group</strike></li>
    <li><strike><b>implement backend logic for inviting to existing group</strike></b></li>
    <li><strike>implement backend logic for resizing group request when inviting</strike></li>
    <li><strike><b>implement backend logic for view group request to join form</b></strike></li>
