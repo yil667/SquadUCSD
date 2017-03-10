@@ -1,26 +1,30 @@
 <?php
 
+include_once "dbController.php";
+include_once "loginController.php";
+
+session_start();
 
 
-//$target_dir = "$_SERVER[DOCUMENT_ROOT]/img/";
+$target_dir = "$_SERVER[DOCUMENT_ROOT]/img/";
 
 $userid = getUserId();
 
 echo "relax nig";
 
-////$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
 //if (isset($_FILES["filename"]))
 //    echo "relax it's set";
 //else
 //    echo "relax it didn't";
 
+$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
 
-//echo "The file name is " . ["name"];
-//echo "-------";
-//echo "extension gets you " . $suffix;
+echo "The file name is " . $_FILES["filename"]["name"];
+echo "-------";
+echo "extension gets you " . $suffix;
 
-//
-//$target_str =  $target_dir . "user_" . $userid . $suffix;
+
+$target_str =  $target_dir . "user_" . $userid . $suffix;
 //
 //
 //
