@@ -109,8 +109,8 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                             </div>
                         </div>
                         <div class="form-group">
-                        	 <div class="col-md-9">
-                            	<label for="choose" class="col-md-3 control-label"></label>
+                        	<label for="choose" class="col-md-3 control-label"></label>
+                        	<div class="col-md-9">
                         	    <label type="button" class="btn btn-primary" id="choose" name="choose">
 								    <input type="file" id="filename" style="display:none">
 								    Choose File
