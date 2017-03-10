@@ -112,6 +112,11 @@ span {
     margin-top: 8px !important;
 }
 
+#common_avatar {
+    width:20px !important;
+    height:20px !important;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
