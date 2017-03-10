@@ -42,7 +42,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-            $("#upload-btn").prop("disable","true");
+            $("#upload-btn").prop('disabled', true);
             // input fields
             var major = <?php echo json_encode($user->getMajor()); ?>;
             document.getElementById('major').value = major;
@@ -216,6 +216,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 <script type="text/javascript">
 	function preview(input) {
 		var validSize = true;
+		$("#upload-btn").prop('disabled', true);
 		if (typeof FileReader !== "undefined") {
 		    var size = input.files[0].size;
 		    if(size > 100000){
@@ -224,6 +225,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 		    }
 		}
         if (input.files && input.files[0] && validSize) {
+        	$("#upload-btn").prop('disabled', false);
             var reader = new FileReader();
 
             reader.onload = function (e) {
