@@ -22,14 +22,14 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
             var browseNav =
                 "<li><a href='./browse.php'>Browse</a></li>";
             var loggedInContent =
-                "<img src='" + avatar + "'" + " style='width:40px;height:40px;' id='avatar'>" +
                 "<li class='dropdown'>" +
                 "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + userFirstName + " <span class='caret'></span></a><ul class='dropdown-menu'>" +
                 "<li><a href='editprofile.php'>Edit Profile</a></li>" +
                 "<li><a href='viewprofile.php'>View Profile</a></li>" +
                 "<li><a href='managegroups.php'>Manage Groups</a></li>" +
                 "<li><a href='controller/logoutAction.php'>" +
-                "<span class='glyphicon glyphicon-log-out'>" + "</span> Logout</a></li></ul></li>";
+                "<span class='glyphicon glyphicon-log-out'>" + "</span> Logout</a></li></ul></li>" +
+                "<img src='" + avatar + "'" + " style='width:40px;height:40px;' id='avatar'>";
             if (isUserLoggedIn) {
                 $('#navList li:nth-child(1)').after(browseNav);
                 $("#rightNav").html(loggedInContent);
