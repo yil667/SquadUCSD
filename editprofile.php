@@ -119,7 +119,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         <div class="form-group">
                         	<div class="col-md-9 col-md-9 col-md-offset-3">
 <!--                        	    <label type="button" class="btn btn-success hidden-xs" id="choose" name="choose">-->
-								    <input type="file" id="filename" name="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
+								    <input type="file" id="filename" name="filename" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
 								    Choose File
 <!--                                </label>-->
 <!--                                <label type="button" class="btn btn-success btn-block btn-lg visible-xs" id="choose" name="choose">-->
