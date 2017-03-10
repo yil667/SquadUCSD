@@ -6,10 +6,13 @@ include_once "changeAvatarController.php";
 
 session_start();
 
+$conn = connectToDB();
+
 $userid = getUserId();
 $target_dir = "$_SERVER[DOCUMENT_ROOT]/img/";
 $suffix = pathinfo($_FILES["filename"]["name"])["extension"];
-$target_str = $target_dir .  "user_" . $userid . "." . $suffix;
+$file_name = "user_" . $userid . "." . $suffix;
+$target_str = $target_dir .  $file_name;
 
 // this line checks for a valid image
 $validImage = getimagesize($_FILES["filename"]["tmp_name"]);
@@ -23,18 +26,11 @@ else if (!$validSize)
     header("Location: http://www.squaducsd.com/editprofile.php?invalidsize");
 else {
     // put the file in the disk
-
-    echo $target_str;
-    echo $_FILES["filename"]["tmp_name"];
-
-    if (move_uploaded_file($_FILES["filename"]["tmp_name"], $target_str))
-        echo "relax";
-    else
-        echo "fuxk off";
+    move_uploaded_file($_FILES["filename"]["tmp_name"], $target_str);
 
     // update the database
-//    updateUserProfile();
+    updateUserProfile($conn, $userid, $file_name);
 
-//    header("Location: http://www.squaducsd.com/editprofile.php?badimage");
+    header("Location: http://www.squaducsd.com/editprofile.php?avatarupdated");
 }
 // redirect with flag
