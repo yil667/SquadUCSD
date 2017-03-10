@@ -65,7 +65,7 @@ if (strrpos($url, "?query=") !== false &&
             }
             else if (window.location.href.indexOf("&type=groups") > -1) {
                 for (i = start; i < start + show && i < result.length; i++)
-                    renderResultGroup(result[i]['name'], result[i]['size'], result[i]['groupid']);
+                    renderResultGroup(result[i]['name'], result[i]['maxSize'], result[i]['groupid']);
             }
         }
 
