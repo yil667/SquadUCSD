@@ -14,21 +14,21 @@ echo "relax nig";
 
 
 
-if (isset($_FILES["filename"]))
-    echo "relax it's set";
-else
-    echo "relax it didn't";
-
-if (isset($_FILES["changeAvatarForm"]))
-    echo "relax it's set2";
-else
-    echo "relax it didn't2";
-
-//$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
+//if (isset($_FILES["filename"]))
+//    echo "relax it's set";
+//else
+//    echo "relax it didn't";
 //
-//echo "The file name is " . $_FILES["filename"]["name"];
-//echo "-------";
-//echo "extension gets you " . $suffix;
+//if (isset($_FILES["changeAvatarForm"]))
+//    echo "relax it's set2";
+//else
+//    echo "relax it didn't2";
+
+$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
+
+echo "The file name is " . $_FILES["filename"]["name"];
+echo "-------";
+echo "extension gets you " . $suffix;
 
 
 //$target_str =  $target_dir . "user_" . $userid . $suffix;
