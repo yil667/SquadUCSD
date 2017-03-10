@@ -169,7 +169,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         </div>
 
                         <div class="form-group">
-                            <div class="text-center">
+                            <div class="text-center col-md-12">
                                 <button type="submit" class="btn btn-primary hidden-xs">Save Changes</button>
                                 <button type='submit' class='btn btn-primary btn-block btn-lg visible-xs'>Save Changes</button>
                             </div>
@@ -202,7 +202,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         </div>
 
                         <div class="form-group">
-                            <div class="text-center">
+                            <div class="text-center col-md-12">
                                 <button type="submit" class="btn btn-primary hidden-xs">Change Password</button>
                                 <button type='submit' class='btn btn-primary btn-block btn-lg visible-xs'>Change Password</button>
                             </div>
