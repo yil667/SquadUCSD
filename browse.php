@@ -73,7 +73,7 @@ if (strrpos($url, "?query=") !== false &&
             }
             // Prefill what user selected
             if (window.location.href.indexOf("&type=groups") > -1) {
-              $("#searchtype").getElementsByTagName('option')[2].selected = 'selected';
+            	 $('#searchtype option[value=groups]').attr('selected','selected');
             }
 
 
