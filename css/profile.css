@@ -9,9 +9,11 @@
 button {
     margin-bottom: 1px !important;
     margin-top: 1px !important;
+}
+
+.btn {
     border-radius: 0 !important;
     border: none !important;
-    -webkit-appearance: none;
 }
 
 #memberlist > list-group-item, #grouplist > list-group-item, #classlist > list-group-item {
