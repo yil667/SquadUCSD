@@ -1,15 +1,18 @@
 <?php
 
-$target_dir = "$_SERVER[DOCUMENT_ROOT]/img/";
+
+
+//$target_dir = "$_SERVER[DOCUMENT_ROOT]/img/";
 
 $userid = getUserId();
 
+echo "relax nig";
 
-//$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
-if (isset($_FILES["filename"]))
-    echo "relax it's set";
-else
-    echo "relax it didn't";
+////$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
+//if (isset($_FILES["filename"]))
+//    echo "relax it's set";
+//else
+//    echo "relax it didn't";
 
 
 //echo "The file name is " . ["name"];
