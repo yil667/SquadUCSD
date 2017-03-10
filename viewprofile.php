@@ -242,6 +242,12 @@ else {
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
                         <div class="form-group">
+                            <label for="avatar" class="col-md-3 control-label">Avatar</label>
+                            <div class="col-md-9">
+                                <img src="img/default.jpg" style="width:128px;height:128px;" id="avatar">
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="email" class="col-md-3 control-label">UCSD Email</label>
                             <div class="col-md-9">
                                 <p class="form-control-static" name="email" id="email"></p>
