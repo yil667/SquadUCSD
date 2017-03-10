@@ -23,7 +23,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                 "<li><a href='./browse.php'>Browse</a></li>";
             var loggedInContent =
                 "<li class='dropdown'>" +
-                "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + "<img src='" + common_avatar + "'" + " style='width:30px;height:30px;' id='common_avatar'> " + userFirstName + " <span class='caret'></span></a><ul class='dropdown-menu'>" +
+                "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + "<img src='" + common_avatar + "'" + " style='width:24px;height:24px;' id='common_avatar'> " + userFirstName + " <span class='caret'></span></a><ul class='dropdown-menu'>" +
                 "<li><a href='editprofile.php'>Edit Profile</a></li>" +
                 "<li><a href='viewprofile.php'>View Profile</a></li>" +
                 "<li><a href='managegroups.php'>Manage Groups</a></li>" +
