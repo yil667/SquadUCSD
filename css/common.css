@@ -84,8 +84,8 @@ span {
 .navbar-black .dropdown-menu > li > a,
 .navbar-black .dropdown-menu > li > a {
     margin-top: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
     background-color: #262626;
     color: #cccccc;
 }
