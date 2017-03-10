@@ -114,8 +114,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 							</div>
                         </div>
                         <div class="form-group">
-                        	<label for="choose" class="col-md-3 control-label"></label>
-                        	<div class="col-md-9 col-md-offset-3">
+                        	<div class="col-md-9 col-md-9 col-md-offset-3">
                         	    <label type="button" class="btn btn-success hidden-xs" id="choose" name="choose">
 								    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
 								    Choose File
