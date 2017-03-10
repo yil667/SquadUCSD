@@ -281,18 +281,18 @@ else {
                         </div>
 
                         <div class="form-group">
-                            <label for="about" class="col-md-3 control-label">About Me</label>
-                            <div class="col-md-9">
-                                <p class="form-control-static" name="about" id="about"></p>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
                             <label for="groups" class="col-md-3 control-label">Groups</label>
                             <div class="col-md-9">
                                 <div class="list-group" id="grouplist" name="grouplist">
                                     <!-- contents here are inserted dynamically -->
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="about" class="col-md-3 control-label">About Me</label>
+                            <div class="col-md-9">
+                                <p class="form-control-static" name="about" id="about"></p>
                             </div>
                         </div>
 
