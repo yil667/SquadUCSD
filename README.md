@@ -17,6 +17,7 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
+   <li>pre fill search bar in browse with what's in the url</li> 
    <li>add about section in edit group/ view group - in progress</li> 
    <li>add avatar in edit profile - in progress</li>
    <li>add about in browse page under each user/group </li>
