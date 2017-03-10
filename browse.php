@@ -142,7 +142,6 @@ if (strrpos($url, "?query=") !== false &&
 
 <script type="text/javascript">
 	 $('#searchtype').change(function(){
-       
         var selectBox = document.getElementById("searchtype");
         // initial check for the selection box (need to add more if
         // check if ingroup full fullfull also clear error message
