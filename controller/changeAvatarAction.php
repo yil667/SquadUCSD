@@ -24,15 +24,14 @@ echo "relax nig";
 //else
 //    echo "relax it didn't2";
 
-//$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
-foreach ($_FILES['filename'] as $key => $value) {
-    echo "Key: $key; Value: $value\n";
-}
-echo "-------";
-//echo "extension gets you " . $suffix;
+
+$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
+echo "extension gets you " . $suffix;
 
 
-//$target_str =  $target_dir . "user_" . $userid . $suffix;
+$target_str =  $target_dir . "user_" . $userid . $suffix;
+
+echo "target_str is $target_str";
 //
 //
 //
