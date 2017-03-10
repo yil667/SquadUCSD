@@ -118,17 +118,17 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         </div>
                         <div class="form-group">
                         	<div class="col-md-9 col-md-9 col-md-offset-3">
-                        	    <label type="button" class="btn btn-success hidden-xs" id="choose" name="choose">
-								    <input type="file" id="filename" name="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
-								    Choose File
+                                <label type="button" class="btn btn-success btn-block btn-lg visible-xs" id="choose" name="choose">
+                                    <input type="file" id="filename2" name="filename2" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
+                                    Choose File
                                 </label>
-<!--                                <label type="button" class="btn btn-success btn-block btn-lg visible-xs" id="choose" name="choose">-->
-<!--                                    <input type="file" id="filename" name="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">-->
-<!--                                    Choose File-->
-<!--                                </label>-->
-                         
+                                <label type="button" class="btn btn-success hidden-xs" id="choose" name="choose">
+                                    <input type="file" id="filename" name="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
+                                    Choose File
+                                </label>
+
+                                <input type="submit" class="btn btn-primary btn-block btn-lg visible-xs upload-btn" value="Upload">
                                 <input type="submit" class="btn btn-primary hidden-xs upload-btn" value="Upload">
-<!--                             	<input type="submit" class="btn btn-primary btn-block btn-lg visible-xs upload-btn" value="Upload">-->
 							</div>
                         </div>
                     </form>
