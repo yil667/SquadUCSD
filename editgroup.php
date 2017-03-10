@@ -149,15 +149,25 @@ else if (!$inGroup) {
                         </div>
 
                         <div class="form-group">
-                            <div class="text-center">
+                            <div class="text-center col-md-12">
                                 <button type="button"
                                         onclick="location.href=window.location.href.replace('edit','view').split('&')[0]"
-                                        class="btn btn-primary">View Group Profile
+                                        class="btn btn-primary hidden-xs">View Group Profile
                                 </button>
-                                <button type="button" class="btn btn-primary" data-toggle='modal'
+                                <button type="button"
+                                        onclick="location.href=window.location.href.replace('edit','view').split('&')[0]"
+                                        class="btn btn-primary visible-xs btn-lg btn-block">View Group Profile
+                                </button>
+                                <button type="button" class="btn btn-primary hidden-xs" data-toggle='modal'
                                     data-target="#messagegroupModal">Message</button>
-                                <button type="submit" class="btn btn-primary">Save Changes</button>
-                                <button type="button" class="btn btn-danger" data-toggle='modal'
+                                <button type="button" class="btn btn-primary visible-xs btn-lg btn-block" data-toggle='modal'
+                                        data-target="#messagegroupModal">Message</button>
+                                <button type="submit" class="btn btn-primary hidden-xs">Save Changes</button>
+                                <button type="submit" class="btn btn-primary visible-xs btn-lg btn-block">Save Changes</button>
+                                <button type="button" class="btn btn-danger hidden-xs" data-toggle='modal'
+                                        data-target="#leaveModal">Leave Group
+                                </button>
+                                <button type="button" class="btn btn-danger visible-xs btn-lg btn-block" data-toggle='modal'
                                         data-target="#leaveModal">Leave Group
                                 </button>
                             </div>

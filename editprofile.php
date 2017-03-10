@@ -42,7 +42,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
-            $("#upload-btn").prop('disabled', true);
+            $(".upload-btn").prop('disabled', true);
             // input fields
             var major = <?php echo json_encode($user->getMajor()); ?>;
             document.getElementById('major').value = major;
@@ -112,24 +112,22 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                             </div>
                         </div>
                         <div class="form-group">
-                        	<label for="choose" class="col-md-3 control-label"></label>
-                        	<div class="col-md-9">
+                        	<div class="col-md-9 col-md-offset-3">
                         	    <h5 id="upload-info">Maximum size: 200KB.</h5>
 							</div>
                         </div>
                         <div class="form-group">
-                        	<label for="choose" class="col-md-3 control-label"></label>
-                        	<div class="col-md-9">
-                        	    <label type="button" class="btn btn-primary hidden-xs" id="choose" name="choose">
+                        	<div class="col-md-9 col-md-9 col-md-offset-3">
+                        	    <label type="button" class="btn btn-success hidden-xs" id="choose" name="choose">
 								    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
 								    Choose File
                                 </label>
-                                <label type="button" class="btn btn-primary btn-block btn-lg visible-xs" id="choose" name="choose">
+                                <label type="button" class="btn btn-success btn-block btn-lg visible-xs" id="choose" name="choose">
                                     <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
                                     Choose File
                                 </label>
-                                <button type="submit" class="btn btn-primary hidden-xs" id="upload-btn">Upload</button>
-                                <button type="submit" class="btn btn-primary btn-block btn-lg visible-xs" id="upload-btn">Upload</button>
+                                <button type="submit" class="btn btn-primary hidden-xs upload-btn">Upload</button>
+                                <button type="submit" class="btn btn-primary btn-block btn-lg visible-xs upload-btn">Upload</button>
 							</div>
                         </div>
                     </form>
@@ -230,7 +228,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 <script type="text/javascript">
 	function preview(input) {
 		var validSize = true;
-		$("#upload-btn").prop('disabled', true);
+		$(".upload-btn").prop('disabled', true);
 		if (typeof FileReader !== "undefined") {
 		    var size = input.files[0].size;
 		    if(size > 200000){
@@ -239,7 +237,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 		    }
 		}
         if (input.files && input.files[0] && validSize) {
-        	$("#upload-btn").prop('disabled', false);
+        	$(".upload-btn").prop('disabled', false);
             var reader = new FileReader();
 
             reader.onload = function (e) {

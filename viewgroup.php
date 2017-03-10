@@ -46,7 +46,7 @@ else {
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	 <!-- jQuery form validation -->
+    <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script src="js/message-validation.js"></script>
     <script src="js/request-validation.js"></script>
@@ -85,14 +85,16 @@ else {
                 $("#buttons").html(content);
             }
             else if (inGroup) {
-                content = "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit').split('&')[0]" + " class='btn btn-primary'>Edit Group</button> " +  "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#messagegroupModal'>Message</button>";
+                content = "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit').split('&')[0]" + " class='btn btn-primary hidden-xs'>Edit Group</button> " + "<button type='button' class='btn btn-primary hidden-xs' data-toggle='modal' data-target='#messagegroupModal'>Message</button>" +
+                "<button type='button' onclick=" + "location.href=window.location.href.replace('view','edit').split('&')[0]" + " class='btn btn-primary visible-xs btn-block btn-lg'>Edit Group</button> " + "<button type='button' class='btn btn-primary visible-xs btn-lg btn-block' data-toggle='modal' data-target='#messagegroupModal'>Message</button>";
             }
             else {
-                //unused var???
                 if (fullGroup)
-                    content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#requestModal' disabled>Request to Join Group (Full)</button>";
+                    content = "<button type='button' class='btn btn-primary hidden-xs' role='button' data-toggle='modal' data-target='#requestModal' disabled>Request to Join Group (Full)</button>" +
+                        "<button type='button' class='btn btn-primary visible-xs btn-lg btn-block' role='button' data-toggle='modal' data-target='#requestModal' disabled>Request to Join Group (Full)</button>";
                 else
-                    content = "<button type='button' class='btn btn-primary' role='button' data-toggle='modal' data-target='#requestModal'>Request to Join Group</button>";
+                    content = "<button type='button' class='btn btn-primary hidden-xs' role='button' data-toggle='modal' data-target='#requestModal'>Request to Join Group</button>" +
+                        "<button type='button' class='btn btn-primary visible-xs btn-lg btn-block' role='button' data-toggle='modal' data-target='#requestModal'>Request to Join Group</button>";
             }
             $("#buttons").html(content);
 
@@ -199,7 +201,8 @@ else {
     </div>
 </div>
 
-<div class="modal fade" id="messagegroupModal" tabindex="-1" role="dialog" aria-labelledby="messagegroupLabel" aria-hidden="true">
+<div class="modal fade" id="messagegroupModal" tabindex="-1" role="dialog" aria-labelledby="messagegroupLabel"
+     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

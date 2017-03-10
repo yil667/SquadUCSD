@@ -242,6 +242,12 @@ else {
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST">
                         <div class="form-group">
+                            <label for="avatar" class="col-md-3 control-label">Avatar</label>
+                            <div class="col-md-9">
+                                <img src="img/default.jpg" style="width:128px;height:128px;" id="avatar">
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="email" class="col-md-3 control-label">UCSD Email</label>
                             <div class="col-md-9">
                                 <p class="form-control-static" name="email" id="email"></p>
@@ -313,8 +319,8 @@ else {
                     </div>
 
                     <div class="modal-footer">
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="send-btn" type="submit" class="btn btn-primary">Send</button>
+                        <button class="btn modal-button" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button id="send-btn" type="submit" class="btn btn-primary modal-button">Send</button>
                     </div>
                 </form>
             </div>
@@ -347,8 +353,8 @@ else {
 
                     <div class="modal-footer">
                         <h5 class="text-left" id="invite-error"></h5>
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="invite-btn" type="submit" class="btn btn-primary">Send Invite</button>
+                        <button class="btn modal-button" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button id="invite-btn" type="submit" class="btn btn-primary modal-button">Send Invite</button>
                     </div>
 
                 </form>
@@ -385,8 +391,8 @@ else {
                     </div>
 
                     <div class="modal-footer">
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
+                        <button class="btn modal-button" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button id="send-btn" type="submit" class="btn btn-primary modal-button">Send Invite</button>
                     </div>
                 </form>
             </div>
