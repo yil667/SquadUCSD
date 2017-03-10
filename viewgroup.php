@@ -77,6 +77,9 @@ else {
             var about = <?php echo json_encode($group->getAbout()); ?>;
             $('#about').html(about);
 
+            var avatar = <?php echo json_encode($group->getAvatar()); ?>;
+            $('#avatar').html(avatar);
+
             var inGroup = <?php echo json_encode($inGroup); ?>;
             var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
             var fullGroup = <?php echo json_encode($fullGroup); ?>;
@@ -143,6 +146,13 @@ else {
                             <label for="groupname" class="col-md-3 control-label">Name</label>
                             <div class="col-md-9">
                                 <p class="form-control-static" type="text" name="groupname" id="groupname"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="avatar" class="col-md-3 control-label">Avatar</label>
+                            <div class="col-md-9">
+                                <img src="#" style="width:128px;height:128px;" id="avatar">
                             </div>
                         </div>
 
