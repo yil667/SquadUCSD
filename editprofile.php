@@ -118,10 +118,20 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         </div>
                         <div class="form-group">
                         	<div class="col-md-9 col-md-9 col-md-offset-3">
-                                Select image to upload:
-                                <input type="file" name="filename" id="filename">
-                                <input type="submit" value="Upload Image" name="submit">
-                            </div>
+                        	    <label type="button" class="btn btn-success hidden-xs" id="choose" name="choose">
+								    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
+								    Choose File
+                                </label>
+                                <label type="button" class="btn btn-success btn-block btn-lg visible-xs" id="choose" name="choose">
+                                    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
+                                    Choose File
+                                </label>
+                                <label type="button" class="btn btn-success hidden-xs" id="choose" name="choose">
+                                    <button type="submit" class="btn btn-primary hidden-xs upload-btn">Upload</button>
+                                </label>
+
+                                <button type="submit" class="btn btn-primary btn-block btn-lg visible-xs upload-btn">Upload</button>
+							</div>
                         </div>
                     </form>
                     <form class="form-horizontal" id="editProfileForm" role="form" method="POST"
