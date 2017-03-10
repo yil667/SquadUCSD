@@ -9,7 +9,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 <link rel="stylesheet" type="text/css" href="./css/index.css"/>
 <head>
     <!-- Current favicon. change the image at some point -->
-    <link rel="shortcut icon" href="https://i0.wp.com/theverse.co.uk/wp-content/uploads/2016/10/The_room.jpg?resize=190%2C140" type="image/x-icon"/>
+    <link rel="shortcut icon" href="http://i.imgur.com/Divi9yo.png" type="image/x-icon"/>
 
     <title>SquadUCSD</title>
     <meta charset="utf-8">
