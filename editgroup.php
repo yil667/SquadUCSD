@@ -267,5 +267,32 @@ else if (!$inGroup) {
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    function preview(input) {
+        var validSize = true;
+        $(".upload-btn").prop('disabled', true);
+        if (typeof FileReader !== "undefined") {
+            var size = input.files[0].size;
+            if (size > 200000) {
+                validSize = false;
+                $("#upload-info").html("The file you selected exceeded 200KB!")
+            }
+        }
+        if (input.files && input.files[0] && validSize) {
+            $(".upload-btn").prop('disabled', false);
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#avatar')
+                    .attr('src', e.target.result)
+                    .width(128)
+                    .height(128);
+            };
+            $("#upload-info").html("Click upload to change your avatar.")
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
 </body>
 </html>
