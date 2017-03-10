@@ -111,6 +111,12 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         <div class="form-group">
                         	<label for="choose" class="col-md-3 control-label"></label>
                         	<div class="col-md-9">
+                        	    <h5 id="upload-info">Maximum size: 200KB. Format: jpg, png or gif.</h5>
+							</div>
+                        </div>
+                        <div class="form-group">
+                        	<label for="choose" class="col-md-3 control-label"></label>
+                        	<div class="col-md-9">
                         	    <label type="button" class="btn btn-primary hidden-xs" id="choose" name="choose">
 								    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
 								    Choose File
@@ -226,7 +232,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 		    var size = input.files[0].size;
 		    if(size > 100000){
 		    	validSize = false;
-		    	alert("rekt");
+		    	$("#upload-info").html("The file you selected exceeded 200KB!")
 		    }
 		}
         if (input.files && input.files[0] && validSize) {
