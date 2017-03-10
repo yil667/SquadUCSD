@@ -6,9 +6,14 @@ $userid = getUserId();
 
 
 //$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
+if (isset($_FILES["filename"]))
+    echo "relax it's set";
+else
+    echo "relax it didn't";
 
-echo "The file name is " . $_FILES["filename"]["name"];
-echo "-------";
+
+//echo "The file name is " . ["name"];
+//echo "-------";
 //echo "extension gets you " . $suffix;
 
 //
