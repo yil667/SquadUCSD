@@ -18,7 +18,7 @@ function getUserObject($id)
     $row = mysqli_fetch_assoc($result);
 
     // declare return object
-    $user = new User($id, $row['fname'], $row['lname'], $row['email'], $row['phone'], $row['major'], $row['about']);
+    $user = new User($id, $row['fname'], $row['lname'], $row['email'], $row['phone'], $row['major'], $row['about'], $row['avatar']);
 
     // we now need to get the groups info
     // declare an empty array
@@ -84,7 +84,7 @@ function getGroupObject($id)
                 $result = mysqli_query($conn, $sql);
                 $userRow = mysqli_fetch_assoc($result);
                 array_push($users, new User($userRow['id'], $userRow['fname'], $userRow['lname'],
-                    $userRow['email'], "", "", ""));
+                    $userRow['email'], "", "", "", ""));
 
             }
         }

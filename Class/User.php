@@ -17,7 +17,7 @@ class User
     public $major;
     public $about; // about me
     public $groups; // user's affiliated groups
-
+    public $avatar;
 
     public $class1;
     public $class2;
@@ -25,10 +25,6 @@ class User
     public $class4;
     public $class5;
     public $class6;
-
-    // unimplemented
-    public $tags;
-    public $picture;
 
     /**
      * User constructor.
@@ -39,8 +35,9 @@ class User
      * @param $phone
      * @param $major
      * @param $about
+     * @param $avatar
      */
-    public function __construct($userid, $fname, $lname, $email, $phone, $major, $about)
+    public function __construct($userid, $fname, $lname, $email, $phone, $major, $about, $avatar)
     {
         $this->userid = $userid;
         $this->fname = $fname;
@@ -49,6 +46,7 @@ class User
         $this->phone = $phone;
         $this->major = $major;
         $this->about = $about;
+        $this->avatar = $avatar;
     }
 
     /**
@@ -190,33 +188,17 @@ class User
     /**
      * @return mixed
      */
-    public function getTags()
+    public function getAvatar()
     {
-        return $this->tags;
+        return $this->avatar;
     }
 
     /**
-     * @param mixed $tags
+     * @param mixed $avatar
      */
-    public function setTags($tags)
+    public function setAvatar($avatar)
     {
-        $this->tags = $tags;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPicture()
-    {
-        return $this->picture;
-    }
-
-    /**
-     * @param mixed $picture
-     */
-    public function setPicture($picture)
-    {
-        $this->picture = $picture;
+        $this->avatar = $avatar;
     }
 
     /**
