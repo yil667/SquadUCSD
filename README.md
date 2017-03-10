@@ -19,6 +19,7 @@ This web app allows students to form study groups for the classes they are enrol
 <ol>
    <li>display group avatar </li>
    <li>in login.php make update-info display in green instead of red</li>
+   <li>search result error message for not finding groups not displayed correctly?</li>
    <li>make class in view group clickable</li> 
    <li>add about in browse page under each user/group </li>
    <li>add avatar in browse page under each user/group </li>
