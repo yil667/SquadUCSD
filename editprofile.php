@@ -103,7 +103,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                     </h3>
                 </div>
                 <div class="panel-body">
-                	 <form class="form-horizontal" id="changeAvatarForm" role="form" method="POST"
+                	 <form class="form-horizontal" id="changeAvatarForm" role="form" method="POST" enctype="multipart/form-data"
                           action="controller/changeAvatarAction.php">
 	                	 <div class="form-group">
                             <label for="avatar" class="col-md-3 control-label">Avatar</label>
@@ -118,14 +118,14 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         </div>
                         <div class="form-group">
                         	<div class="col-md-9 col-md-9 col-md-offset-3">
-<!--                        	    <label type="button" class="btn btn-success hidden-xs" id="choose" name="choose">-->
-								    <input type="file" id="filename" name="filename" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
+                        	    <label type="button" class="btn btn-success hidden-xs" id="choose" name="choose">
+								    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
 								    Choose File
-<!--                                </label>-->
-<!--                                <label type="button" class="btn btn-success btn-block btn-lg visible-xs" id="choose" name="choose">-->
-<!--                                    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">-->
-<!--                                    Choose File-->
-<!--                                </label>-->
+                                </label>
+                                <label type="button" class="btn btn-success btn-block btn-lg visible-xs" id="choose" name="choose">
+                                    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
+                                    Choose File
+                                </label>
                                 <button type="submit" class="btn btn-primary hidden-xs upload-btn">Upload</button>
                                 <button type="submit" class="btn btn-primary btn-block btn-lg visible-xs upload-btn">Upload</button>
 							</div>
