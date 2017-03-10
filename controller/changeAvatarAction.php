@@ -15,7 +15,7 @@ $target_str = $target_dir . "user_" . $userid . "." . $suffix;
 $validImage = getimagesize($_FILES["filename"]["tmp_name"]);
 
 // check for the file size
-$validSize = $_FILES["filename"]["size"] > 250000;
+$validSize = $_FILES["filename"]["size"] < 250000;
 
 if (!$validImage)
     header("Location: http://www.squaducsd.com/editprofile.php?invalidimage");
