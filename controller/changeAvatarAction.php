@@ -7,10 +7,10 @@ include_once "changeAvatarController.php";
 session_start();
 
 $userid = getUserId();
-$target_dir = "img/";
+$target_dir = "$_SERVER[DOCUMENT_ROOT]/img/";
 $suffix = pathinfo($_FILES["filename"]["name"])["extension"];
-$target_str = $target_dir . basename($_FILES["filename"]["name"]);
-//    "user_" . $userid . "." . $suffix;
+$target_str = $target_dir . "user_" . $userid . "." . $suffix;
+
 // this line checks for a valid image
 $validImage = getimagesize($_FILES["filename"]["tmp_name"]);
 
