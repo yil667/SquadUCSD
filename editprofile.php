@@ -100,7 +100,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                     </h3>
                 </div>
                 <div class="panel-body">
-                	 <form class="form-horizontal" id="editProfileForm" role="form" method="POST"
+                	 <form class="form-horizontal" id="changeAvatarForm" role="form" method="POST"
                           action="controller/changeAvatarAction.php">
 	                	 <div class="form-group">
                             <label for="avatar" class="col-md-3 control-label">Avatar</label>
@@ -111,7 +111,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         <div class="form-group">
                         	 <div class="col-md-9">
                             	<label for="choose" class="col-md-3 control-label"></label>
-                        	    <label type="button" class="btn btn-primary" id="choose">
+                        	    <label type="button" class="btn btn-primary" id="choose" name="choose">
 								    <input type="file" id="filename" style="display:none">
 								    Choose File
 							   </label>
