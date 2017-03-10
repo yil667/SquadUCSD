@@ -1,6 +1,7 @@
 <?php
 include_once "dbController.php";
 include_once "requestActionController.php";
+include_once "viewProfileController.php";
 
 $conn = connectToDB();
 
@@ -20,8 +21,18 @@ if (mysqli_num_rows($result) > 0) {
 
     // if updated group successfully
     if ($result) {
-        // update the "group" field for both individuals in the students table
+        // update the "group" field for both individual in the students table
         updateUserProfiles($id1, $groupid, $conn);
+
+        $requester = getUserObject($id1);
+        $group = getGroupObject($groupid);
+
+        // send confirmation email to the requester
+        sendEmailToRequester($requester, $group);
+
+        // send confirmation email to the rest of the group, excluding the accepter
+        sendEmailToGroup($requester, $group);
+
         $valid = true;
     }
 }
