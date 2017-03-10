@@ -14,8 +14,8 @@ function getListOfUsers($conn, $query, $userObj)
     $link = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_assoc($link)) {
         $id = $row['id'];
-        if ($userObj->getUserid() != $id) {
-            $newUserObj = getUserObject($id);
+        $newUserObj = getUserObject($id);
+        if ($userObj->getUserid() != $id && !in_array($newUserObj, $result)) {
             array_push($result, $newUserObj);
         }
     }
@@ -30,8 +30,8 @@ function getListOfUsers($conn, $query, $userObj)
                 $link = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($link)) {
                     $id = $row['id'];
-                    if ($userObj->getUserid() != $id) {
-                        $newUserObj = getUserObject($id);
+                    $newUserObj = getUserObject($id);
+                    if ($userObj->getUserid() != $id && !in_array($newUserObj, $result)) {
                         array_push($result, $newUserObj);
                     }
                 }
@@ -55,7 +55,7 @@ function getListOfGroups($conn, $query, $userObj)
     while ($row = mysqli_fetch_assoc($link)) {
         $groupid = $row['id'];
         $group = getGroupObject($groupid);
-        if (!$group->hasUser($userid))
+        if (!$group->hasUser($userid) && !in_array($group, $result))
             array_push($result, $group);
     }
 
@@ -71,7 +71,7 @@ function getListOfGroups($conn, $query, $userObj)
                 while ($row = mysqli_fetch_assoc($link)) {
                     $groupid = $row['id'];
                     $group = getGroupObject($groupid);
-                    if (!$group->hasUser($userid))
+                    if (!$group->hasUser($userid) && !in_array($group, $result))
                         array_push($result, $group);
                 }
             }
