@@ -112,7 +112,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         	<label for="choose" class="col-md-3 control-label"></label>
                         	<div class="col-md-9">
                         	    <label type="button" class="btn btn-success" id="choose" name="choose">
-								    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png">
+								    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
 								    Choose File
 							   </label>
                                <button type="submit" class="btn btn-primary">Upload</button>
@@ -213,5 +213,21 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
         </div>
     </div>
 </div>
+<script type="text/javascript">
+	function preview(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
 </body>
 </html>
