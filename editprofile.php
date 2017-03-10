@@ -106,7 +106,10 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                             <label for="avatar" class="col-md-3 control-label">Avatar</label>
                             <div class="col-md-9">
                                 <img src="img/default.jpg" style="width:128px;height:128px;" id="avatar">
-                                <input class="post btn btn-primary" type="file" name="filename">
+                                <button type="button" class="btn btn-primary">
+								    <input type="file" id="filename" style="display:none">
+								    Choose File
+								</button>
                                 <button type="submit" class="btn btn-primary">Upload</button>
                             </div>
                         </div>
