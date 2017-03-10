@@ -2,15 +2,16 @@
 
 include_once "viewProfileController.php";
 
-function getListOfUsers($conn, $class, $userObj)
+function getListOfUsers($conn, $query, $userObj)
 {
-    $sql = "SELECT * FROM student WHERE class1='$class' OR class2='$class' OR class3='$class' OR class4='$class' " .
-        "OR class5='$class' OR class6='$class'";
-
-    $link = mysqli_query($conn, $sql);
-
     // initialize empty array for the result
     $result = Array();
+
+    // search for classes
+    $sql = "SELECT * FROM student WHERE class1='$query' OR class2='$query' OR class3='$query' OR class4='$query' " .
+        "OR class5='$query' OR class6='$query'";
+
+    $link = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_assoc($link)) {
         $id = $row['id'];
         if ($userObj->getUserid() != $id) {
@@ -19,12 +20,32 @@ function getListOfUsers($conn, $class, $userObj)
         }
     }
 
+    // if no result is found, search for individuals
+    if (sizeof($result) == 0) {
+        // search for the substrings, where space is the delimiter
+        $arr = explode(" ", $query);
+        foreach ($arr as $str) {
+            if ($str !== "") {
+                $sql = "SELECT * FROM student WHERE fname='$query' OR lname='$query'";
+                $link = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($link)) {
+                    $id = $row['id'];
+                    if ($userObj->getUserid() != $id) {
+                        $newUserObj = getUserObject($id);
+                        array_push($result, $newUserObj);
+                    }
+                }
+            }
+        }
+    }
+
+
     return $result;
 }
 
-function getListOfGroups($conn, $class, $userObj)
+function getListOfGroups($conn, $query, $userObj)
 {
-    $sql = "SELECT * FROM groupProfile WHERE class='$class'";
+    $sql = "SELECT * FROM groupProfile WHERE class='$query'";
 
     $link = mysqli_query($conn, $sql);
     $userid = $userObj->getUserid();
@@ -34,9 +55,30 @@ function getListOfGroups($conn, $class, $userObj)
     while ($row = mysqli_fetch_assoc($link)) {
         $groupid = $row['id'];
         $group = getGroupObject($groupid);
-        if(!$group->hasUser($userid))
+        if (!$group->hasUser($userid))
             array_push($result, $group);
     }
+
+    // if no result is found from searching through classes
+    if (sizeof($result) == 0) {
+        // search group names
+        // search for the substrings, where space is the delimiter
+        $arr = explode(" ", $query);
+        foreach ($arr as $str) {
+            if ($str !== "") {
+                $sql = "SELECT * FROM groupProfile WHERE name='$query'";
+                $link = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($link)) {
+                    $groupid = $row['id'];
+                    $group = getGroupObject($groupid);
+                    if (!$group->hasUser($userid))
+                        array_push($result, $group);
+                }
+            }
+
+        }
+    }
+
 
     return $result;
 }

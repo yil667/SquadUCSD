@@ -5,11 +5,11 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 $url = json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to homepage if not groupid foun
-if (strrpos($url, "?class=") !== false &&
+if (strrpos($url, "?query=") !== false &&
     strrpos($url, "&type=") !== false
 ) {
 
-    $_SESSION['class'] = $_GET['class'];
+    $_SESSION['query'] = $_GET['query'];
     $_SESSION['type'] = $_GET['type'];
 
     // after this include, a variable named $result will be available, storing
