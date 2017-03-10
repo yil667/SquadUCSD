@@ -9,6 +9,9 @@
 button {
     margin-bottom: 1px !important;
     margin-top: 1px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    -webkit-appearance: none;
 }
 
 #memberlist > list-group-item, #grouplist > list-group-item, #classlist > list-group-item {
@@ -61,12 +64,6 @@ textarea {
 }
 
 .modal-fade > .modal-content > .modal-body > .form-group > .form-control {
-    border-radius: 0 !important;
-    border: none !important;
-}
-
-.panel-custom > .panel-body > #choose, #filename {
-    background-color:#337ab7 !important;
     border-radius: 0 !important;
     border: none !important;
 }
