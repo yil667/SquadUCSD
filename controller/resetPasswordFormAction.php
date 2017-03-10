@@ -5,7 +5,9 @@ include_once "dbController.php";
 $email = $_SESSION['forgetEmail'];
 $newPassword = $_POST['newpassword'];
 
-$sql = "UPDATE student SET forgotPwdHash='', pwd='$newPassword' WHERE email='$email'";
+$pwd_hash = password_hash($newPassword, PASSWORD_DEFAULT);
+
+$sql = "UPDATE student SET forgotPwdHash='', pwd='$pwd_hash' WHERE email='$email'";
 $conn = connectToDB();
 mysqli_query($conn, $sql);
 
