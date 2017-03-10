@@ -160,13 +160,13 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/default.jpg" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/userid_3.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
                             <div class="list-group-item">
                                 <h4 class="media-heading">User Interface Specialist</h4>
-                                <p class="list-group-item-text">Zifan "Z" Yang</p>
+                                <p class="list-group-item-text">Zifan "-CalCulated-" Yang</p>
                             </div>
                         </div>
                     </div>
