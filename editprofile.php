@@ -107,7 +107,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                             <div class="col-md-9">
                                 <img src="img/default.jpg" style="width:128px;height:128px;" id="avatar">
                                 <label class="custom-file-upload">
-								    <input type="file" id="filename"/>
+								    <input type="file" id="filename" style="display:none">
 								    Custom Upload
 								</label>
                                 <button type="submit" class="btn btn-primary">Upload</button>
