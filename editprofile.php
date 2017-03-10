@@ -109,13 +109,13 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                             </div>
                         </div>
                         <div class="form-group">
-                        	<div class="col-md-9">
+                        	<div class="col-md-9 col-md-offset-3">
                         	    <h5 id="upload-info">Maximum size: 200KB.</h5>
 							</div>
                         </div>
                         <div class="form-group">
              
-                        	<div class="col-md-9">
+                        	<div class="col-md-9 col-md-9 col-md-offset-3">
                         	    <label type="button" class="btn btn-primary hidden-xs" id="choose" name="choose">
 								    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
 								    Choose File
