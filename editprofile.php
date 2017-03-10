@@ -120,7 +120,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                                     Choose File
                                 </label>
                                 <button type="submit" class="btn btn-primary hidden-xs" id="upload-btn">Upload</button>
-                                <button type="submit" class="btn btn-primary btn-lg visible-xs" id="upload-btn">Upload</button>
+                                <button type="submit" class="btn btn-primary btn-block btn-lg visible-xs" id="upload-btn">Upload</button>
 							</div>
                         </div>
                     </form>
