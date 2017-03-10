@@ -21,6 +21,7 @@ $inGroup = $group->hasUser($id);
 $groupname = mysqli_real_escape_string($conn, $_POST['groupname']);
 $course = mysqli_real_escape_string($conn, $_POST['course']);
 $size = mysqli_real_escape_string($conn, $_POST['size']);
+$about = mysqli_real_escape_string($conn, $_POST['about']);
 
 // if the inputted size is less than the current group size
 if ($size < $group->getSize())
@@ -31,7 +32,7 @@ if (!$inGroup)
     header("Location: http://www.squaducsd.com/viewgroup.php?groupid=$groupid");
 else {
     // we assume data validation has already taken place in the front end
-    $sql = "UPDATE groupProfile SET name='$groupname', maxSize='$size', class='$course' " .
+    $sql = "UPDATE groupProfile SET name='$groupname', maxSize='$size', class='$course', about='$about' " .
         "WHERE id='$groupid'";
 
     mysqli_query($conn, $sql);
