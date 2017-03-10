@@ -22,15 +22,13 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
             var browseNav =
                 "<li><a href='./browse.php'>Browse</a></li>";
             var loggedInContent =
-                "<li class='dropdown'>" +
+                "<li class='dropdown'>" + "<img src='" + common_avatar + "'" + " height='30' width='30' id='common_avatar'>" +
                 "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + userFirstName + " <span class='caret'></span></a><ul class='dropdown-menu'>" +
                 "<li><a href='editprofile.php'>Edit Profile</a></li>" +
                 "<li><a href='viewprofile.php'>View Profile</a></li>" +
                 "<li><a href='managegroups.php'>Manage Groups</a></li>" +
                 "<li><a href='controller/logoutAction.php'>" +
-                "<span class='glyphicon glyphicon-log-out'>" + "</span> Logout</a></li></ul></li>" +
-                // for the id of the avatar, don't use "avatar" cuz it conflicts with some elements in other pages
-                "<img src='" + common_avatar + "'" + " height='100' width='100' id='common_avatar'>";
+                "<span class='glyphicon glyphicon-log-out'>" + "</span> Logout</a></li></ul></li>";
             if (isUserLoggedIn) {
                 $('#navList li:nth-child(1)').after(browseNav);
                 $("#rightNav").html(loggedInContent);
