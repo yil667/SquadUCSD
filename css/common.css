@@ -108,6 +108,10 @@ span {
     background-color: #cccccc;
 }
 
+.navbar-black .navbar-toggle {
+    margin-top: 8px !important;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
