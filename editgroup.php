@@ -103,6 +103,26 @@ else if (!$inGroup) {
                 $("#update-info").html("Message sent.");
             }
 
+            else if (window.location.href.indexOf("&avatarupdated") > -1) {
+                $("#update-info").html("Avatar updated successfully.");
+            }
+
+            else if (window.location.href.indexOf("&invalidimage") > -1) {
+                $("#update-info").attr("id", "error-display");
+                $("#error-display").html("Invalid image type.");
+
+            }
+
+            else if (window.location.href.indexOf("&invalidsize") > -1) {
+                $("#update-info").attr("id", "error-display");
+                $("#error-display").html("File size exceeds 200 KB.");
+            }
+
+            else if (window.location.href.indexOf("&avatarfail") > -1) {
+                $("#update-info").attr("id", "error-display");
+                $("#error-display").html("Unexpected error during avatar update.");
+            }
+
         });
     </script>
     <script src="js/group-validation.js"></script>
