@@ -160,7 +160,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/userid_3.png" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/user_3.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
