@@ -69,7 +69,10 @@ else {
             $('#groupname').html(groupname);
 
             var course = <?php echo json_encode($group->getClass()); ?>;
-            $('#course').html(course);
+            if (course !== "") {
+                $('#course').append("<a class='list-group-item' href='browse.php?query=" + course + "&type=users' >"
+                    + course + "</a>");
+            }
 
             var size = <?php echo json_encode($group->getMaxSize()); ?>;
             $('#size').html(size);
