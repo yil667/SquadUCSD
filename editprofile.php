@@ -111,7 +111,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         <div class="form-group">
                         	<label for="choose" class="col-md-3 control-label"></label>
                         	<div class="col-md-9">
-                        	    <h5 id="upload-info">Maximum size: 200KB. Format: jpg, png or gif.</h5>
+                        	    <h5 id="upload-info">Maximum size: 200KB.</h5>
 							</div>
                         </div>
                         <div class="form-group">
