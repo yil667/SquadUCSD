@@ -7,7 +7,7 @@ include_once "changeAvatarController.php";
 session_start();
 
 $userid = getUserId();
-$target_dir = "/img/";
+$target_dir = "img/";
 $suffix = pathinfo($_FILES["filename"]["name"])["extension"];
 $target_str = $target_dir . basename($_FILES["filename"]["name"]);
 //    "user_" . $userid . "." . $suffix;
