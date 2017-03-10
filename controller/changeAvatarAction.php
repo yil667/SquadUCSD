@@ -17,9 +17,6 @@ $validImage = getimagesize($_FILES["filename"]["tmp_name"]);
 // check for the file size
 $validSize = $_FILES["filename"]["size"] < 250000;
 
-echo "dumping nigga";
-var_dump($_FILES);
-
 if (!$validImage)
     header("Location: http://www.squaducsd.com/editprofile.php?invalidimage");
 else if (!$validSize)
