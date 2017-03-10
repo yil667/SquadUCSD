@@ -6,36 +6,33 @@ This web app allows students to form study groups for the classes they are enrol
 </p>
 
 <h1>Add new issues here as well as the issues tab in github</h1>
-   <ol>
-    <li>when requesting to form group, group name is not saved //relax incomplete feature</li>
-    <li>cannot set group size when inviting to form group //in progress</li>
-   </ol>
 <h1>As issues are resolved, close issues on issue tab in github and delete entry here</h1>
 
 <h2>Non-Coding related todo list: </h2>
 <ol>
-   <li>Rewrite blurb on <a href="http://www.squaducsd.com/">welcome</a> page</li>
-   <li>Write some shit for the contact page and give it to some coder to implement</li>
-   <li>Go over Use Cases, User Stories, System Requirements and Design Use cases and update to be consistent with final product</li>
-   <li>Use Site as reference while doing this. Change Use Cases that do not exactly match up with what appears on the site</li>
-   <li>Start testing the site and writing Test Cases based on Revised Use Cases -> ALTER USE CASES FIRST</li>
 </ol>
 
 <h2>General todo list: </h2>
 <li>Feature Suggestion: Search for individual users/groups by name, add a search bar on top, and go to profile using autocomplete or new page</li>
-<li>Working on mobile optimizations</li>
 
 <h2>Front-end todo list: </h2>
 <ol>
-<li>add about section in edit group/ view group</li> 
-<li>add avatar in edit profile</li>
-<li>add about in browse page under each user/group </li>
-<li>add capability to search users directly in browse </li>
- 
+   <li>add about section in edit group/ view group - in progress</li> 
+   <li>add avatar in edit profile - in progress</li>
+   <li>add about in browse page under each user/group </li>
+   <li>add capability to search users directly in browse </li>
 </ol>
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>Go over Use Cases, User Stories, System Requirements and Design Use cases and update to be consistent with final product</strike></li>
+   <li><strike>Use Site as reference while doing this. Change Use Cases that do not exactly match up with what appears on the site</strike></li>
+   <li><strike>Start testing the site and writing Test Cases based on Revised Use Cases -> ALTER USE CASES FIRST</strike></li>
+   <li><strike>Working on mobile optimizations</strike></li>
+   <li><strike>Rewrite blurb on <a href="http://www.squaducsd.com/">welcome</a> page</strike></li>
+   <li><strike>Write some shit for the contact page and give it to some coder to implement</strike></li>
+   <li><strike>when requesting to form group, group name is not saved //relax incomplete feature</strike></li>
+   <li><strike>cannot set group size when inviting to form group //in progress</strike></li>
    <li><strike>display warning if the group if full already when inviting (backend will resize the group)</strike></li>
    <li><strike>autocomplete tries to run on viewprofile page for classes when they are static fields</strike></li>
    <li><strike>check if already in group in viewprofile page, cannot invite to a group user is already a part of</strike></li>
