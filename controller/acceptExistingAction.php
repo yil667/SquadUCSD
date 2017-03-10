@@ -19,10 +19,14 @@ if (mysqli_num_rows($result) > 0) {
     // update the group row in the groupProfile table
     $result = updateGroupProfile($id2, $groupid, $MAX_GROUP_SIZE, $conn);
 
-    // if updated group successfully
+    // if updated group successfully (the group exists)
     if ($result) {
         // update the "group" field for both individuals in the students table
         updateUserProfiles($id2, $groupid, $conn);
+
+        // send email to notify people in the group
+        sendEmail($id2, $groupid);
+
         $valid = true;
     }
 }
