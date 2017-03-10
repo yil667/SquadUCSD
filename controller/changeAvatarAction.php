@@ -14,12 +14,12 @@ echo "relax nig";
 
 
 
-if (isset($_POST["filename"]))
+if (isset($_FILES["filename"]))
     echo "relax it's set";
 else
     echo "relax it didn't";
 
-if (isset($_POST["changeAvatarForm"]))
+if (isset($_FILES["changeAvatarForm"]))
     echo "relax it's set2";
 else
     echo "relax it didn't2";
