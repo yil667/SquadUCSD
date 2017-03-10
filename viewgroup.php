@@ -78,7 +78,7 @@ else {
             $('#about').html(about);
 
             var avatar = <?php echo json_encode($group->getAvatar()); ?>;
-            $('#avatar').html(avatar);
+            $('#avatar').attr("src", avatar);
 
             var inGroup = <?php echo json_encode($inGroup); ?>;
             var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
