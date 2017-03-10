@@ -17,8 +17,6 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
-   <li>resize avatar in navbar and display in same size across different pages. (currently for some reason its size 
-   in homepage is different from view profile, and I'm just backend so ¯\_(ツ)_/¯) </li>
    <li>display small group avatar in manage groups </li>
    <li>search result error message for not finding groups not displayed correctly?</li>
    <li>add about in browse page under each user/group </li>
@@ -27,6 +25,8 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>resize avatar in navbar and display in same size across different pages. (currently for some reason its size 
+   in homepage is different from view profile, and I'm just backend so ¯\_(ツ)_/¯) </strike></li>
    <li><strike>display small avatar in nav bar next to name if applicable (user logged in)</strike></li>
    <li><strike>make class in view group clickable</strike></li> 
    <li><strike>in login.php make update-info display in green instead of red</strike></li>
