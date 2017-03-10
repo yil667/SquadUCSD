@@ -28,4 +28,8 @@ if (mysqli_num_rows($result) > 0) {
 
     // update the "group" field for both individuals in the students table
     updateUserProfiles($id1, $id2, $groupid, $conn);
+
+    // send a confirmation email to the initiator
+    sendConfirmationEmail($conn, $id1, $id2, $groupName, $groupid, $className);
+
 }
