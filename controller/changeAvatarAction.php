@@ -12,7 +12,7 @@ $userid = getUserId();
 
 echo "relax nig";
 
-if (isset($_FILES["filename"]))
+if (isset($_POST["filename"]))
     echo "relax it's set";
 else
     echo "relax it didn't";
