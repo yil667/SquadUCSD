@@ -110,12 +110,17 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         </div>
                         <div class="form-group">
                         	<label for="choose" class="col-md-3 control-label"></label>
-                        	<div class="col-md-9">
-                        	    <label type="button" class="btn btn-primary" id="choose" name="choose">
+                        	<div class="col-md-12">
+                        	    <label type="button" class="btn btn-primary hidden-xs" id="choose" name="choose">
 								    <input type="file" id="filename" style="display:none">
 								    Choose File
-							   </label>
-                               <button type="submit" class="btn btn-primary">Upload</button>
+                                </label>
+                                <label type="button" class="btn btn-primary btn-lg btn-block visible-xs" id="choose" name="choose">
+                                    <input type="file" id="filename" style="display:none">
+                                    Choose File
+                                </label>
+                                <button type="submit" class="btn btn-primary hidden-xs">Upload</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block visible-xs">Upload</button>
 							</div>
                         </div>
                     </form>
