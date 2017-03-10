@@ -71,6 +71,12 @@ if (strrpos($url, "?query=") !== false &&
             if (result.length == 0) {
                 $('#results-container').html("Sorry, we couldn't find any results... ");
             }
+            // Prefill what user selected
+            if (window.location.href.indexOf("&type=groups") > -1) {
+              $("#searchtype").getElementsByTagName('option')[1].selected = 'selected';
+            }
+
+
             resetPage();
             $('#pagination').twbsPagination({
                 totalPages: Math.ceil(result.length / show),
@@ -105,7 +111,7 @@ if (strrpos($url, "?query=") !== false &&
                     </div>
 
                     <div class="form-group" id="courseFormGroup" name="courseFormGroup">
-                        <input type="text" placeholder="Enter a class or user's name" class="form-control" name="query" id="query">
+                        <input type="text" placeholder="Enter class/user name" class="form-control" name="query" id="query">
                     </div>
 
 
@@ -141,10 +147,10 @@ if (strrpos($url, "?query=") !== false &&
         // initial check for the selection box (need to add more if
         // check if ingroup full fullfull also clear error message
         if(selectBox.selectedIndex == 0){
-          	$("#query").attr("placeholder", "Enter a class or user's name"); 
+          	$("#query").attr("placeholder", "Enter class/user name"); 
          }
          else{
-         	$("#query").attr("placeholder", "Enter a class or group name"); 
+         	$("#query").attr("placeholder", "Enter class/group name"); 
          }
      
    
