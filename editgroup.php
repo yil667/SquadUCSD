@@ -84,6 +84,9 @@ else if (!$inGroup) {
             var size = <?php echo json_encode($group->getMaxSize()); ?>;
             document.getElementById('size').value = size;
 
+            var about = <?php echo json_encode($group->getAbout()); ?>;
+            document.getElementById('about').value = about;
+
             if (window.location.href.indexOf("&saved") > -1) {
                 $("#update-info").html("Group profile updated.");
             }
@@ -145,6 +148,13 @@ else if (!$inGroup) {
                                 <!--replace min with num from backend @DOM @SCOTT -->
                                 <input type="number" class="form-control bfh-number" name="size"
                                        id="size">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="about" class="col-md-3 control-label">About Us</label>
+                            <div class="col-md-9">
+                                <textarea class="form-control" name="about" id="about" rows="3"></textarea>
                             </div>
                         </div>
 
