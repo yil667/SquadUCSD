@@ -47,11 +47,8 @@ else {
         updateUserProfile($conn, $userid, $file_name);
 
         header("Location: http://www.squaducsd.com/editprofile.php?avatarupdated");
-
     }
     else {
         header("Location: http://www.squaducsd.com/editprofile.php?avatarfail");
     }
-
-
 }

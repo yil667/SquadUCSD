@@ -35,7 +35,8 @@ function getUserObject($id)
 
                 $group = new Group(
                     $groupRow['id'], $groupRow['name'], $groupRow['size'],
-                    $groupRow['maxSize'], $groupRow['class'], $groupRow['users']);
+                    $groupRow['maxSize'], $groupRow['class'], $groupRow['users'], $groupRow['about'],
+                    $groupRow['avatar']);
                 $group->isFull = $group->isFull();
                 $group->isMax = $group->isMax();
 
@@ -68,7 +69,8 @@ function getGroupObject($id)
     $row = mysqli_fetch_assoc($result);
 
     // declare return object
-    $group = new Group($id, $row['name'], $row['size'], $row['maxSize'], $row['class'], $row['users']);
+    $group = new Group($id, $row['name'], $row['size'], $row['maxSize'], $row['class'], $row['users'], $row['about'],
+        $row['avatar']);
     $group->isFull = $group->isFull();
     $group->isMax = $group->isMax();
     // we now need to get the users' info

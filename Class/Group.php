@@ -11,6 +11,8 @@ class Group
     public $size;
     public $maxSize;
     public $users;
+    public $about;
+    public $avatar;
 
     public $isFull;
     public $isMax;
@@ -23,8 +25,10 @@ class Group
      * @param $size
      * @param $maxSize
      * @param $users
+     * @param $about
+     * @param $avatar
      */
-    public function __construct($groupid, $name, $size, $maxSize, $class, $users)
+    public function __construct($groupid, $name, $size, $maxSize, $class, $users, $about, $avatar)
     {
         $this->groupid = $groupid;
         $this->name = $name;
@@ -32,6 +36,8 @@ class Group
         $this->maxSize = $maxSize;
         $this->class = $class;
         $this->users = $users;
+        $this->about = $about;
+        $this->avatar = $avatar;
     }
 
     /**
@@ -156,4 +162,38 @@ class Group
     {
         return $this->size == $this->MAX_GROUP_SIZE;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAbout()
+    {
+        return $this->about;
+    }
+
+    /**
+     * @param mixed $about
+     */
+    public function setAbout($about)
+    {
+        $this->about = $about;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAvatar()
+    {
+        return $this->avatar;
+    }
+
+    /**
+     * @param mixed $avatar
+     */
+    public function setAvatar($avatar)
+    {
+        $this->avatar = $avatar;
+    }
+
+
 }

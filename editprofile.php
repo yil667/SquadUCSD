@@ -90,7 +90,11 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
             else if (window.location.href.indexOf("?invalidsize") > -1) {
                 $("#update-info").attr("id","error-display");
                 $("#error-display").html("File size exceeds 200 KB.");
+            }
 
+            else if (window.location.href.indexOf("?avatarfail") > -1) {
+                $("#update-info").attr("id","error-display");
+                $("#error-display").html("Unexpected error during avatar update.");
             }
 
             else if (window.location.href.indexOf("?fail") > -1) {
