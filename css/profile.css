@@ -4,10 +4,12 @@
 
 .button {
     text-align: center;
+}
+
+button {
     margin-bottom: 1px;
     margin-top: 1px;
 }
-
 
 #memberlist > list-group-item, #grouplist > list-group-item, #classlist > list-group-item {
     background-color: #eaeaea;
