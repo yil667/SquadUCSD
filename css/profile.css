@@ -65,7 +65,7 @@ textarea {
     border: none !important;
 }
 
-#choose {
+.panel-custom > .panel-body > #choose {
     background-color:#337ab7 !important;
     border-radius: 0 !important;
     border: none !important;
