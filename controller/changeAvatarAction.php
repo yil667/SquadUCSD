@@ -13,25 +13,25 @@ $target_dir = "$_SERVER[DOCUMENT_ROOT]/img/";
 
 $filename = "";
 // check if the user is using big browser
-if($_FILES["filename"]["error"] != UPLOAD_ERR_NO_FILE)
-    $filename = $_FILES["filename"];
+if($_FILES["filename"]["error"] == UPLOAD_ERR_OK)
+    $filename = "filename";
 // smaller browser
-else if ($_FILES["filename2"]["error"] != UPLOAD_ERR_NO_FILE)
-    $filename = $_FILES["filename2"];
+else if ($_FILES["filename2"]["error"] == UPLOAD_ERR_OK)
+    $filename = "filename2";
 else // something went wrong
     header("Location: http://www.squaducsd.com/editprofile.php?avatarfail");
 
 
 
-$suffix = pathinfo($filename["name"])["extension"];
+$suffix = pathinfo($_FILES[$filename]["name"])["extension"];
 $file_name = "user_" . $userid . "." . $suffix;
 $target_str = $target_dir . $file_name;
 
 // this line checks for a valid image
-$validImage = getimagesize($filename["tmp_name"]);
+$validImage = getimagesize($_FILES[$filename]["tmp_name"]);
 
 // check for the file size
-$validSize = $filename["size"] < 250000;
+$validSize = $_FILES[$filename]["size"] < 250000;
 
 if (!$validImage)
     header("Location: http://www.squaducsd.com/editprofile.php?invalidimage");
@@ -39,7 +39,7 @@ else if (!$validSize)
     header("Location: http://www.squaducsd.com/editprofile.php?invalidsize");
 else {
     // put the file in the disk
-    if (move_uploaded_file($filename["tmp_name"], $target_str)) {
+    if (move_uploaded_file($_FILES[$filename]["tmp_name"], $target_str)) {
         // change permission
         chmod($target_str, 0777);
 
