@@ -161,9 +161,9 @@ echo sizeof($result);
                                 "</div>" +
                             "</div>" +
                             "<div class='text-center buttons col-md-12' id='button'>" +
-                                "<button type='button' class='btn btn-primary xs-hidden' onclick=" +
+                                "<button type='button' class='btn btn-primary hidden-xs' onclick=" +
                                         "location.href='viewprofile.php?userid=" + id + "'>View Profile</button>" +
-                                "<button type='button' class='btn btn-primary btn-block btn-lg xs-visible' onclick=" +
+                                "<button type='button' class='btn btn-primary btn-block btn-lg visible-xs' onclick=" +
                                         "location.href='viewprofile.php?userid=" + id + "'>View Profile</button>" +
                             "</div>" +
                         "</form>" +
@@ -186,9 +186,9 @@ echo sizeof($result);
                                 "</div>" +
                             "</div>" +
                             "<div class='text-center buttons col-md-12' id='button'>" +
-                                "<button type='button' class='btn btn-primary xs-hidden' onclick=" +
+                                "<button type='button' class='btn btn-primary hidden-xs' onclick=" +
                                         "location.href='viewgroup.php?groupid=" + id + "'>View Group Profile</button>" +
-                                "<button type='button' class='btn btn-primary btn-block btn-lg xs-visible' onclick=" +
+                                "<button type='button' class='btn btn-primary btn-block btn-lg visible-xs' onclick=" +
                                         "location.href='viewgroup.php?groupid=" + id + "'>View Group Profile</button>" +
                             "</div>" +
                         "</form>" +
