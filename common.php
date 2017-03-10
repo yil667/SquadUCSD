@@ -1,5 +1,7 @@
 <?php
 include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
+
+echo "avatar is $avatar";
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +18,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
         $(document).ready(function () {
             var isUserLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
             var userFirstName = <?php echo json_encode($firstName); ?>;
+            var avatar = <?php echo json_encode($avatar); ?>;
             var defaultContent = "<li><a href='register.php'><span class='glyphicon glyphicon-user'></span> Register</a></li><li><a href='login.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
             var browseNav =
                 "<li><a href='./browse.php'>Browse</a></li>";

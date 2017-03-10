@@ -79,3 +79,11 @@ function handleNotLoggedIn()
         // redirect to the homepage
         header("Location: http://www.squaducsd.com/index.php");
 }
+
+function getAvatar($conn, $id)
+{
+    $sql = "SELECT * FROM student WHERE id='$id'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row['avatar'];
+}
