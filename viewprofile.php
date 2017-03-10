@@ -319,8 +319,8 @@ else {
                     </div>
 
                     <div class="modal-footer">
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="send-btn" type="submit" class="btn btn-primary">Send</button>
+                        <button class="btn modal-button" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button id="send-btn" type="submit" class="btn btn-primary modal-button">Send</button>
                     </div>
                 </form>
             </div>
@@ -353,8 +353,8 @@ else {
 
                     <div class="modal-footer">
                         <h5 class="text-left" id="invite-error"></h5>
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="invite-btn" type="submit" class="btn btn-primary">Send Invite</button>
+                        <button class="btn modal-button" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button id="invite-btn" type="submit" class="btn btn-primary modal-button">Send Invite</button>
                     </div>
 
                 </form>
@@ -391,8 +391,8 @@ else {
                     </div>
 
                     <div class="modal-footer">
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button id="send-btn" type="submit" class="btn btn-primary">Send Invite</button>
+                        <button class="btn modal-button" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button id="send-btn" type="submit" class="btn btn-primary modal-button">Send Invite</button>
                     </div>
                 </form>
             </div>
