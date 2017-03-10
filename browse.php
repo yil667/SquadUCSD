@@ -96,18 +96,18 @@ if (strrpos($url, "?query=") !== false &&
                 <form class="form" role="search" id="searchForm" name="searchForm" method="POST"
                       action="./controller/searchAction.php">
 
-                    <div class="form-group" id="courseFormGroup" name="courseFormGroup">
-                        <label for="course" class="control-label">Class</label>
-                        <input type="text" placeholder="Enter a Class" class="form-control" name="course" id="course">
-                    </div>
-
                     <div class="form-group" id="typeFormGroup" name="typeFormGroup">
-                        <label for="searchtype" class="control-label">Type</label>
+                        <label for="searchtype" class="control-label">Limit Results To</label>
                         <select id="searchtype" name="searchtype">
                             <option value="users">Users</option>
                             <option value="groups">Groups</option>
                         </select>
                     </div>
+
+                    <div class="form-group" id="courseFormGroup" name="courseFormGroup">
+                        <input type="text" placeholder="Enter a Class" class="form-control" name="query" id="query">
+                    </div>
+
 
                     <button type="submit" class="btn btn-primary hidden-xs" role="button">Search
                     </button>
