@@ -220,7 +220,15 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 </div>
 <script type="text/javascript">
 	function preview(input) {
-        if (input.files && input.files[0]) {
+		var validSize = true;
+		if (typeof FileReader !== "undefined") {
+		    var size = input.files[0].size;
+		    if(size > 1){
+		    	validSize = false;
+		    	alert("rekt");
+		    }
+		}
+        if (input.files && input.files[0] && validSize) {
             var reader = new FileReader();
 
             reader.onload = function (e) {
