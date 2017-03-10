@@ -166,7 +166,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                         <div class="media-body">
                             <div class="list-group-item">
                                 <h4 class="media-heading">User Interface Specialist</h4>
-                                <p class="list-group-item-text">Zifan "-CalCulated-" Yang</p>
+                                <p class="list-group-item-text">-CalCulated-</p>
                             </div>
                         </div>
                     </div>
