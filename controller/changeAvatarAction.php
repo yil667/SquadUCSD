@@ -28,6 +28,9 @@ else {
     // put the file in the disk
 
     if (move_uploaded_file($_FILES["filename"]["tmp_name"], $target_str)) {
+        // change permission
+        chmod($target_str, 777);
+
         // update the database
         updateUserProfile($conn, $userid, $file_name);
 
