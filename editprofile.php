@@ -219,7 +219,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                $('#blah')
+                $('#avatar')
                     .attr('src', e.target.result)
                     .width(150)
                     .height(200);
