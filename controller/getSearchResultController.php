@@ -26,7 +26,7 @@ function getListOfUsers($conn, $query, $userObj)
         $arr = explode(" ", $query);
         foreach ($arr as $str) {
             if ($str !== "") {
-                $sql = "SELECT * FROM student WHERE fname='$str' OR lname='$str'";
+                $sql = "SELECT * FROM student WHERE fname LIKE '%{$str}%' OR lname LIKE '%{$str}%'";
                 $link = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($link)) {
                     $id = $row['id'];
@@ -67,7 +67,7 @@ function getListOfGroups($conn, $query, $userObj)
         array_unshift($arr, $query);
         foreach ($arr as $str) {
             if ($str !== "") {
-                $sql = "SELECT * FROM groupProfile WHERE name='$str'";
+                $sql = "SELECT * FROM groupProfile WHERE name LIKE '%{$str}%'";
                 $link = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($link)) {
                     $groupid = $row['id'];
