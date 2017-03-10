@@ -12,19 +12,19 @@ $userid = getUserId();
 
 echo "relax nig";
 
-//if (isset($_FILES["filename"]))
-//    echo "relax it's set";
-//else
-//    echo "relax it didn't";
+if (isset($_FILES["filename"]))
+    echo "relax it's set";
+else
+    echo "relax it didn't";
 
-$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
+//$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
+//
+//echo "The file name is " . $_FILES["filename"]["name"];
+//echo "-------";
+//echo "extension gets you " . $suffix;
 
-echo "The file name is " . $_FILES["filename"]["name"];
-echo "-------";
-echo "extension gets you " . $suffix;
 
-
-$target_str =  $target_dir . "user_" . $userid . $suffix;
+//$target_str =  $target_dir . "user_" . $userid . $suffix;
 //
 //
 //
