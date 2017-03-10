@@ -1,7 +1,6 @@
 <?php
 include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 
-echo "avatar is $avatar";
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +22,7 @@ echo "avatar is $avatar";
             var browseNav =
                 "<li><a href='./browse.php'>Browse</a></li>";
             var loggedInContent =
+                "<img src='" + avatar + "'" + " style='width:40px;height:40px;' id='avatar'>" +
                 "<li class='dropdown'>" +
                 "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>" + userFirstName + " <span class='caret'></span></a><ul class='dropdown-menu'>" +
                 "<li><a href='editprofile.php'>Edit Profile</a></li>" +
@@ -53,7 +53,7 @@ echo "avatar is $avatar";
             <a class="navbar-brand" href="index.php">SquadUCSD</a>
         </div>
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-left" id = "navList">
+            <ul class="nav navbar-nav navbar-left" id="navList">
                 <li><a href="index.php">Home</a></li>
                 <li><a href='./about.php'>About</a></li>
             </ul>
