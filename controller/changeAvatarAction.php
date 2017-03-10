@@ -26,7 +26,7 @@ echo "relax nig";
 
 //$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
 
-echo $_FILES["filename"]["name"];
+echo $_FILES["filename"];
 echo "-------";
 //echo "extension gets you " . $suffix;
 
