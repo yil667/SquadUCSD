@@ -17,7 +17,7 @@ button {
 }
 
 html [type="button"] {
-    -webkit-appearance: none;
+    -webkit-appearance: none !important;
 }
 
 #memberlist > list-group-item, #grouplist > list-group-item, #classlist > list-group-item {
