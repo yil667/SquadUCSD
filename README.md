@@ -17,7 +17,6 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
-   <li>display group avatar </li>
    <li>in login.php make update-info display in green instead of red</li>
    <li>search result error message for not finding groups not displayed correctly?</li>
    <li>make class in view group clickable</li> 
@@ -27,6 +26,7 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>add group avatar </strike></li>
    <li><strike>add avatar in edit profile</strike></li>
    <li><strike>add capability to search users directly in browse </strike></li>
    <li><strike>add about section in edit group/ view group</strike></li> 
@@ -73,13 +73,13 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
-<li>avatar for groups logic </li>
 <li>accommodate front end feature needs </li>
 </ol>
 
 <h2>Back-end recently finished: </h2>
 <ol>
 
+   <li><strike>avatar for groups logic </strike></li>
    <li><strike>forgot password logic updated for encryption</strike></li> 
    <li><strike>mobile support for edit profile avatar</strike></li> 
    <li><strike>avatar backend logic </strike></li> 
