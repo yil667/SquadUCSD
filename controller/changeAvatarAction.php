@@ -5,11 +5,11 @@ $target_dir = "$_SERVER[DOCUMENT_ROOT]/img/";
 $userid = getUserId();
 
 
-$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
+//$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
 
 echo "The file name is " . $_FILES["filename"]["name"];
 echo "-------";
-echo "extension gets you " . $suffix;
+//echo "extension gets you " . $suffix;
 
 //
 //$target_str =  $target_dir . "user_" . $userid . $suffix;
