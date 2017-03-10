@@ -54,7 +54,7 @@ if (strrpos($url, "?query=") !== false &&
         var show = 8;
         var start = 0;
 
-        var prefill = <?php echo json_encode($_SESSION['query']); ?>;
+        var prefill = <?php echo json_encode($_GET['query']); ?>;
 
 
         function resetPage() {
@@ -78,7 +78,7 @@ if (strrpos($url, "?query=") !== false &&
             if (window.location.href.indexOf("&type=groups") > -1) {
             	 $('#searchtype option[value=groups]').attr('selected','selected');
             }
-            $("#query").html(prefill);
+            $("#query").value = prefill;
 
             resetPage();
             $('#pagination').twbsPagination({
