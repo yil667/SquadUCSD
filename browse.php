@@ -97,7 +97,7 @@ if (strrpos($url, "?query=") !== false &&
                       action="./controller/searchAction.php">
 
                     <div class="form-group" id="typeFormGroup" name="typeFormGroup">
-                        <label for="searchtype" class="control-label">Limit Results To</label>
+                        <label for="searchtype" class="control-label">Limit results to</label>
                         <select id="searchtype" name="searchtype">
                             <option value="users">Users</option>
                             <option value="groups">Groups</option>
@@ -105,7 +105,7 @@ if (strrpos($url, "?query=") !== false &&
                     </div>
 
                     <div class="form-group" id="courseFormGroup" name="courseFormGroup">
-                        <input type="text" placeholder="Enter a Class" class="form-control" name="query" id="query">
+                        <input type="text" placeholder="Enter a class or user's name" class="form-control" name="query" id="query">
                     </div>
 
 
@@ -135,6 +135,21 @@ if (strrpos($url, "?query=") !== false &&
 </div>
 
 <script type="text/javascript">
+	 $('#searchtype').change(function(){
+       
+        var selectBox = document.getElementById("searchtype");
+        // initial check for the selection box (need to add more if
+        // check if ingroup full fullfull also clear error message
+        if(selectBox.selectedIndex == 0){
+          	$("#query").attr("placeholder", "Enter a class or user's name"); 
+         }
+         else{
+         	$("#query").attr("placeholder", "Enter a class or group name"); 
+         }
+     
+   
+    });
+
     function renderResult(fname, lname, major, id) {
         $("#results-container").append(
             "<div class='col-md-6'>" +
