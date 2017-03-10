@@ -74,6 +74,9 @@ else {
             var size = <?php echo json_encode($group->getMaxSize()); ?>;
             $('#size').html(size);
 
+            var about = <?php echo json_encode($group->getAbout()); ?>;
+            $('#about').html(about);
+
             var inGroup = <?php echo json_encode($inGroup); ?>;
             var isUserLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
             var fullGroup = <?php echo json_encode($fullGroup); ?>;
@@ -163,6 +166,13 @@ else {
                             <label for="size" class="col-md-3 control-label">Group Size</label>
                             <div class="col-md-9">
                                 <p class="form-control-static" type="number" name="size" id="size"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="about" class="col-md-3 control-label">About Us</label>
+                            <div class="col-md-9">
+                                <p class="form-control-static" name="about" id="about"></p>
                             </div>
                         </div>
 
