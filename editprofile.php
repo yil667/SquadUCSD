@@ -73,11 +73,27 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                 $("#update-info").html("Profile updated.");
             }
 
-            if (window.location.href.indexOf("?success") > -1) {
+            else if (window.location.href.indexOf("?success") > -1) {
                 $("#update-info").html("Password changed successfully.");
             }
 
-            if (window.location.href.indexOf("?fail") > -1) {
+            else if (window.location.href.indexOf("?avatarupdated") > -1) {
+                $("#update-info").html("Avatar updated successfully.");
+            }
+
+            else if (window.location.href.indexOf("?invalidimage") > -1) {
+                $("#update-info").attr("id","error-display");
+                $("#error-display").html("Invalid image type.");
+
+            }
+
+            else if (window.location.href.indexOf("?invalidsize") > -1) {
+                $("#update-info").attr("id","error-display");
+                $("#error-display").html("File size exceeds 200 KB.");
+
+            }
+
+            else if (window.location.href.indexOf("?fail") > -1) {
             	$("#update-info").attr("id","error-display");
                 $("#error-display").html("Password change failed: Incorrect current password entered.");
             }
