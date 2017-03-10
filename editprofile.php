@@ -108,7 +108,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                                 <img src="img/default.jpg" style="width:128px;height:128px;" id="avatar">
                             </div>
                             <div class="col-md-9">
-                        	    <label type="button" class="btn btn-primary">
+                        	    <label type="button" class="btn btn-primary" style="background-color:#337ab7;border:none;">
 								    <input type="file" id="filename" style="display:none">
 								    Choose File
 							   </label>
