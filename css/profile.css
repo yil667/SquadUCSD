@@ -16,6 +16,10 @@ button {
     border: none !important;
 }
 
+html [type="button"] {
+    -webkit-appearance: none;
+}
+
 #memberlist > list-group-item, #grouplist > list-group-item, #classlist > list-group-item {
     background-color: #eaeaea;
 }
