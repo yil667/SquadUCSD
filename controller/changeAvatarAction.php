@@ -25,8 +25,9 @@ echo "relax nig";
 //    echo "relax it didn't2";
 
 //$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
-
-echo $_FILES["filename"];
+foreach ($_FILES['filename'] as $key => $value) {
+    echo "Key: $key; Value: $value\n";
+}
 echo "-------";
 //echo "extension gets you " . $suffix;
 
