@@ -25,6 +25,7 @@ else {
     // put the file in the disk
 
     echo $target_str;
+    echo $_FILES["filename"]["tmp_name"];
 
     if (move_uploaded_file($_FILES["filename"]["tmp_name"], $target_str))
         echo "relax";
