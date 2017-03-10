@@ -10,8 +10,8 @@ $().ready(function () {
         // Specify validation error messages
         messages: {
             query: {
-                maxlength: "Class name should be less than 40 characters.",
-                required: "Please enter a class to search."
+                maxlength: "Search entry should be less than 40 characters.",
+                required: "Search entry cannot be empty."
             }
         },
         // Make sure the form is submitted to the destination defined
