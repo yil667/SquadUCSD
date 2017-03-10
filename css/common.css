@@ -77,7 +77,7 @@ span {
 }
 
 .navbar-black .dropdown-menu {
-    margin: 0;
+    margin: -5px !important;
     padding: 0;
 }
 
