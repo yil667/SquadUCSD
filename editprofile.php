@@ -226,8 +226,8 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
             reader.onload = function (e) {
                 $('#avatar')
                     .attr('src', e.target.result)
-                    .width(150)
-                    .height(200);
+                    .width(128)
+                    .height(228);
             };
 
             reader.readAsDataURL(input.files[0]);
