@@ -229,7 +229,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 		$("#upload-btn").prop('disabled', true);
 		if (typeof FileReader !== "undefined") {
 		    var size = input.files[0].size;
-		    if(size > 100000){
+		    if(size > 200000){
 		    	validSize = false;
 		    	$("#upload-info").html("The file you selected exceeded 200KB!")
 		    }
@@ -244,7 +244,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                     .width(128)
                     .height(128);
             };
-
+            $("#upload-info").html("Click upload to change your avatar.")
             reader.readAsDataURL(input.files[0]);
         }
     }
