@@ -17,6 +17,8 @@ This web app allows students to form study groups for the classes they are enrol
 
 <h2>Front-end todo list: </h2>
 <ol>
+   <li>display small avatar in nav bar next to name if applicable (user logged in)</li>
+   <li>display small group avatar in manage groups </li>
    <li>search result error message for not finding groups not displayed correctly?</li>
    <li>add about in browse page under each user/group </li>
    <li>add avatar in browse page under each user/group </li>
