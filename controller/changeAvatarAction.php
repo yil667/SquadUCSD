@@ -12,10 +12,17 @@ $userid = getUserId();
 
 echo "relax nig";
 
+
+
 if (isset($_POST["filename"]))
     echo "relax it's set";
 else
     echo "relax it didn't";
+
+if (isset($_POST["changeAvatarForm"]))
+    echo "relax it's set2";
+else
+    echo "relax it didn't2";
 
 //$suffix = pathinfo($_FILES["filename"]["name"])["extension"];
 //
