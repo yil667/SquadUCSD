@@ -26,7 +26,7 @@ else {
 
     echo $target_str;
 
-    if (move_uploaded_file($_FILES["filename"]["tmp_name"], $target_str))
+    if (move_uploaded_file($_FILES["filename"]["tmp_name"], $target_dir))
         echo "relax";
     else
         echo "fuxk off";
