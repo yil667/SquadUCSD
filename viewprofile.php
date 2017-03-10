@@ -288,7 +288,7 @@ else {
                         </div>
 
                         <div class="form-group">
-                            <div class="text-center" id="buttons">
+                            <div class="text-center col-md-12" id="buttons">
                             </div>
                         </div>
                     </form>
