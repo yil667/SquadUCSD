@@ -264,6 +264,10 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                 validSize = false;
                 $("#upload-info").html("The file you selected exceeded 200KB!")
             }
+             if (size == 0) {
+                validSize = false;
+                $("#upload-info").html("The file you selected is empty!")
+            }
         }
         if (input.files && input.files[0] && validSize) {
             $(".upload-btn").prop('disabled', false);

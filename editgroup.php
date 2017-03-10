@@ -66,6 +66,7 @@ else if (!$inGroup) {
 
         $(document).ready(function () {
             $('#common').load('./common.php');
+            $(".upload-btn").prop('disabled', true);
             var users = <?php echo json_encode($group->getUsers()); ?>;
 
             for (i = 0; i < users.length; i++) {
@@ -297,6 +298,10 @@ else if (!$inGroup) {
             if (size > 200000) {
                 validSize = false;
                 $("#upload-info").html("The file you selected exceeded 200KB!")
+            }
+            if (size == 0) {
+                validSize = false;
+                $("#upload-info").html("The file you selected is empty!")
             }
         }
         if (input.files && input.files[0] && validSize) {
