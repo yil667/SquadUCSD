@@ -75,5 +75,5 @@ textarea {
 }
 
 @media all and (max-width:480px) {
-    .modal-button { width: 100%; display:block; }
+    .modal-button { width: 100%; display:block; align-self: center;}
 }
