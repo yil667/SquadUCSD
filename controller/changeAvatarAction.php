@@ -2,42 +2,35 @@
 
 include_once "dbController.php";
 include_once "loginController.php";
+include_once "changeAvatarController.php";
 
 session_start();
 
-
-$target_dir = "$_SERVER[DOCUMENT_ROOT]/img/";
-
 $userid = getUserId();
-
-echo "relax nig";
-
-
-//if (isset($_FILES["filename"]))
-//    echo "relax it's set";
-//else
-//    echo "relax it didn't";
-//
-//if (isset($_FILES["changeAvatarForm"]))
-//    echo "relax it's set2";
-//else
-//    echo "relax it didn't2";
-
-
+$target_dir = "$_SERVER[DOCUMENT_ROOT]/img/";
 $suffix = pathinfo($_FILES["filename"]["name"])["extension"];
 $target_str = $target_dir . "user_" . $userid . "." . $suffix;
 
-echo "target_str is $target_str";
+// this line checks for a valid image
+$validImage = getimagesize($_FILES["filename"]["tmp_name"]);
 
-$uploadOk = 1;
-$imageFileType = pathinfo($target_str, PATHINFO_EXTENSION);
-// Check if image file is a actual image or fake image
-$check = getimagesize($_FILES["filename"]["tmp_name"]);
-if ($check !== false) {
-    echo "File is an image - " . $check["mime"] . ".";
-    $uploadOk = 1;
-}
+// check for the file size
+$validSize = $_FILES["filename"]["size"] > 250000;
+
+if (!$validImage)
+    header("Location: http://www.squaducsd.com/editprofile.php?invalidimage");
+else if (!$validSize)
+    header("Location: http://www.squaducsd.com/editprofile.php?invalidsize");
 else {
-    echo "File is not an image.";
-    $uploadOk = 0;
+    // put the file in the disk
+    if (move_uploaded_file($_FILES["filename"]["tmp_name"], $target_str))
+        echo "relax";
+    else
+        echo "fuxk off";
+
+    // update the database
+//    updateUserProfile();
+
+//    header("Location: http://www.squaducsd.com/editprofile.php?badimage");
 }
+// redirect with flag
