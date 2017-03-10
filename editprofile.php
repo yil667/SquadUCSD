@@ -115,7 +115,12 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
 								    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
 								    Choose File
                                 </label>
-                                <button type="submit" class="btn btn-primary" id="upload-btn">Upload</button>
+                                <label type="button" class="btn btn-primary btn-block btn-lg visible-xs" id="choose" name="choose">
+                                    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
+                                    Choose File
+                                </label>
+                                <button type="submit" class="btn btn-primary hidden-xs" id="upload-btn">Upload</button>
+                                <button type="submit" class="btn btn-primary btn-lg visible-xs" id="upload-btn">Upload</button>
 							</div>
                         </div>
                     </form>
