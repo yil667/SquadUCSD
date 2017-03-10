@@ -136,8 +136,8 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="tearingmeapartlisa.jpg" class="media-object img-responsive img-thumbnail img-rounded"
-                                 alt="Responsive image">
+                            <img src="./img/TommyWiseau.jpg" class="media-object img-responsive img-thumbnail img-rounded"
+                                 alt="What a story, Mark">
                         </div>
                         <div class="media-body">
                             <div class="list-group-item">
