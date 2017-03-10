@@ -9,7 +9,8 @@ session_start();
 $userid = getUserId();
 $target_dir = "$_SERVER[DOCUMENT_ROOT]/img/";
 $suffix = pathinfo($_FILES["filename"]["name"])["extension"];
-$target_str = $target_dir . "user_" . $userid . "." . $suffix;
+$target_str = $target_dir .
+//    "user_" . $userid . "." . $suffix;
 
 // this line checks for a valid image
 $validImage = getimagesize($_FILES["filename"]["tmp_name"]);
@@ -26,7 +27,7 @@ else {
 
     echo $target_str;
 
-    if (move_uploaded_file($_FILES["filename"]["tmp_name"], $target_dir))
+    if (move_uploaded_file($_FILES["filename"]["tmp_name"], $target_str))
         echo "relax";
     else
         echo "fuxk off";
