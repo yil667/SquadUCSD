@@ -2,14 +2,14 @@ $().ready(function () {
     $("#searchForm").validate({
         // Specify validation rules
         rules: {
-            course: {
+            query: {
                 maxlength: 40,
                 required: true
             }
         },
         // Specify validation error messages
         messages: {
-            course: {
+            query: {
                 maxlength: "Class name should be less than 40 characters.",
                 required: "Please enter a class to search."
             }
