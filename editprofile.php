@@ -112,11 +112,11 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                         	<label for="choose" class="col-md-3 control-label"></label>
                         	<div class="col-md-12">
                         	    <label type="button" class="btn btn-primary hidden-xs" id="choose" name="choose">
-								    <input type="file" id="filename" style="display:none">
+								    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png">
 								    Choose File
                                 </label>
                                 <label type="button" class="btn btn-primary btn-lg btn-block visible-xs" id="choose" name="choose">
-                                    <input type="file" id="filename" style="display:none">
+                                    <input type="file" id="filename" style="display:none" accept="image/gif, image/jpeg, image/png">
                                     Choose File
                                 </label>
                                 <button type="submit" class="btn btn-primary hidden-xs">Upload</button>
