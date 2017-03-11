@@ -267,6 +267,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                 $("#upload-info").css("color","#ff6666");
             }
             if (size == 0) {
+                validSize = false;
                 $("#upload-info").html("The file you selected is empty!")
                 $("#upload-info").css("color","#ff6666");
             }
