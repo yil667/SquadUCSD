@@ -65,7 +65,7 @@ if (strrpos($url, "?query=") !== false &&
             }
             else if (window.location.href.indexOf("&type=groups") > -1) {
                 for (i = start; i < start + show && i < result.length; i++)
-                    renderResultGroup(result[i]['name'], result[i]['maxSize'], result[i]['groupid']);
+                    renderResultGroup(result[i]['name'], result[i]['size'], result[i]['about'], result[i]['groupid']);
             }
              if (result.length == 0) {
                 $('#results-container').html("Sorry, we couldn't find any results... ");
@@ -191,7 +191,7 @@ if (strrpos($url, "?query=") !== false &&
             "</div>"
         );
     }
-    function renderResultGroup(name, size, id) {
+    function renderResultGroup(name, size, about, id) {
         $("#results-container").append(
             "<div class='col-md-6'>" +
             "<div class='panel panel-custom col-md-12 result-panel'>" +
@@ -202,6 +202,12 @@ if (strrpos($url, "?query=") !== false &&
             "<label for='major' class='col-md-3 control-label'>Size</label>" +
             "<div class='col-md-9'>" +
             "<p class='form-control-static' id='size'>" + size + "</p>" +
+            "</div>" +
+            "</div>" +
+            "<div class='form-group'>" +
+            "<label for='about' class='col-md-3 control-label'>About</label>" +
+            "<div class='col-md-9'>" +
+            "<p class='form-control-static' id='about'>" + about + "</p>" +
             "</div>" +
             "</div>" +
             "<div class='text-center buttons col-md-12' id='button'>" +
