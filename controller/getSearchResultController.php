@@ -55,7 +55,7 @@ function getListOfGroups($conn, $query, $userObj)
     while ($row = mysqli_fetch_assoc($link)) {
         $groupid = $row['id'];
         $group = getGroupObject($groupid);
-        if (!$group->hasUser($userid) && !in_array($group, $result))
+        if (!$group->hasUser($userid) && !$group->isFull() && !in_array($group, $result))
             array_push($result, $group);
     }
 
