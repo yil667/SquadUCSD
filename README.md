@@ -22,6 +22,7 @@ This web app allows students to form study groups for the classes they are enrol
    <li>add about in browse page under each user/group </li>
    <li>add avatar in browse page under each user/group </li>
    <li>Browse avatar ratio problem</li>
+   <li>Long ass message fuck shit up, input validation for group profile "About Me"</li>
 </ol>
 
 <h2>Front-end recently finished: </h2>
