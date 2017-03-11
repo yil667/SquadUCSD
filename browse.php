@@ -61,7 +61,7 @@ if (strrpos($url, "?query=") !== false &&
             $("#results-container").html("");
             if (window.location.href.indexOf("&type=users") > -1) {
                 for (i = start; i < start + show && i < result.length; i++)
-                    renderResult(result[i]['fname'], result[i]['lname'], result[i]['major'], result[i]['userid']);
+                    renderResult(result[i]['fname'], result[i]['lname'], result[i]['major'], result[i]['about'], result[i]['userid']);
             }
             else if (window.location.href.indexOf("&type=groups") > -1) {
                 for (i = start; i < start + show && i < result.length; i++)
@@ -160,7 +160,7 @@ if (strrpos($url, "?query=") !== false &&
 
     });
 
-    function renderResult(fname, lname, major, id) {
+    function renderResult(fname, lname, major, about, id) {
         $("#results-container").append(
             "<div class='col-md-6'>" +
             "<div class='panel panel-custom col-md-12 result-panel'>" +
@@ -171,6 +171,12 @@ if (strrpos($url, "?query=") !== false &&
             "<label for='major' class='col-md-3 control-label'>Major</label>" +
             "<div class='col-md-9'>" +
             "<p class='form-control-static' id='major'>" + major + "</p>" +
+            "</div>" +
+            "</div>" +
+            "<div class='form-group'>" +
+            "<label for='about' class='col-md-3 control-label'>About</label>" +
+            "<div class='col-md-9'>" +
+            "<p class='form-control-static' id='about'>" + about + "</p>" +
             "</div>" +
             "</div>" +
             "<div class='text-center buttons col-md-12' id='button'>" +
