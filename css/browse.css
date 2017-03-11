@@ -33,8 +33,7 @@ button, .btn {
 }
 
 .panel-custom > .panel-heading {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 10px;
     vertical-align: middle;
     background-color: #ffffff !important;
     border-color: transparent;
@@ -80,4 +79,9 @@ button, .btn {
 .error {
     color: #ff6666;
     font-weight: normal;
+}
+
+#result-heading {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
