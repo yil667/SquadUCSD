@@ -86,3 +86,8 @@ button, .btn {
     padding-bottom: 0 !important;
 }
 
+
+#result-heading > img {
+    padding-top: 10px;
+    padding-bottom: 0;
+}
