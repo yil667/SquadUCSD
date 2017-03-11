@@ -71,7 +71,7 @@ if (strrpos($url, "?query=") !== false &&
 
         $(document).ready(function () {
             $('#common').load('./common.php');
-            if (result.length != 0) {
+            if (result.length == 0) {
                 $('#results-container').html("Sorry, we couldn't find any results... ");
             }
             // Prefill what user selected

@@ -264,13 +264,13 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
             var size = input.files[0].size;
             if (size > 200000) {
                 validSize = false;
-                //$（"#upload-info"）.attr("id", "upload-error");
-                $("#upload-info").html("The file you selected exceeded 200KB!")
+                $（"#upload-info"）.attr("id", "upload-error");
+                $("#upload-error").html("The file you selected exceeded 200KB!")
             }
             if (size == 0) {
                 validSize = false;
-                //$（"#upload-info"）.attr("id", "upload-error");
-                $("#upload-info").html("The file you selected is empty!")
+                $（"#upload-info"）.attr("id", "upload-error");
+                $("#upload-error").html("The file you selected is empty!")
             }
         }
         if (input.files && input.files[0] && validSize) {
