@@ -33,7 +33,7 @@ button, .btn {
 }
 
 .panel-custom > .panel-heading {
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     vertical-align: middle;
     background-color: #ffffff !important;
     border-color: transparent;
