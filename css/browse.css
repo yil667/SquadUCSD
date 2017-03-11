@@ -86,4 +86,6 @@ button, .btn {
     padding-bottom: 0 !important;
 }
 
-
+p {
+    min-height: 30px !important; 
+}

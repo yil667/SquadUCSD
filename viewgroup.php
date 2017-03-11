@@ -186,7 +186,7 @@ else {
                         <div class="form-group">
                             <label for="about" class="col-md-3 control-label">About Us</label>
                             <div class="col-md-9">
-                                <p name="about" id="about"></p>
+                                <p class='form-control-static' name="about" id="about"></p>
                             </div>
                         </div>
 
