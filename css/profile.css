@@ -75,3 +75,6 @@ textarea {
 }
 
 
+p {
+    min-height: 30px !important; 
+}
