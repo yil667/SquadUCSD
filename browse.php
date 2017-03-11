@@ -164,7 +164,7 @@ if (strrpos($url, "?query=") !== false &&
         $("#results-container").append(
             "<div class='col-md-10 col-md-offset-1'>" +
             "<div class='panel panel-custom col-md-12 result-panel'>" +
-            "<div class='panel-heading' id='result-heading'><h4><img src='" + avatar + "'" + " style='width:48px;height:48x;background-size: 100%;'> " + fname + " " + lname + "</h4></div>" +
+            "<div class='panel-heading' id='result-heading'><h4><img src='" + avatar + "'" + " style='width:48px;height:48x;'> " + fname + " " + lname + "</h4></div>" +
             "<div class='panel-body result-body'>" +
             "<form class='form-horizontal'>" +
             "<div class='form-group'>" +
@@ -176,7 +176,7 @@ if (strrpos($url, "?query=") !== false &&
             "<div class='form-group'>" +
             "<label for='about' class='col-md-3 control-label'>About</label>" +
             "<div class='col-md-9'>" +
-            "<p class='form-control-static' id='about'>" + about + "</p>" +
+            "<p class='form-control-static col-md-12' id='about'>" + about + "</p>" +
             "</div>" +
             "</div>" +
             "<div class='text-center buttons col-md-12' id='button'>" +
@@ -207,7 +207,7 @@ if (strrpos($url, "?query=") !== false &&
             "<div class='form-group'>" +
             "<label for='about' class='col-md-3 control-label'>About</label>" +
             "<div class='col-md-9'>" +
-            "<p class='form-control-static' id='about'>" + about + "</p>" +
+            "<p class='form-control-static col-md-12' id='about'>" + about + "</p>" +
             "</div>" +
             "</div>" +
             "<div class='text-center buttons col-md-12' id='button'>" +
