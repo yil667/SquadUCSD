@@ -293,7 +293,7 @@ else if (!$inGroup) {
     function preview(input) {
         var validSize = true;
         $(".upload-btn").prop('disabled', true);
-        if (typeof FileReader !== "undefined") {
+        if (input.files && input.files[0] && typeof FileReader !== "undefined") {
             var size = input.files[0].size;
             if (size > 200000) {
                 validSize = false;
