@@ -60,6 +60,7 @@ else if (!$inGroup) {
     <!-- jQuery form validation -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script src="js/message-validation.js"></script>
+    <script src="js/group-validation.js"></script>
     <script type="text/javascript">
         var minSize = <?php echo json_encode($group->getSize()); ?>;//this returns a string which causes problem for jquery validation
         minSize = parseInt(minSize, 10);//string to int
