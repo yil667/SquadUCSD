@@ -177,7 +177,7 @@ else {
                         </div>
 
                         <div class="form-group">
-                            <label for="size" class="col-md-3 control-label">Group Size</label>
+                            <label for="size" class="col-md-3 control-label">Maximum Size</label>
                             <div class="col-md-9">
                                 <p class="form-control-static" type="number" name="size" id="size"></p>
                             </div>
