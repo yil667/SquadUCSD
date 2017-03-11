@@ -18,6 +18,11 @@ function updateGroupProfile($id1, $groupid, $conn)
     if (mysqli_num_rows($result) == 0)
         return false;
 
+    $row = mysqli_fetch_assoc($result);
+
+    if($row['size'] == $row['maxSize'])
+        return false;
+
     $sql = "UPDATE groupProfile SET users=CONCAT(users, ',$id1'), size=size+1 WHERE id='$groupid';";
     mysqli_query($conn, $sql);
     return true;
