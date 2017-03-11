@@ -86,9 +86,10 @@ button, .btn {
     padding-bottom: 0 !important;
 }
 
-#result-heading > img {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-}
 
+@media screen and (min-width: 480px) {
+    #result-heading > h4 {
+        padding-top: 10px;
+    }
+}
 
