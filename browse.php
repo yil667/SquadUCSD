@@ -51,7 +51,7 @@ if (strrpos($url, "?query=") !== false &&
     <script src="js/URI.js" type="text/javascript"></script>
     <script type="text/javascript">
         var result = <?php echo json_encode($result); ?>;
-        var show = 8;
+        var show = 4;
         var start = 0;
 
         var prefill = <?php echo json_encode($_GET['query']); ?>;
