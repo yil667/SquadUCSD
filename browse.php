@@ -61,11 +61,11 @@ if (strrpos($url, "?query=") !== false &&
             $("#results-container").html("");
             if (window.location.href.indexOf("&type=users") > -1) {
                 for (i = start; i < start + show && i < result.length; i++)
-                    renderResult(result[i]['fname'], result[i]['lname'], result[i]['major'], result[i]['about'], result[i]['userid']);
+                    renderResult(result[i]['fname'], result[i]['lname'], result[i]['major'], result[i]['about'], result[i]['avatar'], result[i]['userid']);
             }
             else if (window.location.href.indexOf("&type=groups") > -1) {
                 for (i = start; i < start + show && i < result.length; i++)
-                    renderResultGroup(result[i]['name'], result[i]['size'], result[i]['about'], result[i]['groupid']);
+                    renderResultGroup(result[i]['name'], result[i]['size'], result[i]['about'], result[i]['avatar'], result[i]['groupid']);
             }
              if (result.length == 0) {
                 $('#results-container').html("Sorry, we couldn't find any results... ");
@@ -160,11 +160,11 @@ if (strrpos($url, "?query=") !== false &&
 
     });
 
-    function renderResult(fname, lname, major, about, id) {
+    function renderResult(fname, lname, major, about, avatar, id) {
         $("#results-container").append(
             "<div class='col-md-10 col-md-offset-1'>" +
             "<div class='panel panel-custom col-md-12 result-panel'>" +
-            "<div class='panel-heading'><h4>" + fname + " " + lname + "</h4></div>" +
+            "<div class='panel-heading'><a><h4>" + fname + " " + lname + "</h4></a></div>" +
             "<div class='panel-body result-body'>" +
             "<form class='form-horizontal'>" +
             "<div class='form-group'>" +
@@ -191,7 +191,7 @@ if (strrpos($url, "?query=") !== false &&
             "</div>"
         );
     }
-    function renderResultGroup(name, size, about, id) {
+    function renderResultGroup(name, size, about, avatar, id) {
         $("#results-container").append(
             "<div class='col-md-10 col-md-offset-1'>" +
             "<div class='panel panel-custom col-md-12 result-panel'>" +
