@@ -164,7 +164,7 @@ if (strrpos($url, "?query=") !== false &&
         $("#results-container").append(
             "<div class='col-md-10 col-md-offset-1'>" +
             "<div class='panel panel-custom col-md-12 result-panel'>" +
-            "<div class='panel-heading'><h4><img src='" + avatar + "'" + " style='width:32px;height:32px;margin-top:0px;'>   " + fname + " " + lname + "</h4></div>" +
+            "<div class='panel-heading'><h4><img src='" + avatar + "'" + " style='width:32px;height:32px;'>    " + fname + " " + lname + "</h4></div>" +
             "<div class='panel-body result-body'>" +
             "<form class='form-horizontal'>" +
             "<div class='form-group'>" +
