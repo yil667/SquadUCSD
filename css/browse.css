@@ -82,6 +82,11 @@ button, .btn {
 }
 
 #result-heading {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#result-heading > h4 {
     padding-top: 10px !important;
     padding-bottom: 0 !important;
 }
