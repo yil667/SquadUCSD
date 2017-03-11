@@ -258,21 +258,21 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
     function preview(input) {
         var validSize = true;
 
-        $("#upload-error").attr("id","upload-info");
-        var debug = $("#upload-error").attr("id");
-        alert(debug);
+       // $("#upload-error").attr("id","upload-info");
+        //var debug = $("#upload-error").attr("id");
+        alert("?????");
         $(".upload-btn").prop('disabled', true);
         if (input.files && input.files[0] && typeof FileReader !== "undefined") {
             var size = input.files[0].size;
             if (size > 200000) {
                 validSize = false;
-                $（"#upload-info"）.attr("id", "upload-error");
-                $("#upload-error").html("The file you selected exceeded 200KB!")
+                //$（"#upload-info"）.attr("id", "upload-error");
+                //$("#upload-error").html("The file you selected exceeded 200KB!")
             }
             if (size == 0) {
                 validSize = false;
-                $（"#upload-info"）.attr("id", "upload-error");
-                $("#upload-error").html("The file you selected is empty!")
+                //$（"#upload-info"）.attr("id", "upload-error");
+                //$("#upload-error").html("The file you selected is empty!")
             }
         }
         if (input.files && input.files[0] && validSize) {
