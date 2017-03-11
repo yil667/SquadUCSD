@@ -85,7 +85,9 @@ button, .btn {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
-
+    
 p {
-    min-height: 30px !important; 
+    word-wrap: break-word;
 }
+
+
