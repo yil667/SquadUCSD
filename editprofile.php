@@ -259,6 +259,8 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
         var validSize = true;
 
         $("#upload-error").attr("id","upload-info");
+        var debug = $("#upload-error").attr("id");
+        alert(debug);
         $(".upload-btn").prop('disabled', true);
         if (input.files && input.files[0] && typeof FileReader !== "undefined") {
             var size = input.files[0].size;
