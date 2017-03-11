@@ -127,7 +127,6 @@ else if (!$inGroup) {
 
         });
     </script>
-    <script src="js/group-validation.js"></script>
 </head>
 <body>
 <div id="common"></div>
