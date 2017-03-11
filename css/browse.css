@@ -86,9 +86,9 @@ button, .btn {
     padding-bottom: 0 !important;
 }
 
-#result-heading > h4 {
-    padding-top: 0px !important;
-    padding-bottom: 0 !important;
+#result-heading > img {
+    margin-top: 10px important;
+    margin-bottom: 10px important;
 }
 
 
