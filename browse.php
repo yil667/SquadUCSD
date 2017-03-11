@@ -164,7 +164,7 @@ if (strrpos($url, "?query=") !== false &&
         $("#results-container").append(
             "<div class='col-md-10 col-md-offset-1'>" +
             "<div class='panel panel-custom col-md-12 result-panel'>" +
-            "<div class='panel-heading' id='result-heading'><h4><img src='" + avatar + "'" + " style='width:48px;height:48x;'> " + fname + " " + lname + "</h4></div>" +
+            "<div class='panel-heading' id='result-heading'><h4><img src='" + avatar + "'" + " style='width:48px;height:48x;overflow: hidden;'> " + fname + " " + lname + "</h4></div>" +
             "<div class='panel-body result-body'>" +
             "<form class='form-horizontal'>" +
             "<div class='form-group'>" +
@@ -195,7 +195,7 @@ if (strrpos($url, "?query=") !== false &&
         $("#results-container").append(
             "<div class='col-md-10 col-md-offset-1'>" +
             "<div class='panel panel-custom col-md-12 result-panel'>" +
-            "<div class='panel-heading' id='result-heading'><h4><img src='" + avatar + "'" + " style='width:48px;height:48x;'> " + name + "</h4></div>" +
+            "<div class='panel-heading' id='result-heading'><h4><img src='" + avatar + "'" + " style='width:48px;height:48x;overflow: hidden;'> " + name + "</h4></div>" +
             "<div class='panel-body result-body'>" +
             "<form class='form-horizontal'>" +
             "<div class='form-group'>" +
