@@ -67,13 +67,14 @@ if (strrpos($url, "?query=") !== false &&
                 for (i = start; i < start + show && i < result.length; i++)
                     renderResultGroup(result[i]['name'], result[i]['maxSize'], result[i]['groupid']);
             }
+             if (result.length == 0) {
+                $('#results-container').html("Sorry, we couldn't find any results... ");
+            }
         }
 
         $(document).ready(function () {
             $('#common').load('./common.php');
-            if (result.length == 0) {
-                $('#results-container').html("Sorry, we couldn't find any results... ");
-            }
+           
             // Prefill what user selected
             if (window.location.href.indexOf("&type=groups") > -1) {
                 $('#searchtype option[value=groups]').attr('selected', 'selected');
