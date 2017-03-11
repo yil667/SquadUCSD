@@ -16,10 +16,16 @@ $().ready(function () {
                 min: function () {
                     return minSize;
                 }
+            },
+            about: {
+                maxlength: 200
             }
         },
         // Specify validation error messages
         messages: {
+            about: {
+                maxlength: "Your about should be less than 200 characters."
+            },
             groupname: {
                 required: "Group name cannot be empty.",
                 maxlength: "Group name should be less than 40 characters."
