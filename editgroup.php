@@ -292,16 +292,19 @@ else if (!$inGroup) {
 <script type="text/javascript">
     function preview(input) {
         var validSize = true;
+        $("#upload-info").css("color","inherit");
         $(".upload-btn").prop('disabled', true);
         if (input.files && input.files[0] && typeof FileReader !== "undefined") {
             var size = input.files[0].size;
-            if (size > 200000) {
+           if (size > 200000) {
                 validSize = false;
                 $("#upload-info").html("The file you selected exceeded 200KB!")
+                $("#upload-info").css("color","#ff6666");
             }
             if (size == 0) {
                 validSize = false;
                 $("#upload-info").html("The file you selected is empty!")
+                $("#upload-info").css("color","#ff6666");
             }
         }
         if (input.files && input.files[0] && validSize) {
