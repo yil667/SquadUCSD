@@ -176,7 +176,7 @@ if (strrpos($url, "?query=") !== false &&
             "<div class='form-group'>" +
             "<label for='about' class='col-md-3 control-label'>About</label>" +
             "<div class='col-md-9'>" +
-            "<textarea class=form-control-static id='about'>" + about + "</textarea>" +
+            "<p class=form-control-static id='about'>" + about + "</p>" +
             "</div>" +
             "</div>" +
             "<div class='text-center buttons col-md-12' id='button'>" +
@@ -207,7 +207,7 @@ if (strrpos($url, "?query=") !== false &&
             "<div class='form-group'>" +
             "<label for='about' class='col-md-3 control-label'>About</label>" +
             "<div class='col-md-9'>" +
-            "<p id='about'>" + about + "</p>" +
+            "<p class='form-control-static' id='about'>" + about + "</p>" +
             "</div>" +
             "</div>" +
             "<div class='text-center buttons col-md-12' id='button'>" +

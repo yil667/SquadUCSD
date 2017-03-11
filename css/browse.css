@@ -87,9 +87,3 @@ button, .btn {
 }
 
 
-@media screen and (max-width: 480px) {
-    #result-heading > h4 {
-        padding-top: 10px;
-    }
-}
-
