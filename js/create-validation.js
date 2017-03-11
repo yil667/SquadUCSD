@@ -11,8 +11,7 @@ $().ready(function () {
             },
             groupname: {
                 required: true,
-                maxlength: 40,
-                formatcheck: true
+                maxlength: 40
             }
         },
         // Specify validation error messages
@@ -26,8 +25,7 @@ $().ready(function () {
             },
             groupname: {
                 required: "Your group name cannot be empty.",
-                maxlength: "Your message should be less than 200 characters.",
-                formatcheck: "Please use only alphabetical characters, numbers and spaces."
+                maxlength: "Your message should be less than 200 characters."
             }
         },
         // Make sure the form is submitted to the destination defined
@@ -36,9 +34,6 @@ $().ready(function () {
             form.submit();
         }
         
-    });
-     $.validator.addMethod("formatcheck", function (value) {
-         return /^[A-Za-z0-9\ ]+$/.test(value); // consists of only these
-     });   
+    }); 
 
 });
