@@ -64,7 +64,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/default.png" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/user_11.jpg" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -76,7 +76,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/default.png" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/user_9.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -88,7 +88,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/default.png" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/user_1.jpg" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -148,7 +148,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/default.png" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/user_9010.jpg" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
