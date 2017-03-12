@@ -41,7 +41,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                 <div class="media-list">
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/user_19.jpg" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/user_19.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -55,7 +55,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/user_5.jpg" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/user_5.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -139,7 +139,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/user_7.jpg" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/default.jpg" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
