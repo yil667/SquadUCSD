@@ -53,7 +53,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/default.jpg" class="media-object img-responsive img-thumbnail img-rounded">
+                            <img src="./img/default.png" class="media-object img-responsive img-thumbnail img-rounded">
                         </div>
                         <div class="media-body">
                             <div class="list-group-item">
@@ -64,7 +64,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/default.jpg" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/default.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -76,7 +76,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/default.jpg" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/default.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -88,19 +88,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/default.jpg" class="media-object img-responsive img-thumbnail img-rounded"
-                                 alt="Responsive image">
-                        </div>
-                        <div class="media-body">
-                            <div class="list-group-item">
-                                <h4 class="media-heading">Software Development Lead</h4>
-                                <p class="list-group-item-text">Yi-Chun "Dom" Lee</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="media-left">
-                            <img src="./img/default.jpg" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/default.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -112,7 +100,19 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/default.jpg" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/user_21.png" class="media-object img-responsive img-thumbnail img-rounded"
+                                 alt="Responsive image">
+                        </div>
+                        <div class="media-body">
+                            <div class="list-group-item">
+                                <h4 class="media-heading">Backend Engineer</h4>
+                                <p class="list-group-item-text">Yi-Chun "Dom" Lee</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="./img/default.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -124,7 +124,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/default.jpg" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/default.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
@@ -148,7 +148,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                     </div>
                     <div class="media">
                         <div class="media-left">
-                            <img src="./img/default.jpg" class="media-object img-responsive img-thumbnail img-rounded"
+                            <img src="./img/default.png" class="media-object img-responsive img-thumbnail img-rounded"
                                  alt="Responsive image">
                         </div>
                         <div class="media-body">
