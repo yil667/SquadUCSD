@@ -174,7 +174,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                 <h2>Contact Us</h2>
                 <p>
                     Having trouble with the web application? Want to learn more about SquadUCSD?
-                    Contact us at <a href="mailto:contact@squaducsd.com">contact@squaducsd.com</a> and we’ll get
+                    Contact us at <a href="mailto:toc007@ucsd.edu">contact@squaducsd.com</a> and we’ll get
                     back to
                     you as soon as possible.
                 </p>
