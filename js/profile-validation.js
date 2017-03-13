@@ -12,7 +12,7 @@ $().ready(function () {
                 maxlength: 40
             },
             about: {
-                maxlength: 200
+                maxlength: 1000
             },
             class1: {
                 maxlength: 40
@@ -40,7 +40,7 @@ $().ready(function () {
                 maxlength: "Your major should be less than 40 characters."
             },
             about: {
-                maxlength: "Your about should be less than 200 characters."
+                maxlength: "Your about should be less than 1000 characters."
             },
             class1: {
                 maxlength: "Your class should be less than 40 characters."
