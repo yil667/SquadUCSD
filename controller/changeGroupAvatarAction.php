@@ -15,11 +15,11 @@ $target_dir = "$_SERVER[DOCUMENT_ROOT]/img/";
 
 $filename = "";
 // check if the user is using big browser
-if($_FILES["filename"]["error"] == UPLOAD_ERR_OK)
-    $filename = "filename";
+if($_FILES["filenamegroup"]["error"] == UPLOAD_ERR_OK)
+    $filename = "filenamegroup";
 // smaller browser
-else if ($_FILES["filename2"]["error"] == UPLOAD_ERR_OK)
-    $filename = "filename2";
+else if ($_FILES["filenamegroup2"]["error"] == UPLOAD_ERR_OK)
+    $filename = "filenamegroup2";
 else // something went wrong
     header("Location: http://www.squaducsd.com/editgroup.php?groupid=$groupid&avatarfail");
 

@@ -158,12 +158,12 @@ else if (!$inGroup) {
                             <div class="col-md-9 col-md-9 col-md-offset-3">
                                 <label type="button" class="btn btn-success btn-block btn-lg visible-xs" id="choose"
                                        name="choose">
-                                    <input type="file" id="filename2" name="filename2" style="display:none"
+                                    <input type="file" id="filenamegroup2" name="filenamegroup2" style="display:none"
                                            accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
                                     Choose File
                                 </label>
                                 <label type="button" class="btn btn-success hidden-xs" id="choose" name="choose">
-                                    <input type="file" id="filename" name="filename" style="display:none"
+                                    <input type="file" id="filenamegroup" name="filenamegroup" style="display:none"
                                            accept="image/gif, image/jpeg, image/png" onchange="preview(this);">
                                     Choose File
                                 </label>
