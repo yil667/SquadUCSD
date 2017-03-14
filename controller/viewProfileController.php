@@ -9,7 +9,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/Class/Course.php";
 function getUserObject($id)
 {
     // first retrieve the row from the database
-    $sql = "SELECT * FROM student WHERE id='$id'";
+    $sql = "SELECT * FROM student WHERE id='$id' AND active='1'";
     $conn = connectToDB();
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) == 0)
@@ -82,7 +82,7 @@ function getGroupObject($id)
         // iterate through the groups that the user is affiliated with
         foreach ($userIDs as $userId) {
             if ($userId != "") {
-                $sql = "SELECT * FROM student WHERE id='$userId'";
+                $sql = "SELECT * FROM student WHERE id='$userId' AND active='1'";
                 $result = mysqli_query($conn, $sql);
                 $userRow = mysqli_fetch_assoc($result);
                 array_push($users, new User($userRow['id'], $userRow['fname'], $userRow['lname'],

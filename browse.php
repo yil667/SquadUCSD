@@ -2,6 +2,8 @@
 // we need to adjust the url accordingly (append user id)
 include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 
+handleNotLoggedIn();
+
 $url = json_encode($_SERVER['REQUEST_URI']);
 
 // redirects the url to homepage if not groupid foun
@@ -71,6 +73,8 @@ if (strrpos($url, "?query=") !== false &&
                 $('#results-container').html("Sorry, we couldn't find any results... ");
             }
         }
+
+
 
         $(document).ready(function () {
             $('#common').load('./common.php');
