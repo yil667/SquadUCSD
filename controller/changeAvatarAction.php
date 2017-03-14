@@ -40,6 +40,7 @@ if (!$validImage)
 else if (!$validSize)
     header("Location: http://www.squaducsd.com/editprofile.php?invalidsize");
 else {
+    unlink($target_str); // remove the original file if there exists one
     // put the file in the disk
     if (move_uploaded_file($_FILES[$filename]["tmp_name"], $target_str)) {
         // change permission
