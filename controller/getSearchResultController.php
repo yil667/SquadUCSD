@@ -8,8 +8,8 @@ function getListOfUsers($conn, $query, $userObj)
     $result = Array();
 
     // search for classes
-    $sql = "SELECT * FROM student WHERE class1='$query' OR class2='$query' OR class3='$query' OR class4='$query' " .
-        "OR class5='$query' OR class6='$query'";
+    $sql = "SELECT * FROM student WHERE (class1='$query' OR class2='$query' OR class3='$query' OR class4='$query' " .
+        "OR class5='$query' OR class6='$query') AND active='1'";
 
     $link = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_assoc($link)) {
@@ -26,7 +26,7 @@ function getListOfUsers($conn, $query, $userObj)
         $arr = explode(" ", $query);
         foreach ($arr as $str) {
             if ($str !== "") {
-                $sql = "SELECT * FROM student WHERE fname LIKE '%{$str}%' OR lname LIKE '%{$str}%'";
+                $sql = "SELECT * FROM student WHERE (fname LIKE '%{$str}%' OR lname LIKE '%{$str}%') AND active='1'";
                 $link = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($link)) {
                     $id = $row['id'];
