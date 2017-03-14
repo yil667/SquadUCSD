@@ -40,20 +40,18 @@ if (!$validImage)
 else if (!$validSize)
     header("Location: http://www.squaducsd.com/editgroup.php?groupid=$groupid&invalidsize");
 else {
-    $res = unlink($target_str); // remove the original file if there exists one
-    echo $res ? "good" : "bad";
-
+    unlink($target_str); // remove the original file if there exists one
     // put the file in the disk
-//    if (move_uploaded_file($_FILES[$filename]["tmp_name"], $target_str)) {
-//        // change permission
-//        chmod($target_str, 0777);
-//
-//        // update the database
-//        updateGroupProfile($conn, $groupid, $file_name);
-//
-//        header("Location: http://www.squaducsd.com/editgroup.php?groupid=$groupid&avatarupdated");
-//    }
-//    else {
-//        header("Location: http://www.squaducsd.com/editgroup.php?groupid=$groupid&avatarfail");
-//    }
+    if (move_uploaded_file($_FILES[$filename]["tmp_name"], $target_str)) {
+        // change permission
+        chmod($target_str, 0777);
+
+        // update the database
+        updateGroupProfile($conn, $groupid, $file_name);
+
+        header("Location: http://www.squaducsd.com/editgroup.php?groupid=$groupid&avatarupdated");
+    }
+    else {
+        header("Location: http://www.squaducsd.com/editgroup.php?groupid=$groupid&avatarfail");
+    }
 }
