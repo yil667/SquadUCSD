@@ -18,13 +18,13 @@ $().ready(function () {
                 }
             },
             about: {
-                maxlength: 200
+                maxlength: 1000
             }
         },
         // Specify validation error messages
         messages: {
             about: {
-                maxlength: "Your about should be less than 200 characters."
+                maxlength: "Your about should be less than 1000 characters."
             },
             groupname: {
                 required: "Group name cannot be empty.",
