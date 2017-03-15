@@ -20,11 +20,15 @@ $inGroup = $group->hasUser($id);
 
 // add escape character to prevent sql injection
 $groupname = substr(mysqli_real_escape_string($conn, $_POST['groupname']), 0, $MAX_GROUP_NAME);
+if($groupname == "")
+    $groupname = $group->getName();
+
 $course = substr(mysqli_real_escape_string($conn, $_POST['course']), 0, $MAX_CLASS_NAME);
 $size = mysqli_real_escape_string($conn, $_POST['size']);
 
-// if the input does not contain only numbers, then set the size to the current max size
-if (!ctype_digit($size))
+// if the input is empty or does not contain only numbers,
+// then set the size to the current max size
+if ($size == "" || !ctype_digit($size))
     $size = $group->getMaxSize();
 else // otherwise check against the absolute max group size
     $size = $size > $MAX_GROUP_SIZE ? $MAX_GROUP_SIZE : $size;

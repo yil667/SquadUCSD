@@ -2,10 +2,14 @@
 include_once "dbController.php";
 include_once "loginController.php";
 include_once "generalLibrary.php";
+include_once "viewProfileController.php";
 
 session_start();
 
 handleNotLoggedIn();
+
+$id = getUserId();
+$user = getUserObject($id);
 
 // establish connection to the database
 $conn = connectToDB();
@@ -14,7 +18,7 @@ $conn = connectToDB();
 $phone = substr(mysqli_real_escape_string($conn, $_POST['phone']), 0, $MAX_PHONE_SIZE);
 
 // if the phone number doesn't contain all digits, set it to default empty string
-$phone = ctype_digit($phone) ? $phone : "";
+$phone = ctype_digit($phone) ? $phone : $user->getPhone();
 
 $major = substr(mysqli_real_escape_string($conn, $_POST['major']), 0, $MAX_MAJOR_NAME);
 $about = substr(mysqli_real_escape_string($conn, $_POST['about']), 0, $MAX_ABOUT_SIZE);
@@ -27,7 +31,7 @@ $class5 = substr(mysqli_real_escape_string($conn, $_POST['class5']), 0, $MAX_CLA
 $class6 = substr(mysqli_real_escape_string($conn, $_POST['class6']), 0, $MAX_CLASS_NAME);
 
 
-$id = getUserId();
+
 
 // we assume data validation has already taken place in the front end
 $sql = "UPDATE student SET phone='$phone', major='$major', about='$about', " .
