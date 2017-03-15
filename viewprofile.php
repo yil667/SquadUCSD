@@ -105,7 +105,7 @@ else {
                 }
                 else if (mygroups[initialSelectBox.selectedIndex]["isMax"]) {
                     $('#invite-btn').prop('disabled', true);
-                    $('#invite-error').html("The group has reached its maximum capacity(10).");
+                    $('#invite-error').html("The group has reached its maximum capacity(15).");
                 }
             }
 
@@ -424,7 +424,7 @@ else {
         }
         else if(mygroups[selectBox.selectedIndex]["isMax"]){
             $('#invite-btn').prop('disabled', true);
-            $('#invite-error').html("The group has reached its maximum capacity(10).");
+            $('#invite-error').html("The group has reached its maximum capacity(15).");
         }
         // need more testing
      
