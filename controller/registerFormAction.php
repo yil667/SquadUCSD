@@ -30,6 +30,8 @@ if(!matchingpwd($password, $password2))
     exit();
 }
 
+echo strlen($password);
+
 if(validPwdLength($password, $MIN_PWD_SIZE, $MAX_PWD_SIZE))
 {
     header("Location: http://www.squaducsd.com/register.php?invalidpwd");
