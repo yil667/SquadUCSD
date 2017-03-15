@@ -13,20 +13,18 @@ This web app allows students to form study groups for the classes they are enrol
 </ol>
 
 <h2>General todo list: </h2>
-<li>Feature Suggestion: Search for individual users/groups by name, add a search bar on top, and go to profile using autocomplete or new page</li>
-
+    <li>relax </li>
 <h2>Front-end todo list: </h2>
 <ol>
-   <li>display small group avatar in manage groups </li>
-   <li>search result error message for not finding groups not displayed correctly?</li>
-   <li>add about in browse page under each user/group </li>
-   <li>add avatar in browse page under each user/group </li>
-   <li>Browse avatar ratio problem</li>
-   <li>Long ass message fuck shit up, input validation for group profile "About Me"</li>
 </ol>
 
 <h2>Front-end recently finished: </h2>
 <ol>
+   <li><strike>search result error message for not finding groups not displayed correctly?</strike></li>
+   <li><strike>add about in browse page under each user/group </strike></li>
+   <li><strike>add avatar in browse page under each user/group</strike> </li>
+   <li><strike>Browse avatar ratio problem</strike></li>
+   <li><strike>Long ass message fuck shit up, input validation for group profile "About Me"</strike></li>
    <li><strike>resize avatar in navbar and display in same size across different pages. (currently for some reason its size 
    in homepage is different from view profile, and I'm just backend so ¯\_(ツ)_/¯) </strike></li>
    <li><strike>display small avatar in nav bar next to name if applicable (user logged in)</strike></li>
@@ -79,12 +77,12 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
-<li>accommodate front end feature needs </li>
 </ol>
 
 <h2>Back-end recently finished: </h2>
 <ol>
-
+   <li><strike>accommodate front end feature needs </strike></li>
+   <li><strike>more backend safety checks added </strike></li>
    <li><strike>avatar for groups logic </strike></li>
    <li><strike>forgot password logic updated for encryption</strike></li> 
    <li><strike>mobile support for edit profile avatar</strike></li> 
