@@ -77,6 +77,8 @@ This web app allows students to form study groups for the classes they are enrol
    
 <h2>Back-end todo list:</h2>
 <ol>
+    <li> more input validation needed</li>
+    <li> finish reset.php flags </li>
 </ol>
 
 <h2>Back-end recently finished: </h2>
