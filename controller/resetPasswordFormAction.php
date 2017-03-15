@@ -11,8 +11,8 @@ $email = $_SESSION['forgetEmail'];
 
 $fromurl = $_SESSION['fromurl'];
 $fromurl = clearInvalidFlags($fromurl);
-$newPassword = substr(mysqli_escape_string($conn, $_POST['newpassword']), 0, $MAX_PWD_SIZE);
-$newPassword2 = substr(mysqli_escape_string($conn, $_POST['confirmpass']), 0, $MAX_PWD_SIZE);
+$newPassword = mysqli_escape_string($conn, $_POST['newpassword']);
+$newPassword2 = mysqli_escape_string($conn, $_POST['confirmpass']);
 
 if(!matchingpwd($newPassword, $newPassword2))
 {

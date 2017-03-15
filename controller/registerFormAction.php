@@ -8,8 +8,8 @@ session_start();
 
 $conn = connectToDB();
 
-$first = substr(mysqli_escape_string($conn, $_POST['first']), 0, $MAX_NAME_SIZE);
-$last = substr(mysqli_escape_string($conn, $_POST['last']), 0, $MAX_NAME_SIZE);
+$first = mysqli_escape_string($conn, $_POST['first']);
+$last = mysqli_escape_string($conn, $_POST['last']);
 
 if (emptyNameFields($first, $last)) {
     header("Location: http://www.squaducsd.com/register.php?emptynamefields");
