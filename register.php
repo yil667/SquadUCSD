@@ -31,8 +31,16 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
             if (isUserLoggedIn) {
                 document.location.href = 'index.php';
             }
-            if (window.location.href.indexOf("fail") > -1) {
+            if (window.location.href.indexOf("existingemail") > -1) {
                 $("#register-error").html("The email you entered is already registered! ");
+            }
+
+            else if (window.location.href.indexOf("emptynamefields") > -1) {
+                $("#register-error").html("Your name fields cannot be empty! ");
+            }
+
+            else if (window.location.href.indexOf("invalidemail") > -1) {
+                $("#register-error").html("The email you entered is not a valid email! ");
             }
         });
     </script>

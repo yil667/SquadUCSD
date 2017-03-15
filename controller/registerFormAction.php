@@ -10,7 +10,16 @@ $conn = connectToDB();
 
 $first = substr(mysqli_escape_string($conn, $_POST['first']), 0, $MAX_NAME_SIZE);
 $last = substr(mysqli_escape_string($conn, $_POST['last']), 0, $MAX_NAME_SIZE);
+
+if(emptyNameFields($first, $last)){
+    header("Location: http://www.squaducsd.com/register.php?emptynamefields");
+}
+
 $email = substr(mysqli_escape_string($conn, $_POST['email']), 0, $MAX_EMAIL_SIZE);
+if(!validEmail($email)){
+    header("Location: http://www.squaducsd.com/register.php?invalidemail");
+}
+
 $password = substr(mysqli_escape_string($conn, $_POST['password']), 0, $MAX_PWD_SIZE);
 $hash = md5(rand(0, 1000));
 $duplicateEmail = existingEmail($email);
@@ -20,7 +29,7 @@ if ($duplicateEmail) {
     // notify the front end that
     // the user email already exists in the database
     // with the flag in the url
-    header("Location: http://www.squaducsd.com/register.php?fail");
+    header("Location: http://www.squaducsd.com/register.php?existingemail");
 } // Create the new user in the database
 
 else {

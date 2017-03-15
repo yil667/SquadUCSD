@@ -210,22 +210,27 @@ else {
             }
 
 
-            if (window.location.href.indexOf("&message") > -1) {
+            else if (window.location.href.indexOf("&message") > -1) {
                 $("#update-info").html("Message sent.");
             }
 
-            if (window.location.href.indexOf("&create") > -1) {
+            else if (window.location.href.indexOf("&create") > -1) {
                 $("#update-info").html("Invitation to form group sent");
             }
 
-            if (window.location.href.indexOf("&receiverexist") > -1) {
+            else if (window.location.href.indexOf("&receiverexist") > -1) {
                 $('#update-info').attr('id', 'error-display');
                 $("#error-display").html("User is already in this group.");
             }
 
-            if (window.location.href.indexOf("&exceedsizelimit") > -1) {
+            else if (window.location.href.indexOf("&exceedsizelimit") > -1) {
                 $('#update-info').attr('id', 'error-display');
                 $("#error-display").html("This group is at its size limit!");
+            }
+
+            else if (window.location.href.indexOf("&emptygroupname") > -1) {
+                $('#update-info').attr('id', 'error-display');
+                $("#error-display").html("The group name cannot be empty!");
             }
         });
 

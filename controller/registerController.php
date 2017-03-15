@@ -2,6 +2,19 @@
 
 include_once "dbController.php";
 
+function emptyNameFields($first, $last)
+{
+    return $first == "" || $last == "";
+}
+
+function validEmail($email)
+{
+    $pos = strpos($email, "@ucsd.edu");
+    $expectedPos = strlen($email) - strlen("@ucsd.edu");
+    return filter_var($email, FILTER_VALIDATE_EMAIL) !== FALSE && $pos !== FALSE &&
+        $pos == $expectedPos;
+}
+
 function existingEmail($email)
 {
     $sql = "SELECT * FROM student WHERE email='$email'";
