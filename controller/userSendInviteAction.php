@@ -21,17 +21,25 @@ $fromurl = clearFlags($fromurl);
 $conn = connectToDB();
 
 $groupName = substr(mysqli_escape_string($conn, $_POST['groupname']), 0, $MAX_GROUP_NAME);
-$className = substr(mysqli_escape_string($conn, $_POST['classname']), 0, $MAX_CLASS_NAME);
+
+if ($groupName == "") {
+    // redirect with a flag
+    header("Location: $fromurl" . "&emptygroupname");
+}
+else {
+    $className = substr(mysqli_escape_string($conn, $_POST['classname']), 0, $MAX_CLASS_NAME);
 
 // this is the custom message the user wants to send along with the invite request
-$message = substr($_POST['messageboxform'], 0, $MAX_MESSAGE_SIZE);
-$hash = md5(rand(0, 10000));
+    $message = substr($_POST['messageboxform'], 0, $MAX_MESSAGE_SIZE);
+    $hash = md5(rand(0, 10000));
 
 // add a request to the Invite HashCode Table
-addInviteRequestToDB($conn, $userid, $receiverid, $groupName, $className, $hash);
+    addInviteRequestToDB($conn, $userid, $receiverid, $groupName, $className, $hash);
 
 // send the email request to the receiver
-sendInviteEmail($conn, $userid, $receiverid, $groupName, $className, $message, $hash);
+    sendInviteEmail($conn, $userid, $receiverid, $groupName, $className, $message, $hash);
 
 // redirect with a flag
-header("Location: $fromurl" . "&create");
+    header("Location: $fromurl" . "&create");
+}
+
