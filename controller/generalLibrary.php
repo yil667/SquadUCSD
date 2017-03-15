@@ -4,7 +4,9 @@
 // modifiable
 $MAX_GROUP_SIZE = 15;
 
-$MAX_PWD_SIZE = 15;
+$MIN_PWD_SIZE = 6;
+
+$MAX_PWD_SIZE = 12;
 
 $MAX_EMAIL_SIZE = 60;
 

@@ -42,6 +42,14 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
             else if (window.location.href.indexOf("invalidemail") > -1) {
                 $("#register-error").html("The email you entered is not a valid email! ");
             }
+
+            else if (window.location.href.indexOf("nonmatchingpwd") > -1) {
+                $("#register-error").html("The passwords you entered do not match! ");
+            }
+
+            else if (window.location.href.indexOf("invalidpwd") > -1) {
+                $("#register-error").html("Password must contain 6-12 characters! ");
+            }
         });
     </script>
 </head>

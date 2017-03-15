@@ -28,6 +28,17 @@ function existingEmail($email)
         return false;
 }
 
+function matchingpwd($password, $password2)
+{
+    return $password == $password2;
+}
+
+function validPwdLength($password, $MIN_PWD_SIZE, $MAX_PWD_SIZE)
+{
+    return strlen($password) >= $MIN_PWD_SIZE && strlen($password) <= $MAX_PWD_SIZE;
+}
+
+
 // pre-condition: email does not already exist in the database,
 // and valid credentials
 // no redirection is done in this function
