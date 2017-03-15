@@ -20,7 +20,7 @@ $inGroup = $group->hasUser($id);
 
 // add escape character to prevent sql injection
 $groupname = substr(mysqli_real_escape_string($conn, $_POST['groupname']), 0, $MAX_GROUP_NAME);
-if($groupname == "")
+if ($groupname == "")
     $groupname = $group->getName();
 
 $course = substr(mysqli_real_escape_string($conn, $_POST['course']), 0, $MAX_CLASS_NAME);
@@ -28,10 +28,8 @@ $size = mysqli_real_escape_string($conn, $_POST['size']);
 
 // if the input is empty or does not contain only numbers,
 // then set the size to the current max size
-if ($size == "" || !ctype_digit($size))
+if ($size == "" || !ctype_digit($size) || $size > $MAX_GROUP_SIZE)
     $size = $group->getMaxSize();
-else // otherwise check against the absolute max group size
-    $size = $size > $MAX_GROUP_SIZE ? $MAX_GROUP_SIZE : $size;
 
 $about = substr(mysqli_real_escape_string($conn, $_POST['about']), 0, $MAX_ABOUT_SIZE);
 
@@ -43,7 +41,6 @@ if ($size < $group->getSize())
 if (!$inGroup)
     header("Location: http://www.squaducsd.com/viewgroup.php?groupid=$groupid");
 else {
-    // we assume data validation has already taken place in the front end
     $sql = "UPDATE groupProfile SET name='$groupname', maxSize='$size', class='$course', about='$about' " .
         "WHERE id='$groupid'";
 
