@@ -11,16 +11,16 @@ handleNotLoggedIn();
 $conn = connectToDB();
 
 // add escape character to prevent sql injection
-$phone = mysqli_real_escape_string($conn, $_POST['phone']);
-$major = mysqli_real_escape_string($conn, $_POST['major']);
-$about = mysqli_real_escape_string($conn, $_POST['about']);
+$phone = substr(mysqli_real_escape_string($conn, $_POST['phone']), 0, $MAX_PHONE_SIZE);
+$major = substr(mysqli_real_escape_string($conn, $_POST['major']), 0, $MAX_MAJOR_NAME);
+$about = substr(mysqli_real_escape_string($conn, $_POST['about']), 0, $MAX_ABOUT_SIZE);
 
-$class1 = mysqli_real_escape_string($conn, $_POST['class1']);
-$class2 = mysqli_real_escape_string($conn, $_POST['class2']);
-$class3 = mysqli_real_escape_string($conn, $_POST['class3']);
-$class4 = mysqli_real_escape_string($conn, $_POST['class4']);
-$class5 = mysqli_real_escape_string($conn, $_POST['class5']);
-$class6 = mysqli_real_escape_string($conn, $_POST['class6']);
+$class1 = substr(mysqli_real_escape_string($conn, $_POST['class1']), 0, $MAX_CLASS_NAME);
+$class2 = substr(mysqli_real_escape_string($conn, $_POST['class2']), 0, $MAX_CLASS_NAME);
+$class3 = substr(mysqli_real_escape_string($conn, $_POST['class3']), 0, $MAX_CLASS_NAME);
+$class4 = substr(mysqli_real_escape_string($conn, $_POST['class4']), 0, $MAX_CLASS_NAME);
+$class5 = substr(mysqli_real_escape_string($conn, $_POST['class5']), 0, $MAX_CLASS_NAME);
+$class6 = substr(mysqli_real_escape_string($conn, $_POST['class6']), 0, $MAX_CLASS_NAME);
 
 
 $id = getUserId();

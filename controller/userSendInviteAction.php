@@ -20,8 +20,8 @@ $fromurl = clearFlags($fromurl);
 
 $conn = connectToDB();
 
-$groupName = mysqli_escape_string($conn, $_POST['groupname']);
-$className = mysqli_escape_string($conn, $_POST['classname']);
+$groupName = substr(mysqli_escape_string($conn, $_POST['groupname']), 0, $MAX_GROUP_NAME);
+$className = substr(mysqli_escape_string($conn, $_POST['classname']), 0, $MAX_CLASS_NAME);
 
 // this is the custom message the user wants to send along with the invite request
 $message = substr($_POST['messageboxform'], 0, $MAX_MESSAGE_SIZE);

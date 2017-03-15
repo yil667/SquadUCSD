@@ -20,7 +20,7 @@ $().ready(function () {
                     }
                 },
                 customemail: true,
-                maxlength: 40
+                maxlength: 50
             },
             password: {
                 required: true,
@@ -57,7 +57,7 @@ $().ready(function () {
             },
             email: {
                 customemail: "Please enter a valid UCSD email address.",
-                maxlength: "The maximum length is 40 characters."
+                maxlength: "The maximum length is 50 characters."
             }
         },
         // Make sure the form is submitted to the destination defined

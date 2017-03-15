@@ -1,10 +1,14 @@
 <?php
 include_once "loginController.php";
+include_once "dbController.php";
+include_once "generalLibrary.php";
 
 session_start();
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+$conn = connectToDB();
+
+$email = substr(mysqli_escape_string($conn, $_POST['email']), 0, $MAX_EMAIL_SIZE);
+$password = substr(mysqli_escape_string($conn, $_POST['password']), 0, $MAX_PWD_SIZE);
 
 $retVal = validLogin($email, $password);
 

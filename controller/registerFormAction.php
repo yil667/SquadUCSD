@@ -1,13 +1,17 @@
 <?php
 include_once "registerController.php";
 include_once "loginController.php";
+include_once "generalLibrary.php";
+include_once "dbController.php";
 
 session_start();
 
-$first = $_POST['first'];
-$last = $_POST['last'];
-$email = $_POST['email'];
-$password = $_POST['password'];
+$conn = connectToDB();
+
+$first = substr(mysqli_escape_string($conn, $_POST['first']), 0, $MAX_NAME_SIZE);
+$last = substr(mysqli_escape_string($conn, $_POST['last']), 0, $MAX_NAME_SIZE);
+$email = substr(mysqli_escape_string($conn, $_POST['email']), 0, $MAX_EMAIL_SIZE);
+$password = substr(mysqli_escape_string($conn, $_POST['password']), 0, $MAX_PWD_SIZE);
 $hash = md5(rand(0, 1000));
 $duplicateEmail = existingEmail($email);
 
