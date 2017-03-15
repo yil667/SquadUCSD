@@ -12,6 +12,10 @@ $conn = connectToDB();
 
 // add escape character to prevent sql injection
 $phone = substr(mysqli_real_escape_string($conn, $_POST['phone']), 0, $MAX_PHONE_SIZE);
+
+// if the phone number doesn't contain all digits, set it to default empty string
+$phone = ctype_digit($phone) ? $phone : "";
+
 $major = substr(mysqli_real_escape_string($conn, $_POST['major']), 0, $MAX_MAJOR_NAME);
 $about = substr(mysqli_real_escape_string($conn, $_POST['about']), 0, $MAX_ABOUT_SIZE);
 

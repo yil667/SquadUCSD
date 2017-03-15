@@ -22,7 +22,13 @@ $inGroup = $group->hasUser($id);
 $groupname = substr(mysqli_real_escape_string($conn, $_POST['groupname']), 0, $MAX_GROUP_NAME);
 $course = substr(mysqli_real_escape_string($conn, $_POST['course']), 0, $MAX_CLASS_NAME);
 $size = mysqli_real_escape_string($conn, $_POST['size']);
-$size = $size > $MAX_GROUP_SIZE ? $MAX_GROUP_SIZE : $size;
+
+// if the input does not contain only numbers, then set the size to the current max size
+if (!ctype_digit($size))
+    $size = $group->getMaxSize();
+else // otherwise check against the absolute max group size
+    $size = $size > $MAX_GROUP_SIZE ? $MAX_GROUP_SIZE : $size;
+
 $about = substr(mysqli_real_escape_string($conn, $_POST['about']), 0, $MAX_ABOUT_SIZE);
 
 // if the inputted size is less than the current group size
