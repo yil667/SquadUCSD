@@ -31,6 +31,8 @@ if(!matchingpwd($password, $password2))
 }
 
 echo strlen($password);
+echo $MIN_PWD_SIZE;
+echo $MAX_PWD_SIZE;
 //
 //if(validPwdLength($password, $MIN_PWD_SIZE, $MAX_PWD_SIZE))
 //{
