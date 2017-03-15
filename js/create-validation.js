@@ -3,7 +3,7 @@ $().ready(function () {
         // Specify validation rules
         rules: {
             messageboxform: {
-                maxlength: 200
+                maxlength: 500
             },
             classname: {
                 required: true,
@@ -17,15 +17,15 @@ $().ready(function () {
         // Specify validation error messages
         messages: {
             messageboxform: {
-                maxlength: "Your message should be less than 200 characters."
+                maxlength: "Your message should be less than 500 characters."
             },
             classname: {
                 required: "Your class name cannot be empty.",
-                maxlength: "Your message should be less than 200 characters."
+                maxlength: "Your class name should be less than 40 characters."
             },
             groupname: {
                 required: "Your group name cannot be empty.",
-                maxlength: "Your message should be less than 200 characters."
+                maxlength: "Your group name should be less than 40 characters."
             }
         },
         // Make sure the form is submitted to the destination defined

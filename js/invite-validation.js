@@ -3,7 +3,7 @@ $().ready(function () {
         // Specify validation rules
         rules: {
             messageboxinvite: {
-                maxlength: 200
+                maxlength: 500
             },
             groupid: {
                 required: true
@@ -12,7 +12,7 @@ $().ready(function () {
         // Specify validation error messages
         messages: {
             messageboxinvite: {
-                maxlength: "Your message should be less than 200 characters."
+                maxlength: "Your message should be less than 500 characters."
             },
             groupid: {
                 required: "You must select a group"

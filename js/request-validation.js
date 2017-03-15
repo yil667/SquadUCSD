@@ -3,13 +3,13 @@ $().ready(function () {
         // Specify validation rules
         rules: {
             messageboxreq: {
-                maxlength: 200
+                maxlength: 500
             }
         },
         // Specify validation error messages
         messages: {
             messageboxreq: {
-                maxlength: "Your message should be less than 200 characters."
+                maxlength: "Your message should be less than 500 characters."
             }
         },
         // Make sure the form is submitted to the destination defined

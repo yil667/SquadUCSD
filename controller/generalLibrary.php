@@ -10,7 +10,7 @@ $MAX_EMAIL_SIZE = 60;
 
 // front end checks for 200 characters max, but some unicode takes 3 bytes per character
 // e.g., korean characters
-$MAX_MESSAGE_SIZE = 205 * 3;
+$MAX_MESSAGE_SIZE = 505 * 3;
 
 $MAX_NAME_SIZE = 45 * 3;
 
