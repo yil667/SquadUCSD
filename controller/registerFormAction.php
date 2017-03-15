@@ -31,27 +31,27 @@ if(!matchingpwd($password, $password2))
 }
 
 echo strlen($password);
-
-if(validPwdLength($password, $MIN_PWD_SIZE, $MAX_PWD_SIZE))
-{
-    header("Location: http://www.squaducsd.com/register.php?invalidpwd");
-    exit();
-}
-
-$hash = md5(rand(0, 1000));
-$duplicateEmail = existingEmail($email);
-
-// see if account has already been created
-if ($duplicateEmail) {
-    header("Location: http://www.squaducsd.com/register.php?existingemail");
-    exit();
-}
-
-// add the user into the database
-addUser($email, $password, $first, $last, $hash);
-
-// send the verification email
-sendverificationEmail($first, $email, $hash);
-
-// redirect to the homepage
-header("Location: http://www.squaducsd.com/login.php?verify");
+//
+//if(validPwdLength($password, $MIN_PWD_SIZE, $MAX_PWD_SIZE))
+//{
+//    header("Location: http://www.squaducsd.com/register.php?invalidpwd");
+//    exit();
+//}
+//
+//$hash = md5(rand(0, 1000));
+//$duplicateEmail = existingEmail($email);
+//
+//// see if account has already been created
+//if ($duplicateEmail) {
+//    header("Location: http://www.squaducsd.com/register.php?existingemail");
+//    exit();
+//}
+//
+//// add the user into the database
+//addUser($email, $password, $first, $last, $hash);
+//
+//// send the verification email
+//sendverificationEmail($first, $email, $hash);
+//
+//// redirect to the homepage
+//header("Location: http://www.squaducsd.com/login.php?verify");
