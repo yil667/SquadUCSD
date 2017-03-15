@@ -3,7 +3,7 @@
 
 class Group
 {
-    public $MAX_GROUP_SIZE = 10;
+    public $MAX_GROUP_SIZE = 15;
 
     public $groupid;
     public $name;

@@ -8,7 +8,7 @@ include_once "generalLibrary.php";
 
 // absolute max possible size for all groups
 // modifiable
-$MAX_GROUP_SIZE = 10;
+$MAX_GROUP_SIZE = 15;
 
 session_start();
 

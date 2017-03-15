@@ -3,7 +3,7 @@ include_once "dbController.php";
 include_once "acceptExistingActionController.php";
 
 $conn = connectToDB();
-$MAX_GROUP_SIZE = 10;
+$MAX_GROUP_SIZE = 15;
 
 $sql = "SELECT * FROM inviteTable WHERE id1='$id1' AND id2='$id2' AND groupid='$groupid' AND hash='$hash'";
 $result = mysqli_query($conn, $sql);

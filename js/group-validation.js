@@ -12,7 +12,7 @@ $().ready(function () {
             size: {
                 required: true,
                 digits: true,
-                max: 10,
+                max: 15,
                 min: function () {
                     return minSize;
                 }
@@ -36,7 +36,7 @@ $().ready(function () {
             size: {
                 required: "Size cannot be empty.",
                 digits: "Please enter a valid number.",
-                max: "The maximum group size is 10.",
+                max: "The maximum group size is 15.",
                 min: "Group size cannot be less than current members."
             }
         },
