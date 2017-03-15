@@ -2,14 +2,20 @@
 
 include_once "dbController.php";
 
-$email = $_SESSION['forgetEmail'];
-$hash = $_SESSION['hash'];
+$conn = connectToDB();
+
+$email = mysqli_escape_string($conn, $_SESSION['forgetEmail']);
+$hash = mysqli_escape_string($conn, $_SESSION['hash']);
+
+if( ($email == "") || ($hash == ""))
+{
+    header("Location: http://www.squaducsd.com/error.php");
+    exit();
+}
 
 $sql = "SELECT * FROM student WHERE email='$email' AND forgotPwdHash='$hash'";
-$conn = connectToDB();
 $result = mysqli_query($conn, $sql);
 
-// if the email and hash are correct
 if (!$row = mysqli_fetch_assoc($result)) {
     // No match -> Invalid or expired reset password link.
     header("Location: http://www.squaducsd.com/login.php?invalidreset");

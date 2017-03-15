@@ -4,6 +4,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
 
 $_SESSION['hash'] = $_GET['hash'];
 $_SESSION['forgetEmail'] = $_GET['email'];
+$_SESSION['fromurl'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 include_once "$_SERVER[DOCUMENT_ROOT]/controller/resetPasswordLinkAction.php";
 
