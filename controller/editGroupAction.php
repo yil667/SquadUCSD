@@ -3,6 +3,7 @@
 include_once "dbController.php";
 include_once "loginController.php";
 include_once "viewProfileController.php";
+include_once "generalLibrary.php";
 
 session_start();
 
@@ -18,10 +19,10 @@ $group = getGroupObject($groupid);
 $inGroup = $group->hasUser($id);
 
 // add escape character to prevent sql injection
-$groupname = mysqli_real_escape_string($conn, $_POST['groupname']);
-$course = mysqli_real_escape_string($conn, $_POST['course']);
+$groupname = substr(mysqli_real_escape_string($conn, $_POST['groupname']), 0, $MAX_GROUP_NAME);
+$course = substr(mysqli_real_escape_string($conn, $_POST['course']), 0, $MAX_CLASS_NAME);
 $size = mysqli_real_escape_string($conn, $_POST['size']);
-$about = mysqli_real_escape_string($conn, $_POST['about']);
+$about = substr(mysqli_real_escape_string($conn, $_POST['about']), 0, $MAX_ABOUT_SIZE);
 
 // if the inputted size is less than the current group size
 if ($size < $group->getSize())

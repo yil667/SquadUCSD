@@ -2,6 +2,7 @@
 include_once "dbController.php";
 include_once "loginController.php";
 include_once "changePasswordController.php";
+include_once "generalLibrary.php";
 
 session_start();
 
@@ -10,8 +11,8 @@ handleNotLoggedIn();
 $conn = connectToDB();
 
 $id = getUserId();
-$currPassword = $_POST['currpassword'];
-$newPassword = $_POST['password'];
+$currPassword = substr(mysqli_escape_string($conn, $_POST['currpassword']), 0, $MAX_PWD_SIZE);
+$newPassword = substr(mysqli_escape_string($conn, $_POST['password']), 0, $MAX_PWD_SIZE);
 
 if (validCurrPassword($conn, $id, $currPassword)) {
     updatePassword($conn, $id, $newPassword);

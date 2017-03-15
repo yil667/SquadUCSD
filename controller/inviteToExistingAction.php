@@ -6,9 +6,7 @@ include_once "inviteToExistingController.php";
 include_once "viewProfileController.php";
 include_once "generalLibrary.php";
 
-// absolute max possible size for all groups
-// modifiable
-$MAX_GROUP_SIZE = 15;
+
 
 session_start();
 
@@ -21,7 +19,8 @@ $receiverid = $_SESSION['profileid'];
 $fromurl = $_SESSION['fromurl'];
 $fromurl = clearFlags($fromurl);
 
-$message = substr($_POST['messageboxinvite'], 0, 210);
+
+$message = substr($_POST['messageboxinvite'], 0, $MAX_MESSAGE_SIZE);
 
 $groupid = $_POST['groupid'];
 $group = getGroupObject($groupid);

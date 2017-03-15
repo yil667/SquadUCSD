@@ -1,6 +1,7 @@
 <?php
 include_once "dbController.php";
 include_once "loginController.php";
+include_once "generalLibrary.php";
 
 session_start();
 

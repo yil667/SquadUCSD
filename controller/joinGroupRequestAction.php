@@ -18,7 +18,8 @@ $group = getGroupObject($groupid);
 $fromurl = $_SESSION['fromurl'];
 $fromurl = clearFlags($fromurl);
 
-$message = substr($_POST['messageboxreq'], 0, 210);
+
+$message = substr($_POST['messageboxreq'], 0, $MAX_MESSAGE_SIZE);
 
 $inGroup = $group->hasUser($userid);
 
