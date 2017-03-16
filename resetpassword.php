@@ -46,11 +46,11 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/resetPasswordLinkAction.php";
         $(document).ready(function () {
             $('#common').load('./common.php');
 
-            if (window.location.href.indexOf("?nonmatchingpwd") > -1) {
+            if (window.location.href.indexOf("&nonmatchingpwd") > -1) {
                 $("#email-error").html("The passwords you entered do not match! ");
             }
 
-            else if (window.location.href.indexOf("?invalidpwd") > -1) {
+            else if (window.location.href.indexOf("&invalidpwd") > -1) {
                 $("#email-error").html("Password must contain 6-12 characters! ");
             }
         });
