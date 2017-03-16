@@ -3,14 +3,14 @@ $().ready(function () {
         // Specify validation rules
         rules: {
             query: {
-                maxlength: 40,
+                maxlength: 100,
                 required: true
             }
         },
         // Specify validation error messages
         messages: {
             query: {
-                maxlength: "Search entry should be less than 40 characters.",
+                maxlength: "Search entry should be less than 100 characters.",
                 required: "Search entry cannot be empty."
             }
         },

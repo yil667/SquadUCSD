@@ -4,14 +4,14 @@ $().ready(function () {
         rules: {
             sendmessageform: {
                 required: true,
-                maxlength: 200
+                maxlength: 500
             }
         },
         // Specify validation error messages
         messages: {
             sendmessageform: {
                 required: "Your message cannot be empty.",
-                maxlength: "Your message should be less than 200 characters."
+                maxlength: "Your message should be less than 500 characters."
             }
         },
         // Make sure the form is submitted to the destination defined

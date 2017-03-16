@@ -4,7 +4,7 @@ $().ready(function () {
         rules: {
             email: {
                 required: true,
-                maxlength: 40
+                maxlength: 50
             },
             password: {
                 required: true,
