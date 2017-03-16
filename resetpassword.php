@@ -45,6 +45,14 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/resetPasswordLinkAction.php";
     <script type="text/javascript">
         $(document).ready(function () {
             $('#common').load('./common.php');
+
+            if (window.location.href.indexOf("?nonmatchingpwd") > -1) {
+                $("#email-error").html("The passwords you entered do not match! ");
+            }
+
+            else if (window.location.href.indexOf("?invalidpwd") > -1) {
+                $("#email-error").html("Password must contain 6-12 characters! ");
+            }
         });
     </script>
     <script src="js/resetpassword-validation.js"></script>
@@ -55,7 +63,10 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/resetPasswordLinkAction.php";
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-custom">
-                <div class="panel-heading" id="login-header"><h3>Reset Password</h3></div>
+                <div class="panel-heading" id="login-header">
+                    <h3>Reset Password
+                        <h4 id="email-error"><h4>
+                    </h3></div>
                 <div class="panel-body">
 
                     <div class="col-md-6 col-md-offset-3" style="margin-bottom:10px;">
