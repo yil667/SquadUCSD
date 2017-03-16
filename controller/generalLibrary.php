@@ -10,7 +10,7 @@ $MAX_PWD_SIZE = 12;
 
 $MAX_EMAIL_SIZE = 60;
 
-// front end checks for 200 characters max, but some unicode takes 3 bytes per character
+// front end checks for 500 characters max, but some unicode takes 3 bytes per character
 // e.g., korean characters
 $MAX_MESSAGE_SIZE = 505 * 3;
 

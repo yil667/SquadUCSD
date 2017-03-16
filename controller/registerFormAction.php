@@ -8,8 +8,8 @@ session_start();
 
 $conn = connectToDB();
 
-$first = mysqli_escape_string($conn, $_POST['first']);
-$last = mysqli_escape_string($conn, $_POST['last']);
+$first = substr(mysqli_escape_string($conn, $_POST['first']), 0, $MAX_NAME_SIZE);
+$last = substr(mysqli_escape_string($conn, $_POST['last']), 0, $MAX_NAME_SIZE);
 
 if (emptyNameFields($first, $last)) {
     header("Location: http://www.squaducsd.com/register.php?emptynamefields");
@@ -22,8 +22,8 @@ if (!validEmail($email)) {
     exit();
 }
 
-$password = substr(mysqli_escape_string($conn, $_POST['password']), 0, $MAX_PWD_SIZE);
-$password2 = substr(mysqli_escape_string($conn, $_POST['password2']), 0, $MAX_PWD_SIZE);
+$password = mysqli_escape_string($conn, $_POST['password']);
+$password2 = mysqli_escape_string($conn, $_POST['password2']);
 if(!matchingpwd($password, $password2))
 {
     header("Location: http://www.squaducsd.com/register.php?nonmatchingpwd");
