@@ -97,10 +97,22 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/viewProfileAction.php";
                 $("#error-display").html("Unexpected error during avatar update.");
             }
 
-            else if (window.location.href.indexOf("?fail") > -1) {
+            else if (window.location.href.indexOf("?incorrectcurrentpwd") > -1) {
                 $("#update-info").attr("id", "error-display");
                 $("#error-display").html("Password change failed: Incorrect current password entered.");
             }
+
+            else if (window.location.href.indexOf("?nonmatchingpwd") > -1) {
+                $("#update-info").attr("id", "error-display");
+                $("#error-display").html("The passwords you entered do not match! ");
+            }
+
+            else if (window.location.href.indexOf("?invalidpwd") > -1) {
+                $("#update-info").attr("id", "error-display");
+                $("#error-display").html("Password must contain 6-12 characters! ");
+            }
+
+
 
             var name = <?php echo json_encode($user->getFname() . " " . $user->getLname()); ?>;
             $('#name').html(name);
