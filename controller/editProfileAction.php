@@ -22,16 +22,14 @@ if (!ctype_digit($phone))
     $phone = $user->getPhone();
 
 $major = mb_substr(mysqli_real_escape_string($conn, $_POST['major']), 0, $MAX_MAJOR_NAME, "UTF-8");
+$about = mb_substr(mysqli_real_escape_string($conn, $_POST['about']), 0, $MAX_ABOUT_SIZE, "UTF-8");
 
-
-$about = substr(mysqli_real_escape_string($conn, $_POST['about']), 0, $MAX_ABOUT_SIZE);
-
-$class1 = substr(mysqli_real_escape_string($conn, $_POST['class1']), 0, $MAX_CLASS_NAME);
-$class2 = substr(mysqli_real_escape_string($conn, $_POST['class2']), 0, $MAX_CLASS_NAME);
-$class3 = substr(mysqli_real_escape_string($conn, $_POST['class3']), 0, $MAX_CLASS_NAME);
-$class4 = substr(mysqli_real_escape_string($conn, $_POST['class4']), 0, $MAX_CLASS_NAME);
-$class5 = substr(mysqli_real_escape_string($conn, $_POST['class5']), 0, $MAX_CLASS_NAME);
-$class6 = substr(mysqli_real_escape_string($conn, $_POST['class6']), 0, $MAX_CLASS_NAME);
+$class1 = mb_substr(mysqli_real_escape_string($conn, $_POST['class1']), 0, $MAX_CLASS_NAME, "UTF-8");
+$class2 = mb_substr(mysqli_real_escape_string($conn, $_POST['class2']), 0, $MAX_CLASS_NAME, "UTF-8");
+$class3 = mb_substr(mysqli_real_escape_string($conn, $_POST['class3']), 0, $MAX_CLASS_NAME, "UTF-8");
+$class4 = mb_substr(mysqli_real_escape_string($conn, $_POST['class4']), 0, $MAX_CLASS_NAME, "UTF-8");
+$class5 = mb_substr(mysqli_real_escape_string($conn, $_POST['class5']), 0, $MAX_CLASS_NAME, "UTF-8");
+$class6 = mb_substr(mysqli_real_escape_string($conn, $_POST['class6']), 0, $MAX_CLASS_NAME, "UTF-8");
 
 
 $sql = "UPDATE student SET phone='$phone', major='$major', about='$about', " .

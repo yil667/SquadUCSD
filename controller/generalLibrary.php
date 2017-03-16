@@ -10,25 +10,21 @@ $MAX_PWD_SIZE = 12;
 
 $MAX_EMAIL_SIZE = 60;
 
-// front end checks for 500 characters max, but some unicode takes 4 bytes per character
-// e.g., korean characters
-$UNICODE_BYTES = 1;
+$MAX_MESSAGE_SIZE = 500;
 
-$MAX_MESSAGE_SIZE = 505 * $UNICODE_BYTES;
+$MAX_NAME_SIZE = 40;
 
-$MAX_NAME_SIZE = 45 * $UNICODE_BYTES;
+$MAX_CLASS_NAME = 40;
 
-$MAX_CLASS_NAME = 45 * $UNICODE_BYTES;
+$MAX_GROUP_NAME = 40;
 
-$MAX_GROUP_NAME = 45 * $UNICODE_BYTES;
-
-$MAX_MAJOR_NAME = 45 * $UNICODE_BYTES;
+$MAX_MAJOR_NAME = 40;
 
 $MAX_PHONE_SIZE = 15;
 
-$MAX_ABOUT_SIZE = 1005 * $UNICODE_BYTES;
+$MAX_ABOUT_SIZE = 1000;
 
-$MAX_QUERY_SIZE = 100 * $UNICODE_BYTES;
+$MAX_QUERY_SIZE = 100;
 
 // this function clears all the flags in an url, after and including &
 function clearFlags($url)

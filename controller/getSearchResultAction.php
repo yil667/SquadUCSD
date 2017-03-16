@@ -12,7 +12,7 @@ $conn = connectToDB();
 $id = getUserId();// fetches the id from the url
 $user = getUserObject($id);
 $type = $_SESSION['type'];
-$query = substr(mysqli_escape_string($conn, strtoupper(urldecode($_SESSION['query']))), 0, $MAX_QUERY_SIZE);
+$query = mb_substr(mysqli_escape_string($conn, strtoupper(urldecode($_SESSION['query']))), 0, $MAX_QUERY_SIZE, "UTF-8");
 
 if($type == "users")
     $result = getListOfUsers($conn, $query, $user);

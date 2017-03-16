@@ -7,8 +7,8 @@ session_start();
 
 $conn = connectToDB();
 
-$email = substr(mysqli_escape_string($conn, $_POST['email']), 0, $MAX_EMAIL_SIZE);
-$password = substr(mysqli_escape_string($conn, $_POST['password']), 0, $MAX_PWD_SIZE);
+$email = mb_substr(mysqli_escape_string($conn, $_POST['email']), 0, $MAX_EMAIL_SIZE, "UTF-8");
+$password = mb_substr(mysqli_escape_string($conn, $_POST['password']), 0, $MAX_PWD_SIZE, "UTF-8");
 
 $retVal = validLogin($email, $password);
 

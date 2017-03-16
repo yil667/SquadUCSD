@@ -35,7 +35,7 @@ function matchingpwd($password, $password2)
 
 function validPwdLength($password, $MIN_PWD_SIZE, $MAX_PWD_SIZE)
 {
-    return (strlen($password) >= $MIN_PWD_SIZE) && (strlen($password) <= $MAX_PWD_SIZE);
+    return (mb_strlen($password, "UTF-8") >= $MIN_PWD_SIZE) && (mb_strlen($password, "UTF-8") <= $MAX_PWD_SIZE);
 }
 
 

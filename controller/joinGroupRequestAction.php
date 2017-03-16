@@ -19,7 +19,7 @@ $fromurl = $_SESSION['fromurl'];
 $fromurl = clearFlags($fromurl);
 
 
-$message = substr($_POST['messageboxreq'], 0, $MAX_MESSAGE_SIZE);
+$message = mb_substr($_POST['messageboxreq'], 0, $MAX_MESSAGE_SIZE, "UTF-8");
 
 $inGroup = $group->hasUser($userid);
 

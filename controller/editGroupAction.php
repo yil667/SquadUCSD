@@ -19,19 +19,19 @@ $group = getGroupObject($groupid);
 $inGroup = $group->hasUser($id);
 
 // add escape character to prevent sql injection
-$groupname = substr(mysqli_real_escape_string($conn, $_POST['groupname']), 0, $MAX_GROUP_NAME);
+$groupname = mb_substr(mysqli_real_escape_string($conn, $_POST['groupname']), 0, $MAX_GROUP_NAME, "UTF-8");
 if ($groupname == "")
     $groupname = $group->getName();
 
-$course = substr(mysqli_real_escape_string($conn, $_POST['course']), 0, $MAX_CLASS_NAME);
+$course = mb_substr(mysqli_real_escape_string($conn, $_POST['course']), 0, $MAX_CLASS_NAME, "UTF-8");
 $size = mysqli_real_escape_string($conn, $_POST['size']);
 
 // if the input is empty or does not contain only numbers,
 // then set the size to the current max size
-if ($size == "" || !ctype_digit($size) || $size > $MAX_GROUP_SIZE)
+if ( ($size == "") || !ctype_digit($size) || ($size > $MAX_GROUP_SIZE))
     $size = $group->getMaxSize();
 
-$about = substr(mysqli_real_escape_string($conn, $_POST['about']), 0, $MAX_ABOUT_SIZE);
+$about = mb_substr(mysqli_real_escape_string($conn, $_POST['about']), 0, $MAX_ABOUT_SIZE, "UTF-8");
 
 // if the inputted size is less than the current group size
 if ($size < $group->getSize())

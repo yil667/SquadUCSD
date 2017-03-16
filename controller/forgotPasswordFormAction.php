@@ -6,7 +6,7 @@ include_once "generalLibrary.php";
 session_start();
 $conn = connectToDB();
 
-$email = substr(mysqli_escape_string($conn, $_POST['email']), 0, $MAX_EMAIL_SIZE);
+$email = mb_substr(mysqli_escape_string($conn, $_POST['email']), 0, $MAX_EMAIL_SIZE, "UTF-8");
 
 $result = handleForgotPasswordEmail($conn, $email);
 

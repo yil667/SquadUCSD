@@ -12,7 +12,7 @@ handleNotLoggedIn();
 $conn = connectToDB();
 
 $id = getUserId();
-$currPassword = substr(mysqli_escape_string($conn, $_POST['currpassword']), 0, $MAX_PWD_SIZE);
+$currPassword = mb_substr(mysqli_escape_string($conn, $_POST['currpassword']), 0, $MAX_PWD_SIZE, "UTF-8");
 
 if (!validCurrPassword($conn, $id, $currPassword)) {
     header("Location: http://www.squaducsd.com/editprofile.php?incorrectcurrentpwd");
