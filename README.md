@@ -19,7 +19,7 @@ Our group members in alphabetical order and github links:
 <li>Chenzhong Tao</li>
 <li><a href=https://www.github.com/JimmyTani>Jimmy Tani</a></li>
 <li>Annie Wai</li>
-<li>Quinn Wong</li>
+<li><a href=https://www.github.com/qwong95>Quinn Wong</a></li>
 <li>Jiaxin Yang</li>
 <li><a href=https://www.github.com/p6668>Zifan Yang</a></li>
 </ul>
