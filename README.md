@@ -11,16 +11,16 @@ This app was developed as part of the CSE110: Software Engineering course at UCS
 </p>
 <ul>
 Our group members in alphabetical order and github links:
-<li>Brad Anderson</li>
+<li><a href=https://www.github.com/braanderson>Brad Anderson</a></li>
 <li><a href=https://www.github.com/scottchen625>Scott Chen</a></li>
 <li><a href=https://www.github.com/toc007>Tommy Chen</a></li>
 <li><a href=https://www.github.com/wenyichen>Wenyi Chen</a></li>
 <li><a href=https://www.github.com/yil667>Dominic Lee</a></li>
-<li>Chenzhong Tao</li>
+<li><a href=https://www.github.com/chtao>Chenzhong Tao</a></li>
 <li><a href=https://www.github.com/JimmyTani>Jimmy Tani</a></li>
-<li>Annie Wai</li>
+<li><a href=https://www.github.com/apwai>Annie Wai</a></li>
 <li><a href=https://www.github.com/qwong95>Quinn Wong</a></li>
-<li>Jiaxin Yang</li>
+<li><a href=https://www.github.com/JiaxinY>Jiaxin Yang</a></li>
 <li><a href=https://www.github.com/p6668>Zifan Yang</a></li>
 </ul>
 
