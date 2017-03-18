@@ -189,7 +189,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/controller/startUserSession.php";
                             <a href="viewprofile.php?userid=3">
                                 <div class="list-group-item">
                                     <h4 class="media-heading">User Interface Specialist</h4>
-                                    <p class="list-group-item-text">-CalCulated-</p>
+                                    <p class="list-group-item-text">Zifan Yang</p>
                                 </div>
                             </a>
                         </div>
