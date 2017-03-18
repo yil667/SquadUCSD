@@ -7,21 +7,21 @@ This web app allows students to form study groups for the classes they are enrol
 </p>
 
 <p>
-This app was developed as part of the CSE110: Software Engineering course at UCSD by:
+This app was developed as part of the CSE110: Software Engineering course at UCSD.
 </p>
 <ul>
-In alphabetical order:
+Our group members in alphabetical order and github links:
 <li>Brad Anderson</li>
-<li>Scott Chen</li>
-<li>Tommy Chen</li>
-<li>Wenyi Chen</li>
-<li>Dominic Lee</li>
+<li><a href=www.github.com/scottchen625>Scott Chen</a></li>
+<li><a href=www.github.com/toc007>Tommy Chen</a></li>
+<li><a href=www.github.com/wenyichen>Wenyi Chen</a></li>
+<li><a href=www.github.com/yil667>Dominic Lee</a></li>
 <li>Chenzhong Tao</li>
-<li>Jimmy Tani</li>
+<li><a href=www.github.com/JimmyTani>Jimmy Tani</a></li>
 <li>Annie Wai</li>
 <li>Quinn Wong</li>
 <li>Jiaxin Yang</li>
-<li>Zifan Yang</li>
+<li><a href=www.github.com/p6668>Zifan Yang</a></li>
 </ul>
 
 <h2>General todo list: </h2>
