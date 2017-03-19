@@ -55,6 +55,7 @@ This app was developed as part of the CSE110: Software Engineering course at UCS
     
 <h2>Contact Us</h2>
 <strong>Having trouble with the web application? Want to learn more about SquadUCSD? Contact us and we’ll get back to you as soon as possible.</strong>
+<br>
 <p>Tommy Chen:</p>
 <ul>
 <li>Phone - 408-510-2370</li>
