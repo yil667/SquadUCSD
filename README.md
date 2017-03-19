@@ -1,6 +1,6 @@
 <html>
 <h1>SUCS D</h1>
-<h4>SquadUCSD</h4>
+<h2>SquadUCSD</h2>
 
 <p>
 This web app allows students to form study groups for the classes they are enrolled in. Groups are formed based on schedule compatibility and individual personalities and preferences. Groups can set a maximum size to allow however many people in. This can be changed any time.
@@ -10,7 +10,7 @@ This web app allows students to form study groups for the classes they are enrol
 This app was developed as part of the CSE110: Software Engineering course at UCSD.
 </p>
 <ul>
-Our group members in alphabetical order and github links:
+<p>Our group members in alphabetical order and github links:</p>
 <li><a href=https://www.github.com/braanderson>Brad Anderson</a></li>
 <li><a href=https://www.github.com/scottchen625>Scott Chen</a></li>
 <li><a href=https://www.github.com/toc007>Tommy Chen</a></li>
@@ -24,7 +24,8 @@ Our group members in alphabetical order and github links:
 <li><a href=https://www.github.com/p6668>Zifan Yang</a></li>
 </ul>
 
-<h2>General todo list: </h2>
+<h2>Login Credentials</h2>
+    <p></p>
 <h2>Front-end todo list: </h2>
 <h2>Back-end todo list:</h2>
 <ol>
