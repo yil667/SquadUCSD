@@ -25,7 +25,32 @@ Our group members in alphabetical order and github links:
 </ul>
 
 <h2>Login Credentials</h2>
-    <p></p>
+    <p>Account 1:</p>
+    <p></p> 
+    <ul>
+    <li>Name: Adam Apple</li>
+    <li>Email: AdamAppleSquadUCSD@yahoo.com</li>
+    <li>Email password: squaducsd007</li>
+    <li>SquadUCSD password: squaducsd007</li>
+    </ul>
+    
+    Account 2: 
+    Name: Brandon Box
+    Email: BrandonBoxSquadUCSD@yahoo.com
+    Email password: squaducsd007
+    	SquadUCSD password: squaducsd007
+    
+    Account 3: 
+    Name: Curtis Cat
+    Email: CurtisCatSquadUCSD@yahoo.com
+    Email password: squaducsd007
+    SquadUCSD password: squaducsd007
+    
+    Account 4: 
+    Name: Daniel Danger
+    Email: DanielDangerSquadUCSD@yahoo.com
+    Email password: squaducsd007
+    SquadUCSD password: squaducsd007
 <h2>Front-end todo list: </h2>
 <h2>Back-end todo list:</h2>
 <ol>
