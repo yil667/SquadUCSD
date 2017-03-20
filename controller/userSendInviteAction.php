@@ -20,7 +20,7 @@ $fromurl = clearFlags($fromurl);
 
 $conn = connectToDB();
 
-$groupName = mv_substr(mysqli_escape_string($conn, $_POST['groupname']), 0, $MAX_GROUP_NAME, "UTF-8");
+$groupName = mb_substr(mysqli_escape_string($conn, $_POST['groupname']), 0, $MAX_GROUP_NAME, "UTF-8");
 
 if ($groupName == "") {
     // redirect with a flag
